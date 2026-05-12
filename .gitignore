@@ -1,0 +1,53 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Distribution / build
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+secrets.json
+secrets.yaml
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/results/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs & data output
+*.log
+logs/
+*.csv
+*.parquet
+*.feather
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Type stubs cache
+.mypy_cache/
+.ruff_cache/

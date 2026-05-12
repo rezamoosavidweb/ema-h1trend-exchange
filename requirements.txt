@@ -1,0 +1,23 @@
+# ── Core trading ─────────────────────────────────────────────────────────────
+pybit>=5.8.0              # Bybit official Python SDK (v5 Unified Trading API)
+
+# ── Data processing (unchanged from MT5 project) ──────────────────────────────
+numpy>=1.26
+pandas>=2.2
+pyarrow>=15.0             # Parquet cache (optional but fast)
+
+# ── Configuration ─────────────────────────────────────────────────────────────
+pydantic>=2.7
+pydantic-settings>=2.3    # BaseSettings with .env file support
+
+# ── Async runtime ─────────────────────────────────────────────────────────────
+# asyncio is stdlib; no extra package needed for the main loop
+
+# ── Optional: testing ─────────────────────────────────────────────────────────
+pytest>=8.1
+pytest-asyncio>=0.23
+pytest-mock>=3.12
+
+# ── Optional: dev tools ───────────────────────────────────────────────────────
+python-dotenv>=1.0        # Load .env files (also handled by pydantic-settings)
+matplotlib

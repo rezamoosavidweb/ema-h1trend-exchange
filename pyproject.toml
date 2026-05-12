@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "ema-h1trend-bybit"
+version = "1.0.0"
+description = "EMA H1 Trend Strategy — Bybit Linear Futures Edition"
+requires-python = ">=3.11"
+dependencies = [
+    "pybit>=5.8.0",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1",
+    "pytest-asyncio>=0.23",
+    "pytest-mock>=3.12",
+]
+
+[project.scripts]
+ema-bot = "app.main:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*", "core*", "config*", "exchange*", "execution*",
+           "market*", "risk*", "strategy*", "state*", "models*",
+           "services*", "storage*", "telemetry*"]
