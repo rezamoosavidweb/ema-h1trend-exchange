@@ -32,7 +32,7 @@ htmlcov/
 
 # Logs & data output
 *.log
-logs/
+# logs/
 *.csv
 *.parquet
 *.feather
