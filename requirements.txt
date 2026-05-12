@@ -18,6 +18,9 @@ pytest>=8.1
 pytest-asyncio>=0.23
 pytest-mock>=3.12
 
+# ── Telegram (Telethon user-account notifier) ─────────────────────────────────
+telethon>=1.36             # MTProto client — login with phone, send to channels
+
 # ── Optional: dev tools ───────────────────────────────────────────────────────
 python-dotenv>=1.0        # Load .env files (also handled by pydantic-settings)
 matplotlib

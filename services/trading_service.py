@@ -95,6 +95,24 @@ class TradingService:
         self._order_mgr: Optional[OrderManager] = None
         self._reconciler: Optional[OrderReconciler] = None
 
+    # ── Public properties (for Telegram bot access) ───────────────────────────
+
+    @property
+    def symbol(self) -> str:
+        return self._cfg.symbol
+
+    @property
+    def state(self) -> BotState:
+        return self._state
+
+    @property
+    def settings(self) -> Settings:
+        return self._cfg
+
+    @property
+    def client(self) -> BybitClient:
+        return self._client
+
     # ── Public API ────────────────────────────────────────────────────────────
 
     async def run(self) -> None:

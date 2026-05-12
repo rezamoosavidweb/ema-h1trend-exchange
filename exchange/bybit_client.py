@@ -461,3 +461,62 @@ class BybitClient:
         resp = await self._call("get_server_time")
         ts_ms = int(resp["result"]["timeSecond"]) * 1000
         return datetime.fromtimestamp(ts_ms / 1000, tz=timezone.utc)
+
+    # ── All positions (account-wide) ──────────────────────────────────────────
+
+    async def get_all_positions(self) -> list[Position]:
+        """Return all open positions across all linear USDT symbols."""
+        resp = await self._call(
+            "get_positions",
+            category=BYBIT_CATEGORY,
+            settleCoin=BYBIT_QUOTE_COIN,
+        )
+        positions: list[Position] = []
+        for p in resp["result"]["list"]:
+            size = float(p.get("size", 0) or 0)
+            if size <= 0:
+                continue
+            raw_side = p.get("side", "None")
+            if raw_side == "None":
+                continue
+            side = Side.BUY if raw_side == "Buy" else Side.SELL
+            positions.append(
+                Position(
+                    symbol=p["symbol"],
+                    side=side,
+                    size=size,
+                    entry_price=float(p.get("avgPrice", 0) or 0),
+                    unrealized_pnl=float(p.get("unrealisedPnl", 0) or 0),
+                    leverage=float(p.get("leverage", 1) or 1),
+                    position_idx=int(p.get("positionIdx", 0)),
+                )
+            )
+        return positions
+
+    # ── Closed P&L ────────────────────────────────────────────────────────────
+
+    async def get_closed_pnl(
+        self,
+        symbol: Optional[str] = None,
+        start_ms: Optional[int] = None,
+        end_ms: Optional[int] = None,
+        limit: int = 50,
+    ) -> list[dict]:
+        """
+        Fetch closed P&L records (completed trades).
+
+        Each record contains closedPnl, symbol, side, avgEntryPrice,
+        avgExitPrice, closedSize, orderLinkId, updatedTime, etc.
+        """
+        kwargs: dict[str, Any] = {
+            "category": BYBIT_CATEGORY,
+            "limit": min(limit, 100),
+        }
+        if symbol:
+            kwargs["symbol"] = symbol
+        if start_ms is not None:
+            kwargs["startTime"] = str(start_ms)
+        if end_ms is not None:
+            kwargs["endTime"] = str(end_ms)
+        resp = await self._call("get_closed_pnl", **kwargs)
+        return resp["result"]["list"]

@@ -178,6 +178,28 @@ class Settings(BaseSettings):
         description="Directory for per-symbol JSONL event journals. Empty string disables.",
     )
 
+    # ── Telegram (Telethon user account) ─────────────────────────────────────
+    telegram_api_id: Optional[int] = Field(
+        None,
+        description="Telegram API ID from https://my.telegram.org/apps",
+    )
+    telegram_api_hash: Optional[str] = Field(
+        None,
+        description="Telegram API hash from https://my.telegram.org/apps",
+    )
+    telegram_phone: Optional[str] = Field(
+        None,
+        description="Your phone number (e.g. +989123456789). If unset, prompted at startup.",
+    )
+    telegram_session_file: str = Field(
+        "telegram_session",
+        description="Path (without .session suffix) where Telethon saves the login session.",
+    )
+    telegram_listen_chat: Optional[int] = Field(
+        None,
+        description="Chat ID to listen for slash commands. None = respond to all incoming messages.",
+    )
+
     # ── Derived properties (computed after validation) ────────────────────────
     @model_validator(mode="after")
     def _fill_derived(self) -> "Settings":

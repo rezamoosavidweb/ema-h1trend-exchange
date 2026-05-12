@@ -21,10 +21,13 @@ from __future__ import annotations
 
 import asyncio
 import logging
-from typing import List
+from typing import TYPE_CHECKING, List, Optional
 
 from config.settings import Settings
 from services.trading_service import TradingService
+
+if TYPE_CHECKING:
+    from telegram_bot.bot import TelegramBot
 
 log = logging.getLogger(__name__)
 
@@ -37,10 +40,20 @@ class MultiSymbolRunner:
     Errors in one symbol do not abort others.
     """
 
-    def __init__(self, symbols: List[str], base_settings: Settings) -> None:
+    def __init__(
+        self,
+        symbols: List[str],
+        base_settings: Settings,
+        telegram_bot: Optional["TelegramBot"] = None,
+    ) -> None:
         self._symbols = symbols
         self._base = base_settings
         self._services: List[TradingService] = []
+        self._telegram_bot = telegram_bot
+
+    @property
+    def services(self) -> List[TradingService]:
+        return list(self._services)
 
     async def run(self) -> None:
         """Start all symbol services and run until all complete (or stop() is called)."""
@@ -49,10 +62,9 @@ class MultiSymbolRunner:
         tasks = []
         for symbol in self._symbols:
             # Clone settings with overridden symbol
-            # pydantic models are immutable so we copy + override
             cfg_dict = self._base.model_dump()
             cfg_dict["symbol"] = symbol
-            # Magic must be per-symbol (auto-derived from symbol)
+            # Magic and pip_size must be per-symbol (auto-derived)
             cfg_dict["magic"] = None
             cfg_dict["pip_size"] = None
 
@@ -66,6 +78,14 @@ class MultiSymbolRunner:
                 name=f"trading-{symbol}",
             ))
 
+        # Wire telegram bot services now that TradingService instances are ready
+        if self._telegram_bot is not None:
+            self._telegram_bot._services = {s.symbol: s for s in self._services}
+            tasks.append(asyncio.create_task(
+                self._telegram_bot.run(),
+                name="telegram-bot",
+            ))
+
         try:
             await asyncio.gather(*tasks, return_exceptions=False)
         except Exception as exc:
@@ -74,7 +94,9 @@ class MultiSymbolRunner:
             raise
 
     async def stop(self) -> None:
-        """Request graceful shutdown of all symbol services."""
+        """Request graceful shutdown of all symbol services and telegram bot."""
         for svc in self._services:
             await svc.stop()
+        if self._telegram_bot is not None:
+            await self._telegram_bot.stop()
         log.info("MultiSymbolRunner stopped all services.")

@@ -18,6 +18,7 @@ import os
 import signal
 import sys
 from pathlib import Path
+from typing import Optional
 
 # ── Make project root importable regardless of CWD ────────────────────────────
 _ROOT = Path(__file__).resolve().parent.parent
@@ -29,6 +30,28 @@ from services.trading_service import TradingService
 from telemetry.logging import configure_logging
 
 log = logging.getLogger(__name__)
+
+
+def _build_telegram_bot(cfg: Settings, services: list) -> "Optional[TelegramBot]":
+    """Return a TelegramBot if TELEGRAM_API_ID and TELEGRAM_API_HASH are configured."""
+    if not cfg.telegram_api_id or not cfg.telegram_api_hash:
+        return None
+    try:
+        from telegram_bot.bot import TelegramBot
+        return TelegramBot(
+            api_id=cfg.telegram_api_id,
+            api_hash=cfg.telegram_api_hash,
+            phone=cfg.telegram_phone,
+            services=services,
+            base_settings=cfg,
+            session_file=cfg.telegram_session_file or None,
+        )
+    except ImportError:
+        log.warning(
+            "telethon not installed — Telegram notifier disabled. "
+            "Run: pip install telethon"
+        )
+        return None
 
 
 # ── Argument parsing ──────────────────────────────────────────────────────────
@@ -200,13 +223,17 @@ async def run_backtest(cfg: Settings, args: argparse.Namespace) -> None:
 
 # ── Signal handlers ───────────────────────────────────────────────────────────
 
-def _install_signal_handlers(service: TradingService, loop: asyncio.AbstractEventLoop) -> None:
+def _install_signal_handlers(service: TradingService, loop: asyncio.AbstractEventLoop, tg_bot=None) -> None:
     """Install SIGINT and SIGTERM handlers for graceful shutdown."""
     def _handle_shutdown(signum, frame):
         log.info("Signal %s received — initiating graceful shutdown.", signum)
         loop.call_soon_threadsafe(
             lambda: asyncio.ensure_future(service.stop(), loop=loop)
         )
+        if tg_bot is not None:
+            loop.call_soon_threadsafe(
+                lambda: asyncio.ensure_future(tg_bot.stop(), loop=loop)
+            )
 
     signal.signal(signal.SIGINT, _handle_shutdown)
     signal.signal(signal.SIGTERM, _handle_shutdown)
@@ -265,17 +292,30 @@ def main() -> None:
             symbols = [s.strip().upper() for s in args.symbols.split(",") if s.strip()]
             log.info("Multi-symbol mode | symbols=%s", symbols)
             from services.multi_symbol_runner import MultiSymbolRunner
-            runner = MultiSymbolRunner(symbols, cfg)
+            tg_bot = _build_telegram_bot(cfg, [])
+            runner = MultiSymbolRunner(symbols, cfg, telegram_bot=tg_bot)
 
             async def _run_multi():
                 _install_signal_handlers_async(runner, loop)
+                if tg_bot is not None:
+                    # Login first (may prompt for phone/code on first run)
+                    await tg_bot.login()
                 await runner.run()
 
             loop.run_until_complete(_run_multi())
         else:
             service = TradingService(cfg)
-            _install_signal_handlers(service, loop)
-            loop.run_until_complete(service.run())
+            tg_bot = _build_telegram_bot(cfg, [service])
+            _install_signal_handlers(service, loop, tg_bot=tg_bot)
+
+            if tg_bot is not None:
+                async def _run_single_with_telegram():
+                    # Login first (may prompt for phone/code on first run)
+                    await tg_bot.login()
+                    await asyncio.gather(service.run(), tg_bot.run())
+                loop.run_until_complete(_run_single_with_telegram())
+            else:
+                loop.run_until_complete(service.run())
 
     except KeyboardInterrupt:
         log.info("KeyboardInterrupt — shutting down.")
