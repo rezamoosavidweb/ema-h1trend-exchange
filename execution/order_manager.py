@@ -392,9 +392,9 @@ class OrderManager:
                     self._journal.log("margin_blocked", available=avail, reason="zero_balance")
                 return
 
-        # Compute properly sized qty using live balance
+        # Compute properly sized qty using live balance + leverage (margin-based)
         try:
-            norm_qty = compute_qty(balance, risk_per_trade, raw_entry, raw_sl, side, self._info)
+            norm_qty = compute_qty(balance, risk_per_trade, raw_entry, self._leverage, self._info)
         except (InvalidQtyError, Exception) as exc:
             log.error("Qty computation failed — skipping: %s", exc)
             if self._journal:
@@ -402,7 +402,7 @@ class OrderManager:
             return
 
         # Risk summary for logging
-        summary = risk_summary(balance, risk_per_trade, raw_entry, raw_sl, raw_tp, side, norm_qty)
+        summary = risk_summary(balance, risk_per_trade, raw_entry, raw_sl, raw_tp, side, norm_qty, self._leverage)
         log.info("Risk | %s", " ".join(f"{k}={v}" for k, v in summary.items()))
         if self._journal:
             self._journal.log("risk_sizing", **summary)

@@ -80,7 +80,8 @@ class Settings(BaseSettings):
         DEFAULT_RISK_PER_TRADE,
         gt=0,
         lt=1,
-        description="Fraction of balance risked per trade (e.g. 0.01 = 1%).",
+        description="Fraction of wallet used as margin per trade (e.g. 0.01 = 1%). "
+                    "With leverage N: position notional = margin × N, margin committed stays fixed.",
     )
     pip_size: Optional[float] = Field(
         None,

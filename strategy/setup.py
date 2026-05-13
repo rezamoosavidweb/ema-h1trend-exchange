@@ -209,6 +209,7 @@ def list_setup_signals(
     pip_size: float,
     rr: float,
     risk_per_trade: float,
+    leverage: int = 1,
 ) -> pd.DataFrame:
     """
     Every closed M5 bar where the model would place a new pending (bull/bear trend + swing).
@@ -229,6 +230,7 @@ def list_setup_signals(
             rr=rr,
             balance=float(start_balance),
             risk_per_trade=risk_per_trade,
+            leverage=leverage,
         )
         if setup is None:
             continue

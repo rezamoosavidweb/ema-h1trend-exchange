@@ -1,22 +1,18 @@
 """
-Position sizing for Bybit Linear Perpetuals.
+Position sizing for Bybit Linear Perpetuals — margin-based model.
 
-The core formula is IDENTICAL to the MT5 version:
-    qty = (balance * risk_per_trade) / risk_per_unit
+Formula:
+    margin  = balance * margin_pct          (e.g. 1% of wallet)
+    qty     = (margin * leverage) / entry   (base-asset units)
 
-For Bybit USDT-margined linear contracts:
-  - qty is in BASE asset (e.g. BTC for BTCUSDT)
-  - PnL = qty_base * (exit_price - entry_price)   [in USDT]
-  - risk_per_unit = |entry_price - sl_price|       [in USDT per 1 base unit]
-
-So the formula works directly without any lot-multiplier conversion.
+The exchange requires exactly `margin` USDT of free balance regardless of
+leverage. With higher leverage the position notional grows but margin stays
+fixed at margin_pct% of wallet.
 
 After computing raw qty we:
   1. Normalize to qtyStep (floor — never round up to avoid over-sizing)
   2. Clamp to [minOrderQty, maxOrderQty]
   3. Validate margin availability
-
-This module is pure and has no async code.
 """
 
 from __future__ import annotations
@@ -34,35 +30,28 @@ log = logging.getLogger(__name__)
 
 def compute_raw_qty(
     balance: float,
-    risk_per_trade: float,
+    margin_pct: float,
     entry: float,
-    sl: float,
-    side: str,
+    leverage: int,
 ) -> float:
     """
-    Raw (un-normalized) quantity from risk sizing.
+    Raw (un-normalized) quantity from margin-based sizing.
 
-    Identical to compute_pending_setup() internal formula:
-        risk_cash = balance * risk_per_trade
-        risk_per_unit = |entry - sl|
-        qty = risk_cash / risk_per_unit
+        margin = balance * margin_pct
+        qty    = (margin * leverage) / entry
+
+    The actual margin committed to the exchange is always `margin` USDT.
+    Leverage multiplies position size but not the capital committed.
     """
-    if side == "buy":
-        risk_per_unit = entry - sl
-    else:
-        risk_per_unit = sl - entry
-
-    risk_per_unit = max(risk_per_unit, 1e-12)
-    risk_cash = balance * risk_per_trade
-    return risk_cash / risk_per_unit
+    margin = balance * margin_pct
+    return (margin * leverage) / max(entry, 1e-12)
 
 
 def compute_qty(
     balance: float,
-    risk_per_trade: float,
+    margin_pct: float,
     entry: float,
-    sl: float,
-    side: str,
+    leverage: int,
     info: InstrumentInfo,
 ) -> float:
     """
@@ -71,19 +60,20 @@ def compute_qty(
     Returns the exact qty string-safe float ready to send to Bybit.
     Raises InvalidQtyError if below minimum after normalization.
     """
-    raw = compute_raw_qty(balance, risk_per_trade, entry, sl, side)
+    raw = compute_raw_qty(balance, margin_pct, entry, leverage)
     qty = normalize_qty(raw, info)
 
     log.debug(
-        "Sizing: balance=%.2f risk=%.4f entry=%.5f sl=%.5f side=%s "
-        "→ raw_qty=%.6f → normalized_qty=%.6f",
-        balance, risk_per_trade, entry, sl, side, raw, qty,
+        "Sizing: balance=%.2f margin_pct=%.4f entry=%.5f leverage=%dx "
+        "→ margin=%.4f → raw_qty=%.6f → normalized_qty=%.6f",
+        balance, margin_pct, entry, leverage,
+        balance * margin_pct, raw, qty,
     )
 
     if qty < info.min_qty - 1e-9:
         raise InvalidQtyError(
             f"Computed qty {qty} (raw={raw:.6f}) is below minOrderQty={info.min_qty} "
-            f"for {info.symbol}. Increase balance/risk or reduce SL distance."
+            f"for {info.symbol}. Increase balance/margin_pct or leverage."
         )
 
     return qty
@@ -118,14 +108,15 @@ def check_margin_available(
 
 def risk_summary(
     balance: float,
-    risk_per_trade: float,
+    margin_pct: float,
     entry: float,
     sl: float,
     tp: float,
     side: str,
     qty: float,
+    leverage: int = 1,
 ) -> dict:
-    """Return a dict with risk/reward breakdown for logging."""
+    """Return a dict with margin/risk breakdown for logging."""
     if side == "buy":
         risk_per_unit = entry - sl
         reward_per_unit = tp - entry
@@ -133,13 +124,16 @@ def risk_summary(
         risk_per_unit = sl - entry
         reward_per_unit = entry - tp
 
+    margin_used = (qty * entry) / leverage
     risk_cash = risk_per_unit * qty
     reward_cash = reward_per_unit * qty
     rr = reward_per_unit / max(risk_per_unit, 1e-12)
 
     return {
         "balance": round(balance, 2),
-        "risk_pct": round(risk_per_trade * 100, 3),
+        "margin_pct": round(margin_pct * 100, 3),
+        "margin_used": round(margin_used, 4),
+        "leverage": leverage,
         "risk_cash": round(risk_cash, 4),
         "reward_cash": round(reward_cash, 4),
         "rr": round(rr, 3),

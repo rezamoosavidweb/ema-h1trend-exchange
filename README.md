@@ -49,12 +49,16 @@ Every 5 minutes:
   6. Sleep until next M5 candle boundary
 ```
 
-**Position sizing** (identical to MT5):
+**Position sizing** — margin-based model:
 ```
-risk_cash     = balance × risk_per_trade       (e.g. 10000 × 0.01 = $100)
-risk_per_unit = |entry_price − sl_price|        (price distance)
-qty           = risk_cash / risk_per_unit        (in base asset: BTC, ETH, ...)
+margin  = balance × RISK_PER_TRADE             (e.g. 57531 × 0.01 = 575.31 USDT)
+qty     = (margin × LEVERAGE) / entry_price    (in base asset: BTC, ETH, ...)
+
+BTCUSDT  leverage=1:  qty = 575.31 × 1  / 81153 = 0.00709 BTC  (margin used: 575 USDT)
+BTCUSDT  leverage=10: qty = 575.31 × 10 / 81153 = 0.0709  BTC  (margin used: 575 USDT)
 ```
+The margin committed to the exchange is always `RISK_PER_TRADE %` of your wallet.
+Leverage scales the position notional — not the capital at risk.
 
 ---
 
@@ -245,8 +249,8 @@ Values are read in this priority order:
 | `bybit_api_secret` | `BYBIT_API_SECRET` | *required* | API secret |
 | `bybit_testnet` | `BYBIT_TESTNET` | `false` | Use testnet |
 | `symbol` | `SYMBOL` | `BTCUSDT` | Trading symbol |
-| `risk_per_trade` | `RISK_PER_TRADE` | `0.01` | 1% risk per trade |
-| `leverage` | `LEVERAGE` | `1` | Leverage (1 = no leverage) |
+| `risk_per_trade` | `RISK_PER_TRADE` | `0.01` | Fraction of wallet used as margin per trade (1% = 0.01). Margin = balance × this value. |
+| `leverage` | `LEVERAGE` | `1` | Position size multiplier. Margin committed stays constant; notional = margin × leverage. |
 | `rr` | `RR` | `1.0` | Reward:risk ratio |
 | `pending_expiry_min` | `PENDING_EXPIRY_MIN` | `60` | Order TTL in minutes |
 | `lookback_bars` | `LOOKBACK_BARS` | `5` | Swing window size |
@@ -357,18 +361,23 @@ and a **UTC DatetimeIndex** — identical to what the MT5 source produced.
 
 ### `risk/` — Position Sizing
 
-**`sizing.py`** — The exact same formula as MT5:
+**`sizing.py`** — Margin-based position sizing:
 
 ```python
-risk_cash     = balance * risk_per_trade
-risk_per_unit = abs(entry - sl)
-raw_qty       = risk_cash / risk_per_unit
+margin  = balance * margin_pct               # e.g. 57531 × 0.01 = 575.31 USDT
+raw_qty = (margin * leverage) / entry_price  # e.g. 575.31 × 1 / 81153 = 0.00709 BTC
 
 # Then normalize:
 qty = normalize_qty(raw_qty, info)   # floor to qtyStep, clamp to [min, max]
 ```
 
-Also includes `check_margin_available()` — warns before sending an order that
+Key properties of this model:
+
+- **Margin committed is always fixed**: `balance × RISK_PER_TRADE` USDT, regardless of leverage
+- **Leverage scales position size**: with 10x, notional is 10× but margin stays the same
+- **Margin check always passes** as long as `balance × RISK_PER_TRADE < available_balance`
+
+Also includes `check_margin_available()` — validates before sending an order that
 would be rejected for insufficient margin.
 
 ---
@@ -525,7 +534,7 @@ All tests use synthetic OHLCV data generated in fixtures.
 |---|---|
 | `test_strategy_parity.py` | EMA math, trend detection, signal geometry, risk formula — verifies parity with MT5 |
 | `test_precision.py` | Tick rounding (nearest / up / down), qty floor, string formatting |
-| `test_risk_sizing.py` | `compute_qty` formula matches MT5, qty validation |
+| `test_risk_sizing.py` | Margin-based `compute_qty` formula, leverage scaling, qty validation |
 | `test_bot_state.py` | Candle guard, pending tracking, expiry, orderLinkId determinism |
 
 ```bash
@@ -549,9 +558,10 @@ BYBIT_TESTNET=false            # true = testnet
 # ── Symbol ──────────────────────────────────────────────────────────
 SYMBOL=BTCUSDT                 # or ETHUSDT, SOLUSDT, etc.
 
-# ── Strategy (match your MT5 settings exactly) ───────────────────────
-RISK_PER_TRADE=0.01            # 1% of account balance
-LEVERAGE=1                     # 1x = full collateral, no leverage
+# ── Position sizing ──────────────────────────────────────────────────
+# margin = balance × RISK_PER_TRADE   qty = (margin × LEVERAGE) / entry
+RISK_PER_TRADE=0.01            # fraction of wallet used as margin per trade (1% = 0.01)
+LEVERAGE=1                     # position size multiplier; margin committed stays fixed
 RR=1.0                         # TP distance = 1× SL distance
 LOOKBACK_BARS=5                # bars in swing window
 PENDING_OFFSET_TICKS=3.0       # ticks beyond swing high/low
@@ -860,8 +870,10 @@ A: Via `.env` or CLI flags — `LOOKBACK_BARS`, `PENDING_OFFSET_TICKS`, `RR`, et
 These are the same parameters you configured in MT5.
 
 **Q: What leverage should I use?**
-A: Start with `LEVERAGE=1`. The risk sizing formula already accounts for balance
-correctly at 1x. Higher leverage increases margin efficiency but adds liquidation risk.
+A: Start with `LEVERAGE=1` and `RISK_PER_TRADE=0.01`. This commits 1% of your wallet
+as margin per trade with no leverage amplification. Increase `LEVERAGE` to open larger
+positions with the same margin outlay — but this also increases liquidation risk.
+The margin committed is always fixed at `balance × RISK_PER_TRADE` regardless of leverage.
 
 **Q: Why does the bot use REST polling instead of WebSocket?**
 A: The strategy fires once per 5-minute candle. REST polling is sufficient and simpler.

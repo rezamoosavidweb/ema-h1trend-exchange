@@ -100,6 +100,7 @@ def compute_pending_setup(
     rr: float,
     balance: float,
     risk_per_trade: float,
+    leverage: int = 1,
 ) -> dict | None:
     """Pending setup at closed bar bar_index; None if flat trend or insufficient rows."""
     if bar_index < lookback_bars:
@@ -116,13 +117,15 @@ def compute_pending_setup(
 
     offset = float(pending_offset_ticks) * float(pip_size)
 
+    # Margin-based sizing: commit (balance * risk_per_trade) as margin
+    margin = balance * risk_per_trade
+
     if trend == "bull":
         entry = hh + offset
         sl = ll - offset
         risk_per_unit = max(entry - sl, 1e-12)
         tp = entry + rr * risk_per_unit
-        risk_cash = balance * risk_per_trade
-        qty = risk_cash / risk_per_unit
+        qty = (margin * leverage) / max(entry, 1e-12)
         return {
             "side": "buy",
             "entry": entry,
@@ -135,8 +138,7 @@ def compute_pending_setup(
     sl = hh + offset
     risk_per_unit = max(sl - entry, 1e-12)
     tp = entry - rr * risk_per_unit
-    risk_cash = balance * risk_per_trade
-    qty = risk_cash / risk_per_unit
+    qty = (margin * leverage) / max(entry, 1e-12)
     return {
         "side": "sell",
         "entry": entry,

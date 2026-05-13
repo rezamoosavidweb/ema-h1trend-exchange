@@ -400,6 +400,7 @@ class TradingService:
             pip_size=cfg.effective_pip_size(),
             rr=cfg.rr,
             risk_per_trade=cfg.risk_per_trade,
+            leverage=cfg.leverage,
         )
 
         log.info("Signals: %d total", len(signals))
