@@ -92,7 +92,7 @@ def _parse_args() -> argparse.Namespace:
 
     # Strategy parameters
     p.add_argument("--risk", type=float, default=None,
-                   help="Fraction of balance risked per trade (e.g. 0.01 = 1%).")
+                   help="Fixed USDT risk per trade (e.g. 20.0 = $20 win/loss).")
     p.add_argument("--pip-size", type=float, default=None,
                    help="Price increment for entry offset. Default: auto from symbol.")
     p.add_argument("--leverage", type=int, default=None,
@@ -140,7 +140,7 @@ def _apply_overrides(args: argparse.Namespace) -> None:
     if args.magic is not None:
         os.environ["MAGIC"] = str(args.magic)
     if args.risk is not None:
-        os.environ["RISK_PER_TRADE"] = str(args.risk)
+        os.environ["RISK_FIXED_USDT"] = str(args.risk)
     if args.pip_size is not None:
         os.environ["PIP_SIZE"] = str(args.pip_size)
     if args.leverage is not None:
@@ -206,7 +206,7 @@ async def run_backtest(cfg: Settings, args: argparse.Namespace) -> None:
         pending_offset_ticks=cfg.pending_offset_ticks,
         pip_size=cfg.effective_pip_size(),
         rr=cfg.rr,
-        risk_per_trade=cfg.risk_per_trade,
+        risk_cash=cfg.risk_fixed_usdt,
         pending_expiry_min=cfg.pending_expiry_min,
         entry_timeframe_minutes=cfg.entry_tf_minutes,
     )
@@ -289,11 +289,11 @@ def main() -> None:
 
     mode = "DEMO" if cfg.bybit_demo else ("TESTNET" if cfg.bybit_testnet else "LIVE")
     log.info(
-        "Starting EMA H1 Trend Bot | symbol=%s magic=%d risk=%.4f "
+        "Starting EMA H1 Trend Bot | symbol=%s magic=%d risk=%.2f USDT "
         "leverage=%dx mode=%s dry_run=%s",
         cfg.symbol,
         cfg.effective_magic(),
-        cfg.risk_per_trade,
+        cfg.risk_fixed_usdt,
         cfg.leverage,
         mode,
         cfg.dry_run,
