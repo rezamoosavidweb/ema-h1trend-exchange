@@ -16,6 +16,8 @@ import time
 from datetime import datetime, timezone
 from typing import Any, Optional
 
+from pybit.exceptions import FailedRequestError as PybitFailedRequestError
+from pybit.exceptions import InvalidRequestError as PybitInvalidRequestError
 from pybit.unified_trading import HTTP
 
 from core.constants import (
@@ -141,6 +143,9 @@ class BybitClient:
 
             except ExchangeError:
                 raise
+
+            except (PybitInvalidRequestError, PybitFailedRequestError) as exc:
+                raise ExchangeError(str(exc)) from exc
 
             if attempt < self._max_retries:
                 await asyncio.sleep(delay)
