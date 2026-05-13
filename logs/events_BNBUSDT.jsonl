@@ -268,3 +268,129 @@
 {"ts": "2026-05-13T13:05:02.582Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 29, "has_position": false}
 {"ts": "2026-05-13T13:05:02.583Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 13, "expiry_bars": 12, "side": "buy", "entry": 679.53}
 {"ts": "2026-05-13T13:05:02.583Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 29}
+{"ts": "2026-05-13T13:10:01.949Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 30}
+{"ts": "2026-05-13T13:10:02.647Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 30, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:05:00+00:00", "h1_trend": {"2026-05-13 12:55:00+00:00": "flat", "2026-05-13 13:00:00+00:00": "flat", "2026-05-13 13:05:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:10:02.854Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 30, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:10:03.053Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 30, "equity": 57521.79845484, "available": 57521.79845484, "used_margin": 0.0}
+{"ts": "2026-05-13T13:10:03.336Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 30, "has_position": false}
+{"ts": "2026-05-13T13:10:03.336Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 14, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T13:10:03.337Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 30}
+{"ts": "2026-05-13T13:15:01.571Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 31}
+{"ts": "2026-05-13T13:15:02.067Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 31, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:10:00+00:00", "h1_trend": {"2026-05-13 13:00:00+00:00": "flat", "2026-05-13 13:05:00+00:00": "flat", "2026-05-13 13:10:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:15:02.286Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 31, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:15:02.519Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 31, "equity": 57521.79845484, "available": 57521.79845484, "used_margin": 0.0}
+{"ts": "2026-05-13T13:15:02.959Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 31, "has_position": false}
+{"ts": "2026-05-13T13:15:02.960Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 15, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T13:15:02.960Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 31}
+{"ts": "2026-05-13T13:20:02.318Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 32}
+{"ts": "2026-05-13T13:20:02.664Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 32, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:15:00+00:00", "h1_trend": {"2026-05-13 13:05:00+00:00": "flat", "2026-05-13 13:10:00+00:00": "flat", "2026-05-13 13:15:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:20:02.845Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 32, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:20:03.111Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 32, "equity": 57521.79845484, "available": 57521.79845484, "used_margin": 0.0}
+{"ts": "2026-05-13T13:20:03.524Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 32, "has_position": false}
+{"ts": "2026-05-13T13:20:03.525Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 16, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T13:20:03.525Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 32}
+{"ts": "2026-05-13T13:25:01.785Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 33}
+{"ts": "2026-05-13T13:25:02.276Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 33, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:20:00+00:00", "h1_trend": {"2026-05-13 13:10:00+00:00": "flat", "2026-05-13 13:15:00+00:00": "flat", "2026-05-13 13:20:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:25:02.519Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 33, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:25:02.708Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 33, "equity": 57521.79845484, "available": 57521.79845484, "used_margin": 0.0}
+{"ts": "2026-05-13T13:25:03.268Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 33, "has_position": false}
+{"ts": "2026-05-13T13:25:03.268Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 17, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T13:25:03.268Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 33}
+{"ts": "2026-05-13T13:30:01.566Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 34}
+{"ts": "2026-05-13T13:30:02.207Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 34, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:25:00+00:00", "h1_trend": {"2026-05-13 13:15:00+00:00": "flat", "2026-05-13 13:20:00+00:00": "flat", "2026-05-13 13:25:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:30:02.405Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 34, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:30:02.489Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 34, "equity": 57521.79845484, "available": 56960.28548464, "used_margin": 561.5129702}
+{"ts": "2026-05-13T13:30:02.793Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 34, "has_position": false}
+{"ts": "2026-05-13T13:30:02.793Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 18, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T13:30:02.793Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 34}
+{"ts": "2026-05-13T13:35:02.111Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 35}
+{"ts": "2026-05-13T13:35:02.659Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 35, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:30:00+00:00", "h1_trend": {"2026-05-13 13:20:00+00:00": "flat", "2026-05-13 13:25:00+00:00": "flat", "2026-05-13 13:30:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:35:02.831Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 35, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:35:03.098Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 35, "equity": 57521.68101724, "available": 56960.476370439996, "used_margin": 561.2099668}
+{"ts": "2026-05-13T13:35:03.381Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 35, "has_position": false}
+{"ts": "2026-05-13T13:35:03.381Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 19, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T13:35:03.381Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 35}
+{"ts": "2026-05-13T13:40:01.750Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 36}
+{"ts": "2026-05-13T13:40:02.446Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 36, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:35:00+00:00", "h1_trend": {"2026-05-13 13:25:00+00:00": "flat", "2026-05-13 13:30:00+00:00": "flat", "2026-05-13 13:35:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:40:02.616Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 36, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:40:02.801Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 36, "equity": 57522.95247932, "available": 57522.95247932, "used_margin": 0.0}
+{"ts": "2026-05-13T13:40:03.081Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 36, "has_position": false}
+{"ts": "2026-05-13T13:40:03.081Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 20, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T13:40:03.082Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 36}
+{"ts": "2026-05-13T13:45:01.509Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 37}
+{"ts": "2026-05-13T13:45:02.166Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 37, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:40:00+00:00", "h1_trend": {"2026-05-13 13:30:00+00:00": "flat", "2026-05-13 13:35:00+00:00": "flat", "2026-05-13 13:40:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:45:02.342Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 37, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:45:02.757Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 37, "equity": 57522.95247932, "available": 57522.95247932, "used_margin": 0.0}
+{"ts": "2026-05-13T13:45:03.037Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 37, "has_position": false}
+{"ts": "2026-05-13T13:45:03.038Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 21, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T13:45:03.038Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 37}
+{"ts": "2026-05-13T13:50:01.378Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 38}
+{"ts": "2026-05-13T13:50:02.110Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 38, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:45:00+00:00", "h1_trend": {"2026-05-13 13:35:00+00:00": "flat", "2026-05-13 13:40:00+00:00": "flat", "2026-05-13 13:45:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:50:02.282Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 38, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:50:02.547Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 38, "equity": 57522.95247932, "available": 57522.95247932, "used_margin": 0.0}
+{"ts": "2026-05-13T13:50:02.938Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 38, "has_position": false}
+{"ts": "2026-05-13T13:50:02.938Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 22, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T13:50:02.938Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 38}
+{"ts": "2026-05-13T13:55:02.413Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 39}
+{"ts": "2026-05-13T13:55:02.778Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 39, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:50:00+00:00", "h1_trend": {"2026-05-13 13:40:00+00:00": "flat", "2026-05-13 13:45:00+00:00": "flat", "2026-05-13 13:50:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:55:02.955Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 39, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:55:03.217Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 39, "equity": 57522.95247932, "available": 57522.95247932, "used_margin": 0.0}
+{"ts": "2026-05-13T13:55:03.495Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 39, "has_position": false}
+{"ts": "2026-05-13T13:55:03.495Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 23, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T13:55:03.496Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 39}
+{"ts": "2026-05-13T14:00:01.723Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 40}
+{"ts": "2026-05-13T14:00:02.226Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 40, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:55:00+00:00", "h1_trend": {"2026-05-13 13:45:00+00:00": "flat", "2026-05-13 13:50:00+00:00": "flat", "2026-05-13 13:55:00+00:00": "flat"}}
+{"ts": "2026-05-13T14:00:02.401Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 40, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T14:00:02.880Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 40, "equity": 57522.95247932, "available": 57522.95247932, "used_margin": 0.0}
+{"ts": "2026-05-13T14:00:03.245Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 40, "has_position": false}
+{"ts": "2026-05-13T14:00:03.246Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 24, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T14:00:03.246Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 40}
+{"ts": "2026-05-13T14:05:01.480Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 41}
+{"ts": "2026-05-13T14:05:01.880Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 41, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:00:00+00:00", "h1_trend": {"2026-05-13 13:50:00+00:00": "flat", "2026-05-13 13:55:00+00:00": "flat", "2026-05-13 14:00:00+00:00": "flat"}}
+{"ts": "2026-05-13T14:05:02.083Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 41, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T14:05:02.162Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 41, "equity": 57520.16760034, "available": 55822.172538089995, "used_margin": 1700.23940225}
+{"ts": "2026-05-13T14:05:02.620Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 41, "has_position": false}
+{"ts": "2026-05-13T14:05:02.621Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 25, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T14:05:02.621Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 41}
+{"ts": "2026-05-13T14:10:01.823Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 42}
+{"ts": "2026-05-13T14:10:02.390Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 42, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:05:00+00:00", "h1_trend": {"2026-05-13 13:55:00+00:00": "flat", "2026-05-13 14:00:00+00:00": "flat", "2026-05-13 14:05:00+00:00": "flat"}}
+{"ts": "2026-05-13T14:10:02.567Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 42, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T14:10:02.759Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 42, "equity": 57518.53824034, "available": 55820.543178089996, "used_margin": 1701.86876225}
+{"ts": "2026-05-13T14:10:03.036Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 42, "has_position": false}
+{"ts": "2026-05-13T14:10:03.037Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 26, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T14:10:03.037Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 42}
+{"ts": "2026-05-13T14:15:01.298Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 43}
+{"ts": "2026-05-13T14:15:01.727Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 43, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:10:00+00:00", "h1_trend": {"2026-05-13 14:00:00+00:00": "flat", "2026-05-13 14:05:00+00:00": "flat", "2026-05-13 14:10:00+00:00": "flat"}}
+{"ts": "2026-05-13T14:15:01.902Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 43, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T14:15:02.405Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 43, "equity": 57517.58191034, "available": 55819.586848089995, "used_margin": 1702.82509225}
+{"ts": "2026-05-13T14:15:02.683Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 43, "has_position": false}
+{"ts": "2026-05-13T14:15:02.684Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 27, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T14:15:02.684Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 43}
+{"ts": "2026-05-13T14:20:01.979Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 44}
+{"ts": "2026-05-13T14:20:02.647Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 44, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:15:00+00:00", "h1_trend": {"2026-05-13 14:05:00+00:00": "flat", "2026-05-13 14:10:00+00:00": "flat", "2026-05-13 14:15:00+00:00": "flat"}}
+{"ts": "2026-05-13T14:20:02.819Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 44, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T14:20:03.080Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 44, "equity": 57517.77852034, "available": 55819.783458089994, "used_margin": 1702.62848225}
+{"ts": "2026-05-13T14:20:03.359Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 44, "has_position": false}
+{"ts": "2026-05-13T14:20:03.359Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 28, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T14:20:03.359Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 44}
+{"ts": "2026-05-13T14:25:01.579Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 45}
+{"ts": "2026-05-13T14:25:02.557Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 45, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:20:00+00:00", "h1_trend": {"2026-05-13 14:10:00+00:00": "flat", "2026-05-13 14:15:00+00:00": "flat", "2026-05-13 14:20:00+00:00": "flat"}}
+{"ts": "2026-05-13T14:25:02.730Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 45, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T14:25:02.818Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 45, "equity": 57515.98643034, "available": 55817.99136809, "used_margin": 1704.42057225}
+{"ts": "2026-05-13T14:25:03.097Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 45, "has_position": false}
+{"ts": "2026-05-13T14:25:03.098Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 29, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T14:25:03.098Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 45}
+{"ts": "2026-05-13T14:30:01.336Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 46}
+{"ts": "2026-05-13T14:30:01.752Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 46, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:25:00+00:00", "h1_trend": {"2026-05-13 14:15:00+00:00": "flat", "2026-05-13 14:20:00+00:00": "flat", "2026-05-13 14:25:00+00:00": "flat"}}
+{"ts": "2026-05-13T14:30:01.929Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 46, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T14:30:02.264Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 46, "equity": 57514.74416034, "available": 55816.74909809, "used_margin": 1705.66284225}
+{"ts": "2026-05-13T14:30:02.547Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 46, "has_position": false}
+{"ts": "2026-05-13T14:30:02.548Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 30, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T14:30:02.548Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 46}
+{"ts": "2026-05-13T14:35:01.769Z", "symbol": "BNBUSDT", "event": "cycle_start", "cycle": 47}
+{"ts": "2026-05-13T14:35:02.353Z", "symbol": "BNBUSDT", "event": "data_fetched", "cycle": 47, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:30:00+00:00", "h1_trend": {"2026-05-13 14:20:00+00:00": "flat", "2026-05-13 14:25:00+00:00": "flat", "2026-05-13 14:30:00+00:00": "flat"}}
+{"ts": "2026-05-13T14:35:02.542Z", "symbol": "BNBUSDT", "event": "signal", "cycle": 47, "total_signals": 420, "side": "buy", "entry": 679.53, "sl": 676.87, "tp": 682.1899999999999, "qty": 0.1471605374302827, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T14:35:02.734Z", "symbol": "BNBUSDT", "event": "balance", "cycle": 47, "equity": 57515.85643034, "available": 55817.861368089994, "used_margin": 1704.55057225}
+{"ts": "2026-05-13T14:35:03.013Z", "symbol": "BNBUSDT", "event": "position_check", "cycle": 47, "has_position": false}
+{"ts": "2026-05-13T14:35:03.014Z", "symbol": "BNBUSDT", "event": "signal_expired", "bars_passed": 31, "expiry_bars": 12, "side": "buy", "entry": 679.53}
+{"ts": "2026-05-13T14:35:03.014Z", "symbol": "BNBUSDT", "event": "cycle_complete", "cycle": 47}

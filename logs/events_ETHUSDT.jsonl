@@ -330,3 +330,131 @@
 {"ts": "2026-05-13T13:05:02.978Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 29, "has_position": false}
 {"ts": "2026-05-13T13:05:02.979Z", "symbol": "ETHUSDT", "event": "signal_expired", "bars_passed": 13, "expiry_bars": 12, "side": "buy", "entry": 2306.8900000000003}
 {"ts": "2026-05-13T13:05:02.979Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 29}
+{"ts": "2026-05-13T13:10:02.172Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 30}
+{"ts": "2026-05-13T13:10:02.866Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 30, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:05:00+00:00", "h1_trend": {"2026-05-13 12:55:00+00:00": "flat", "2026-05-13 13:00:00+00:00": "flat", "2026-05-13 13:05:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:10:03.047Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 30, "total_signals": 436, "side": "buy", "entry": 2306.8900000000003, "sl": 2298.64, "tp": 2315.140000000001, "qty": 0.043348404128502, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:10:03.243Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 30, "equity": 57521.79845484, "available": 57521.79845484, "used_margin": 0.0}
+{"ts": "2026-05-13T13:10:03.522Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 30, "has_position": false}
+{"ts": "2026-05-13T13:10:03.523Z", "symbol": "ETHUSDT", "event": "signal_expired", "bars_passed": 14, "expiry_bars": 12, "side": "buy", "entry": 2306.8900000000003}
+{"ts": "2026-05-13T13:10:03.523Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 30}
+{"ts": "2026-05-13T13:15:01.809Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 31}
+{"ts": "2026-05-13T13:15:02.314Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 31, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:10:00+00:00", "h1_trend": {"2026-05-13 13:00:00+00:00": "flat", "2026-05-13 13:05:00+00:00": "flat", "2026-05-13 13:10:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:15:02.518Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 31, "total_signals": 435, "side": "buy", "entry": 2306.8900000000003, "sl": 2298.64, "tp": 2315.140000000001, "qty": 0.043348404128502, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:15:02.747Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 31, "equity": 57521.79845484, "available": 57521.79845484, "used_margin": 0.0}
+{"ts": "2026-05-13T13:15:03.040Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 31, "has_position": false}
+{"ts": "2026-05-13T13:15:03.041Z", "symbol": "ETHUSDT", "event": "signal_expired", "bars_passed": 15, "expiry_bars": 12, "side": "buy", "entry": 2306.8900000000003}
+{"ts": "2026-05-13T13:15:03.041Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 31}
+{"ts": "2026-05-13T13:20:01.352Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 32}
+{"ts": "2026-05-13T13:20:01.811Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 32, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:15:00+00:00", "h1_trend": {"2026-05-13 13:05:00+00:00": "flat", "2026-05-13 13:10:00+00:00": "flat", "2026-05-13 13:15:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:20:02.011Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 32, "total_signals": 434, "side": "buy", "entry": 2306.8900000000003, "sl": 2298.64, "tp": 2315.140000000001, "qty": 0.043348404128502, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:20:02.100Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 32, "equity": 57521.79845484, "available": 57521.79845484, "used_margin": 0.0}
+{"ts": "2026-05-13T13:20:02.396Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 32, "has_position": false}
+{"ts": "2026-05-13T13:20:02.397Z", "symbol": "ETHUSDT", "event": "signal_expired", "bars_passed": 16, "expiry_bars": 12, "side": "buy", "entry": 2306.8900000000003}
+{"ts": "2026-05-13T13:20:02.397Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 32}
+{"ts": "2026-05-13T13:25:01.718Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 33}
+{"ts": "2026-05-13T13:25:02.530Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 33, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:20:00+00:00", "h1_trend": {"2026-05-13 13:10:00+00:00": "flat", "2026-05-13 13:15:00+00:00": "flat", "2026-05-13 13:20:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:25:02.702Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 33, "total_signals": 433, "side": "buy", "entry": 2306.8900000000003, "sl": 2298.64, "tp": 2315.140000000001, "qty": 0.043348404128502, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:25:02.795Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 33, "equity": 57521.79845484, "available": 57521.79845484, "used_margin": 0.0}
+{"ts": "2026-05-13T13:25:03.269Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 33, "has_position": false}
+{"ts": "2026-05-13T13:25:03.269Z", "symbol": "ETHUSDT", "event": "signal_expired", "bars_passed": 17, "expiry_bars": 12, "side": "buy", "entry": 2306.8900000000003}
+{"ts": "2026-05-13T13:25:03.269Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 33}
+{"ts": "2026-05-13T13:30:01.466Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 34}
+{"ts": "2026-05-13T13:30:01.979Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 34, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:25:00+00:00", "h1_trend": {"2026-05-13 13:15:00+00:00": "flat", "2026-05-13 13:20:00+00:00": "flat", "2026-05-13 13:25:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:30:02.183Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 34, "total_signals": 432, "side": "buy", "entry": 2306.8900000000003, "sl": 2298.64, "tp": 2315.140000000001, "qty": 0.043348404128502, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:30:02.408Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 34, "equity": 57521.79845484, "available": 56960.28548464, "used_margin": 561.5129702}
+{"ts": "2026-05-13T13:30:02.794Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 34, "has_position": false}
+{"ts": "2026-05-13T13:30:02.795Z", "symbol": "ETHUSDT", "event": "signal_expired", "bars_passed": 18, "expiry_bars": 12, "side": "buy", "entry": 2306.8900000000003}
+{"ts": "2026-05-13T13:30:02.795Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 34}
+{"ts": "2026-05-13T13:35:02.086Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 35}
+{"ts": "2026-05-13T13:35:02.847Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 35, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:30:00+00:00", "h1_trend": {"2026-05-13 13:20:00+00:00": "flat", "2026-05-13 13:25:00+00:00": "flat", "2026-05-13 13:30:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:35:03.020Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 35, "total_signals": 431, "side": "buy", "entry": 2306.8900000000003, "sl": 2298.64, "tp": 2315.140000000001, "qty": 0.043348404128502, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:35:03.108Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 35, "equity": 57521.68101724, "available": 56960.476370439996, "used_margin": 561.2099668}
+{"ts": "2026-05-13T13:35:03.386Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 35, "has_position": false}
+{"ts": "2026-05-13T13:35:03.387Z", "symbol": "ETHUSDT", "event": "signal_expired", "bars_passed": 19, "expiry_bars": 12, "side": "buy", "entry": 2306.8900000000003}
+{"ts": "2026-05-13T13:35:03.387Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 35}
+{"ts": "2026-05-13T13:40:01.710Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 36}
+{"ts": "2026-05-13T13:40:02.628Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 36, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:35:00+00:00", "h1_trend": {"2026-05-13 13:25:00+00:00": "flat", "2026-05-13 13:30:00+00:00": "flat", "2026-05-13 13:35:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:40:02.799Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 36, "total_signals": 430, "side": "buy", "entry": 2306.8900000000003, "sl": 2298.64, "tp": 2315.140000000001, "qty": 0.043348404128502, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:40:02.879Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 36, "equity": 57522.95247932, "available": 57522.95247932, "used_margin": 0.0}
+{"ts": "2026-05-13T13:40:03.160Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 36, "has_position": false}
+{"ts": "2026-05-13T13:40:03.161Z", "symbol": "ETHUSDT", "event": "signal_expired", "bars_passed": 20, "expiry_bars": 12, "side": "buy", "entry": 2306.8900000000003}
+{"ts": "2026-05-13T13:40:03.161Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 36}
+{"ts": "2026-05-13T13:45:01.512Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 37}
+{"ts": "2026-05-13T13:45:02.541Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 37, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:40:00+00:00", "h1_trend": {"2026-05-13 13:30:00+00:00": "flat", "2026-05-13 13:35:00+00:00": "flat", "2026-05-13 13:40:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:45:02.755Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 37, "total_signals": 429, "side": "buy", "entry": 2306.8900000000003, "sl": 2298.64, "tp": 2315.140000000001, "qty": 0.043348404128502, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:45:02.838Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 37, "equity": 57522.95247932, "available": 57522.95247932, "used_margin": 0.0}
+{"ts": "2026-05-13T13:45:03.117Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 37, "has_position": false}
+{"ts": "2026-05-13T13:45:03.118Z", "symbol": "ETHUSDT", "event": "signal_expired", "bars_passed": 21, "expiry_bars": 12, "side": "buy", "entry": 2306.8900000000003}
+{"ts": "2026-05-13T13:45:03.118Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 37}
+{"ts": "2026-05-13T13:50:01.436Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 38}
+{"ts": "2026-05-13T13:50:02.292Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 38, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:45:00+00:00", "h1_trend": {"2026-05-13 13:35:00+00:00": "flat", "2026-05-13 13:40:00+00:00": "flat", "2026-05-13 13:45:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:50:02.462Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 38, "total_signals": 428, "side": "buy", "entry": 2306.8900000000003, "sl": 2298.64, "tp": 2315.140000000001, "qty": 0.043348404128502, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:50:02.546Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 38, "equity": 57522.95247932, "available": 57522.95247932, "used_margin": 0.0}
+{"ts": "2026-05-13T13:50:02.939Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 38, "has_position": false}
+{"ts": "2026-05-13T13:50:02.939Z", "symbol": "ETHUSDT", "event": "signal_expired", "bars_passed": 22, "expiry_bars": 12, "side": "buy", "entry": 2306.8900000000003}
+{"ts": "2026-05-13T13:50:02.940Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 38}
+{"ts": "2026-05-13T13:55:02.410Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 39}
+{"ts": "2026-05-13T13:55:02.971Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 39, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:50:00+00:00", "h1_trend": {"2026-05-13 13:40:00+00:00": "flat", "2026-05-13 13:45:00+00:00": "flat", "2026-05-13 13:50:00+00:00": "flat"}}
+{"ts": "2026-05-13T13:55:03.141Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 39, "total_signals": 427, "side": "buy", "entry": 2306.8900000000003, "sl": 2298.64, "tp": 2315.140000000001, "qty": 0.043348404128502, "signal_bar": "2026-05-13 11:55:00+00:00", "trend": "bull"}
+{"ts": "2026-05-13T13:55:03.236Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 39, "equity": 57522.95247932, "available": 57522.95247932, "used_margin": 0.0}
+{"ts": "2026-05-13T13:55:03.517Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 39, "has_position": false}
+{"ts": "2026-05-13T13:55:03.518Z", "symbol": "ETHUSDT", "event": "signal_expired", "bars_passed": 23, "expiry_bars": 12, "side": "buy", "entry": 2306.8900000000003}
+{"ts": "2026-05-13T13:55:03.518Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 39}
+{"ts": "2026-05-13T14:00:01.732Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 40}
+{"ts": "2026-05-13T14:00:02.422Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 40, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 13:55:00+00:00", "h1_trend": {"2026-05-13 13:45:00+00:00": "bear", "2026-05-13 13:50:00+00:00": "bear", "2026-05-13 13:55:00+00:00": "bear"}}
+{"ts": "2026-05-13T14:00:02.624Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 40, "total_signals": 438, "side": "sell", "entry": 2257.18, "sl": 2282.9300000000003, "tp": 2231.4299999999994, "qty": 0.0443030684305195, "signal_bar": "2026-05-13 13:55:00+00:00", "trend": "bear"}
+{"ts": "2026-05-13T14:00:02.875Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 40, "equity": 57522.95247932, "available": 57522.95247932, "used_margin": 0.0}
+{"ts": "2026-05-13T14:00:03.243Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 40, "has_position": false}
+{"ts": "2026-05-13T14:00:03.244Z", "symbol": "ETHUSDT", "event": "risk_sizing", "balance": 57522.95, "margin_pct": 1.0, "margin_used": 564.295, "leverage": 1, "risk_cash": 6.4375, "reward_cash": 6.4375, "rr": 1.0, "qty": 0.25, "risk_per_unit": 25.75, "reward_per_unit": 25.75}
+{"ts": "2026-05-13T14:00:03.526Z", "symbol": "ETHUSDT", "event": "order_created", "dry_run": false, "link_id": "ema-33257621-s-1778680500", "side": "sell", "entry": 2257.18, "sl": 2282.94, "tp": 2231.42, "qty": 0.25, "signal_bar": "2026-05-13 13:55:00+00:00", "bybit_order_id": "48a2bba5-896a-4f43-8eba-897a4cf88a4d"}
+{"ts": "2026-05-13T14:00:03.526Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 40}
+{"ts": "2026-05-13T14:05:01.812Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 41}
+{"ts": "2026-05-13T14:05:02.407Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 41, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:00:00+00:00", "h1_trend": {"2026-05-13 13:50:00+00:00": "bear", "2026-05-13 13:55:00+00:00": "bear", "2026-05-13 14:00:00+00:00": "bear"}}
+{"ts": "2026-05-13T14:05:02.612Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 41, "total_signals": 438, "side": "sell", "entry": 2257.18, "sl": 2280.5600000000004, "tp": 2233.7999999999993, "qty": 0.0443030684305195, "signal_bar": "2026-05-13 14:00:00+00:00", "trend": "bear"}
+{"ts": "2026-05-13T14:05:02.812Z", "symbol": "ETHUSDT", "event": "order_cleared", "link_id": "ema-33257621-s-1778680500", "reason": "exchange_status_filled", "exchange_status": "filled"}
+{"ts": "2026-05-13T14:05:03.089Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 41, "equity": 57520.16760034, "available": 55822.172538089995, "used_margin": 1700.23940225}
+{"ts": "2026-05-13T14:05:03.368Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 41, "has_position": true}
+{"ts": "2026-05-13T14:05:03.368Z", "symbol": "ETHUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-13T14:05:03.368Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 41}
+{"ts": "2026-05-13T14:10:01.685Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 42}
+{"ts": "2026-05-13T14:10:02.170Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 42, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:05:00+00:00", "h1_trend": {"2026-05-13 13:55:00+00:00": "bear", "2026-05-13 14:00:00+00:00": "bear", "2026-05-13 14:05:00+00:00": "bear"}}
+{"ts": "2026-05-13T14:10:02.364Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 42, "total_signals": 438, "side": "sell", "entry": 2247.6099999999997, "sl": 2273.03, "tp": 2222.189999999999, "qty": 0.04449170452169194, "signal_bar": "2026-05-13 14:05:00+00:00", "trend": "bear"}
+{"ts": "2026-05-13T14:10:02.754Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 42, "equity": 57518.53824034, "available": 55820.543178089996, "used_margin": 1701.86876225}
+{"ts": "2026-05-13T14:10:03.034Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 42, "has_position": true}
+{"ts": "2026-05-13T14:10:03.035Z", "symbol": "ETHUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-13T14:10:03.035Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 42}
+{"ts": "2026-05-13T14:15:01.278Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 43}
+{"ts": "2026-05-13T14:15:02.149Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 43, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:10:00+00:00", "h1_trend": {"2026-05-13 14:00:00+00:00": "bear", "2026-05-13 14:05:00+00:00": "bear", "2026-05-13 14:10:00+00:00": "bear"}}
+{"ts": "2026-05-13T14:15:02.322Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 43, "total_signals": 438, "side": "sell", "entry": 2247.6099999999997, "sl": 2269.38, "tp": 2225.8399999999992, "qty": 0.04449170452169194, "signal_bar": "2026-05-13 14:10:00+00:00", "trend": "bear"}
+{"ts": "2026-05-13T14:15:02.401Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 43, "equity": 57517.58191034, "available": 55819.586848089995, "used_margin": 1702.82509225}
+{"ts": "2026-05-13T14:15:02.686Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 43, "has_position": true}
+{"ts": "2026-05-13T14:15:02.686Z", "symbol": "ETHUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-13T14:15:02.686Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 43}
+{"ts": "2026-05-13T14:20:01.950Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 44}
+{"ts": "2026-05-13T14:20:02.449Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 44, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:15:00+00:00", "h1_trend": {"2026-05-13 14:05:00+00:00": "bear", "2026-05-13 14:10:00+00:00": "bear", "2026-05-13 14:15:00+00:00": "bear"}}
+{"ts": "2026-05-13T14:20:02.627Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 44, "total_signals": 438, "side": "sell", "entry": 2247.6099999999997, "sl": 2265.8100000000004, "tp": 2229.409999999999, "qty": 0.04449170452169194, "signal_bar": "2026-05-13 14:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-13T14:20:03.077Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 44, "equity": 57517.77852034, "available": 55819.783458089994, "used_margin": 1702.62848225}
+{"ts": "2026-05-13T14:20:03.358Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 44, "has_position": true}
+{"ts": "2026-05-13T14:20:03.358Z", "symbol": "ETHUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-13T14:20:03.358Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 44}
+{"ts": "2026-05-13T14:25:01.575Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 45}
+{"ts": "2026-05-13T14:25:02.024Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 45, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:20:00+00:00", "h1_trend": {"2026-05-13 14:10:00+00:00": "bear", "2026-05-13 14:15:00+00:00": "bear", "2026-05-13 14:20:00+00:00": "bear"}}
+{"ts": "2026-05-13T14:25:02.240Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 45, "total_signals": 438, "side": "sell", "entry": 2247.6099999999997, "sl": 2265.8100000000004, "tp": 2229.409999999999, "qty": 0.04449170452169194, "signal_bar": "2026-05-13 14:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-13T14:25:02.318Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 45, "equity": 57516.06946034, "available": 55818.07439808999, "used_margin": 1704.33754225}
+{"ts": "2026-05-13T14:25:02.730Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 45, "has_position": true}
+{"ts": "2026-05-13T14:25:02.730Z", "symbol": "ETHUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-13T14:25:02.731Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 45}
+{"ts": "2026-05-13T14:30:02.215Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 46}
+{"ts": "2026-05-13T14:30:02.587Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 46, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:25:00+00:00", "h1_trend": {"2026-05-13 14:15:00+00:00": "bear", "2026-05-13 14:20:00+00:00": "bear", "2026-05-13 14:25:00+00:00": "bear"}}
+{"ts": "2026-05-13T14:30:02.794Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 46, "total_signals": 438, "side": "sell", "entry": 2247.6099999999997, "sl": 2266.9500000000003, "tp": 2228.269999999999, "qty": 0.04449170452169194, "signal_bar": "2026-05-13 14:25:00+00:00", "trend": "bear"}
+{"ts": "2026-05-13T14:30:03.036Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 46, "equity": 57514.74416034, "available": 55816.74909809, "used_margin": 1705.66284225}
+{"ts": "2026-05-13T14:30:03.314Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 46, "has_position": true}
+{"ts": "2026-05-13T14:30:03.314Z", "symbol": "ETHUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-13T14:30:03.314Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 46}
+{"ts": "2026-05-13T14:35:01.518Z", "symbol": "ETHUSDT", "event": "cycle_start", "cycle": 47}
+{"ts": "2026-05-13T14:35:01.906Z", "symbol": "ETHUSDT", "event": "data_fetched", "cycle": 47, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-13 14:30:00+00:00", "h1_trend": {"2026-05-13 14:20:00+00:00": "bear", "2026-05-13 14:25:00+00:00": "bear", "2026-05-13 14:30:00+00:00": "bear"}}
+{"ts": "2026-05-13T14:35:02.086Z", "symbol": "ETHUSDT", "event": "signal", "cycle": 47, "total_signals": 438, "side": "sell", "entry": 2257.27, "sl": 2270.02, "tp": 2244.52, "qty": 0.044301302015266227, "signal_bar": "2026-05-13 14:30:00+00:00", "trend": "bear"}
+{"ts": "2026-05-13T14:35:02.544Z", "symbol": "ETHUSDT", "event": "balance", "cycle": 47, "equity": 57515.85643034, "available": 55817.861368089994, "used_margin": 1704.55057225}
+{"ts": "2026-05-13T14:35:02.961Z", "symbol": "ETHUSDT", "event": "position_check", "cycle": 47, "has_position": true}
+{"ts": "2026-05-13T14:35:02.961Z", "symbol": "ETHUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-13T14:35:02.961Z", "symbol": "ETHUSDT", "event": "cycle_complete", "cycle": 47}
