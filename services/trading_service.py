@@ -46,6 +46,7 @@ from storage.signal_log import SignalLogger
 from storage.event_journal import EventJournal
 from strategy.crypto_core import add_emas, merge_h1_trend_onto_m5
 from strategy.setup import list_setup_signals
+from telemetry.logging import SymbolAdapter, add_symbol_file_handler
 
 log = logging.getLogger(__name__)
 
@@ -66,6 +67,7 @@ class TradingService:
         self._cfg = settings
         self._running = False
         self._shutdown_event = asyncio.Event()
+        self._log = SymbolAdapter(log, settings.symbol)
 
         # ── Infrastructure ────────────────────────────────────────────────────
         self._client = BybitClient(
@@ -87,7 +89,7 @@ class TradingService:
         # ── Event journal (JSONL per symbol) ──────────────────────────────────
         self._journal = EventJournal(settings.symbol, log_dir=settings.event_log_dir)
         if self._journal.enabled:
-            log.info("Event journal → %s", self._journal.path)
+            self._log.info("Event journal → %s", self._journal.path)
 
         # These are set up in _initialize()
         self._info: Optional[InstrumentInfo] = None
@@ -123,16 +125,16 @@ class TradingService:
             await self._initialize()
             await self._loop()
         except asyncio.CancelledError:
-            log.info("TradingService cancelled.")
+            self._log.info("TradingService cancelled.")
         except Exception as exc:
-            log.exception("Fatal error in TradingService: %s", exc)
+            self._log.exception("Fatal error in TradingService: %s", exc)
             raise
         finally:
             await self._teardown()
 
     async def stop(self) -> None:
         """Signal graceful shutdown."""
-        log.info("Shutdown requested.")
+        self._log.info("Shutdown requested.")
         self._running = False
         self._shutdown_event.set()
 
@@ -141,16 +143,15 @@ class TradingService:
     async def _initialize(self) -> None:
         """One-time setup: instrument info, leverage, position mode, reconcile."""
         cfg = self._cfg
-        log.info(
-            "Initializing | symbol=%s testnet=%s leverage=%dx dry_run=%s",
-            cfg.symbol, cfg.bybit_testnet, cfg.leverage, cfg.dry_run,
+        self._log.info(
+            "Initializing | testnet=%s leverage=%dx dry_run=%s",
+            cfg.bybit_testnet, cfg.leverage, cfg.dry_run,
         )
 
         # Fetch instrument info (tick size, qty step, etc.)
         self._info = await self._client.get_instrument_info(cfg.symbol)
-        log.info(
-            "Instrument | symbol=%s tickSize=%s qtyStep=%s minQty=%s maxQty=%s",
-            self._info.symbol,
+        self._log.info(
+            "Instrument | tickSize=%s qtyStep=%s minQty=%s maxQty=%s",
             self._info.tick_size,
             self._info.qty_step,
             self._info.min_qty,
@@ -178,6 +179,7 @@ class TradingService:
             info=self._info,
             state=self._state,
             magic=cfg.effective_magic(),
+            symbol=cfg.symbol,
             position_idx=cfg.position_idx,
             leverage=cfg.leverage,
             dry_run=cfg.dry_run,
@@ -192,10 +194,13 @@ class TradingService:
             journal=self._journal,
         )
 
+        # ── Per-symbol log file ───────────────────────────────────────────────
+        add_symbol_file_handler(cfg.symbol, log_dir="logs", json_output=cfg.log_json)
+
         # ── Startup recovery: adopt orphan orders from previous session ───────
         await self._reconciler.reconcile_on_startup()
 
-        log.info(
+        self._log.info(
             "Initialized | magic=%d pip_size=%.6f lookback=%d "
             "offset_ticks=%.1f expiry_min=%d rr=%.1f risk=%.4f",
             cfg.effective_magic(),
@@ -214,52 +219,56 @@ class TradingService:
     async def _log_account_summary(self) -> None:
         """Log a full account snapshot to console and journal at startup."""
         cfg = self._cfg
-        sep = "=" * 70
+        sep = "─" * 55
         mode = "DEMO" if cfg.bybit_demo else ("TESTNET" if cfg.bybit_testnet else "LIVE")
 
-        log.info(sep)
-        log.info("ACCOUNT SNAPSHOT | %s", mode)
-        log.info(sep)
+        self._log.info(sep)
+        self._log.info("ACCOUNT SNAPSHOT | %s", mode)
 
         # ── Wallet ────────────────────────────────────────────────────────────
         try:
             wallet = await self._client.get_balance()
-            log.info("  Wallet  | equity=%.2f USDT  available=%.2f USDT  used_margin=%.2f USDT",
-                     wallet.total_equity, wallet.available_balance, wallet.used_margin)
+            self._log.info(
+                "  Wallet   | equity=%.2f  available=%.2f  margin=%.2f USDT",
+                wallet.total_equity, wallet.available_balance, wallet.used_margin,
+            )
         except Exception as exc:
-            log.warning("  Wallet  | could not fetch: %s", exc)
+            self._log.warning("  Wallet   | could not fetch: %s", exc)
             wallet = None
 
         # ── Bot config ────────────────────────────────────────────────────────
-        log.info("  Symbol  | %s  (tickSize=%s  qtyStep=%s  minQty=%s)",
-                 cfg.symbol, self._info.tick_size, self._info.qty_step, self._info.min_qty)
-        log.info("  Risk    | %.1f%% per trade  leverage=%dx  RR=%.1f  pip=%.6f",
-                 cfg.risk_per_trade * 100, cfg.leverage, cfg.rr, cfg.effective_pip_size())
-        log.info("  Expiry  | %d min (%d bars M%d)  lookback=%d bars",
-                 cfg.pending_expiry_min, cfg.expiry_bars, cfg.entry_tf_minutes, cfg.lookback_bars)
-
+        self._log.info(
+            "  Config   | risk=%.1f%%  lev=%dx  RR=%.1f  pip=%.6f  expiry=%dmin  lookback=%d",
+            cfg.risk_per_trade * 100, cfg.leverage, cfg.rr, cfg.effective_pip_size(),
+            cfg.pending_expiry_min, cfg.lookback_bars,
+        )
         if wallet is not None and wallet.total_equity > 0:
             risk_cash = wallet.total_equity * cfg.risk_per_trade
-            log.info("  Per trade | risk_cash=%.2f USDT  (%.1f%% of %.2f USDT equity)",
-                     risk_cash, cfg.risk_per_trade * 100, wallet.total_equity)
-
-        log.info("  Mode    | dry_run=%s  replace_pending=%s  position_mode=%s",
-                 cfg.dry_run, cfg.replace_pending, cfg.position_mode)
+            self._log.info(
+                "  Per trade | %.2f USDT risk  (%.1f%% of %.2f equity)",
+                risk_cash, cfg.risk_per_trade * 100, wallet.total_equity,
+            )
+        self._log.info(
+            "  Mode     | dry_run=%s  replace_pending=%s  position_mode=%s",
+            cfg.dry_run, cfg.replace_pending, cfg.position_mode,
+        )
 
         # ── Open positions ────────────────────────────────────────────────────
         positions = []
         try:
             positions = await self._client.get_positions(cfg.symbol)
             if positions:
-                log.info("  Positions | %d open:", len(positions))
+                self._log.info("  Positions | %d open:", len(positions))
                 for p in positions:
-                    log.info("    → %s  size=%s  entry=%.2f  uPnL=%.2f USDT  lev=%sx",
-                             p.side.value.upper(), p.size, p.entry_price,
-                             p.unrealized_pnl, int(p.leverage))
+                    self._log.info(
+                        "    → %s  size=%s  entry=%.2f  uPnL=%.2f USDT  lev=%sx",
+                        p.side.value.upper(), p.size, p.entry_price,
+                        p.unrealized_pnl, int(p.leverage),
+                    )
             else:
-                log.info("  Positions | none open")
+                self._log.info("  Positions | none open")
         except Exception as exc:
-            log.warning("  Positions | could not fetch: %s", exc)
+            self._log.warning("  Positions | could not fetch: %s", exc)
 
         # ── Pending orders ────────────────────────────────────────────────────
         our_orders = []
@@ -268,22 +277,21 @@ class TradingService:
             our_orders = [o for o in raw_orders
                           if o.get("orderLinkId", "").startswith("ema-")]
             if our_orders:
-                log.info("  Pending   | %d order(s):", len(our_orders))
+                self._log.info("  Pending   | %d order(s):", len(our_orders))
                 for o in our_orders:
-                    log.info("    → %s  side=%s  trigger=%s  sl=%s  tp=%s  qty=%s  status=%s",
-                             o.get("orderLinkId", "?"),
-                             o.get("side", "?"),
-                             o.get("triggerPrice", "?"),
-                             o.get("stopLoss", "?"),
-                             o.get("takeProfit", "?"),
-                             o.get("qty", "?"),
-                             o.get("orderStatus", "?"))
+                    self._log.info(
+                        "    → %s  side=%s  trigger=%s  sl=%s  tp=%s  qty=%s  status=%s",
+                        o.get("orderLinkId", "?"), o.get("side", "?"),
+                        o.get("triggerPrice", "?"), o.get("stopLoss", "?"),
+                        o.get("takeProfit", "?"), o.get("qty", "?"),
+                        o.get("orderStatus", "?"),
+                    )
             else:
-                log.info("  Pending   | none")
+                self._log.info("  Pending   | none")
         except Exception as exc:
-            log.warning("  Pending   | could not fetch: %s", exc)
+            self._log.warning("  Pending   | could not fetch: %s", exc)
 
-        log.info(sep)
+        self._log.info(sep)
 
         # ── Journal: bot_start + account_snapshot ─────────────────────────────
         self._journal.log(
@@ -328,16 +336,16 @@ class TradingService:
         Loop fires immediately on start, then sleeps until the next M5 candle boundary.
         The duplicate-candle guard prevents double-processing on restart.
         """
-        log.info("=" * 70)
-        log.info("TRADING LOOP STARTED | symbol=%s", self._cfg.symbol)
-        log.info("=" * 70)
+        self._log.info("━" * 55)
+        self._log.info("TRADING LOOP STARTED")
+        self._log.info("━" * 55)
 
         while self._running:
             # ── Duplicate-candle guard (peek cheaply) ─────────────────────────
             current_candle = await self._fetcher.peek_latest_candle_time()
 
             if self._state.is_duplicate_candle(current_candle):
-                log.info("Candle %s already processed — waiting for next.", current_candle)
+                self._log.info("Candle %s already processed — waiting for next.", current_candle)
                 await self._sleep_until_next_candle()
                 continue
 
@@ -348,7 +356,7 @@ class TradingService:
                 self._state.mark_candle_processed(current_candle)
             except Exception as exc:
                 self._state.cycles_error += 1
-                log.exception("ERROR in strategy cycle #%d: %s", self._state.cycles_total, exc)
+                self._log.exception("ERROR in strategy cycle #%d: %s", self._state.cycles_total, exc)
                 self._journal.log("cycle_error", cycle=self._state.cycles_total, error=str(exc))
 
             # ── Sleep until next M5 boundary ──────────────────────────────────
@@ -366,9 +374,7 @@ class TradingService:
         """
         cfg = self._cfg
         cycle_num = self._state.cycles_total
-        log.info("-" * 50)
-        log.info("CYCLE #%d | %s", cycle_num, self._cfg.symbol)
-        log.info("-" * 50)
+        self._log.info("── CYCLE #%d ──────────────────────────────────────", cycle_num)
 
         self._journal.log("cycle_start", cycle=cycle_num)
 
@@ -379,8 +385,8 @@ class TradingService:
         m5_ctx = _build_context(m5, h1)
 
         h1_trend_tail = {str(k): v for k, v in m5_ctx["trend"].tail(3).to_dict().items()}
-        log.info("H1 trend tail: %s", h1_trend_tail)
-        log.info("M5 trend dist: %s", m5_ctx["trend"].value_counts(dropna=False).to_dict())
+        self._log.info("H1 trend (last 3): %s", h1_trend_tail)
+        self._log.info("M5 trend dist: %s", m5_ctx["trend"].value_counts(dropna=False).to_dict())
 
         self._journal.log(
             "data_fetched",
@@ -403,10 +409,10 @@ class TradingService:
             leverage=cfg.leverage,
         )
 
-        log.info("Signals: %d total", len(signals))
+        self._log.info("Signals: %d total", len(signals))
         if not signals.empty:
             last = signals.iloc[-1]
-            log.info(
+            self._log.info(
                 "Last signal | side=%s entry=%.5f sl=%.5f tp=%.5f qty=%.4f bar=%s",
                 last["side"], last["entry"], last["sl"], last["tp"],
                 last["qty"], last["signal_bar_time"],
@@ -433,8 +439,8 @@ class TradingService:
         # ── 5. Get live balance ───────────────────────────────────────────────
         wallet = await self._client.get_balance()
         balance = wallet.total_equity
-        log.info(
-            "Balance: %.2f USDT | available=%.2f USDT | used_margin=%.2f USDT",
+        self._log.info(
+            "Balance: %.2f USDT | available=%.2f | margin=%.2f USDT",
             balance, wallet.available_balance, wallet.used_margin,
         )
         self._journal.log(
@@ -447,7 +453,7 @@ class TradingService:
 
         # ── 6. Check for open position ────────────────────────────────────────
         has_position = await self._client.has_open_position(cfg.symbol)
-        log.info("Open position [%s]: %s", cfg.symbol, has_position)
+        self._log.info("Open position: %s", has_position)
         self._journal.log("position_check", cycle=cycle_num, has_position=has_position)
 
         # ── 7. Sync pending orders (core logic — identical to MT5) ────────────
@@ -485,11 +491,12 @@ class TradingService:
 
         wait_seconds += 1  # 1s buffer to ensure candle is closed
 
-        log.info(
-            "[%s] Sleeping %ds until next %dm candle...",
-            now.strftime("%Y-%m-%d %H:%M:%S UTC"),
+        from datetime import timedelta
+        self._log.info(
+            "Sleeping %ds → next %dm candle at %s UTC",
             wait_seconds,
             tf_minutes,
+            (now + timedelta(seconds=wait_seconds)).strftime("%H:%M:%S"),
         )
 
         try:
@@ -497,8 +504,7 @@ class TradingService:
                 self._shutdown_event.wait(),
                 timeout=wait_seconds,
             )
-            # Shutdown event fired during sleep
-            log.info("Shutdown event received during sleep.")
+            self._log.info("Shutdown event received during sleep.")
             self._running = False
         except asyncio.TimeoutError:
             pass  # Normal: sleep expired, continue loop
@@ -507,10 +513,7 @@ class TradingService:
 
     async def _teardown(self) -> None:
         """Graceful shutdown — cancel any pending orders if configured."""
-        log.info("=" * 70)
-        log.info("GRACEFUL SHUTDOWN | symbol=%s", self._cfg.symbol)
-        log.info("State: %s", self._state.summary())
-        log.info("=" * 70)
+        self._log.info("GRACEFUL SHUTDOWN | state: %s", self._state.summary())
 
     # ── Signal log helper ─────────────────────────────────────────────────────
 
@@ -540,7 +543,7 @@ class TradingService:
                 action=action,
             )
         except Exception as exc:
-            log.debug("Signal log error (non-fatal): %s", exc)
+            self._log.debug("Signal log error (non-fatal): %s", exc)
 
 
 # ── Context building (pure — identical to MT5 build_context()) ────────────────

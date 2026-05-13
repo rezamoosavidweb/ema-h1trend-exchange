@@ -24,6 +24,7 @@ from exchange.bybit_client import BybitClient
 from models.order import OrderStatus, PendingOrder, Side
 from state.bot_state import BotState
 from storage.event_journal import EventJournal
+from telemetry.logging import SymbolAdapter
 
 log = logging.getLogger(__name__)
 
@@ -50,6 +51,7 @@ class OrderReconciler:
         self._magic = magic
         self._symbol = symbol
         self._journal = journal
+        self._log = SymbolAdapter(log, symbol)
 
     # ── Startup recovery ──────────────────────────────────────────────────────
 
@@ -63,19 +65,17 @@ class OrderReconciler:
         3. If found: adopt the most recent one into local state.
         4. Cancel any stale duplicates (more than one pending is a race condition).
         """
-        log.info("[%s] Running startup reconciliation...", self._symbol)
+        self._log.info("Running startup reconciliation...")
 
         # ── Check open positions ──────────────────────────────────────────────
         positions = await self._client.get_positions(self._symbol)
         if positions:
-            log.info(
-                "[%s] Found %d open position(s) at startup. Will not place pending orders "
-                "until positions close.",
-                self._symbol,
+            self._log.info(
+                "Found %d open position(s) at startup — will not place pending until closed.",
                 len(positions),
             )
             for p in positions:
-                log.info(
+                self._log.info(
                     "  Position: side=%s size=%s entry=%.5f",
                     p.side.value, p.size, p.entry_price,
                 )
@@ -88,13 +88,13 @@ class OrderReconciler:
         ]
 
         if not our_orders:
-            log.info("[%s] No orphan orders found at startup.", self._symbol)
+            self._log.info("No orphan orders found at startup.")
             self._state.mark_recovery_done()
             return
 
-        log.info("[%s] Found %d orphan order(s) from previous session.", self._symbol, len(our_orders))
+        self._log.info("Found %d orphan order(s) from previous session.", len(our_orders))
         for o in our_orders:
-            log.info(
+            self._log.info(
                 "  Orphan: link=%s side=%s triggerPrice=%s status=%s",
                 o.get("orderLinkId"),
                 o.get("side"),
@@ -118,14 +118,14 @@ class OrderReconciler:
         # Cancel duplicates
         for orphan in stale:
             link = orphan.get("orderLinkId", "")
-            log.info("Cancelling stale duplicate orphan: %s", link)
+            self._log.info("Cancelling stale duplicate orphan: %s", link)
             await self._client.cancel_order(self._symbol, link)
 
         # Adopt latest into state
         adopted = _raw_order_to_pending(latest, self._symbol)
         if adopted is not None:
             self._state.set_pending(adopted)
-            log.info("[%s] Adopted orphan into state: %s", self._symbol, adopted)
+            self._log.info("Adopted orphan into state: %s", adopted)
             if self._journal:
                 self._journal.log("orphan_adopted",
                                   link_id=adopted.order_link_id,
@@ -150,9 +150,8 @@ class OrderReconciler:
         order = await self._client.get_order_by_link_id(self._symbol, link_id)
 
         if order is None:
-            log.info(
-                "Tracked pending %s no longer on exchange (filled/cancelled/triggered). "
-                "Clearing local state.",
+            self._log.info(
+                "Pending %s no longer on exchange (filled/cancelled/triggered) — clearing.",
                 link_id,
             )
             if self._journal:
@@ -163,7 +162,7 @@ class OrderReconciler:
 
         status = order.get("orderStatus", "").lower()
         if status in ("cancelled", "deactivated", "filled"):
-            log.info("Tracked pending %s status=%s — clearing.", link_id, status)
+            self._log.info("Tracked pending %s status=%s — clearing.", link_id, status)
             if self._journal:
                 self._journal.log("order_cleared", link_id=link_id,
                                   reason=f"exchange_status_{status}",
@@ -188,12 +187,12 @@ class OrderReconciler:
                 continue
             if link == tracked_link:
                 continue
-            log.info("Cancelling orphan order: %s", link)
+            self._log.info("Cancelling orphan order: %s", link)
             await self._client.cancel_order(self._symbol, link)
             cancelled += 1
 
         if cancelled:
-            log.info("Cleaned up %d orphan order(s).", cancelled)
+            self._log.info("Cleaned up %d orphan order(s).", cancelled)
         return cancelled
 
 
@@ -231,5 +230,5 @@ def _raw_order_to_pending(raw: dict, symbol: str) -> Optional[PendingOrder]:
             status=OrderStatus.PENDING,
         )
     except Exception as exc:
-        log.warning("Could not parse raw order into PendingOrder: %s — %s", raw, exc)
+        log.warning("Could not parse raw order into PendingOrder: %s | %s", raw, exc)
         return None

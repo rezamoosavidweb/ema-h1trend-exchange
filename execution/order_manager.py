@@ -41,6 +41,7 @@ from models.order import InstrumentInfo, PendingOrder, Side, TriggerDirection, W
 from risk.sizing import check_margin_available, compute_qty, risk_summary
 from state.bot_state import BotState, make_order_link_id
 from storage.event_journal import EventJournal
+from telemetry.logging import SymbolAdapter
 
 log = logging.getLogger(__name__)
 
@@ -59,6 +60,7 @@ class OrderManager:
         info: InstrumentInfo,
         state: BotState,
         magic: int,
+        symbol: str = "",
         position_idx: int = 0,
         leverage: int = 1,
         dry_run: bool = False,
@@ -72,7 +74,8 @@ class OrderManager:
         self._leverage = leverage
         self._dry_run = dry_run
         self._journal = journal
-        self._last_wallet: Optional[WalletBalance] = None  # set externally before sync
+        self._last_wallet: Optional[WalletBalance] = None
+        self._log = SymbolAdapter(log, symbol or info.symbol)
 
     # ── Create ────────────────────────────────────────────────────────────────
 
@@ -98,7 +101,7 @@ class OrderManager:
         try:
             validate_order_geometry(side, adj_entry, adj_sl, adj_tp, self._info)
         except InvalidPriceError as exc:
-            log.error("Price geometry invalid after snap — skipping: %s", exc)
+            self._log.error("Price geometry invalid after snap — skipping: %s", exc)
             return None
 
         # Normalize quantity
@@ -106,14 +109,14 @@ class OrderManager:
         try:
             validate_qty(norm_qty, self._info)
         except InvalidQtyError as exc:
-            log.error("Invalid qty — skipping: %s", exc)
+            self._log.error("Invalid qty — skipping: %s", exc)
             return None
 
         order_link_id = make_order_link_id(
             self._info.symbol, self._magic, side, signal_bar_time
         )
 
-        log.info(
+        self._log.info(
             "Creating %s_STOP | link=%s entry=%s sl=%s tp=%s qty=%s signal_bar=%s",
             side.upper(),
             order_link_id,
@@ -125,7 +128,7 @@ class OrderManager:
         )
 
         if self._dry_run:
-            log.info("[DRY RUN] Would place order — no actual API call.")
+            self._log.info("[DRY RUN] Would place order — no actual API call.")
             pending = PendingOrder(
                 order_link_id=order_link_id,
                 side=Side.BUY if side == "buy" else Side.SELL,
@@ -164,7 +167,7 @@ class OrderManager:
                 position_idx=self._position_idx,
             )
         except ExchangeError as exc:
-            log.error("create_pending_order FAILED: %s", exc)
+            self._log.error("create_pending_order FAILED: %s", exc)
             if self._journal:
                 self._journal.log("order_create_failed", link_id=order_link_id,
                                   side=side, entry=adj_entry, error=str(exc))
@@ -183,7 +186,7 @@ class OrderManager:
             bybit_order_id=result.get("orderId"),
         )
         self._state.set_pending(pending)
-        log.info("Pending order CREATED | %s", pending)
+        self._log.info("Pending order CREATED | %s", pending)
         if self._journal:
             self._journal.log("order_created", dry_run=False,
                               link_id=order_link_id, side=side,
@@ -209,7 +212,7 @@ class OrderManager:
         Returns True on success.
         """
         if self._state.pending is None:
-            log.error("modify_pending_order called but no pending order tracked.")
+            self._log.error("modify_pending_order called but no pending order tracked.")
             return False
 
         order_link_id = self._state.pending.order_link_id
@@ -219,12 +222,12 @@ class OrderManager:
         try:
             validate_order_geometry(side, adj_entry, adj_sl, adj_tp, self._info)
         except InvalidPriceError as exc:
-            log.error("Modify geometry invalid — aborting: %s", exc)
+            self._log.error("Modify geometry invalid — aborting: %s", exc)
             return False
 
         norm_qty = normalize_qty(qty, self._info)
 
-        log.info(
+        self._log.info(
             "Modifying pending | link=%s entry=%s sl=%s tp=%s qty=%s",
             order_link_id,
             price_to_str(adj_entry, self._info.tick_size),
@@ -234,7 +237,7 @@ class OrderManager:
         )
 
         if self._dry_run:
-            log.info("[DRY RUN] Would amend order.")
+            self._log.info("[DRY RUN] Would amend order.")
             self._state.pending.entry = adj_entry
             self._state.pending.sl = adj_sl
             self._state.pending.tp = adj_tp
@@ -255,7 +258,7 @@ class OrderManager:
                 tp=price_to_str(adj_tp, self._info.tick_size),
             )
         except ExchangeError as exc:
-            log.error("modify_pending_order FAILED: %s", exc)
+            self._log.error("modify_pending_order FAILED: %s", exc)
             if self._journal:
                 self._journal.log("order_modify_failed", link_id=order_link_id, error=str(exc))
             return False
@@ -264,7 +267,7 @@ class OrderManager:
         self._state.pending.sl = adj_sl
         self._state.pending.tp = adj_tp
         self._state.pending.qty = norm_qty
-        log.info("Pending order MODIFIED | link=%s", order_link_id)
+        self._log.info("Pending order MODIFIED | link=%s", order_link_id)
         if self._journal:
             self._journal.log("order_modified", dry_run=False, link_id=order_link_id,
                               entry=adj_entry, sl=adj_sl, tp=adj_tp, qty=norm_qty)
@@ -279,11 +282,11 @@ class OrderManager:
         Equivalent to MT5 TRADE_ACTION_REMOVE.
         """
         if self._state.pending is None:
-            log.debug("cancel_pending_order: no pending order to cancel.")
+            self._log.debug("cancel_pending_order: no pending order to cancel.")
             return
 
         order_link_id = self._state.pending.order_link_id
-        log.info("Cancelling pending order | link=%s reason=%s", order_link_id, reason or "unspecified")
+        self._log.info("Cancelling pending order | link=%s reason=%s", order_link_id, reason or "unspecified")
 
         if self._journal:
             self._journal.log("order_cancelled", link_id=order_link_id,
@@ -296,7 +299,7 @@ class OrderManager:
 
     async def cancel_all_pending(self, reason: str = "") -> None:
         """Cancel ALL stop orders on this symbol and clear local state."""
-        log.info("Cancelling ALL pending orders | symbol=%s reason=%s", self._info.symbol, reason)
+        self._log.info("Cancelling ALL pending orders | symbol=%s reason=%s", self._info.symbol, reason)
         if not self._dry_run:
             await self._client.cancel_all_stop_orders(self._info.symbol)
         self._state.clear_pending(reason)
@@ -336,14 +339,14 @@ class OrderManager:
 
         # ── Step 1: position guard ────────────────────────────────────────────
         if has_position:
-            log.info("Open position detected — skipping pending order sync.")
+            self._log.info("Open position detected — skipping pending order sync.")
             if self._journal:
                 self._journal.log("position_open_skip")
             return
 
         # ── Step 2: no signals ────────────────────────────────────────────────
         if signals_df is None or (hasattr(signals_df, "empty") and signals_df.empty):
-            log.info("No signals — no action on pending orders.")
+            self._log.info("No signals — no action on pending orders.")
             if self._journal:
                 self._journal.log("no_signal")
             return
@@ -363,14 +366,14 @@ class OrderManager:
         raw_tp = float(last_signal["tp"])
         raw_qty = float(last_signal["qty"])
 
-        log.info(
+        self._log.info(
             "Latest signal | side=%s entry=%.5f signal_time=%s bars_passed=%d expiry_bars=%d",
             side, raw_entry, signal_time, bars_passed, expiry_bars,
         )
 
         # ── Step 4: expired ───────────────────────────────────────────────────
         if bars_passed >= expiry_bars:
-            log.info("Signal EXPIRED (bars_passed=%d >= expiry_bars=%d).", bars_passed, expiry_bars)
+            self._log.info("Signal EXPIRED (bars_passed=%d >= expiry_bars=%d).", bars_passed, expiry_bars)
             if self._journal:
                 self._journal.log("signal_expired", bars_passed=bars_passed,
                                   expiry_bars=expiry_bars, side=side, entry=raw_entry)
@@ -379,13 +382,13 @@ class OrderManager:
             return
 
         # ── Step 5: valid signal ──────────────────────────────────────────────
-        log.info("Signal VALID.")
+        self._log.info("Signal VALID.")
 
         # ── Available balance guard ───────────────────────────────────────────
         if wallet is not None:
             avail = wallet.available_balance
             if avail <= 0:
-                log.warning(
+                self._log.warning(
                     "Available balance is %.2f USDT — no free margin. Skipping order.", avail
                 )
                 if self._journal:
@@ -396,14 +399,14 @@ class OrderManager:
         try:
             norm_qty = compute_qty(balance, risk_per_trade, raw_entry, self._leverage, self._info)
         except (InvalidQtyError, Exception) as exc:
-            log.error("Qty computation failed — skipping: %s", exc)
+            self._log.error("Qty computation failed — skipping: %s", exc)
             if self._journal:
                 self._journal.log("qty_error", error=str(exc), side=side, entry=raw_entry)
             return
 
         # Risk summary for logging
         summary = risk_summary(balance, risk_per_trade, raw_entry, raw_sl, raw_tp, side, norm_qty, self._leverage)
-        log.info("Risk | %s", " ".join(f"{k}={v}" for k, v in summary.items()))
+        self._log.info("Risk | %s", " ".join(f"{k}={v}" for k, v in summary.items()))
         if self._journal:
             self._journal.log("risk_sizing", **summary)
 
@@ -417,7 +420,7 @@ class OrderManager:
             tp_dist = adj_entry - adj_tp
 
         if tp_dist < original_sl_dist * 0.5:
-            log.warning(
+            self._log.warning(
                 "Stale signal — entry snapped past market (tp_dist=%.5f < min=%.5f). Skipping.",
                 tp_dist, original_sl_dist * 0.5,
             )
@@ -431,7 +434,7 @@ class OrderManager:
             try:
                 check_margin_available(wallet, norm_qty, adj_entry, self._leverage)
             except InsufficientMarginError as exc:
-                log.error("MARGIN CHECK FAILED — skipping order: %s", exc)
+                self._log.error("MARGIN CHECK FAILED — skipping order: %s", exc)
                 if self._journal:
                     self._journal.log("margin_failed", error=str(exc),
                                       qty=norm_qty, entry=adj_entry, leverage=self._leverage)
@@ -439,22 +442,22 @@ class OrderManager:
 
         # ── 5b: no existing pending → create ─────────────────────────────────
         if not self._state.has_pending():
-            log.info("No existing pending — creating new.")
+            self._log.info("No existing pending — creating new.")
             await self.create_pending_order(
                 side, raw_entry, raw_sl, raw_tp, norm_qty, signal_time
             )
             return
 
         # ── 5b / 5c / 5d: existing pending ───────────────────────────────────
-        log.info("Checking existing pending for changes (link=%s).", self._state.pending.order_link_id)
+        self._log.info("Checking existing pending for changes (link=%s).", self._state.pending.order_link_id)
 
         if self._state.pending_matches_signal(side, adj_entry, adj_sl, adj_tp, pip_size):
-            log.info("Pending order already up-to-date — no action.")
+            self._log.info("Pending order already up-to-date — no action.")
             return
 
         if not self._state.pending_side_matches(side):
             # Different side — cannot amend; must cancel and recreate
-            log.info(
+            self._log.info(
                 "Order side changed (%s → %s) — cancelling and recreating.",
                 self._state.pending.side.value, side,
             )
@@ -464,11 +467,11 @@ class OrderManager:
             )
         else:
             # Same side, different prices → modify
-            log.info("Pending prices changed — modifying.")
+            self._log.info("Pending prices changed — modifying.")
             success = await self.modify_pending_order(side, raw_entry, raw_sl, raw_tp, norm_qty)
             if not success:
                 # Amend failed (possibly already filled/cancelled) — recreate
-                log.warning("Amend failed — attempting cancel + recreate.")
+                self._log.warning("Amend failed — attempting cancel + recreate.")
                 await self.cancel_pending_order(reason="amend_failed")
                 await self.create_pending_order(
                     side, raw_entry, raw_sl, raw_tp, norm_qty, signal_time
