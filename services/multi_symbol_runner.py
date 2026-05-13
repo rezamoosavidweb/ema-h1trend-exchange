@@ -28,6 +28,7 @@ from services.trading_service import TradingService
 
 if TYPE_CHECKING:
     from telegram_bot.bot import TelegramBot
+    from services.ws_order_notifier import WsOrderNotifier
 
 log = logging.getLogger(__name__)
 
@@ -45,11 +46,13 @@ class MultiSymbolRunner:
         symbols: List[str],
         base_settings: Settings,
         telegram_bot: Optional["TelegramBot"] = None,
+        ws_notifier: Optional["WsOrderNotifier"] = None,
     ) -> None:
         self._symbols = symbols
         self._base = base_settings
         self._services: List[TradingService] = []
         self._telegram_bot = telegram_bot
+        self._ws_notifier = ws_notifier
 
     @property
     def services(self) -> List[TradingService]:
@@ -86,6 +89,13 @@ class MultiSymbolRunner:
                 name="telegram-bot",
             ))
 
+        # WebSocket order notifier — one shared instance for all symbols
+        if self._ws_notifier is not None:
+            tasks.append(asyncio.create_task(
+                self._ws_notifier.run(),
+                name="ws-order-notifier",
+            ))
+
         try:
             await asyncio.gather(*tasks, return_exceptions=False)
         except Exception as exc:
@@ -99,4 +109,6 @@ class MultiSymbolRunner:
             await svc.stop()
         if self._telegram_bot is not None:
             await self._telegram_bot.stop()
+        if self._ws_notifier is not None:
+            await self._ws_notifier.stop()
         log.info("MultiSymbolRunner stopped all services.")

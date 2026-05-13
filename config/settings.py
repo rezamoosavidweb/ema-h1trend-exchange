@@ -201,6 +201,22 @@ class Settings(BaseSettings):
         description="Chat ID to listen for slash commands. None = respond to all incoming messages.",
     )
 
+    # ── Telegram (Bot API — for WebSocket order notifications) ────────────────
+    telegram_bot_token: Optional[str] = Field(
+        None,
+        description="Telegram Bot token (from @BotFather). Used by WsOrderNotifier.",
+    )
+    telegram_chat_id: Optional[int] = Field(
+        None,
+        description="Target chat/channel ID for bot notifications (e.g. -1002383929199).",
+    )
+
+    # ── WebSocket notifier ────────────────────────────────────────────────────
+    ws_notifier_enabled: bool = Field(
+        True,
+        description="Enable Bybit private WebSocket for real-time Telegram order notifications.",
+    )
+
     # ── Derived properties (computed after validation) ────────────────────────
     @model_validator(mode="after")
     def _fill_derived(self) -> "Settings":

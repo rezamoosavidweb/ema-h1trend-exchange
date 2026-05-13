@@ -373,12 +373,22 @@ class OrderManager:
 
         # ── Step 4: expired ───────────────────────────────────────────────────
         if bars_passed >= expiry_bars:
-            self._log.info("Signal EXPIRED (bars_passed=%d >= expiry_bars=%d).", bars_passed, expiry_bars)
-            if self._journal:
-                self._journal.log("signal_expired", bars_passed=bars_passed,
-                                  expiry_bars=expiry_bars, side=side, entry=raw_entry)
             if self._state.has_pending():
+                # First cycle where this signal expires — cancel order and journal once
+                self._log.info(
+                    "Signal EXPIRED (bars_passed=%d >= expiry_bars=%d) — cancelling order.",
+                    bars_passed, expiry_bars,
+                )
+                if self._journal:
+                    self._journal.log("signal_expired", bars_passed=bars_passed,
+                                      expiry_bars=expiry_bars, side=side, entry=raw_entry)
                 await self.cancel_pending_order(reason="signal_expired")
+            else:
+                # Signal still stale but order already gone — suppress repeat journal spam
+                self._log.debug(
+                    "Stale signal (bars_passed=%d) — no pending order, nothing to do.",
+                    bars_passed,
+                )
             return
 
         # ── Step 5: valid signal ──────────────────────────────────────────────

@@ -54,6 +54,26 @@ def _build_telegram_bot(cfg: Settings, services: list) -> "Optional[TelegramBot]
         return None
 
 
+def _build_ws_notifier(cfg: Settings, tg_bot) -> "Optional[object]":
+    """
+    Return a WsOrderNotifier if WebSocket notifications are enabled and
+    a Telegram sender is available.
+    """
+    if not cfg.ws_notifier_enabled:
+        return None
+    if tg_bot is None:
+        log.info("WsOrderNotifier: no Telegram bot configured — skipping.")
+        return None
+    try:
+        from services.ws_order_notifier import WsOrderNotifier
+        notifier = WsOrderNotifier(settings=cfg, send_fn=tg_bot.send)
+        log.info("WsOrderNotifier created — will send order alerts to Telegram.")
+        return notifier
+    except Exception as exc:
+        log.warning("WsOrderNotifier could not be created: %s", exc)
+        return None
+
+
 # ── Argument parsing ──────────────────────────────────────────────────────────
 
 def _parse_args() -> argparse.Namespace:
@@ -292,27 +312,35 @@ def main() -> None:
             symbols = [s.strip().upper() for s in args.symbols.split(",") if s.strip()]
             log.info("Multi-symbol mode | symbols=%s", symbols)
             from services.multi_symbol_runner import MultiSymbolRunner
-            tg_bot = _build_telegram_bot(cfg, [])
-            runner = MultiSymbolRunner(symbols, cfg, telegram_bot=tg_bot)
+            tg_bot      = _build_telegram_bot(cfg, [])
+            ws_notifier = _build_ws_notifier(cfg, tg_bot)
+            runner      = MultiSymbolRunner(
+                symbols,
+                cfg,
+                telegram_bot=tg_bot,
+                ws_notifier=ws_notifier,
+            )
 
             async def _run_multi():
                 _install_signal_handlers_async(runner, loop)
                 if tg_bot is not None:
-                    # Login first (may prompt for phone/code on first run)
                     await tg_bot.login()
                 await runner.run()
 
             loop.run_until_complete(_run_multi())
         else:
-            service = TradingService(cfg)
-            tg_bot = _build_telegram_bot(cfg, [service])
+            service     = TradingService(cfg)
+            tg_bot      = _build_telegram_bot(cfg, [service])
+            ws_notifier = _build_ws_notifier(cfg, tg_bot)
             _install_signal_handlers(service, loop, tg_bot=tg_bot)
 
             if tg_bot is not None:
                 async def _run_single_with_telegram():
-                    # Login first (may prompt for phone/code on first run)
                     await tg_bot.login()
-                    await asyncio.gather(service.run(), tg_bot.run())
+                    tasks = [service.run(), tg_bot.run()]
+                    if ws_notifier is not None:
+                        tasks.append(ws_notifier.run())
+                    await asyncio.gather(*tasks)
                 loop.run_until_complete(_run_single_with_telegram())
             else:
                 loop.run_until_complete(service.run())

@@ -55,13 +55,21 @@ class TelethonNotifier:
             self._target,
         )
 
-    async def send(self, text: str) -> None:
-        """Send a text message to TARGET_CHANNEL."""
+    async def send(self, text: str, parse_mode: str = "md") -> None:
+        """
+        Send a text message to TARGET_CHANNEL.
+        parse_mode: 'md' (Markdown), 'html', or None (plain text).
+        """
         if self._client is None or not self._client.is_connected():
             log.warning("Telethon: client not connected — message dropped: %.80s", text)
             return
         try:
-            await self._client.send_message(self._target, text)
+            await self._client.send_message(
+                self._target,
+                text,
+                parse_mode=parse_mode,
+                link_preview=False,
+            )
         except Exception as exc:
             log.warning("Telethon: send_message failed: %s", exc)
 

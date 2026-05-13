@@ -82,6 +82,7 @@ class TradingService:
 
         # ── Per-symbol state ──────────────────────────────────────────────────
         self._state = BotState(symbol=settings.symbol)
+        self._last_h1_trend: str = ""
 
         # ── Signal logger ─────────────────────────────────────────────────────
         self._signal_log = SignalLogger(settings.signal_log_csv)
@@ -385,6 +386,8 @@ class TradingService:
         m5_ctx = _build_context(m5, h1)
 
         h1_trend_tail = {str(k): v for k, v in m5_ctx["trend"].tail(3).to_dict().items()}
+        current_trend = str(m5_ctx["trend"].iloc[-1]) if len(m5_ctx) > 0 else "unknown"
+
         self._log.info("H1 trend (last 3): %s", h1_trend_tail)
         self._log.info("M5 trend dist: %s", m5_ctx["trend"].value_counts(dropna=False).to_dict())
 
@@ -396,6 +399,21 @@ class TradingService:
             current_bar=str(m5_ctx.index[-1]),
             h1_trend=h1_trend_tail,
         )
+
+        # ── Trend change detection ─────────────────────────────────────────────
+        if self._last_h1_trend and current_trend != self._last_h1_trend:
+            self._log.info(
+                "H1 trend changed: %s → %s at bar %s",
+                self._last_h1_trend, current_trend, m5_ctx.index[-1],
+            )
+            self._journal.log(
+                "trend_changed",
+                cycle=cycle_num,
+                from_trend=self._last_h1_trend,
+                to_trend=current_trend,
+                bar=str(m5_ctx.index[-1]),
+            )
+        self._last_h1_trend = current_trend
 
         # ── 3. Generate signals ───────────────────────────────────────────────
         signals = list_setup_signals(
@@ -431,7 +449,14 @@ class TradingService:
                 trend=str(last.get("trend", "")),
             )
         else:
-            self._journal.log("signal", cycle=cycle_num, total_signals=0)
+            reason = "trend_flat" if current_trend not in ("bull", "bear") else "no_setup"
+            self._log.info("No signals — trend=%s reason=%s", current_trend, reason)
+            self._journal.log(
+                "no_signal",
+                cycle=cycle_num,
+                current_trend=current_trend,
+                reason=reason,
+            )
 
         # ── 4. Reconcile exchange state ───────────────────────────────────────
         await self._reconciler.reconcile_cycle()
