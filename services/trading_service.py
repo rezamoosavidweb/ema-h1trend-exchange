@@ -559,7 +559,7 @@ class TradingService:
                 model_tp=float(signal_row["tp"]),
                 setup_qty=float(signal_row["qty"]),
                 balance=cfg.start_balance,
-                risk_per_trade=cfg.risk_per_trade,
+                risk_cash=cfg.risk_fixed_usdt,
                 pip_size=cfg.effective_pip_size(),
                 lookback_bars=cfg.lookback_bars,
                 rr=cfg.rr,

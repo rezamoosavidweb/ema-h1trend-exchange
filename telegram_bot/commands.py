@@ -216,7 +216,7 @@ async def _config_text(services: Dict, base: Settings, req_symbol: Optional[str]
         lines.append(f"Config — {sym}")
         lines.append(f"  Mode:         {mode}")
         lines.append(f"  Dry Run:      {'Yes' if cfg.dry_run else 'No'}")
-        lines.append(f"  Risk/Trade:   {cfg.risk_per_trade * 100:.2f}%")
+        lines.append(f"  Risk/Trade:   {cfg.risk_fixed_usdt:.2f} USDT")
         lines.append(f"  R:R:          {cfg.rr}")
         lines.append(f"  Leverage:     {cfg.leverage}x")
         lines.append(f"  Lookback:     {cfg.lookback_bars} bars")

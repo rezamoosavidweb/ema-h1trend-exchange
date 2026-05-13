@@ -32,7 +32,6 @@ SIGNAL_CSV_FIELDS = (
     "adjusted_tp",
     "normalized_qty",
     "balance",
-    "risk_per_trade",
     "risk_cash",
     "pip_size",
     "lookback_bars",
@@ -75,7 +74,7 @@ class SignalLogger:
         adjusted_tp: Optional[float] = None,
         normalized_qty: Optional[float] = None,
         balance: float = 0.0,
-        risk_per_trade: float = 0.0,
+        risk_cash: float = 0.0,
         pip_size: float = 0.0,
         lookback_bars: int = 5,
         rr: float = 1.0,
@@ -97,8 +96,6 @@ class SignalLogger:
                 if hasattr(signal_bar_time, "isoformat")
                 else str(signal_bar_time)
             )
-            risk_cash = balance * risk_per_trade
-
             row = {
                 "logged_at_utc": datetime.now(timezone.utc).isoformat(),
                 "symbol": symbol,
@@ -115,7 +112,6 @@ class SignalLogger:
                 "adjusted_tp": f"{adjusted_tp:.5f}" if adjusted_tp is not None else "",
                 "normalized_qty": f"{normalized_qty:.6f}" if normalized_qty is not None else "",
                 "balance": f"{balance:.2f}",
-                "risk_per_trade": f"{risk_per_trade:.4f}",
                 "risk_cash": f"{risk_cash:.4f}",
                 "pip_size": f"{pip_size:.6f}",
                 "lookback_bars": lookback_bars,
