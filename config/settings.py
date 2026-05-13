@@ -25,7 +25,7 @@ from core.constants import (
     DEFAULT_LOOKBACK_BARS,
     DEFAULT_PENDING_EXPIRY_MIN,
     DEFAULT_PENDING_OFFSET_TICKS,
-    DEFAULT_RISK_PER_TRADE,
+    DEFAULT_RISK_FIXED_USDT,
     DEFAULT_RR,
     DEFAULT_START_BALANCE,
     ENTRY_TF_MINUTES,
@@ -76,12 +76,11 @@ class Settings(BaseSettings):
         None,
         description="Order isolation magic. Default: auto-derived from symbol.",
     )
-    risk_per_trade: float = Field(
-        DEFAULT_RISK_PER_TRADE,
+    risk_fixed_usdt: float = Field(
+        DEFAULT_RISK_FIXED_USDT,
         gt=0,
-        lt=1,
-        description="Fraction of wallet used as margin per trade (e.g. 0.01 = 1%). "
-                    "With leverage N: position notional = margin × N, margin committed stays fixed.",
+        description="Fixed dollar risk per trade in USDT (e.g. 20.0 = $20). "
+                    "qty = risk_fixed_usdt / sl_distance. Each trade wins/loses exactly this amount.",
     )
     pip_size: Optional[float] = Field(
         None,

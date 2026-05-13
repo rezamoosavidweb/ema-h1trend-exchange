@@ -181,8 +181,7 @@ class TestComputePendingSetup:
             pending_offset_ticks=3.0,
             pip_size=1.0,
             rr=1.0,
-            balance=10000.0,
-            risk_per_trade=0.01,
+            risk_cash=20.0,
         )
         assert result is not None
         assert result["side"] == "buy"
@@ -197,8 +196,7 @@ class TestComputePendingSetup:
             pending_offset_ticks=3.0,
             pip_size=1.0,
             rr=1.0,
-            balance=10000.0,
-            risk_per_trade=0.01,
+            risk_cash=20.0,
         )
         assert result is None
 
@@ -210,8 +208,7 @@ class TestComputePendingSetup:
             pending_offset_ticks=3.0,
             pip_size=1.0,
             rr=1.0,
-            balance=10000.0,
-            risk_per_trade=0.01,
+            risk_cash=20.0,
         )
         assert result is not None
         # Buy geometry: sl < entry < tp
@@ -219,21 +216,18 @@ class TestComputePendingSetup:
 
     def test_risk_sizing(self):
         ctx = self._bull_context()
-        balance = 10000.0
-        risk_pct = 0.01
+        risk_cash = 20.0
         result = compute_pending_setup(
             ctx, bar_index=220,
             lookback_bars=5,
             pending_offset_ticks=3.0,
             pip_size=1.0,
             rr=1.0,
-            balance=balance,
-            risk_per_trade=risk_pct,
+            risk_cash=risk_cash,
         )
         assert result is not None
-        expected_risk_cash = balance * risk_pct
         actual_risk_cash = result["qty"] * (result["entry"] - result["sl"])
-        assert abs(actual_risk_cash - expected_risk_cash) < 0.01
+        assert abs(actual_risk_cash - risk_cash) < 0.01
 
     def test_rr_ratio(self):
         ctx = self._bull_context()
@@ -244,8 +238,7 @@ class TestComputePendingSetup:
             pending_offset_ticks=3.0,
             pip_size=1.0,
             rr=rr,
-            balance=10000.0,
-            risk_per_trade=0.01,
+            risk_cash=20.0,
         )
         assert result is not None
         sl_dist = result["entry"] - result["sl"]
@@ -272,7 +265,7 @@ class TestRunBacktest:
             pending_offset_ticks=3.0,
             pip_size=1.0,
             rr=1.0,
-            risk_per_trade=0.01,
+            risk_cash=20.0,
             pending_expiry_min=60,
         )
         assert isinstance(trades, pd.DataFrame)
@@ -287,7 +280,7 @@ class TestRunBacktest:
             pending_offset_ticks=3.0,
             pip_size=1.0,
             rr=1.0,
-            risk_per_trade=0.01,
+            risk_cash=20.0,
             pending_expiry_min=60,
         )
         if not trades.empty:
@@ -304,7 +297,7 @@ class TestRunBacktest:
             pending_offset_ticks=3.0,
             pip_size=1.0,
             rr=1.0,
-            risk_per_trade=0.01,
+            risk_cash=20.0,
             pending_expiry_min=60,
         )
         assert len(eq) > 0

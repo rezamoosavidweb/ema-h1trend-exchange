@@ -312,7 +312,7 @@ class OrderManager:
         signals_df,
         m5_ctx,
         balance: float,
-        risk_per_trade: float,
+        risk_cash: float,
         pip_size: float,
         pending_expiry_min: int,
         entry_tf_minutes: int = 5,
@@ -405,9 +405,9 @@ class OrderManager:
                     self._journal.log("margin_blocked", available=avail, reason="zero_balance")
                 return
 
-        # Compute properly sized qty using live balance + leverage (margin-based)
+        # Compute properly sized qty: risk_cash / sl_distance (SL-distance model)
         try:
-            norm_qty = compute_qty(balance, risk_per_trade, raw_entry, self._leverage, self._info)
+            norm_qty = compute_qty(risk_cash, raw_entry, raw_sl, self._leverage, self._info)
         except (InvalidQtyError, Exception) as exc:
             self._log.error("Qty computation failed — skipping: %s", exc)
             if self._journal:
@@ -415,7 +415,7 @@ class OrderManager:
             return
 
         # Risk summary for logging
-        summary = risk_summary(balance, risk_per_trade, raw_entry, raw_sl, raw_tp, side, norm_qty, self._leverage)
+        summary = risk_summary(risk_cash, raw_entry, raw_sl, raw_tp, side, norm_qty, self._leverage)
         self._log.info("Risk | %s", " ".join(f"{k}={v}" for k, v in summary.items()))
         if self._journal:
             self._journal.log("risk_sizing", **summary)

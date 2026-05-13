@@ -203,14 +203,14 @@ class TradingService:
 
         self._log.info(
             "Initialized | magic=%d pip_size=%.6f lookback=%d "
-            "offset_ticks=%.1f expiry_min=%d rr=%.1f risk=%.4f",
+            "offset_ticks=%.1f expiry_min=%d rr=%.1f risk=%.2f USDT",
             cfg.effective_magic(),
             cfg.effective_pip_size(),
             cfg.lookback_bars,
             cfg.pending_offset_ticks,
             cfg.pending_expiry_min,
             cfg.rr,
-            cfg.risk_per_trade,
+            cfg.risk_fixed_usdt,
         )
 
         await self._log_account_summary()
@@ -239,15 +239,16 @@ class TradingService:
 
         # ── Bot config ────────────────────────────────────────────────────────
         self._log.info(
-            "  Config   | risk=%.1f%%  lev=%dx  RR=%.1f  pip=%.6f  expiry=%dmin  lookback=%d",
-            cfg.risk_per_trade * 100, cfg.leverage, cfg.rr, cfg.effective_pip_size(),
+            "  Config   | risk=%.2f USDT  lev=%dx  RR=%.1f  pip=%.6f  expiry=%dmin  lookback=%d",
+            cfg.risk_fixed_usdt, cfg.leverage, cfg.rr, cfg.effective_pip_size(),
             cfg.pending_expiry_min, cfg.lookback_bars,
         )
         if wallet is not None and wallet.total_equity > 0:
-            risk_cash = wallet.total_equity * cfg.risk_per_trade
             self._log.info(
-                "  Per trade | %.2f USDT risk  (%.1f%% of %.2f equity)",
-                risk_cash, cfg.risk_per_trade * 100, wallet.total_equity,
+                "  Per trade | %.2f USDT risk  (%.2f%% of %.2f equity)",
+                cfg.risk_fixed_usdt,
+                cfg.risk_fixed_usdt / wallet.total_equity * 100,
+                wallet.total_equity,
             )
         self._log.info(
             "  Mode     | dry_run=%s  replace_pending=%s  position_mode=%s",
@@ -300,7 +301,7 @@ class TradingService:
             mode=mode,
             dry_run=cfg.dry_run,
             symbol=cfg.symbol,
-            risk_pct=cfg.risk_per_trade * 100,
+            risk_usdt=cfg.risk_fixed_usdt,
             leverage=cfg.leverage,
             rr=cfg.rr,
             pip_size=cfg.effective_pip_size(),
@@ -418,12 +419,11 @@ class TradingService:
         # ── 3. Generate signals ───────────────────────────────────────────────
         signals = list_setup_signals(
             m5_ctx,
-            start_balance=cfg.start_balance,
+            risk_cash=cfg.risk_fixed_usdt,
             lookback_bars=cfg.lookback_bars,
             pending_offset_ticks=cfg.pending_offset_ticks,
             pip_size=cfg.effective_pip_size(),
             rr=cfg.rr,
-            risk_per_trade=cfg.risk_per_trade,
             leverage=cfg.leverage,
         )
 
@@ -488,7 +488,7 @@ class TradingService:
             m5_ctx=m5_ctx,
             balance=balance,
             wallet=wallet,
-            risk_per_trade=cfg.risk_per_trade,
+            risk_cash=cfg.risk_fixed_usdt,
             pip_size=cfg.effective_pip_size(),
             pending_expiry_min=cfg.pending_expiry_min,
             entry_tf_minutes=cfg.entry_tf_minutes,

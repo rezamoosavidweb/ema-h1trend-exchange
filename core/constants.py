@@ -17,7 +17,7 @@ DEFAULT_LOOKBACK_BARS: int = 5
 DEFAULT_PENDING_OFFSET_TICKS: float = 3.0
 DEFAULT_PENDING_EXPIRY_MIN: int = 60
 DEFAULT_RR: float = 1.0
-DEFAULT_RISK_PER_TRADE: float = 0.01
+DEFAULT_RISK_FIXED_USDT: float = 20.0
 DEFAULT_START_BALANCE: float = 10_000.0
 
 # ── Candle timeframes (Bybit interval strings) ────────────────────────────────

@@ -20,7 +20,7 @@ def run_backtest(
     pending_offset_ticks: float,
     pip_size: float,
     rr: float,
-    risk_per_trade: float,
+    risk_cash: float,
     pending_expiry_min: int,
     entry_timeframe_minutes: int = 5,
 ) -> tuple[pd.DataFrame, pd.Series]:
@@ -124,8 +124,7 @@ def run_backtest(
                 pending_offset_ticks=pending_offset_ticks,
                 pip_size=pip_size,
                 rr=rr,
-                balance=balance,
-                risk_per_trade=risk_per_trade,
+                risk_cash=risk_cash,
             )
             if setup is not None:
                 pending = {

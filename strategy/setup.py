@@ -20,7 +20,7 @@ def _simulate_walk_forward(
     pending_offset_ticks: float,
     pip_size: float,
     rr: float,
-    risk_per_trade: float,
+    risk_cash: float,
     pending_expiry_min: int,
     entry_timeframe_minutes: int = 5,
 ) -> tuple[list[dict], list[tuple], list[dict]]:
@@ -154,8 +154,7 @@ def _simulate_walk_forward(
                 pending_offset_ticks=pending_offset_ticks,
                 pip_size=pip_size,
                 rr=rr,
-                balance=balance,
-                risk_per_trade=risk_per_trade,
+                risk_cash=risk_cash,
             )
             if setup is not None:
                 pending = {
@@ -178,7 +177,7 @@ def list_trade_entries(
     pending_offset_ticks: float,
     pip_size: float,
     rr: float,
-    risk_per_trade: float,
+    risk_cash: float,
     pending_expiry_min: int,
     entry_timeframe_minutes: int = 5,
 ) -> pd.DataFrame:
@@ -193,7 +192,7 @@ def list_trade_entries(
         pending_offset_ticks=pending_offset_ticks,
         pip_size=pip_size,
         rr=rr,
-        risk_per_trade=risk_per_trade,
+        risk_cash=risk_cash,
         pending_expiry_min=pending_expiry_min,
         entry_timeframe_minutes=entry_timeframe_minutes,
     )
@@ -203,20 +202,18 @@ def list_trade_entries(
 def list_setup_signals(
     data: pd.DataFrame,
     *,
-    start_balance: float,
+    risk_cash: float,
     lookback_bars: int,
     pending_offset_ticks: float,
     pip_size: float,
     rr: float,
-    risk_per_trade: float,
     leverage: int = 1,
 ) -> pd.DataFrame:
     """
     Every closed M5 bar where the model would place a new pending (bull/bear trend + swing).
 
-    Uses the same ``compute_pending_setup`` as the backtest, with a **fixed** ``start_balance``
-    for sizing on every bar (scan / chart overlay). This does not simulate position overlap,
-    expiry, or fills — only "there is an entry signal at this bar."
+    Uses the same ``compute_pending_setup`` as the backtest.
+    Does not simulate position overlap, expiry, or fills — only "there is an entry signal."
     """
     data = data.copy().sort_index()
     rows: list[dict] = []
@@ -228,8 +225,7 @@ def list_setup_signals(
             pending_offset_ticks=pending_offset_ticks,
             pip_size=pip_size,
             rr=rr,
-            balance=float(start_balance),
-            risk_per_trade=risk_per_trade,
+            risk_cash=risk_cash,
             leverage=leverage,
         )
         if setup is None:
@@ -254,12 +250,12 @@ def list_setup_signals(
 def list_entry_points(
     data: pd.DataFrame,
     *,
+    risk_cash: float,
     start_balance: float,
     lookback_bars: int,
     pending_offset_ticks: float,
     pip_size: float,
     rr: float,
-    risk_per_trade: float,
     pending_expiry_min: int,
     entry_timeframe_minutes: int = 5,
     mode: str = "filled",
@@ -274,22 +270,21 @@ def list_entry_points(
     if mode == "signal":
         return list_setup_signals(
             data,
-            start_balance=start_balance,
+            risk_cash=risk_cash,
             lookback_bars=lookback_bars,
             pending_offset_ticks=pending_offset_ticks,
             pip_size=pip_size,
             rr=rr,
-            risk_per_trade=risk_per_trade,
         )
     if mode == "filled":
         return list_trade_entries(
             data,
             start_balance=start_balance,
+            risk_cash=risk_cash,
             lookback_bars=lookback_bars,
             pending_offset_ticks=pending_offset_ticks,
             pip_size=pip_size,
             rr=rr,
-            risk_per_trade=risk_per_trade,
             pending_expiry_min=pending_expiry_min,
             entry_timeframe_minutes=entry_timeframe_minutes,
         )

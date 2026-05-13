@@ -1,18 +1,18 @@
 """
-Position sizing for Bybit Linear Perpetuals — margin-based model.
+Position sizing for Bybit Linear Perpetuals — fixed-USDT risk model.
 
 Formula:
-    margin  = balance * margin_pct          (e.g. 1% of wallet)
-    qty     = (margin * leverage) / entry   (base-asset units)
+    sl_dist = abs(entry - sl)       (price distance to stop)
+    qty     = risk_cash / sl_dist   (base-asset units)
 
-The exchange requires exactly `margin` USDT of free balance regardless of
-leverage. With higher leverage the position notional grows but margin stays
-fixed at margin_pct% of wallet.
+risk_cash is a fixed dollar amount (e.g. $20) set via RISK_FIXED_USDT.
+This guarantees every trade wins/loses exactly risk_cash USDT at TP/SL,
+regardless of SL distance or symbol price level.
 
 After computing raw qty we:
-  1. Normalize to qtyStep (floor — never round up to avoid over-sizing)
-  2. Clamp to [minOrderQty, maxOrderQty]
-  3. Validate margin availability
+  1. Validate raw qty >= minOrderQty (raise InvalidQtyError if not)
+  2. Normalize to qtyStep (floor — never round up to avoid over-sizing)
+  3. Clamp to maxOrderQty
 """
 
 from __future__ import annotations
@@ -29,52 +29,55 @@ log = logging.getLogger(__name__)
 
 
 def compute_raw_qty(
-    balance: float,
-    margin_pct: float,
+    risk_cash: float,
     entry: float,
-    leverage: int,
+    sl: float,
 ) -> float:
     """
-    Raw (un-normalized) quantity from margin-based sizing.
+    Raw (un-normalized) quantity from fixed-USDT risk sizing.
 
-        margin = balance * margin_pct
-        qty    = (margin * leverage) / entry
+        sl_dist = abs(entry - sl)
+        qty     = risk_cash / sl_dist
 
-    The actual margin committed to the exchange is always `margin` USDT.
-    Leverage multiplies position size but not the capital committed.
+    Ensures loss at SL == risk_cash and profit at TP == risk_cash * RR.
     """
-    margin = balance * margin_pct
-    return (margin * leverage) / max(entry, 1e-12)
+    sl_dist = abs(entry - sl)
+    if sl_dist < 1e-12:
+        raise InvalidQtyError(
+            f"SL distance near zero (entry={entry} sl={sl}) — cannot size position."
+        )
+    return risk_cash / sl_dist
 
 
 def compute_qty(
-    balance: float,
-    margin_pct: float,
+    risk_cash: float,
     entry: float,
+    sl: float,
     leverage: int,
     info: InstrumentInfo,
 ) -> float:
     """
-    Full position sizing pipeline: raw qty → normalize → validate.
+    Full position sizing pipeline: raw qty → validate → normalize.
 
     Returns the exact qty string-safe float ready to send to Bybit.
-    Raises InvalidQtyError if below minimum after normalization.
+    Raises InvalidQtyError if below minOrderQty.
+    leverage is kept for margin-check callers but does not affect qty.
     """
-    raw = compute_raw_qty(balance, margin_pct, entry, leverage)
+    raw = compute_raw_qty(risk_cash, entry, sl)
+
+    if raw < info.min_qty:
+        raise InvalidQtyError(
+            f"Computed qty {raw:.6f} is below minOrderQty={info.min_qty} "
+            f"for {info.symbol}. Increase RISK_FIXED_USDT or tighten SL distance."
+        )
+
     qty = normalize_qty(raw, info)
 
     log.debug(
-        "Sizing: balance=%.2f margin_pct=%.4f entry=%.5f leverage=%dx "
-        "→ margin=%.4f → raw_qty=%.6f → normalized_qty=%.6f",
-        balance, margin_pct, entry, leverage,
-        balance * margin_pct, raw, qty,
+        "Sizing: risk_cash=%.4f entry=%.5f sl=%.5f "
+        "sl_dist=%.5f → raw_qty=%.6f → normalized_qty=%.6f",
+        risk_cash, entry, sl, abs(entry - sl), raw, qty,
     )
-
-    if qty < info.min_qty - 1e-9:
-        raise InvalidQtyError(
-            f"Computed qty {qty} (raw={raw:.6f}) is below minOrderQty={info.min_qty} "
-            f"for {info.symbol}. Increase balance/margin_pct or leverage."
-        )
 
     return qty
 
@@ -107,8 +110,7 @@ def check_margin_available(
 
 
 def risk_summary(
-    balance: float,
-    margin_pct: float,
+    risk_cash: float,
     entry: float,
     sl: float,
     tp: float,
@@ -116,7 +118,7 @@ def risk_summary(
     qty: float,
     leverage: int = 1,
 ) -> dict:
-    """Return a dict with margin/risk breakdown for logging."""
+    """Return a dict with risk breakdown for logging."""
     if side == "buy":
         risk_per_unit = entry - sl
         reward_per_unit = tp - entry
@@ -125,19 +127,18 @@ def risk_summary(
         reward_per_unit = entry - tp
 
     margin_used = (qty * entry) / leverage
-    risk_cash = risk_per_unit * qty
+    actual_risk = risk_per_unit * qty
     reward_cash = reward_per_unit * qty
     rr = reward_per_unit / max(risk_per_unit, 1e-12)
 
     return {
-        "balance": round(balance, 2),
-        "margin_pct": round(margin_pct * 100, 3),
-        "margin_used": round(margin_used, 4),
-        "leverage": leverage,
         "risk_cash": round(risk_cash, 4),
+        "actual_risk": round(actual_risk, 4),
         "reward_cash": round(reward_cash, 4),
         "rr": round(rr, 3),
         "qty": qty,
+        "margin_used": round(margin_used, 4),
+        "leverage": leverage,
         "risk_per_unit": round(risk_per_unit, 5),
         "reward_per_unit": round(reward_per_unit, 5),
     }
