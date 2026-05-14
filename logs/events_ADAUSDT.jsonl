@@ -14,3 +14,10 @@
 {"ts": "2026-05-14T01:52:54.648Z", "symbol": "ADAUSDT", "event": "position_check", "cycle": 1, "has_position": true}
 {"ts": "2026-05-14T01:52:54.648Z", "symbol": "ADAUSDT", "event": "position_open_skip"}
 {"ts": "2026-05-14T01:52:54.648Z", "symbol": "ADAUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-14T01:55:02.584Z", "symbol": "ADAUSDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-14T01:55:04.029Z", "symbol": "ADAUSDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-14 01:50:00+00:00", "h1_trend": {"2026-05-14 01:40:00+00:00": "bear", "2026-05-14 01:45:00+00:00": "bear", "2026-05-14 01:50:00+00:00": "bear"}}
+{"ts": "2026-05-14T01:55:04.213Z", "symbol": "ADAUSDT", "event": "signal", "cycle": 2, "total_signals": 462, "side": "sell", "entry": 0.2647, "sl": 0.2661, "tp": 0.2633, "qty": 14285.714285714159, "signal_bar": "2026-05-14 01:50:00+00:00", "trend": "bear"}
+{"ts": "2026-05-14T01:55:04.492Z", "symbol": "ADAUSDT", "event": "balance", "cycle": 2, "equity": 57379.42416045, "available": 36272.56928891, "used_margin": 21142.13344154}
+{"ts": "2026-05-14T01:55:04.979Z", "symbol": "ADAUSDT", "event": "position_check", "cycle": 2, "has_position": true}
+{"ts": "2026-05-14T01:55:04.979Z", "symbol": "ADAUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-14T01:55:04.979Z", "symbol": "ADAUSDT", "event": "cycle_complete", "cycle": 2}

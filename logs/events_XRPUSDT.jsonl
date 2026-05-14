@@ -14,3 +14,10 @@
 {"ts": "2026-05-14T01:52:51.097Z", "symbol": "XRPUSDT", "event": "position_check", "cycle": 1, "has_position": true}
 {"ts": "2026-05-14T01:52:51.097Z", "symbol": "XRPUSDT", "event": "position_open_skip"}
 {"ts": "2026-05-14T01:52:51.097Z", "symbol": "XRPUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-14T01:55:01.177Z", "symbol": "XRPUSDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-14T01:55:01.713Z", "symbol": "XRPUSDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-14 01:50:00+00:00", "h1_trend": {"2026-05-14 01:40:00+00:00": "bear", "2026-05-14 01:45:00+00:00": "bear", "2026-05-14 01:50:00+00:00": "bear"}}
+{"ts": "2026-05-14T01:55:01.900Z", "symbol": "XRPUSDT", "event": "signal", "cycle": 2, "total_signals": 426, "side": "sell", "entry": 1.4251, "sl": 1.4345999999999999, "tp": 1.4156000000000002, "qty": 2105.2631578947717, "signal_bar": "2026-05-14 01:50:00+00:00", "trend": "bear"}
+{"ts": "2026-05-14T01:55:02.340Z", "symbol": "XRPUSDT", "event": "balance", "cycle": 2, "equity": 57378.72822045, "available": 36271.553388910004, "used_margin": 21143.14934154}
+{"ts": "2026-05-14T01:55:02.797Z", "symbol": "XRPUSDT", "event": "position_check", "cycle": 2, "has_position": true}
+{"ts": "2026-05-14T01:55:02.797Z", "symbol": "XRPUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-14T01:55:02.797Z", "symbol": "XRPUSDT", "event": "cycle_complete", "cycle": 2}
