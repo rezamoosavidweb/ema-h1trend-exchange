@@ -20,6 +20,12 @@ DEFAULT_RR: float = 1.0
 DEFAULT_RISK_FIXED_USDT: float = 20.0
 DEFAULT_START_BALANCE: float = 10_000.0
 
+# ── SL fee-tightening & ATR minimum SL ───────────────────────────────────────
+DEFAULT_FEE_TIGHTEN_SL: bool = False
+DEFAULT_ATR_MIN_SL_ENABLED: bool = False
+DEFAULT_ATR_PERIOD: int = 14
+DEFAULT_ATR_MIN_SL_MULTIPLIER: float = 1.0
+
 # ── Candle timeframes (Bybit interval strings) ────────────────────────────────
 TF_ENTRY_BYBIT: str = "5"    # 5-minute candles
 TF_TREND_BYBIT: str = "60"   # 1-hour candles

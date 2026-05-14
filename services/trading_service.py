@@ -188,6 +188,11 @@ class TradingService:
             entry_fee_rate=cfg.entry_fee_rate,
             exit_fee_rate=cfg.exit_fee_rate,
             fee_adjusted_sizing=cfg.fee_adjusted_sizing,
+            fee_tighten_sl=cfg.fee_tighten_sl,
+            atr_min_sl_enabled=cfg.atr_min_sl_enabled,
+            atr_period=cfg.atr_period,
+            atr_min_sl_multiplier=cfg.atr_min_sl_multiplier,
+            rr=cfg.rr,
         )
 
         self._reconciler = OrderReconciler(
@@ -245,6 +250,11 @@ class TradingService:
             "  Config   | risk=%.2f USDT  lev=%dx  RR=%.1f  pip=%.6f  expiry=%dmin  lookback=%d",
             cfg.risk_fixed_usdt, cfg.leverage, cfg.rr, cfg.effective_pip_size(),
             cfg.pending_expiry_min, cfg.lookback_bars,
+        )
+        self._log.info(
+            "  SL adj   | fee_tighten=%s  atr_floor=%s  atr_period=%d  atr_mult=%.2f",
+            cfg.fee_tighten_sl, cfg.atr_min_sl_enabled,
+            cfg.atr_period, cfg.atr_min_sl_multiplier,
         )
         if wallet is not None and wallet.total_equity > 0:
             self._log.info(

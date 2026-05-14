@@ -22,8 +22,12 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 from core.constants import (
     BARS_ENTRY,
     BARS_TREND,
+    DEFAULT_ATR_MIN_SL_ENABLED,
+    DEFAULT_ATR_MIN_SL_MULTIPLIER,
+    DEFAULT_ATR_PERIOD,
     DEFAULT_ENTRY_FEE_RATE,
     DEFAULT_EXIT_FEE_RATE,
+    DEFAULT_FEE_TIGHTEN_SL,
     DEFAULT_LOOKBACK_BARS,
     DEFAULT_PENDING_EXPIRY_MIN,
     DEFAULT_PENDING_OFFSET_TICKS,
@@ -128,8 +132,35 @@ class Settings(BaseSettings):
         description=(
             "Adjust qty and TP so net P&L at SL == net P&L at TP (after fees). "
             "qty = risk / (sl_dist + entry*fee_total); "
-            "tp_dist = sl_dist + 2*entry*fee_total."
+            "tp_dist = sl_dist + 2*entry*fee_total. "
+            "Mutually exclusive with fee_tighten_sl (fee_tighten_sl takes precedence)."
         ),
+    )
+    fee_tighten_sl: bool = Field(
+        DEFAULT_FEE_TIGHTEN_SL,
+        description=(
+            "Move SL closer to entry by fee_per_unit so net loss at SL == risk_fixed_usdt. "
+            "qty is sized on the original SL distance; adjusted_sl = sl ± entry*(entry_fee+exit_fee). "
+            "Takes precedence over fee_adjusted_sizing when both are True."
+        ),
+    )
+    atr_min_sl_enabled: bool = Field(
+        DEFAULT_ATR_MIN_SL_ENABLED,
+        description=(
+            "When True, the SL distance cannot be tighter than atr_period ATR × atr_min_sl_multiplier. "
+            "ATR is computed on M5 bars. If swing SL is already wider, it is unchanged. "
+            "When SL is widened, TP is recomputed to maintain RR."
+        ),
+    )
+    atr_period: int = Field(
+        DEFAULT_ATR_PERIOD,
+        gt=0,
+        description="ATR period in M5 bars used for the minimum SL floor.",
+    )
+    atr_min_sl_multiplier: float = Field(
+        DEFAULT_ATR_MIN_SL_MULTIPLIER,
+        gt=0,
+        description="Minimum SL distance = ATR × this multiplier.",
     )
     start_balance: float = Field(
         DEFAULT_START_BALANCE,

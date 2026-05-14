@@ -39,11 +39,14 @@ from exchange.precision import (
 )
 from models.order import InstrumentInfo, PendingOrder, Side, TriggerDirection, WalletBalance
 from risk.sizing import (
+    apply_atr_floor_sl,
     check_margin_available,
+    compute_atr,
     compute_qty,
     compute_qty_fee_adjusted,
     fee_adjusted_tp,
     risk_summary,
+    tighten_sl_for_fees,
 )
 from state.bot_state import BotState, make_order_link_id
 from storage.event_journal import EventJournal
@@ -74,6 +77,11 @@ class OrderManager:
         entry_fee_rate: float = 0.0,
         exit_fee_rate: float = 0.0,
         fee_adjusted_sizing: bool = False,
+        fee_tighten_sl: bool = False,
+        atr_min_sl_enabled: bool = False,
+        atr_period: int = 14,
+        atr_min_sl_multiplier: float = 1.0,
+        rr: float = 1.0,
     ) -> None:
         self._client = client
         self._info = info
@@ -86,6 +94,11 @@ class OrderManager:
         self._entry_fee_rate = entry_fee_rate
         self._exit_fee_rate = exit_fee_rate
         self._fee_adjusted_sizing = fee_adjusted_sizing
+        self._fee_tighten_sl = fee_tighten_sl
+        self._atr_min_sl_enabled = atr_min_sl_enabled
+        self._atr_period = atr_period
+        self._atr_min_sl_multiplier = atr_min_sl_multiplier
+        self._rr = rr
         self._last_wallet: Optional[WalletBalance] = None
         self._log = SymbolAdapter(log, symbol or info.symbol)
 
@@ -417,31 +430,103 @@ class OrderManager:
                     self._journal.log("margin_blocked", available=avail, reason="zero_balance")
                 return
 
-        # Compute qty and TP — fee-adjusted or plain SL-distance model
+        # ── Step 1: ATR floor — may widen SL and recompute TP ───────────────────
+        effective_sl = raw_sl
+        effective_tp = raw_tp
+
+        if self._atr_min_sl_enabled:
+            atr_val = compute_atr(m5_ctx, self._atr_period)
+            if atr_val is None:
+                self._log.warning(
+                    "ATR(%d) not available (insufficient M5 bars) — skipping ATR SL floor.",
+                    self._atr_period,
+                )
+            else:
+                floored_sl = apply_atr_floor_sl(
+                    raw_entry, effective_sl, side, atr_val, self._atr_min_sl_multiplier
+                )
+                if abs(floored_sl - effective_sl) > 1e-9:
+                    new_sl_dist = abs(raw_entry - floored_sl)
+                    new_tp = (
+                        raw_entry + self._rr * new_sl_dist
+                        if side == "buy"
+                        else raw_entry - self._rr * new_sl_dist
+                    )
+                    self._log.info(
+                        "ATR floor | atr=%.5f mult=%.2f sl %.5f→%.5f tp %.5f→%.5f",
+                        atr_val, self._atr_min_sl_multiplier,
+                        effective_sl, floored_sl, effective_tp, new_tp,
+                    )
+                    if self._journal:
+                        self._journal.log(
+                            "atr_sl_floor",
+                            atr=atr_val, multiplier=self._atr_min_sl_multiplier,
+                            sl_before=effective_sl, sl_after=floored_sl,
+                            tp_before=effective_tp, tp_after=new_tp,
+                        )
+                    effective_sl = floored_sl
+                    effective_tp = new_tp
+
+        # sizing_sl is the ATR-floored SL — qty is based on this distance
+        sizing_sl = effective_sl
+
+        # ── Step 2: fee SL tighten — moves SL closer, qty stays on sizing_sl ──
+        if self._fee_tighten_sl:
+            tightened = tighten_sl_for_fees(
+                raw_entry, sizing_sl, side,
+                self._entry_fee_rate, self._exit_fee_rate,
+            )
+            sl_dist_after = abs(raw_entry - tightened)
+            if sl_dist_after < 1e-6:
+                self._log.warning(
+                    "Fee SL tighten would collapse SL (dist=%.8f) — skipping tighten.",
+                    sl_dist_after,
+                )
+            else:
+                self._log.info(
+                    "Fee SL tighten | fee_per_unit=%.5f sl %.5f→%.5f",
+                    raw_entry * (self._entry_fee_rate + self._exit_fee_rate),
+                    effective_sl, tightened,
+                )
+                if self._journal:
+                    self._journal.log(
+                        "fee_sl_tighten",
+                        fee_per_unit=raw_entry * (self._entry_fee_rate + self._exit_fee_rate),
+                        sl_before=effective_sl, sl_after=tightened,
+                    )
+                effective_sl = tightened
+
+        # ── Step 3: qty and final TP ─────────────────────────────────────────
         try:
-            if self._fee_adjusted_sizing:
+            if self._fee_tighten_sl:
+                # qty on sizing_sl (pre-tighten) ensures net_loss = risk_cash at SL
+                norm_qty = compute_qty(risk_cash, raw_entry, sizing_sl, self._leverage, self._info)
+            elif self._fee_adjusted_sizing:
                 norm_qty = compute_qty_fee_adjusted(
-                    risk_cash, raw_entry, raw_sl,
+                    risk_cash, raw_entry, effective_sl,
                     self._entry_fee_rate, self._exit_fee_rate,
                     self._leverage, self._info,
                 )
-                raw_tp = fee_adjusted_tp(
-                    raw_entry, raw_sl, side,
+                effective_tp = fee_adjusted_tp(
+                    raw_entry, effective_sl, side,
                     self._entry_fee_rate, self._exit_fee_rate,
                 )
                 self._log.info(
                     "Fee-adjusted sizing | entry_fee=%.4f%% exit_fee=%.4f%% "
                     "adj_tp=%.5f adj_qty=%.6f",
                     self._entry_fee_rate * 100, self._exit_fee_rate * 100,
-                    raw_tp, norm_qty,
+                    effective_tp, norm_qty,
                 )
             else:
-                norm_qty = compute_qty(risk_cash, raw_entry, raw_sl, self._leverage, self._info)
+                norm_qty = compute_qty(risk_cash, raw_entry, effective_sl, self._leverage, self._info)
         except (InvalidQtyError, Exception) as exc:
             self._log.error("Qty computation failed — skipping: %s", exc)
             if self._journal:
                 self._journal.log("qty_error", error=str(exc), side=side, entry=raw_entry)
             return
+
+        raw_sl = effective_sl
+        raw_tp = effective_tp
 
         # Risk summary for logging
         summary = risk_summary(risk_cash, raw_entry, raw_sl, raw_tp, side, norm_qty, self._leverage)

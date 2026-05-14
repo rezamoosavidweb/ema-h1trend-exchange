@@ -24,3 +24,4 @@ telethon>=1.36             # MTProto client — login with phone, send to channe
 # ── Optional: dev tools ───────────────────────────────────────────────────────
 python-dotenv>=1.0        # Load .env files (also handled by pydantic-settings)
 matplotlib
+plotly

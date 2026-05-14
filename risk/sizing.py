@@ -19,7 +19,10 @@ from __future__ import annotations
 
 import logging
 import math
-from typing import Optional
+from typing import TYPE_CHECKING, Optional
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 from core.exceptions import InsufficientMarginError, InvalidQtyError
 from exchange.precision import normalize_qty
@@ -182,6 +185,64 @@ def fee_adjusted_tp(
     fee_dist = entry * (entry_fee_rate + exit_fee_rate)
     tp_dist = sl_dist + 2 * fee_dist
     return entry + tp_dist if side == "buy" else entry - tp_dist
+
+
+def tighten_sl_for_fees(
+    entry: float,
+    sl: float,
+    side: str,
+    entry_fee_rate: float,
+    exit_fee_rate: float,
+) -> float:
+    """
+    Move SL closer to entry by fee_per_unit so net loss at SL == risk_cash.
+
+    The caller must size qty on the ORIGINAL (pre-tighten) SL distance:
+        qty = risk_cash / abs(entry - sl_before_tighten)
+
+    At the tightened SL:
+        gross_loss = qty * (original_sl_dist - fee_per_unit) = risk_cash - fees
+        net_loss   = gross_loss + fees                       = risk_cash  ✓
+    """
+    fee_per_unit = entry * (entry_fee_rate + exit_fee_rate)
+    return (sl + fee_per_unit) if side == "buy" else (sl - fee_per_unit)
+
+
+def apply_atr_floor_sl(
+    entry: float,
+    sl: float,
+    side: str,
+    atr_value: float,
+    atr_multiplier: float,
+) -> float:
+    """
+    Widen SL to at least atr_value * atr_multiplier distance from entry.
+    If the swing SL is already wider, it is returned unchanged.
+    """
+    min_sl_dist = atr_value * atr_multiplier
+    sl_dist = max(abs(entry - sl), min_sl_dist)
+    return (entry - sl_dist) if side == "buy" else (entry + sl_dist)
+
+
+def compute_atr(m5_ctx: "pd.DataFrame", period: int) -> Optional[float]:
+    """
+    Compute the latest ATR(period) from an M5 OHLCV DataFrame.
+    Returns None when there are not enough bars.
+    """
+    import pandas as pd  # local import — pandas not always installed in lightweight envs
+
+    if len(m5_ctx) < period + 1:
+        return None
+    high = m5_ctx["high"]
+    low = m5_ctx["low"]
+    close = m5_ctx["close"]
+    prev_close = close.shift(1)
+    tr = pd.concat(
+        [high - low, (high - prev_close).abs(), (low - prev_close).abs()],
+        axis=1,
+    ).max(axis=1)
+    val = tr.rolling(period).mean().iloc[-1]
+    return float(val) if not math.isnan(val) else None
 
 
 def risk_summary(
