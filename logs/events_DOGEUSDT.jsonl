@@ -1,0 +1,7 @@
+{"ts": "2026-05-14T01:50:02.521Z", "symbol": "DOGEUSDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-14T01:50:04.765Z", "symbol": "DOGEUSDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-14 01:45:00+00:00", "h1_trend": {"2026-05-14 01:35:00+00:00": "bull", "2026-05-14 01:40:00+00:00": "bull", "2026-05-14 01:45:00+00:00": "bull"}}
+{"ts": "2026-05-14T01:50:04.944Z", "symbol": "DOGEUSDT", "event": "signal", "cycle": 3, "total_signals": 438, "side": "buy", "entry": 0.11499, "sl": 0.11345000000000001, "tp": 0.11652999999999998, "qty": 12987.012987013106, "signal_bar": "2026-05-14 01:45:00+00:00", "trend": "bull"}
+{"ts": "2026-05-14T01:50:05.335Z", "symbol": "DOGEUSDT", "event": "balance", "cycle": 3, "equity": 57394.64868045, "available": 36290.673448910005, "used_margin": 21124.02928154}
+{"ts": "2026-05-14T01:50:05.625Z", "symbol": "DOGEUSDT", "event": "position_check", "cycle": 3, "has_position": true}
+{"ts": "2026-05-14T01:50:05.625Z", "symbol": "DOGEUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-14T01:50:05.625Z", "symbol": "DOGEUSDT", "event": "cycle_complete", "cycle": 3}

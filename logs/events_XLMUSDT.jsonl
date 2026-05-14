@@ -1,0 +1,7 @@
+{"ts": "2026-05-14T01:50:02.508Z", "symbol": "XLMUSDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-14T01:50:04.573Z", "symbol": "XLMUSDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-14 01:45:00+00:00", "h1_trend": {"2026-05-14 01:35:00+00:00": "bear", "2026-05-14 01:40:00+00:00": "bear", "2026-05-14 01:45:00+00:00": "bear"}}
+{"ts": "2026-05-14T01:50:04.753Z", "symbol": "XLMUSDT", "event": "signal", "cycle": 3, "total_signals": 438, "side": "sell", "entry": 0.12919, "sl": 0.18974, "tp": 0.06864, "qty": 330.30553261767136, "signal_bar": "2026-05-14 01:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-14T01:50:05.626Z", "symbol": "XLMUSDT", "event": "balance", "cycle": 3, "equity": 57393.15556045, "available": 36289.18032891, "used_margin": 21125.52240154}
+{"ts": "2026-05-14T01:50:05.904Z", "symbol": "XLMUSDT", "event": "position_check", "cycle": 3, "has_position": false}
+{"ts": "2026-05-14T01:50:05.905Z", "symbol": "XLMUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9815, "reward_cash": 19.9815, "rr": 1.0, "qty": 330.0, "margin_used": 42.6327, "leverage": 1, "risk_per_unit": 0.06055, "reward_per_unit": 0.06055}
+{"ts": "2026-05-14T01:50:05.906Z", "symbol": "XLMUSDT", "event": "cycle_complete", "cycle": 3}

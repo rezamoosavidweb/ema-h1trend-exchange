@@ -1,0 +1,7 @@
+{"ts": "2026-05-14T01:50:01.591Z", "symbol": "DOTUSDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-14T01:50:02.232Z", "symbol": "DOTUSDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-14 01:45:00+00:00", "h1_trend": {"2026-05-14 01:35:00+00:00": "bear", "2026-05-14 01:40:00+00:00": "bear", "2026-05-14 01:45:00+00:00": "bear"}}
+{"ts": "2026-05-14T01:50:02.497Z", "symbol": "DOTUSDT", "event": "signal", "cycle": 3, "total_signals": 486, "side": "sell", "entry": 1.3029, "sl": 1.3661, "tp": 1.2396999999999998, "qty": 316.45569620253093, "signal_bar": "2026-05-14 01:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-14T01:50:05.335Z", "symbol": "DOTUSDT", "event": "balance", "cycle": 3, "equity": 57394.64868045, "available": 36290.673448910005, "used_margin": 21124.02928154}
+{"ts": "2026-05-14T01:50:05.623Z", "symbol": "DOTUSDT", "event": "position_check", "cycle": 3, "has_position": false}
+{"ts": "2026-05-14T01:50:05.624Z", "symbol": "DOTUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9965, "reward_cash": 19.9965, "rr": 1.0, "qty": 316.4, "margin_used": 412.2376, "leverage": 1, "risk_per_unit": 0.0632, "reward_per_unit": 0.0632}
+{"ts": "2026-05-14T01:50:05.624Z", "symbol": "DOTUSDT", "event": "cycle_complete", "cycle": 3}

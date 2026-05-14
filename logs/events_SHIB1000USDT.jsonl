@@ -1,0 +1,7 @@
+{"ts": "2026-05-14T01:50:02.529Z", "symbol": "SHIB1000USDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-14T01:50:04.956Z", "symbol": "SHIB1000USDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-14 01:45:00+00:00", "h1_trend": {"2026-05-14 01:35:00+00:00": "bear", "2026-05-14 01:40:00+00:00": "bear", "2026-05-14 01:45:00+00:00": "bear"}}
+{"ts": "2026-05-14T01:50:05.136Z", "symbol": "SHIB1000USDT", "event": "signal", "cycle": 3, "total_signals": 426, "side": "sell", "entry": -0.023696, "sl": 0.036324999999999996, "tp": -0.08371699999999999, "qty": 333.21670748571336, "signal_bar": "2026-05-14 01:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-14T01:50:05.336Z", "symbol": "SHIB1000USDT", "event": "balance", "cycle": 3, "equity": 57394.64868045, "available": 36290.673448910005, "used_margin": 21124.02928154}
+{"ts": "2026-05-14T01:50:05.621Z", "symbol": "SHIB1000USDT", "event": "position_check", "cycle": 3, "has_position": false}
+{"ts": "2026-05-14T01:50:05.622Z", "symbol": "SHIB1000USDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.8069, "reward_cash": 19.8069, "rr": 1.0, "qty": 330.0, "margin_used": -7.8197, "leverage": 1, "risk_per_unit": 0.06002, "reward_per_unit": 0.06002}
+{"ts": "2026-05-14T01:50:05.622Z", "symbol": "SHIB1000USDT", "event": "cycle_complete", "cycle": 3}

@@ -1,0 +1,7 @@
+{"ts": "2026-05-14T01:50:01.871Z", "symbol": "SOLUSDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-14T01:50:02.556Z", "symbol": "SOLUSDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-14 01:45:00+00:00", "h1_trend": {"2026-05-14 01:35:00+00:00": "bear", "2026-05-14 01:40:00+00:00": "bear", "2026-05-14 01:45:00+00:00": "bear"}}
+{"ts": "2026-05-14T01:50:02.913Z", "symbol": "SOLUSDT", "event": "signal", "cycle": 3, "total_signals": 378, "side": "sell", "entry": 90.91, "sl": 91.25, "tp": 90.57, "qty": 58.82352941176411, "signal_bar": "2026-05-14 01:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-14T01:50:04.314Z", "symbol": "SOLUSDT", "event": "balance", "cycle": 3, "equity": 57394.64868045, "available": 36290.673448910005, "used_margin": 21124.02928154}
+{"ts": "2026-05-14T01:50:05.413Z", "symbol": "SOLUSDT", "event": "position_check", "cycle": 3, "has_position": true}
+{"ts": "2026-05-14T01:50:05.414Z", "symbol": "SOLUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-14T01:50:05.414Z", "symbol": "SOLUSDT", "event": "cycle_complete", "cycle": 3}
