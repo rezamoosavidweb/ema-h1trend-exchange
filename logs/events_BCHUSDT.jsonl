@@ -5,3 +5,13 @@
 {"ts": "2026-05-14T01:50:05.897Z", "symbol": "BCHUSDT", "event": "position_check", "cycle": 3, "has_position": false}
 {"ts": "2026-05-14T01:50:05.898Z", "symbol": "BCHUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.992, "reward_cash": 19.992, "rr": 1.0, "qty": 14.7, "margin_used": 6376.419, "leverage": 1, "risk_per_unit": 1.36, "reward_per_unit": 1.36}
 {"ts": "2026-05-14T01:50:05.898Z", "symbol": "BCHUSDT", "event": "cycle_complete", "cycle": 3}
+{"ts": "2026-05-14T01:52:46.926Z", "symbol": "BCHUSDT", "event": "orphan_adopted", "link_id": "ema-64980124-s-1778722500", "side": "sell", "entry": 433.7}
+{"ts": "2026-05-14T01:52:47.780Z", "symbol": "BCHUSDT", "event": "bot_start", "mode": "DEMO", "dry_run": false, "risk_usdt": 20.0, "leverage": 1, "rr": 1.0, "pip_size": 0.01, "expiry_min": 60, "expiry_bars": 12, "lookback_bars": 5, "position_mode": "one_way", "magic": 64980124, "journal_path": "logs/events_BCHUSDT.jsonl"}
+{"ts": "2026-05-14T01:52:47.780Z", "symbol": "BCHUSDT", "event": "account_snapshot", "equity": 57385.66247045, "available": 36277.047818909996, "used_margin": 21137.65491154, "open_positions": [], "pending_orders": [{"link_id": "ema-64980124-s-1778722500", "side": "Sell", "trigger": "433.7", "status": "Untriggered"}]}
+{"ts": "2026-05-14T01:52:48.066Z", "symbol": "BCHUSDT", "event": "cycle_start", "cycle": 1}
+{"ts": "2026-05-14T01:52:49.475Z", "symbol": "BCHUSDT", "event": "data_fetched", "cycle": 1, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-14 01:45:00+00:00", "h1_trend": {"2026-05-14 01:35:00+00:00": "bear", "2026-05-14 01:40:00+00:00": "bear", "2026-05-14 01:45:00+00:00": "bear"}}
+{"ts": "2026-05-14T01:52:49.701Z", "symbol": "BCHUSDT", "event": "signal", "cycle": 1, "total_signals": 546, "side": "sell", "entry": 433.77000000000004, "sl": 435.13, "tp": 432.4100000000001, "qty": 14.705882352941643, "signal_bar": "2026-05-14 01:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-14T01:52:51.029Z", "symbol": "BCHUSDT", "event": "balance", "cycle": 1, "equity": 57385.66247045, "available": 36277.047818909996, "used_margin": 21137.65491154}
+{"ts": "2026-05-14T01:52:51.311Z", "symbol": "BCHUSDT", "event": "position_check", "cycle": 1, "has_position": false}
+{"ts": "2026-05-14T01:52:51.312Z", "symbol": "BCHUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.992, "reward_cash": 19.992, "rr": 1.0, "qty": 14.7, "margin_used": 6376.419, "leverage": 1, "risk_per_unit": 1.36, "reward_per_unit": 1.36}
+{"ts": "2026-05-14T01:52:51.313Z", "symbol": "BCHUSDT", "event": "cycle_complete", "cycle": 1}
