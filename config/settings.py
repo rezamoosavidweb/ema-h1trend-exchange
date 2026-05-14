@@ -44,15 +44,19 @@ def _derive_magic(symbol: str) -> int:
 
 def _default_crypto_tick(sym: str) -> float:
     """Fallback pip size when not set explicitly — identical to MT5 logic."""
-    u = sym.upper().replace("USDT", "").replace("PERP", "")
+    u = sym.upper().replace("USDT", "").replace("PERP", "").replace(".P", "")
     if u.startswith("BTC"):
         return 1.0
     if u.startswith("ETH"):
         return 0.01
-    if u.startswith(("XRP", "DOGE", "ADA")):
+    if u.startswith(("XRP", "DOGE", "ADA", "XLM", "XTZ")):
         return 0.0001
-    if u.startswith(("BNB", "BCH", "LTC", "SOL")):
+    if u.startswith(("BNB", "BCH", "LTC", "SOL", "AVAX", "LINK", "UNI")):
         return 0.01
+    if u.startswith(("DOT", "ATOM", "FIL", "NEAR")):
+        return 0.001
+    if u.startswith("SHIB"):   # SHIB1000USDT: price ~0.006 USDT
+        return 0.000001
     return 0.01
 
 
