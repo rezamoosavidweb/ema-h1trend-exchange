@@ -29,6 +29,10 @@ ENTRY_TF_MINUTES: int = 5
 BARS_ENTRY: int = 600   # M5: 200 warmup + 50 buffer + headroom for merge
 BARS_TREND: int = 350   # H1: 200 warmup + 50 buffer
 
+# ── Fee rates (Bybit linear perpetuals defaults) ──────────────────────────────
+DEFAULT_ENTRY_FEE_RATE: float = 0.0002   # Limit order maker fee (0.02%)
+DEFAULT_EXIT_FEE_RATE: float = 0.00055  # Market order taker fee (0.055%)
+
 # ── Order identification ──────────────────────────────────────────────────────
 ORDER_LINK_ID_PREFIX: str = "ema"
 ORDER_COMMENT: str = "ema_trend"

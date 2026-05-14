@@ -185,6 +185,9 @@ class TradingService:
             leverage=cfg.leverage,
             dry_run=cfg.dry_run,
             journal=self._journal,
+            entry_fee_rate=cfg.entry_fee_rate,
+            exit_fee_rate=cfg.exit_fee_rate,
+            fee_adjusted_sizing=cfg.fee_adjusted_sizing,
         )
 
         self._reconciler = OrderReconciler(

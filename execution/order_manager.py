@@ -38,7 +38,13 @@ from exchange.precision import (
     validate_qty,
 )
 from models.order import InstrumentInfo, PendingOrder, Side, TriggerDirection, WalletBalance
-from risk.sizing import check_margin_available, compute_qty, risk_summary
+from risk.sizing import (
+    check_margin_available,
+    compute_qty,
+    compute_qty_fee_adjusted,
+    fee_adjusted_tp,
+    risk_summary,
+)
 from state.bot_state import BotState, make_order_link_id
 from storage.event_journal import EventJournal
 from telemetry.logging import SymbolAdapter
@@ -65,6 +71,9 @@ class OrderManager:
         leverage: int = 1,
         dry_run: bool = False,
         journal: Optional[EventJournal] = None,
+        entry_fee_rate: float = 0.0,
+        exit_fee_rate: float = 0.0,
+        fee_adjusted_sizing: bool = False,
     ) -> None:
         self._client = client
         self._info = info
@@ -74,6 +83,9 @@ class OrderManager:
         self._leverage = leverage
         self._dry_run = dry_run
         self._journal = journal
+        self._entry_fee_rate = entry_fee_rate
+        self._exit_fee_rate = exit_fee_rate
+        self._fee_adjusted_sizing = fee_adjusted_sizing
         self._last_wallet: Optional[WalletBalance] = None
         self._log = SymbolAdapter(log, symbol or info.symbol)
 
@@ -405,9 +417,26 @@ class OrderManager:
                     self._journal.log("margin_blocked", available=avail, reason="zero_balance")
                 return
 
-        # Compute properly sized qty: risk_cash / sl_distance (SL-distance model)
+        # Compute qty and TP — fee-adjusted or plain SL-distance model
         try:
-            norm_qty = compute_qty(risk_cash, raw_entry, raw_sl, self._leverage, self._info)
+            if self._fee_adjusted_sizing:
+                norm_qty = compute_qty_fee_adjusted(
+                    risk_cash, raw_entry, raw_sl,
+                    self._entry_fee_rate, self._exit_fee_rate,
+                    self._leverage, self._info,
+                )
+                raw_tp = fee_adjusted_tp(
+                    raw_entry, raw_sl, side,
+                    self._entry_fee_rate, self._exit_fee_rate,
+                )
+                self._log.info(
+                    "Fee-adjusted sizing | entry_fee=%.4f%% exit_fee=%.4f%% "
+                    "adj_tp=%.5f adj_qty=%.6f",
+                    self._entry_fee_rate * 100, self._exit_fee_rate * 100,
+                    raw_tp, norm_qty,
+                )
+            else:
+                norm_qty = compute_qty(risk_cash, raw_entry, raw_sl, self._leverage, self._info)
         except (InvalidQtyError, Exception) as exc:
             self._log.error("Qty computation failed — skipping: %s", exc)
             if self._journal:

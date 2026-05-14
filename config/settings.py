@@ -22,6 +22,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 from core.constants import (
     BARS_ENTRY,
     BARS_TREND,
+    DEFAULT_ENTRY_FEE_RATE,
+    DEFAULT_EXIT_FEE_RATE,
     DEFAULT_LOOKBACK_BARS,
     DEFAULT_PENDING_EXPIRY_MIN,
     DEFAULT_PENDING_OFFSET_TICKS,
@@ -106,6 +108,24 @@ class Settings(BaseSettings):
         DEFAULT_RR,
         gt=0,
         description="Reward:risk ratio for TP (TP distance / SL distance).",
+    )
+    entry_fee_rate: float = Field(
+        DEFAULT_ENTRY_FEE_RATE,
+        ge=0,
+        description="Entry order fee rate (Bybit limit/maker = 0.0002 = 0.02%).",
+    )
+    exit_fee_rate: float = Field(
+        DEFAULT_EXIT_FEE_RATE,
+        ge=0,
+        description="Exit order fee rate (Bybit market/taker = 0.00055 = 0.055%).",
+    )
+    fee_adjusted_sizing: bool = Field(
+        False,
+        description=(
+            "Adjust qty and TP so net P&L at SL == net P&L at TP (after fees). "
+            "qty = risk / (sl_dist + entry*fee_total); "
+            "tp_dist = sl_dist + 2*entry*fee_total."
+        ),
     )
     start_balance: float = Field(
         DEFAULT_START_BALANCE,

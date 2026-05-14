@@ -109,6 +109,81 @@ def check_margin_available(
         )
 
 
+def compute_raw_qty_fee_adjusted(
+    risk_net: float,
+    entry: float,
+    sl: float,
+    entry_fee_rate: float,
+    exit_fee_rate: float,
+) -> float:
+    """
+    Fee-adjusted position sizing: net P&L at SL == -risk_net after fees.
+
+        fee_per_unit = entry * (entry_fee_rate + exit_fee_rate)
+        qty = risk_net / (sl_dist + fee_per_unit)
+
+    With this qty and fee_adjusted_tp(), both win (at TP) and loss (at SL)
+    net exactly risk_net USDT after trading fees.
+    """
+    sl_dist = abs(entry - sl)
+    if sl_dist < 1e-12:
+        raise InvalidQtyError(
+            f"SL distance near zero (entry={entry} sl={sl}) — cannot size position."
+        )
+    fee_per_unit = entry * (entry_fee_rate + exit_fee_rate)
+    return risk_net / (sl_dist + fee_per_unit)
+
+
+def compute_qty_fee_adjusted(
+    risk_net: float,
+    entry: float,
+    sl: float,
+    entry_fee_rate: float,
+    exit_fee_rate: float,
+    leverage: int,
+    info: InstrumentInfo,
+) -> float:
+    """Full pipeline for fee-adjusted sizing: raw → validate → normalize."""
+    raw = compute_raw_qty_fee_adjusted(risk_net, entry, sl, entry_fee_rate, exit_fee_rate)
+
+    if raw < info.min_qty:
+        raise InvalidQtyError(
+            f"Computed qty {raw:.6f} is below minOrderQty={info.min_qty} "
+            f"for {info.symbol}. Increase RISK_FIXED_USDT or tighten SL distance."
+        )
+
+    qty = normalize_qty(raw, info)
+
+    fee_per_unit = entry * (entry_fee_rate + exit_fee_rate)
+    log.debug(
+        "Fee-adjusted sizing: risk_net=%.4f entry=%.5f sl=%.5f "
+        "sl_dist=%.5f fee_per_unit=%.5f → raw_qty=%.6f → normalized_qty=%.6f",
+        risk_net, entry, sl, abs(entry - sl), fee_per_unit, raw, qty,
+    )
+
+    return qty
+
+
+def fee_adjusted_tp(
+    entry: float,
+    sl: float,
+    side: str,
+    entry_fee_rate: float,
+    exit_fee_rate: float,
+) -> float:
+    """
+    TP price that makes net P&L at TP == +risk_net, symmetric with the loss at SL.
+
+        tp_dist = sl_dist + 2 * entry * (entry_fee_rate + exit_fee_rate)
+
+    Use together with compute_qty_fee_adjusted() for exact symmetry.
+    """
+    sl_dist = abs(entry - sl)
+    fee_dist = entry * (entry_fee_rate + exit_fee_rate)
+    tp_dist = sl_dist + 2 * fee_dist
+    return entry + tp_dist if side == "buy" else entry - tp_dist
+
+
 def risk_summary(
     risk_cash: float,
     entry: float,
