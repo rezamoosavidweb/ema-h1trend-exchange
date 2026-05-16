@@ -165,6 +165,25 @@ class DataFetcher:
         )
         return m5, h1
 
+    async def fetch_m5_frame(self) -> pd.DataFrame:
+        """
+        Fetch only the entry-TF (M5) frame, drop forming candle, validate min bars.
+        Used by strategies that need no H1 trend (e.g. Order Block Reaction).
+        """
+        m5_raw = await self._fetch_ohlcv(self.tf_entry, self.bars_entry)
+        m5     = _drop_forming_candle(m5_raw, self.tf_entry)
+        _validate_min_bars(m5, MIN_WARMUP_BARS_M5 + 1, f"M{self.tf_entry}")
+        _check_staleness(m5, self.tf_entry)
+        log.info(
+            "Data ready | %s M%s=%d bars [%s → %s]",
+            self.symbol,
+            self.tf_entry,
+            len(m5),
+            m5.index[0].strftime("%Y-%m-%d %H:%M"),
+            m5.index[-1].strftime("%Y-%m-%d %H:%M"),
+        )
+        return m5
+
     async def peek_latest_candle_time(self) -> Optional[pd.Timestamp]:
         """
         Cheap peek at the timestamp of the last closed candle for the duplicate guard.

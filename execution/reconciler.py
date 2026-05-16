@@ -45,12 +45,14 @@ class OrderReconciler:
         magic: int,
         symbol: str,
         journal: Optional[EventJournal] = None,
+        link_prefix: str = ORDER_LINK_ID_PREFIX,
     ) -> None:
         self._client = client
         self._state = state
         self._magic = magic
         self._symbol = symbol
         self._journal = journal
+        self._link_prefix = link_prefix
         self._log = SymbolAdapter(log, symbol)
 
     # ── Startup recovery ──────────────────────────────────────────────────────
@@ -84,7 +86,7 @@ class OrderReconciler:
         raw_orders = await self._client.get_open_stop_orders(self._symbol)
         our_orders = [
             o for o in raw_orders
-            if o.get("orderLinkId", "").startswith(f"{ORDER_LINK_ID_PREFIX}-")
+            if o.get("orderLinkId", "").startswith(f"{self._link_prefix}-")
         ]
 
         if not our_orders:

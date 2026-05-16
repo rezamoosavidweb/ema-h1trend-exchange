@@ -160,20 +160,21 @@ def make_order_link_id(
     magic: int,
     side: str,
     signal_bar_time: pd.Timestamp,
+    prefix: str = "ema",
 ) -> str:
     """
     Deterministic, idempotent orderLinkId (max 36 chars for Bybit).
 
     Same inputs → same ID → exchange deduplicates on re-submission.
-    Pattern: ema-<magic_short>-<side_char>-<bar_unix>
+    Pattern: <prefix>-<magic_short>-<side_char>-<bar_unix>
     """
     bar_unix = int(signal_bar_time.timestamp())
-    raw = f"ema-{magic}-{side[0]}-{bar_unix}"
+    raw = f"{prefix}-{magic}-{side[0]}-{bar_unix}"
     if len(raw) <= 36:
         return raw
-    # Hash if too long (symbol with long name)
+    # Hash if too long
     digest = _hashlib.md5(raw.encode()).hexdigest()[:12]
-    return f"ema-{digest}"
+    return f"{prefix}-{digest}"
 
 
 def make_order_link_id_from_str(

@@ -82,6 +82,7 @@ class OrderManager:
         atr_period: int = 14,
         atr_min_sl_multiplier: float = 1.0,
         rr: float = 1.0,
+        link_prefix: str = "ema",
     ) -> None:
         self._client = client
         self._info = info
@@ -99,6 +100,7 @@ class OrderManager:
         self._atr_period = atr_period
         self._atr_min_sl_multiplier = atr_min_sl_multiplier
         self._rr = rr
+        self._link_prefix = link_prefix
         self._last_wallet: Optional[WalletBalance] = None
         self._log = SymbolAdapter(log, symbol or info.symbol)
 
@@ -138,7 +140,8 @@ class OrderManager:
             return None
 
         order_link_id = make_order_link_id(
-            self._info.symbol, self._magic, side, signal_bar_time
+            self._info.symbol, self._magic, side, signal_bar_time,
+            prefix=self._link_prefix,
         )
 
         self._log.info(
