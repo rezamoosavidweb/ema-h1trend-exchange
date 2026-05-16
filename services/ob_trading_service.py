@@ -125,8 +125,9 @@ class OBTradingService:
 
         self._info = await self._client.get_instrument_info(cfg.symbol)
         self._log.info(
-            "Instrument | tickSize=%s qtyStep=%s minQty=%s",
-            self._info.tick_size, self._info.qty_step, self._info.min_qty,
+            "Instrument | tickSize=%s qtyStep=%s minQty=%s maxQty=%s",
+            self._info.tick_size, self._info.qty_step,
+            self._info.min_qty, self._info.max_qty,
         )
 
         if not cfg.dry_run:
@@ -180,12 +181,11 @@ class OBTradingService:
 
         self._log.info(
             "Initialized OB bot | magic=%d pip_size=%.6f expiry_min=%d "
-            "rr=%.1f (notebook RISK_REWARD=%.1f) risk=%.2f USDT "
-            "fee_adj=False atr_floor=False sl_buffer=%.4f",
+            "rr=%.1f risk=%.2f USDT sl_buffer=%.4f fee_adj=False atr_floor=False",
             cfg.effective_magic(),
             cfg.effective_pip_size(),
             cfg.pending_expiry_min,
-            cfg.rr, OB_DEFAULT_RR,
+            cfg.rr,
             cfg.risk_fixed_usdt,
             OB_SL_BUFFER,
         )
@@ -202,6 +202,7 @@ class OBTradingService:
         self._log.info(sep)
         self._log.info("ACCOUNT SNAPSHOT | %s | Order Block Strategy", mode)
 
+        # ── Wallet ────────────────────────────────────────────────────────────
         try:
             wallet = await self._client.get_balance()
             self._log.info(
@@ -212,27 +213,70 @@ class OBTradingService:
             self._log.warning("  Wallet   | could not fetch: %s", exc)
             wallet = None
 
+        # ── Config ────────────────────────────────────────────────────────────
         self._log.info(
             "  Config   | risk=%.2f USDT  lev=%dx  RR=%.1f  pip=%.6f  expiry=%dmin",
             cfg.risk_fixed_usdt, cfg.leverage, cfg.rr,
             cfg.effective_pip_size(), cfg.pending_expiry_min,
         )
-        self._log.info(sep)
+        self._log.info(
+            "  SL/TP    | fee_tighten=False  atr_floor=False  sl_buffer=%.4f"
+            "  (notebook: RR=%.1f  SL_BUFFER=%.1f)",
+            OB_SL_BUFFER, OB_DEFAULT_RR, OB_SL_BUFFER,
+        )
+        if wallet is not None and wallet.total_equity > 0:
+            self._log.info(
+                "  Per trade | %.2f USDT risk  (%.2f%% of %.2f equity)",
+                cfg.risk_fixed_usdt,
+                cfg.risk_fixed_usdt / wallet.total_equity * 100,
+                wallet.total_equity,
+            )
+        self._log.info(
+            "  Mode     | dry_run=%s  replace_pending=%s  position_mode=%s",
+            cfg.dry_run, cfg.replace_pending, cfg.position_mode,
+        )
 
+        # ── Open positions ────────────────────────────────────────────────────
         positions = []
         try:
             positions = await self._client.get_positions(cfg.symbol)
-        except Exception:
-            pass
+            if positions:
+                self._log.info("  Positions | %d open:", len(positions))
+                for p in positions:
+                    self._log.info(
+                        "    → %s  size=%s  entry=%.2f  uPnL=%.2f USDT  lev=%sx",
+                        p.side.value.upper(), p.size, p.entry_price,
+                        p.unrealized_pnl, int(p.leverage),
+                    )
+            else:
+                self._log.info("  Positions | none open")
+        except Exception as exc:
+            self._log.warning("  Positions | could not fetch: %s", exc)
 
+        # ── Pending orders (ob- prefix) ───────────────────────────────────────
         our_orders = []
         try:
             raw = await self._client.get_open_stop_orders(cfg.symbol)
             our_orders = [o for o in raw
                           if o.get("orderLinkId", "").startswith(f"{OB_LINK_PREFIX}-")]
-        except Exception:
-            pass
+            if our_orders:
+                self._log.info("  Pending   | %d OB order(s):", len(our_orders))
+                for o in our_orders:
+                    self._log.info(
+                        "    → %s  side=%s  trigger=%s  sl=%s  tp=%s  qty=%s  status=%s",
+                        o.get("orderLinkId", "?"), o.get("side", "?"),
+                        o.get("triggerPrice", "?"), o.get("stopLoss", "?"),
+                        o.get("takeProfit", "?"), o.get("qty", "?"),
+                        o.get("orderStatus", "?"),
+                    )
+            else:
+                self._log.info("  Pending   | none (ob- prefix)")
+        except Exception as exc:
+            self._log.warning("  Pending   | could not fetch: %s", exc)
 
+        self._log.info(sep)
+
+        # ── Journal ───────────────────────────────────────────────────────────
         self._journal.log(
             "bot_start",
             mode=mode,
@@ -262,7 +306,9 @@ class OBTradingService:
             ],
             pending_orders=[
                 {"link_id": o.get("orderLinkId"), "side": o.get("side"),
-                 "trigger": o.get("triggerPrice"), "status": o.get("orderStatus")}
+                 "trigger": o.get("triggerPrice"), "sl": o.get("stopLoss"),
+                 "tp": o.get("takeProfit"), "qty": o.get("qty"),
+                 "status": o.get("orderStatus")}
                 for o in our_orders
             ],
         )
@@ -271,14 +317,14 @@ class OBTradingService:
 
     async def _loop(self) -> None:
         self._log.info("━" * 55)
-        self._log.info("ORDER BLOCK TRADING LOOP STARTED")
+        self._log.info("OB [ORDER BLOCK] TRADING LOOP STARTED")
         self._log.info("━" * 55)
 
         while self._running:
             current_candle = await self._fetcher.peek_latest_candle_time()
 
             if self._state.is_duplicate_candle(current_candle):
-                self._log.info("Candle %s already processed — waiting.", current_candle)
+                self._log.info("Candle %s already processed — waiting for next.", current_candle)
                 await self._sleep_until_next_candle()
                 continue
 
@@ -309,6 +355,7 @@ class OBTradingService:
         # ── 1. Fetch M5 only ─────────────────────────────────────────────────
         m5 = await self._fetcher.fetch_m5_frame()
 
+        self._log.info("M5 bars: %d  current_bar=%s", len(m5), m5.index[-1])
         self._journal.log(
             "data_fetched",
             cycle=cycle_num,
@@ -327,10 +374,7 @@ class OBTradingService:
             sl_buffer=OB_SL_BUFFER,
         )
 
-        self._log.info(
-            "OB Signals: %d total | rr=%.1f sl_buffer=%.4f",
-            len(signals), cfg.rr, OB_SL_BUFFER,
-        )
+        self._log.info("OB Signals: %d total", len(signals))
         if not signals.empty:
             last = signals.iloc[-1]
             sl_dist = abs(float(last["entry"]) - float(last["sl"]))
@@ -346,6 +390,7 @@ class OBTradingService:
                 sl_dist, actual_rr,
                 last["qty"], last["signal_bar_time"],
             )
+            self._log_signal_to_csv(last, action="generated")
             self._journal.log(
                 "signal",
                 cycle=cycle_num,
@@ -371,7 +416,7 @@ class OBTradingService:
         wallet  = await self._client.get_balance()
         balance = wallet.total_equity
         self._log.info(
-            "Balance: %.2f USDT | available=%.2f | margin=%.2f",
+            "Balance: %.2f USDT | available=%.2f | margin=%.2f USDT",
             balance, wallet.available_balance, wallet.used_margin,
         )
         self._journal.log(
@@ -432,3 +477,33 @@ class OBTradingService:
 
     async def _teardown(self) -> None:
         self._log.info("GRACEFUL SHUTDOWN | state: %s", self._state.summary())
+
+    # ── Signal log helper ─────────────────────────────────────────────────────
+
+    def _log_signal_to_csv(self, signal_row, action: str = "generated") -> None:
+        if not self._signal_log.is_enabled():
+            return
+        cfg = self._cfg
+        try:
+            ob_type = str(signal_row.get("ob_type", ""))
+            self._signal_log.log_signal(
+                symbol=cfg.symbol,
+                magic=cfg.effective_magic(),
+                signal_bar_time=signal_row["signal_bar_time"],
+                trend=ob_type,           # ob_type used in trend field for OB strategy
+                side=str(signal_row["side"]),
+                model_entry=float(signal_row["entry"]),
+                model_sl=float(signal_row["sl"]),
+                model_tp=float(signal_row["tp"]),
+                setup_qty=float(signal_row["qty"]),
+                balance=cfg.start_balance,
+                risk_cash=cfg.risk_fixed_usdt,
+                pip_size=cfg.effective_pip_size(),
+                lookback_bars=0,         # not applicable for OB strategy
+                rr=cfg.rr,
+                pending_offset_ticks=0.0,  # not applicable for OB strategy
+                dry_run=cfg.dry_run,
+                action=action,
+            )
+        except Exception as exc:
+            self._log.debug("OB signal log error (non-fatal): %s", exc)
