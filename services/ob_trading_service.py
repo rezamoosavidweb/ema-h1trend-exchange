@@ -29,7 +29,7 @@ from models.order import InstrumentInfo
 from state.bot_state import BotState
 from storage.signal_log import SignalLogger
 from storage.event_journal import EventJournal
-from strategy.ob_core import list_ob_signals, OB_WARMUP_BARS
+from strategy.ob_core import list_ob_signals, OB_WARMUP_BARS, DEFAULT_RR as OB_DEFAULT_RR, SL_BUFFER as OB_SL_BUFFER
 from telemetry.logging import SymbolAdapter, add_symbol_file_handler
 
 log = logging.getLogger(__name__)
@@ -155,9 +155,11 @@ class OBTradingService:
             journal=self._journal,
             entry_fee_rate=cfg.entry_fee_rate,
             exit_fee_rate=cfg.exit_fee_rate,
-            fee_adjusted_sizing=cfg.fee_adjusted_sizing,
-            fee_tighten_sl=cfg.fee_tighten_sl,
-            atr_min_sl_enabled=cfg.atr_min_sl_enabled,
+            # Notebook (08_order_block_reaction_crypto.ipynb) has no fee-based SL/TP
+            # adjustments or ATR floor — keep False so bot output matches notebook exactly.
+            fee_adjusted_sizing=False,
+            fee_tighten_sl=False,
+            atr_min_sl_enabled=False,
             atr_period=cfg.atr_period,
             atr_min_sl_multiplier=cfg.atr_min_sl_multiplier,
             rr=cfg.rr,
@@ -177,12 +179,15 @@ class OBTradingService:
         await self._reconciler.reconcile_on_startup()
 
         self._log.info(
-            "Initialized OB bot | magic=%d pip_size=%.6f expiry_min=%d rr=%.1f risk=%.2f USDT",
+            "Initialized OB bot | magic=%d pip_size=%.6f expiry_min=%d "
+            "rr=%.1f (notebook RISK_REWARD=%.1f) risk=%.2f USDT "
+            "fee_adj=False atr_floor=False sl_buffer=%.4f",
             cfg.effective_magic(),
             cfg.effective_pip_size(),
             cfg.pending_expiry_min,
-            cfg.rr,
+            cfg.rr, OB_DEFAULT_RR,
             cfg.risk_fixed_usdt,
+            OB_SL_BUFFER,
         )
 
         await self._log_account_summary()
@@ -312,19 +317,33 @@ class OBTradingService:
         )
 
         # ── 2. Generate OB signals ───────────────────────────────────────────
+        # Matches notebook run_ob_backtest exactly:
+        #   Bullish: entry=ob_high  sl=ob_low-SL_BUFFER   tp=entry+(entry-sl)*rr
+        #   Bearish: entry=ob_low   sl=ob_high+SL_BUFFER   tp=entry-(sl-entry)*rr
         signals = list_ob_signals(
             m5,
             risk_cash=cfg.risk_fixed_usdt,
             rr=cfg.rr,
+            sl_buffer=OB_SL_BUFFER,
         )
 
-        self._log.info("OB Signals: %d total", len(signals))
+        self._log.info(
+            "OB Signals: %d total | rr=%.1f sl_buffer=%.4f",
+            len(signals), cfg.rr, OB_SL_BUFFER,
+        )
         if not signals.empty:
             last = signals.iloc[-1]
+            sl_dist = abs(float(last["entry"]) - float(last["sl"]))
+            actual_rr = (
+                abs(float(last["tp"]) - float(last["entry"])) / sl_dist
+                if sl_dist > 0 else 0.0
+            )
             self._log.info(
-                "Last OB signal | side=%s ob_type=%s entry=%.5f sl=%.5f tp=%.5f qty=%.4f bar=%s",
+                "Last OB signal | side=%s ob_type=%s entry=%.5f sl=%.5f tp=%.5f "
+                "sl_dist=%.5f rr=%.2f qty=%.4f bar=%s",
                 last["side"], last.get("ob_type", "?"),
                 last["entry"], last["sl"], last["tp"],
+                sl_dist, actual_rr,
                 last["qty"], last["signal_bar_time"],
             )
             self._journal.log(
@@ -335,6 +354,8 @@ class OBTradingService:
                 entry=float(last["entry"]),
                 sl=float(last["sl"]),
                 tp=float(last["tp"]),
+                sl_dist=float(sl_dist),
+                rr=float(actual_rr),
                 qty=float(last["qty"]),
                 signal_bar=str(last["signal_bar_time"]),
                 ob_type=str(last.get("ob_type", "")),

@@ -75,7 +75,12 @@ def _apply_overrides(args: argparse.Namespace) -> None:
     if args.symbol:         os.environ["SYMBOL"]           = args.symbol
     if args.magic:          os.environ["MAGIC"]            = str(args.magic)
     if args.risk is not None:  os.environ["RISK_FIXED_USDT"] = str(args.risk)
-    if args.rr is not None:    os.environ["RR"]              = str(args.rr)
+    if args.rr is not None:
+        os.environ["RR"] = str(args.rr)
+    elif not os.environ.get("RR"):
+        # OB notebook default: RISK_REWARD = 2.0
+        # TP = entry ± (entry - sl) * 2.0
+        os.environ["RR"] = "2.0"
     if args.pip_size:       os.environ["PIP_SIZE"]         = str(args.pip_size)
     if args.leverage:       os.environ["LEVERAGE"]         = str(args.leverage)
     if args.dry_run:        os.environ["DRY_RUN"]          = "true"
