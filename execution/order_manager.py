@@ -140,9 +140,11 @@ class OrderManager:
             self._log.error("Invalid qty — skipping: %s", exc)
             return None
 
+        attempt = self._state.ob_attempt_count(side, signal_bar_time)
         order_link_id = make_order_link_id(
             self._info.symbol, self._magic, side, signal_bar_time,
             prefix=self._link_prefix,
+            attempt=attempt,
         )
 
         self._log.info(
@@ -422,11 +424,21 @@ class OrderManager:
                                       expiry_bars=expiry_bars, side=side, entry=raw_entry)
                 await self.cancel_pending_order(reason="signal_expired")
             else:
-                # Signal still stale but order already gone — suppress repeat journal spam
-                self._log.debug(
-                    "Stale signal (bars_passed=%d) — no pending order, nothing to do.",
-                    bars_passed,
+                # Signal expired and no pending order exists — log once per unique entry
+                self._log.info(
+                    "Signal EXPIRED (bars_passed=%d >= expiry_bars=%d) — no pending, skipping. "
+                    "side=%s entry=%.5f signal_bar=%s",
+                    bars_passed, expiry_bars, side, raw_entry, signal_time,
                 )
+                if self._journal:
+                    self._journal.log(
+                        "signal_expired_skip",
+                        bars_passed=bars_passed,
+                        expiry_bars=expiry_bars,
+                        side=side,
+                        entry=raw_entry,
+                        signal_bar=str(signal_time),
+                    )
             return
 
         # ── Step 5: valid signal ──────────────────────────────────────────────

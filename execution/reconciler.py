@@ -165,6 +165,13 @@ class OrderReconciler:
         status = order.get("orderStatus", "").lower()
         if status in ("cancelled", "deactivated", "filled"):
             self._log.info("Tracked pending %s status=%s — clearing.", link_id, status)
+            if status == "filled" and self._state.pending is not None:
+                # Track the fill so the next re-entry on the same OB gets a
+                # fresh link_id and avoids ErrCode 110072 (duplicate orderLinkId).
+                self._state.mark_ob_filled(
+                    self._state.pending.side.value,
+                    self._state.pending.signal_bar_time,
+                )
             if self._journal:
                 self._journal.log("order_cleared", link_id=link_id,
                                   reason=f"exchange_status_{status}",

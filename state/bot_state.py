@@ -52,6 +52,12 @@ class BotState:
     cycles_total: int = field(default=0)
     cycles_error: int = field(default=0)
 
+    # ── OB re-entry counters ─────────────────────────────────────────────────
+    # Tracks how many times each OB signal bar has been filled, so subsequent
+    # re-entries on the same OB use a unique orderLinkId (avoids ErrCode 110072).
+    # Key: "{side[0]}-{bar_unix}"  e.g. "b-1779039900"
+    _ob_fill_counts: dict = field(default_factory=dict, repr=False)
+
     # ── Lock accessor ────────────────────────────────────────────────────────
 
     @property
@@ -131,6 +137,25 @@ class BotState:
             return False
         return self.pending.side.value == side
 
+    # ── OB re-entry tracking ──────────────────────────────────────────────────
+
+    def _ob_key(self, side: str, signal_bar_time) -> str:
+        bar_unix = int(pd.Timestamp(signal_bar_time).timestamp())
+        return f"{side[0].lower()}-{bar_unix}"
+
+    def mark_ob_filled(self, side: str, signal_bar_time) -> None:
+        """Record that a fill occurred for this OB so next re-entry gets a fresh link_id."""
+        key = self._ob_key(side, signal_bar_time)
+        self._ob_fill_counts[key] = self._ob_fill_counts.get(key, 0) + 1
+        log.info(
+            "[%s] OB fill count for %s → attempt %d",
+            self.symbol, key, self._ob_fill_counts[key],
+        )
+
+    def ob_attempt_count(self, side: str, signal_bar_time) -> int:
+        """Return number of prior fills for this OB (0 = first attempt)."""
+        return self._ob_fill_counts.get(self._ob_key(side, signal_bar_time), 0)
+
     # ── Startup recovery ──────────────────────────────────────────────────────
 
     def mark_recovery_done(self) -> None:
@@ -161,18 +186,22 @@ def make_order_link_id(
     side: str,
     signal_bar_time: pd.Timestamp,
     prefix: str = "ema",
+    attempt: int = 0,
 ) -> str:
     """
-    Deterministic, idempotent orderLinkId (max 36 chars for Bybit).
+    Deterministic orderLinkId (max 36 chars for Bybit).
 
-    Same inputs → same ID → exchange deduplicates on re-submission.
-    Pattern: <prefix>-<magic_short>-<side_char>-<bar_unix>
+    `attempt` is incremented each time the same OB signal bar is filled, so
+    re-entries on the same OB get a unique ID and avoid ErrCode 110072.
+    Pattern: <prefix>-<magic_short>-<side_char>-<bar_unix>[-<attempt>]
     """
     bar_unix = int(signal_bar_time.timestamp())
-    raw = f"{prefix}-{magic}-{side[0]}-{bar_unix}"
+    if attempt > 0:
+        raw = f"{prefix}-{magic}-{side[0]}-{bar_unix}-{attempt}"
+    else:
+        raw = f"{prefix}-{magic}-{side[0]}-{bar_unix}"
     if len(raw) <= 36:
         return raw
-    # Hash if too long
     digest = _hashlib.md5(raw.encode()).hexdigest()[:12]
     return f"{prefix}-{digest}"
 
