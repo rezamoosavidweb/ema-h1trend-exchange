@@ -54,6 +54,10 @@ class MultiSymbolRunner:
         self._telegram_bot = telegram_bot
         self._ws_notifier = ws_notifier
 
+    def _make_service(self, sym_cfg: Settings) -> TradingService:
+        """Factory method — subclasses override to return a different service type."""
+        return TradingService(sym_cfg)
+
     @property
     def services(self) -> List[TradingService]:
         return list(self._services)
@@ -74,7 +78,7 @@ class MultiSymbolRunner:
             from config.settings import Settings as S
             sym_cfg = S(**cfg_dict)
 
-            svc = TradingService(sym_cfg)
+            svc = self._make_service(sym_cfg)
             self._services.append(svc)
             tasks.append(asyncio.create_task(
                 svc.run(),

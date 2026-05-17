@@ -155,12 +155,8 @@ def main() -> None:
             log.info("Multi-symbol OB mode | symbols=%s", symbols)
             from services.multi_symbol_runner import MultiSymbolRunner
 
-            # Patch MultiSymbolRunner to use OBTradingService
-            import services.multi_symbol_runner as _msr
-            _orig_factory = getattr(_msr, "_service_factory", None)
-
             class _OBRunner(MultiSymbolRunner):
-                def _make_service(self, symbol: str, sym_cfg: Settings) -> OBTradingService:
+                def _make_service(self, sym_cfg: Settings) -> OBTradingService:
                     return OBTradingService(sym_cfg)
 
             runner = _OBRunner(symbols, cfg)
