@@ -6,3 +6,9 @@
 {"ts": "2026-05-17T08:56:31.765Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 1, "equity": 56122.69316115, "available": 53344.92397244999, "used_margin": 2783.5240887}
 {"ts": "2026-05-17T08:56:32.044Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 1, "has_position": false}
 {"ts": "2026-05-17T08:56:32.045Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-17T09:00:01.184Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-17T09:00:01.597Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "current_bar": "2026-05-17 08:55:00+00:00"}
+{"ts": "2026-05-17T09:00:01.739Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 2, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:00:01.870Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 2, "equity": 56122.97006115, "available": 53345.20087245, "used_margin": 2783.2471887}
+{"ts": "2026-05-17T09:00:02.277Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 2, "has_position": false}
+{"ts": "2026-05-17T09:00:02.278Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 2}

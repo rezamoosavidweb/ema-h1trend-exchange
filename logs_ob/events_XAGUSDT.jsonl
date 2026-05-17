@@ -8,3 +8,10 @@
 {"ts": "2026-05-17T08:56:32.044Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 222.222, "margin_used": 16822.2054, "leverage": 1, "risk_per_unit": 0.09, "reward_per_unit": 0.18}
 {"ts": "2026-05-17T08:56:32.318Z", "symbol": "XAGUSDT", "event": "order_created", "dry_run": false, "link_id": "ob-82950467-b-1778982300", "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.89, "qty": 222.222, "signal_bar": "2026-05-17 01:45:00+00:00", "bybit_order_id": "e9c50555-6493-4e13-bdea-a110f436801b"}
 {"ts": "2026-05-17T08:56:32.318Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-17T09:00:01.398Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-17T09:00:01.954Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "current_bar": "2026-05-17 08:55:00+00:00"}
+{"ts": "2026-05-17T09:00:02.089Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 2, "total_signals": 11, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:00:02.555Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 2, "equity": 56122.97006115, "available": 53345.20087245, "used_margin": 2783.2471887}
+{"ts": "2026-05-17T09:00:02.835Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 2, "has_position": false}
+{"ts": "2026-05-17T09:00:02.836Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 222.222, "margin_used": 16822.2054, "leverage": 1, "risk_per_unit": 0.09, "reward_per_unit": 0.18}
+{"ts": "2026-05-17T09:00:02.836Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 2}
