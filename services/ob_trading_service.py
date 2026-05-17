@@ -29,7 +29,13 @@ from models.order import InstrumentInfo
 from state.bot_state import BotState
 from storage.signal_log import SignalLogger
 from storage.event_journal import EventJournal
-from strategy.ob_core import list_ob_signals, OB_WARMUP_BARS, DEFAULT_RR as OB_DEFAULT_RR, SL_BUFFER as OB_SL_BUFFER
+from strategy.ob_core import (
+    list_ob_signals,
+    OB_WARMUP_BARS,
+    OB_EXPIRY_BARS,
+    DEFAULT_RR as OB_DEFAULT_RR,
+    SL_BUFFER as OB_SL_BUFFER,
+)
 from telemetry.logging import SymbolAdapter, add_symbol_file_handler
 
 log = logging.getLogger(__name__)
@@ -432,7 +438,25 @@ class OBTradingService:
         self._log.info("Open position: %s", has_position)
         self._journal.log("position_check", cycle=cycle_num, has_position=has_position)
 
-        # ── 6. Sync orders ───────────────────────────────────────────────────
+        # ── 6. OB invalidation guard ─────────────────────────────────────────
+        # Notebook: OB is cancelled when price closes through ob_low/ob_high.
+        # ob_core.py handles this naturally — if the OB zone is broken, that
+        # signal no longer appears in the output.  When signals are empty AND
+        # we hold a pending, it means the latest OB was invalidated → cancel.
+        if signals.empty and self._state.has_pending():
+            self._log.info(
+                "No active OB setups — OB zone invalidated — cancelling pending order."
+            )
+            self._journal.log("ob_invalidated", cycle=cycle_num,
+                              reason="no_active_ob_signals")
+            await self._order_mgr.cancel_pending_order(reason="ob_invalidated")
+
+        # ── 7. Sync orders ───────────────────────────────────────────────────
+        # Notebook expiry: OB is valid for OB_EXPIRY_BARS (100) M5 candles
+        # from OB formation, not from signal time.  Use OB_EXPIRY_BARS as the
+        # pending lifetime so the order survives the full OB window.
+        # Natural invalidation (step 6 above) cancels it sooner when needed.
+        ob_expiry_min = OB_EXPIRY_BARS * cfg.entry_tf_minutes  # 100 * 5 = 500 min
         await self._order_mgr.sync_pending_orders(
             has_position=has_position,
             signals_df=signals,
@@ -441,7 +465,7 @@ class OBTradingService:
             wallet=wallet,
             risk_cash=cfg.risk_fixed_usdt,
             pip_size=cfg.effective_pip_size(),
-            pending_expiry_min=cfg.pending_expiry_min,
+            pending_expiry_min=ob_expiry_min,
             entry_tf_minutes=cfg.entry_tf_minutes,
         )
 
