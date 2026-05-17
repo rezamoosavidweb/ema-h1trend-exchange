@@ -30,6 +30,11 @@ DEFAULT_RR               = 2.0
 SL_BUFFER                = 0.0
 OB_WARMUP_BARS           = 120   # min bars before signals are reliable
 
+# ── Fee-based minimum SL distance ────────────────────────────────────────────
+MAKER_FEE_RATE  = 0.0002    # 0.02%  — limit entry orders
+TAKER_FEE_RATE  = 0.00055   # 0.055% — stop-loss (market) exit
+MIN_SL_FEE_MULT = 1.0       # min_sl_dist = entry × (maker+taker) × this
+
 
 @dataclass
 class _Displacement:
@@ -154,6 +159,7 @@ def list_ob_signals(
     displacement_atr_mult: float  = DISPLACEMENT_ATR_MULT,
     ob_expiry_bars: int           = OB_EXPIRY_BARS,
     rejection_wick_ratio: float   = REJECTION_WICK_RATIO,
+    min_sl_fee_mult: float        = MIN_SL_FEE_MULT,
 ) -> pd.DataFrame:
     """
     Scan all closed M5 bars and return every bar where an OB entry signal fires.
@@ -183,10 +189,11 @@ def list_ob_signals(
                 # Retest: low touches zone AND close stays above ob_low
                 if float(bar["low"]) <= ob.ob_high and float(bar["close"]) >= ob.ob_low:
                     if _is_rejection(bar, ob.ob_type, rejection_wick_ratio):
-                        entry = ob.ob_high
-                        sl    = ob.ob_low - sl_buffer
-                        dist  = entry - sl
-                        if dist > 0:
+                        entry    = ob.ob_high
+                        sl       = ob.ob_low - sl_buffer
+                        dist     = entry - sl
+                        min_dist = entry * (MAKER_FEE_RATE + TAKER_FEE_RATE) * min_sl_fee_mult
+                        if dist >= min_dist:
                             rows.append({
                                 "signal_bar_index": i,
                                 "signal_bar_time":  df.index[i],
@@ -209,10 +216,11 @@ def list_ob_signals(
                 # Retest: high touches zone AND close stays below ob_high
                 if float(bar["high"]) >= ob.ob_low and float(bar["close"]) <= ob.ob_high:
                     if _is_rejection(bar, ob.ob_type, rejection_wick_ratio):
-                        entry = ob.ob_low
-                        sl    = ob.ob_high + sl_buffer
-                        dist  = sl - entry
-                        if dist > 0:
+                        entry    = ob.ob_low
+                        sl       = ob.ob_high + sl_buffer
+                        dist     = sl - entry
+                        min_dist = entry * (MAKER_FEE_RATE + TAKER_FEE_RATE) * min_sl_fee_mult
+                        if dist >= min_dist:
                             rows.append({
                                 "signal_bar_index": i,
                                 "signal_bar_time":  df.index[i],

@@ -114,6 +114,7 @@ class OrderManager:
         tp: float,
         qty: float,
         signal_bar_time: pd.Timestamp,
+        current_price: Optional[float] = None,
     ) -> Optional[PendingOrder]:
         """
         Place a new conditional stop-entry order.
@@ -177,9 +178,17 @@ class OrderManager:
             return pending
 
         bybit_side = "Buy" if side == "buy" else "Sell"
-        trigger_dir = TriggerDirection.for_side(
-            Side.BUY if side == "buy" else Side.SELL
-        ).value
+        if current_price is not None:
+            # Compare entry vs live price: OB limit-retest entries may be
+            # below current (BUY retracement) or above (SELL retracement).
+            trigger_dir = (
+                TriggerDirection.FALLS_TO if entry < current_price
+                else TriggerDirection.RISES_TO
+            ).value
+        else:
+            trigger_dir = TriggerDirection.for_side(
+                Side.BUY if side == "buy" else Side.SELL
+            ).value
 
         try:
             result = await self._client.place_conditional_order(
@@ -364,6 +373,7 @@ class OrderManager:
            e. Pending different prices → modify
         """
         expiry_bars = max(1, pending_expiry_min // entry_tf_minutes)
+        current_price = float(m5_ctx.iloc[-1]["close"]) if m5_ctx is not None else None
 
         # ── Step 1: position guard ────────────────────────────────────────────
         if has_position:
@@ -571,7 +581,8 @@ class OrderManager:
         if not self._state.has_pending():
             self._log.info("No existing pending — creating new.")
             await self.create_pending_order(
-                side, raw_entry, raw_sl, raw_tp, norm_qty, signal_time
+                side, raw_entry, raw_sl, raw_tp, norm_qty, signal_time,
+                current_price=current_price,
             )
             return
 
@@ -590,7 +601,8 @@ class OrderManager:
             )
             await self.cancel_pending_order(reason="side_changed")
             await self.create_pending_order(
-                side, raw_entry, raw_sl, raw_tp, norm_qty, signal_time
+                side, raw_entry, raw_sl, raw_tp, norm_qty, signal_time,
+                current_price=current_price,
             )
         else:
             # Same side, different prices → modify
@@ -601,5 +613,6 @@ class OrderManager:
                 self._log.warning("Amend failed — attempting cancel + recreate.")
                 await self.cancel_pending_order(reason="amend_failed")
                 await self.create_pending_order(
-                    side, raw_entry, raw_sl, raw_tp, norm_qty, signal_time
+                    side, raw_entry, raw_sl, raw_tp, norm_qty, signal_time,
+                    current_price=current_price,
                 )
