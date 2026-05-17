@@ -1,0 +1,882 @@
+{"ts": "2026-05-16T21:22:00.112Z", "symbol": "BTCUSDT", "event": "orphan_adopted", "link_id": "ema-15316363-s-1778963700", "side": "sell", "entry": 78174.6}
+{"ts": "2026-05-16T21:22:00.948Z", "symbol": "BTCUSDT", "event": "bot_start", "mode": "DEMO", "dry_run": false, "risk_usdt": 20.0, "leverage": 1, "rr": 2.0, "pip_size": 1.0, "expiry_min": 60, "expiry_bars": 12, "lookback_bars": 5, "position_mode": "one_way", "magic": 15316363, "journal_path": "logs/events_BTCUSDT.jsonl"}
+{"ts": "2026-05-16T21:22:00.948Z", "symbol": "BTCUSDT", "event": "account_snapshot", "equity": 56255.44926015, "available": 20308.397641509997, "used_margin": 35962.00135864, "open_positions": [], "pending_orders": [{"link_id": "ema-15316363-s-1778963700", "side": "Sell", "trigger": "78174.6", "status": "Untriggered"}]}
+{"ts": "2026-05-16T21:22:01.231Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 1}
+{"ts": "2026-05-16T21:22:02.520Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 1, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:15:00+00:00", "h1_trend": {"2026-05-16 21:05:00+00:00": "bear", "2026-05-16 21:10:00+00:00": "bear", "2026-05-16 21:15:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:22:02.712Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 1, "total_signals": 498, "side": "sell", "entry": 78192.1, "sl": 78277.9, "tp": 78020.50000000003, "qty": 0.23310023310026473, "signal_bar": "2026-05-16 21:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:22:04.741Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 1, "equity": 56253.48907015, "available": 20306.43745151, "used_margin": 35963.96154864}
+{"ts": "2026-05-16T21:22:05.022Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 1, "has_position": false}
+{"ts": "2026-05-16T21:22:05.023Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.64407500000001, "sl_before": 78277.9, "sl_after": 78219.25592499999}
+{"ts": "2026-05-16T21:22:05.023Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 6.3273, "reward_cash": 39.9828, "rr": 6.319, "qty": 0.233, "margin_used": 18218.7593, "leverage": 1, "risk_per_unit": 27.15592, "reward_per_unit": 171.6}
+{"ts": "2026-05-16T21:22:05.299Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778963700", "entry": 78192.1, "sl": 78219.3, "tp": 78020.5, "qty": 0.233}
+{"ts": "2026-05-16T21:22:05.299Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-16T21:22:18.065Z", "symbol": "BTCUSDT", "event": "orphan_adopted", "link_id": "ema-15316363-s-1778963700", "side": "sell", "entry": 78192.1}
+{"ts": "2026-05-16T21:22:18.901Z", "symbol": "BTCUSDT", "event": "bot_start", "mode": "DEMO", "dry_run": false, "risk_usdt": 20.0, "leverage": 1, "rr": 2.0, "pip_size": 1.0, "expiry_min": 60, "expiry_bars": 12, "lookback_bars": 5, "position_mode": "one_way", "magic": 15316363, "journal_path": "logs/events_BTCUSDT.jsonl"}
+{"ts": "2026-05-16T21:22:18.901Z", "symbol": "BTCUSDT", "event": "account_snapshot", "equity": 56251.50024015, "available": 20304.448621509997, "used_margin": 35965.95037864, "open_positions": [], "pending_orders": [{"link_id": "ema-15316363-s-1778963700", "side": "Sell", "trigger": "78192.1", "status": "Untriggered"}]}
+{"ts": "2026-05-16T21:22:19.183Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 1}
+{"ts": "2026-05-16T21:22:20.565Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 1, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:15:00+00:00", "h1_trend": {"2026-05-16 21:05:00+00:00": "bear", "2026-05-16 21:10:00+00:00": "bear", "2026-05-16 21:15:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:22:20.839Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 1, "total_signals": 498, "side": "sell", "entry": 78192.1, "sl": 78277.9, "tp": 78020.50000000003, "qty": 0.23310023310026473, "signal_bar": "2026-05-16 21:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:22:22.563Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 1, "equity": 56252.13917015, "available": 20305.087551509998, "used_margin": 35965.31144864}
+{"ts": "2026-05-16T21:22:22.845Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 1, "has_position": false}
+{"ts": "2026-05-16T21:22:22.846Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.64407500000001, "sl_before": 78277.9, "sl_after": 78219.25592499999}
+{"ts": "2026-05-16T21:22:22.846Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 6.3273, "reward_cash": 39.9828, "rr": 6.319, "qty": 0.233, "margin_used": 18218.7593, "leverage": 1, "risk_per_unit": 27.15592, "reward_per_unit": 171.6}
+{"ts": "2026-05-16T21:22:22.846Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-16T21:25:02.500Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-16T21:25:03.547Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:20:00+00:00", "h1_trend": {"2026-05-16 21:10:00+00:00": "bear", "2026-05-16 21:15:00+00:00": "bear", "2026-05-16 21:20:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:25:03.728Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 2, "total_signals": 498, "side": "sell", "entry": 78192.1, "sl": 78277.9, "tp": 78020.50000000003, "qty": 0.23310023310026473, "signal_bar": "2026-05-16 21:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:25:03.950Z", "symbol": "BTCUSDT", "event": "order_cleared", "link_id": "ema-15316363-s-1778963700", "reason": "exchange_status_filled", "exchange_status": "filled"}
+{"ts": "2026-05-16T21:25:04.623Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 2, "equity": 56265.20178829, "available": 2079.3502344200024, "used_margin": 54187.40501387}
+{"ts": "2026-05-16T21:25:04.901Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 2, "has_position": true}
+{"ts": "2026-05-16T21:25:04.902Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T21:25:04.902Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 2}
+{"ts": "2026-05-16T21:29:04.747Z", "symbol": "BTCUSDT", "event": "bot_start", "mode": "DEMO", "dry_run": false, "risk_usdt": 20.0, "leverage": 1, "rr": 2.0, "pip_size": 1.0, "expiry_min": 60, "expiry_bars": 12, "lookback_bars": 5, "position_mode": "one_way", "magic": 15316363, "journal_path": "logs/events_BTCUSDT.jsonl"}
+{"ts": "2026-05-16T21:29:04.747Z", "symbol": "BTCUSDT", "event": "account_snapshot", "equity": 56235.96084247, "available": 20288.90922383, "used_margin": 35961.29811864, "open_positions": [], "pending_orders": []}
+{"ts": "2026-05-16T21:29:05.165Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 1}
+{"ts": "2026-05-16T21:29:05.661Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 1, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:20:00+00:00", "h1_trend": {"2026-05-16 21:10:00+00:00": "bear", "2026-05-16 21:15:00+00:00": "bear", "2026-05-16 21:20:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:29:05.913Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 1, "total_signals": 498, "side": "sell", "entry": 78192.1, "sl": 78277.9, "tp": 78020.50000000003, "qty": 0.23310023310026473, "signal_bar": "2026-05-16 21:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:29:05.989Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 1, "equity": 56235.96084247, "available": 20288.90922383, "used_margin": 35961.29811864}
+{"ts": "2026-05-16T21:29:06.268Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 1, "has_position": false}
+{"ts": "2026-05-16T21:29:06.269Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.64407500000001, "sl_before": 78277.9, "sl_after": 78219.25592499999}
+{"ts": "2026-05-16T21:29:06.269Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 6.3273, "reward_cash": 39.9828, "rr": 6.319, "qty": 0.233, "margin_used": 18218.7593, "leverage": 1, "risk_per_unit": 27.15592, "reward_per_unit": 171.6}
+{"ts": "2026-05-16T21:29:06.545Z", "symbol": "BTCUSDT", "event": "order_created", "dry_run": false, "link_id": "ema-15316363-s-1778966400", "side": "sell", "entry": 78192.1, "sl": 78219.3, "tp": 78020.5, "qty": 0.233, "signal_bar": "2026-05-16 21:20:00+00:00", "bybit_order_id": "60b397c8-97dc-4f98-b6d7-76aeb39c04b6"}
+{"ts": "2026-05-16T21:29:06.546Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-16T21:30:01.679Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-16T21:30:01.975Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:25:00+00:00", "h1_trend": {"2026-05-16 21:15:00+00:00": "bear", "2026-05-16 21:20:00+00:00": "bear", "2026-05-16 21:25:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:30:02.153Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 2, "total_signals": 498, "side": "sell", "entry": 78192.1, "sl": 78277.9, "tp": 78020.50000000003, "qty": 0.23310023310026473, "signal_bar": "2026-05-16 21:25:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:30:02.515Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 2, "equity": 56238.73430247, "available": 20291.682683829997, "used_margin": 35958.52465864}
+{"ts": "2026-05-16T21:30:02.795Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 2, "has_position": false}
+{"ts": "2026-05-16T21:30:02.796Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.64407500000001, "sl_before": 78277.9, "sl_after": 78219.25592499999}
+{"ts": "2026-05-16T21:30:02.797Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 6.3273, "reward_cash": 39.9828, "rr": 6.319, "qty": 0.233, "margin_used": 18218.7593, "leverage": 1, "risk_per_unit": 27.15592, "reward_per_unit": 171.6}
+{"ts": "2026-05-16T21:30:02.797Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 2}
+{"ts": "2026-05-16T21:35:02.078Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-16T21:35:02.585Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:30:00+00:00", "h1_trend": {"2026-05-16 21:20:00+00:00": "bear", "2026-05-16 21:25:00+00:00": "bear", "2026-05-16 21:30:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:35:02.764Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 3, "total_signals": 498, "side": "sell", "entry": 78188.4, "sl": 78277.9, "tp": 78009.4, "qty": 0.22346368715083798, "signal_bar": "2026-05-16 21:30:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:35:03.125Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 3, "equity": 56236.92253247, "available": 20289.870913829996, "used_margin": 35960.33642864}
+{"ts": "2026-05-16T21:35:03.402Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 3, "has_position": false}
+{"ts": "2026-05-16T21:35:03.403Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.641299999999994, "sl_before": 78277.9, "sl_after": 78219.25869999999}
+{"ts": "2026-05-16T21:35:03.404Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 6.8815, "reward_cash": 39.917, "rr": 5.801, "qty": 0.223, "margin_used": 17436.0132, "leverage": 1, "risk_per_unit": 30.8587, "reward_per_unit": 179.0}
+{"ts": "2026-05-16T21:35:03.679Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778966400", "entry": 78188.4, "sl": 78219.3, "tp": 78009.4, "qty": 0.223}
+{"ts": "2026-05-16T21:35:03.679Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 3}
+{"ts": "2026-05-16T21:40:02.732Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 4}
+{"ts": "2026-05-16T21:40:03.767Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 4, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:35:00+00:00", "h1_trend": {"2026-05-16 21:25:00+00:00": "bear", "2026-05-16 21:30:00+00:00": "bear", "2026-05-16 21:35:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:40:03.951Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 4, "total_signals": 498, "side": "sell", "entry": 78188.4, "sl": 78273.6, "tp": 78017.99999999997, "qty": 0.2347417840375266, "signal_bar": "2026-05-16 21:35:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:40:05.049Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 4, "equity": 56246.89483247, "available": 20299.843213829998, "used_margin": 35950.36412864}
+{"ts": "2026-05-16T21:40:05.880Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 4, "has_position": false}
+{"ts": "2026-05-16T21:40:05.881Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.641299999999994, "sl_before": 78273.6, "sl_after": 78214.9587}
+{"ts": "2026-05-16T21:40:05.882Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 6.2147, "reward_cash": 39.8736, "rr": 6.416, "qty": 0.234, "margin_used": 18296.0856, "leverage": 1, "risk_per_unit": 26.5587, "reward_per_unit": 170.4}
+{"ts": "2026-05-16T21:40:06.717Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778966400", "entry": 78188.4, "sl": 78215.0, "tp": 78017.9, "qty": 0.234}
+{"ts": "2026-05-16T21:40:06.718Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 4}
+{"ts": "2026-05-16T21:45:02.067Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 5}
+{"ts": "2026-05-16T21:45:02.464Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 5, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:40:00+00:00", "h1_trend": {"2026-05-16 21:30:00+00:00": "bear", "2026-05-16 21:35:00+00:00": "bear", "2026-05-16 21:40:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:45:02.641Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 5, "total_signals": 498, "side": "sell", "entry": 78188.4, "sl": 78273.5, "tp": 78018.19999999998, "qty": 0.23501762632195808, "signal_bar": "2026-05-16 21:40:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:45:02.726Z", "symbol": "BTCUSDT", "event": "order_cleared", "link_id": "ema-15316363-s-1778966400", "reason": "exchange_status_filled", "exchange_status": "filled"}
+{"ts": "2026-05-16T21:45:03.004Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 5, "equity": 56246.15222471, "available": 24229.41600255, "used_margin": 32019.43556216}
+{"ts": "2026-05-16T21:45:03.284Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 5, "has_position": false}
+{"ts": "2026-05-16T21:45:03.284Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.641299999999994, "sl_before": 78273.5, "sl_after": 78214.8587}
+{"ts": "2026-05-16T21:45:03.285Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 6.2178, "reward_cash": 39.997, "rr": 6.433, "qty": 0.235, "margin_used": 18374.274, "leverage": 1, "risk_per_unit": 26.4587, "reward_per_unit": 170.2}
+{"ts": "2026-05-16T21:45:03.563Z", "symbol": "BTCUSDT", "event": "order_created", "dry_run": false, "link_id": "ema-15316363-s-1778967600", "side": "sell", "entry": 78188.4, "sl": 78214.9, "tp": 78018.1, "qty": 0.235, "signal_bar": "2026-05-16 21:40:00+00:00", "bybit_order_id": "c3c92408-84da-4bf7-b64a-8e8e0557da5c"}
+{"ts": "2026-05-16T21:45:03.563Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 5}
+{"ts": "2026-05-16T21:48:01.935Z", "symbol": "BTCUSDT", "event": "orphan_adopted", "link_id": "ema-15316363-s-1778967600", "side": "sell", "entry": 78188.4}
+{"ts": "2026-05-16T21:48:04.398Z", "symbol": "BTCUSDT", "event": "bot_start", "mode": "DEMO", "dry_run": false, "risk_usdt": 20.0, "leverage": 1, "rr": 2.0, "pip_size": 1.0, "expiry_min": 60, "expiry_bars": 12, "lookback_bars": 5, "position_mode": "one_way", "magic": 15316363, "journal_path": "logs/events_BTCUSDT.jsonl"}
+{"ts": "2026-05-16T21:48:04.398Z", "symbol": "BTCUSDT", "event": "account_snapshot", "equity": 56240.61844471, "available": 24223.88222255, "used_margin": 32024.96934216, "open_positions": [], "pending_orders": [{"link_id": "ema-15316363-s-1778967600", "side": "Sell", "trigger": "78188.4", "status": "Untriggered"}]}
+{"ts": "2026-05-16T21:48:04.885Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 1}
+{"ts": "2026-05-16T21:48:05.548Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 1, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:40:00+00:00", "h1_trend": {"2026-05-16 21:30:00+00:00": "bear", "2026-05-16 21:35:00+00:00": "bear", "2026-05-16 21:40:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:48:05.751Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 1, "total_signals": 498, "side": "sell", "entry": 78188.4, "sl": 78273.5, "tp": 78018.19999999998, "qty": 0.23501762632195808, "signal_bar": "2026-05-16 21:40:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:48:06.841Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 1, "equity": 56243.35334471, "available": 24226.61712255, "used_margin": 32022.23444216}
+{"ts": "2026-05-16T21:48:07.679Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 1, "has_position": false}
+{"ts": "2026-05-16T21:48:07.680Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.641299999999994, "sl_before": 78273.5, "sl_after": 78214.8587}
+{"ts": "2026-05-16T21:48:07.680Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 6.2178, "reward_cash": 39.997, "rr": 6.433, "qty": 0.235, "margin_used": 18374.274, "leverage": 1, "risk_per_unit": 26.4587, "reward_per_unit": 170.2}
+{"ts": "2026-05-16T21:48:07.680Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-16T21:50:02.369Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-16T21:50:03.405Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:45:00+00:00", "h1_trend": {"2026-05-16 21:35:00+00:00": "bear", "2026-05-16 21:40:00+00:00": "bear", "2026-05-16 21:45:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:50:03.587Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 2, "total_signals": 498, "side": "sell", "entry": 78166.8, "sl": 78276.3, "tp": 77947.8, "qty": 0.182648401826484, "signal_bar": "2026-05-16 21:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:50:04.715Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 2, "equity": 56249.47113471, "available": 24232.73491255, "used_margin": 32016.11665216}
+{"ts": "2026-05-16T21:50:05.532Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 2, "has_position": false}
+{"ts": "2026-05-16T21:50:05.533Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.6251, "sl_before": 78276.3, "sl_after": 78217.6749}
+{"ts": "2026-05-16T21:50:05.533Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 9.2592, "reward_cash": 39.858, "rr": 4.305, "qty": 0.182, "margin_used": 14226.3576, "leverage": 1, "risk_per_unit": 50.8749, "reward_per_unit": 219.0}
+{"ts": "2026-05-16T21:50:06.345Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778967600", "entry": 78166.8, "sl": 78217.7, "tp": 77947.8, "qty": 0.182}
+{"ts": "2026-05-16T21:50:06.345Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 2}
+{"ts": "2026-05-16T21:55:01.787Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-16T21:55:02.208Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:50:00+00:00", "h1_trend": {"2026-05-16 21:40:00+00:00": "bear", "2026-05-16 21:45:00+00:00": "bear", "2026-05-16 21:50:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:55:02.390Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 3, "total_signals": 498, "side": "sell", "entry": 78166.8, "sl": 78276.3, "tp": 77947.8, "qty": 0.182648401826484, "signal_bar": "2026-05-16 21:50:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:55:02.749Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 3, "equity": 56243.84067471, "available": 24227.10445255, "used_margin": 32021.74711216}
+{"ts": "2026-05-16T21:55:03.030Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 3, "has_position": false}
+{"ts": "2026-05-16T21:55:03.032Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.6251, "sl_before": 78276.3, "sl_after": 78217.6749}
+{"ts": "2026-05-16T21:55:03.032Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 9.2592, "reward_cash": 39.858, "rr": 4.305, "qty": 0.182, "margin_used": 14226.3576, "leverage": 1, "risk_per_unit": 50.8749, "reward_per_unit": 219.0}
+{"ts": "2026-05-16T21:55:03.032Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 3}
+{"ts": "2026-05-16T21:55:48.874Z", "symbol": "BTCUSDT", "event": "orphan_adopted", "link_id": "ema-15316363-s-1778967600", "side": "sell", "entry": 78166.8}
+{"ts": "2026-05-16T21:55:49.708Z", "symbol": "BTCUSDT", "event": "bot_start", "mode": "DEMO", "dry_run": false, "risk_usdt": 20.0, "leverage": 1, "rr": 2.0, "pip_size": 1.0, "expiry_min": 60, "expiry_bars": 12, "lookback_bars": 5, "position_mode": "one_way", "magic": 15316363, "journal_path": "logs/events_BTCUSDT.jsonl"}
+{"ts": "2026-05-16T21:55:49.708Z", "symbol": "BTCUSDT", "event": "account_snapshot", "equity": 56242.57937471, "available": 24225.84315255, "used_margin": 32023.00841216, "open_positions": [], "pending_orders": [{"link_id": "ema-15316363-s-1778967600", "side": "Sell", "trigger": "78166.8", "status": "Untriggered"}]}
+{"ts": "2026-05-16T21:55:49.990Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 1}
+{"ts": "2026-05-16T21:55:50.472Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 1, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:50:00+00:00", "h1_trend": {"2026-05-16 21:40:00+00:00": "bear", "2026-05-16 21:45:00+00:00": "bear", "2026-05-16 21:50:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:55:50.656Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 1, "total_signals": 498, "side": "sell", "entry": 78166.8, "sl": 78276.3, "tp": 77947.8, "qty": 0.182648401826484, "signal_bar": "2026-05-16 21:50:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:55:51.011Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 1, "equity": 56242.57937471, "available": 24225.84315255, "used_margin": 32023.00841216}
+{"ts": "2026-05-16T21:55:51.289Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 1, "has_position": false}
+{"ts": "2026-05-16T21:55:51.290Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.6251, "sl_before": 78276.3, "sl_after": 78217.6749}
+{"ts": "2026-05-16T21:55:51.290Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 9.2592, "reward_cash": 39.858, "rr": 4.305, "qty": 0.182, "margin_used": 14226.3576, "leverage": 1, "risk_per_unit": 50.8749, "reward_per_unit": 219.0}
+{"ts": "2026-05-16T21:55:51.291Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-16T22:00:01.670Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-16T22:00:02.132Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:55:00+00:00", "h1_trend": {"2026-05-16 21:45:00+00:00": "bear", "2026-05-16 21:50:00+00:00": "bear", "2026-05-16 21:55:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:00:02.315Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 2, "total_signals": 498, "side": "sell", "entry": 78166.8, "sl": 78276.3, "tp": 77947.8, "qty": 0.182648401826484, "signal_bar": "2026-05-16 21:55:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:00:02.669Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 2, "equity": 56241.12681471, "available": 24224.39059255, "used_margin": 32024.46097216}
+{"ts": "2026-05-16T22:00:02.948Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 2, "has_position": false}
+{"ts": "2026-05-16T22:00:02.949Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.6251, "sl_before": 78276.3, "sl_after": 78217.6749}
+{"ts": "2026-05-16T22:00:02.949Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 9.2592, "reward_cash": 39.858, "rr": 4.305, "qty": 0.182, "margin_used": 14226.3576, "leverage": 1, "risk_per_unit": 50.8749, "reward_per_unit": 219.0}
+{"ts": "2026-05-16T22:00:02.949Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 2}
+{"ts": "2026-05-16T22:05:02.147Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-16T22:05:02.538Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:00:00+00:00", "h1_trend": {"2026-05-16 21:50:00+00:00": "bear", "2026-05-16 21:55:00+00:00": "bear", "2026-05-16 22:00:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:05:02.720Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 3, "total_signals": 498, "side": "sell", "entry": 78166.8, "sl": 78277.9, "tp": 77944.60000000002, "qty": 0.18001800180019417, "signal_bar": "2026-05-16 22:00:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:05:02.798Z", "symbol": "BTCUSDT", "event": "order_cleared", "link_id": "ema-15316363-s-1778967600", "reason": "exchange_status_filled", "exchange_status": "filled"}
+{"ts": "2026-05-16T22:05:03.076Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 3, "equity": 56283.74683689, "available": 17520.701228470003, "used_margin": 38741.19295842}
+{"ts": "2026-05-16T22:05:03.356Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 3, "has_position": true}
+{"ts": "2026-05-16T22:05:03.357Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T22:05:03.357Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 3}
+{"ts": "2026-05-16T22:10:02.368Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 4}
+{"ts": "2026-05-16T22:10:03.398Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 4, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:05:00+00:00", "h1_trend": {"2026-05-16 21:55:00+00:00": "bear", "2026-05-16 22:00:00+00:00": "bear", "2026-05-16 22:05:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:10:03.582Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 4, "total_signals": 498, "side": "sell", "entry": 78147.0, "sl": 78277.9, "tp": 77885.20000000001, "qty": 0.15278838808251252, "signal_bar": "2026-05-16 22:05:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:10:04.222Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 4, "equity": 56290.89503623, "available": 25861.04860482, "used_margin": 30415.10107141}
+{"ts": "2026-05-16T22:10:05.034Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 4, "has_position": true}
+{"ts": "2026-05-16T22:10:05.034Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T22:10:05.034Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 4}
+{"ts": "2026-05-16T22:15:02.171Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 5}
+{"ts": "2026-05-16T22:15:03.368Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 5, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:10:00+00:00", "h1_trend": {"2026-05-16 22:00:00+00:00": "bear", "2026-05-16 22:05:00+00:00": "bear", "2026-05-16 22:10:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:15:03.548Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 5, "total_signals": 498, "side": "sell", "entry": 78134.7, "sl": 78277.9, "tp": 77848.3, "qty": 0.1396648044692766, "signal_bar": "2026-05-16 22:10:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:15:03.839Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 5, "equity": 56261.46690623, "available": 25831.62047482, "used_margin": 30444.52920141}
+{"ts": "2026-05-16T22:15:04.648Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 5, "has_position": true}
+{"ts": "2026-05-16T22:15:04.648Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T22:15:04.648Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 5}
+{"ts": "2026-05-16T22:20:02.142Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 6}
+{"ts": "2026-05-16T22:20:02.623Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 6, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:15:00+00:00", "h1_trend": {"2026-05-16 22:05:00+00:00": "bear", "2026-05-16 22:10:00+00:00": "bear", "2026-05-16 22:15:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:20:02.806Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 6, "total_signals": 498, "side": "sell", "entry": 78134.7, "sl": 78277.9, "tp": 77848.3, "qty": 0.1396648044692766, "signal_bar": "2026-05-16 22:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:20:02.887Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 6, "equity": 56247.75206481, "available": 40059.91222676, "used_margin": 16199.78140805}
+{"ts": "2026-05-16T22:20:03.164Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 6, "has_position": false}
+{"ts": "2026-05-16T22:20:03.165Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.601025, "sl_before": 78277.9, "sl_after": 78219.298975}
+{"ts": "2026-05-16T22:20:03.166Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 11.7593, "reward_cash": 39.8096, "rr": 3.385, "qty": 0.139, "margin_used": 10860.7233, "leverage": 1, "risk_per_unit": 84.59898, "reward_per_unit": 286.4}
+{"ts": "2026-05-16T22:20:03.443Z", "symbol": "BTCUSDT", "event": "order_created", "dry_run": false, "link_id": "ema-15316363-s-1778969700", "side": "sell", "entry": 78134.7, "sl": 78219.3, "tp": 77848.3, "qty": 0.139, "signal_bar": "2026-05-16 22:15:00+00:00", "bybit_order_id": "f2da6021-f21c-46bc-a3fb-6d55068497bd"}
+{"ts": "2026-05-16T22:20:03.443Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 6}
+{"ts": "2026-05-16T22:25:01.847Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 7}
+{"ts": "2026-05-16T22:25:02.237Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 7, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:20:00+00:00", "h1_trend": {"2026-05-16 22:10:00+00:00": "bear", "2026-05-16 22:15:00+00:00": "bear", "2026-05-16 22:20:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:25:02.424Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 7, "total_signals": 498, "side": "sell", "entry": 78134.7, "sl": 78277.9, "tp": 77848.3, "qty": 0.1396648044692766, "signal_bar": "2026-05-16 22:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:25:02.777Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 7, "equity": 56240.07053481, "available": 40052.23069676, "used_margin": 16207.46293805}
+{"ts": "2026-05-16T22:25:03.054Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 7, "has_position": false}
+{"ts": "2026-05-16T22:25:03.055Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.601025, "sl_before": 78277.9, "sl_after": 78219.298975}
+{"ts": "2026-05-16T22:25:03.055Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 11.7593, "reward_cash": 39.8096, "rr": 3.385, "qty": 0.139, "margin_used": 10860.7233, "leverage": 1, "risk_per_unit": 84.59898, "reward_per_unit": 286.4}
+{"ts": "2026-05-16T22:25:03.056Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 7}
+{"ts": "2026-05-16T22:30:01.403Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 8}
+{"ts": "2026-05-16T22:30:01.909Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 8, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:25:00+00:00", "h1_trend": {"2026-05-16 22:15:00+00:00": "bear", "2026-05-16 22:20:00+00:00": "bear", "2026-05-16 22:25:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:30:02.089Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 8, "total_signals": 498, "side": "sell", "entry": 78134.7, "sl": 78256.4, "tp": 77891.3, "qty": 0.16433853738702117, "signal_bar": "2026-05-16 22:25:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:30:02.449Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 8, "equity": 56246.48825481, "available": 40058.64841676, "used_margin": 16201.04521805}
+{"ts": "2026-05-16T22:30:02.727Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 8, "has_position": false}
+{"ts": "2026-05-16T22:30:02.728Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.601025, "sl_before": 78256.4, "sl_after": 78197.798975}
+{"ts": "2026-05-16T22:30:02.728Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 10.3482, "reward_cash": 39.9176, "rr": 3.857, "qty": 0.164, "margin_used": 12814.0908, "leverage": 1, "risk_per_unit": 63.09898, "reward_per_unit": 243.4}
+{"ts": "2026-05-16T22:30:03.004Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778969700", "entry": 78134.7, "sl": 78197.8, "tp": 77891.3, "qty": 0.164}
+{"ts": "2026-05-16T22:30:03.004Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 8}
+{"ts": "2026-05-16T22:35:01.282Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 9}
+{"ts": "2026-05-16T22:35:01.775Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 9, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:30:00+00:00", "h1_trend": {"2026-05-16 22:20:00+00:00": "bear", "2026-05-16 22:25:00+00:00": "bear", "2026-05-16 22:30:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:35:01.954Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 9, "total_signals": 498, "side": "sell", "entry": 78134.7, "sl": 78256.4, "tp": 77891.3, "qty": 0.16433853738702117, "signal_bar": "2026-05-16 22:30:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:35:02.309Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 9, "equity": 56251.58213481, "available": 40063.74229676, "used_margin": 16195.95133805}
+{"ts": "2026-05-16T22:35:02.588Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 9, "has_position": false}
+{"ts": "2026-05-16T22:35:02.589Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.601025, "sl_before": 78256.4, "sl_after": 78197.798975}
+{"ts": "2026-05-16T22:35:02.589Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 10.3482, "reward_cash": 39.9176, "rr": 3.857, "qty": 0.164, "margin_used": 12814.0908, "leverage": 1, "risk_per_unit": 63.09898, "reward_per_unit": 243.4}
+{"ts": "2026-05-16T22:35:02.590Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 9}
+{"ts": "2026-05-16T22:40:01.796Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 10}
+{"ts": "2026-05-16T22:40:02.224Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 10, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:35:00+00:00", "h1_trend": {"2026-05-16 22:25:00+00:00": "bear", "2026-05-16 22:30:00+00:00": "bear", "2026-05-16 22:35:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:40:02.406Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 10, "total_signals": 498, "side": "sell", "entry": 78140.7, "sl": 78256.4, "tp": 77909.3, "qty": 0.17286084701815474, "signal_bar": "2026-05-16 22:35:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:40:02.763Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 10, "equity": 56254.62833481, "available": 40066.78849676, "used_margin": 16192.90513805}
+{"ts": "2026-05-16T22:40:03.041Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 10, "has_position": false}
+{"ts": "2026-05-16T22:40:03.042Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.605525, "sl_before": 78256.4, "sl_after": 78197.79447499999}
+{"ts": "2026-05-16T22:40:03.042Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 9.8202, "reward_cash": 39.8008, "rr": 4.053, "qty": 0.172, "margin_used": 13440.2004, "leverage": 1, "risk_per_unit": 57.09447, "reward_per_unit": 231.4}
+{"ts": "2026-05-16T22:40:03.318Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778969700", "entry": 78140.7, "sl": 78197.8, "tp": 77909.3, "qty": 0.172}
+{"ts": "2026-05-16T22:40:03.319Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 10}
+{"ts": "2026-05-16T22:45:01.707Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 11}
+{"ts": "2026-05-16T22:45:02.099Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 11, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:40:00+00:00", "h1_trend": {"2026-05-16 22:30:00+00:00": "bear", "2026-05-16 22:35:00+00:00": "bear", "2026-05-16 22:40:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:45:02.278Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 11, "total_signals": 498, "side": "sell", "entry": 78175.6, "sl": 78256.4, "tp": 78014.00000000003, "qty": 0.2475247524752832, "signal_bar": "2026-05-16 22:40:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:45:02.638Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 11, "equity": 56256.26986481, "available": 40068.43002676, "used_margin": 16191.26360805}
+{"ts": "2026-05-16T22:45:02.916Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 11, "has_position": false}
+{"ts": "2026-05-16T22:45:02.917Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.6317, "sl_before": 78256.4, "sl_after": 78197.7683}
+{"ts": "2026-05-16T22:45:02.917Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 5.4756, "reward_cash": 39.9152, "rr": 7.29, "qty": 0.247, "margin_used": 19309.3732, "leverage": 1, "risk_per_unit": 22.1683, "reward_per_unit": 161.6}
+{"ts": "2026-05-16T22:45:03.194Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778969700", "entry": 78175.6, "sl": 78197.8, "tp": 78014.0, "qty": 0.247}
+{"ts": "2026-05-16T22:45:03.194Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 11}
+{"ts": "2026-05-16T22:50:01.497Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 12}
+{"ts": "2026-05-16T22:50:01.860Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 12, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:45:00+00:00", "h1_trend": {"2026-05-16 22:35:00+00:00": "bear", "2026-05-16 22:40:00+00:00": "bear", "2026-05-16 22:45:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:50:02.042Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 12, "total_signals": 498, "side": "sell", "entry": 78175.6, "sl": 78253.2, "tp": 78020.40000000002, "qty": 0.2577319587629156, "signal_bar": "2026-05-16 22:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:50:02.121Z", "symbol": "BTCUSDT", "event": "order_cleared", "link_id": "ema-15316363-s-1778969700", "reason": "exchange_status_filled", "exchange_status": "filled"}
+{"ts": "2026-05-16T22:50:02.397Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 12, "equity": 56254.04417017, "available": 20735.590821599995, "used_margin": 35520.24093857}
+{"ts": "2026-05-16T22:50:02.675Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 12, "has_position": true}
+{"ts": "2026-05-16T22:50:02.675Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T22:50:02.676Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 12}
+{"ts": "2026-05-16T22:55:02.000Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 13}
+{"ts": "2026-05-16T22:55:02.512Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 13, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:50:00+00:00", "h1_trend": {"2026-05-16 22:40:00+00:00": "bear", "2026-05-16 22:45:00+00:00": "bear", "2026-05-16 22:50:00+00:00": "bear"}}
+{"ts": "2026-05-16T22:55:02.690Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 13, "total_signals": 498, "side": "sell", "entry": 78150.0, "sl": 78248.8, "tp": 77952.4, "qty": 0.20242914979756488, "signal_bar": "2026-05-16 22:50:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T22:55:02.776Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 13, "equity": 56254.48712017, "available": 20736.0337716, "used_margin": 35519.79798857}
+{"ts": "2026-05-16T22:55:03.054Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 13, "has_position": true}
+{"ts": "2026-05-16T22:55:03.054Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T22:55:03.054Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 13}
+{"ts": "2026-05-16T23:00:01.361Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 14}
+{"ts": "2026-05-16T23:00:01.892Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 14, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 22:55:00+00:00", "h1_trend": {"2026-05-16 22:45:00+00:00": "bear", "2026-05-16 22:50:00+00:00": "bear", "2026-05-16 22:55:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:00:02.073Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 14, "total_signals": 498, "side": "sell", "entry": 78150.0, "sl": 78248.8, "tp": 77952.4, "qty": 0.20242914979756488, "signal_bar": "2026-05-16 22:55:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:00:02.155Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 14, "equity": 56269.11449017, "available": 20750.661141599994, "used_margin": 35505.17061857}
+{"ts": "2026-05-16T23:00:02.434Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 14, "has_position": true}
+{"ts": "2026-05-16T23:00:02.434Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T23:00:02.434Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 14}
+{"ts": "2026-05-16T23:05:01.730Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 15}
+{"ts": "2026-05-16T23:05:02.125Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 15, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:00:00+00:00", "h1_trend": {"2026-05-16 22:50:00+00:00": "bear", "2026-05-16 22:55:00+00:00": "bear", "2026-05-16 23:00:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:05:02.305Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 15, "total_signals": 498, "side": "sell", "entry": 78137.4, "sl": 78225.5, "tp": 77961.19999999998, "qty": 0.22701475595912235, "signal_bar": "2026-05-16 23:00:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:05:02.389Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 15, "equity": 56283.99273069, "available": 21816.332274239998, "used_margin": 34456.86760645}
+{"ts": "2026-05-16T23:05:02.667Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 15, "has_position": true}
+{"ts": "2026-05-16T23:05:02.668Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T23:05:02.668Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 15}
+{"ts": "2026-05-16T23:10:01.886Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 16}
+{"ts": "2026-05-16T23:10:02.246Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 16, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:05:00+00:00", "h1_trend": {"2026-05-16 22:55:00+00:00": "bear", "2026-05-16 23:00:00+00:00": "bear", "2026-05-16 23:05:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:10:02.426Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 16, "total_signals": 498, "side": "sell", "entry": 78110.9, "sl": 78198.6, "tp": 77935.49999999997, "qty": 0.228050171037598, "signal_bar": "2026-05-16 23:05:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:10:02.509Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 16, "equity": 56262.42912069, "available": 21794.76866424, "used_margin": 34478.43121645}
+{"ts": "2026-05-16T23:10:02.788Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 16, "has_position": true}
+{"ts": "2026-05-16T23:10:02.788Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T23:10:02.788Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 16}
+{"ts": "2026-05-16T23:15:02.071Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 17}
+{"ts": "2026-05-16T23:15:02.575Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 17, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:10:00+00:00", "h1_trend": {"2026-05-16 23:00:00+00:00": "bear", "2026-05-16 23:05:00+00:00": "bear", "2026-05-16 23:10:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:15:02.753Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 17, "total_signals": 498, "side": "sell", "entry": 78110.9, "sl": 78198.6, "tp": 77935.49999999997, "qty": 0.228050171037598, "signal_bar": "2026-05-16 23:10:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:15:02.838Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 17, "equity": 56263.91099069, "available": 21796.250534240004, "used_margin": 34476.94934645}
+{"ts": "2026-05-16T23:15:03.117Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 17, "has_position": true}
+{"ts": "2026-05-16T23:15:03.117Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T23:15:03.117Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 17}
+{"ts": "2026-05-16T23:20:01.511Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 18}
+{"ts": "2026-05-16T23:20:02.018Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 18, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:15:00+00:00", "h1_trend": {"2026-05-16 23:05:00+00:00": "bear", "2026-05-16 23:10:00+00:00": "bear", "2026-05-16 23:15:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:20:02.200Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 18, "total_signals": 498, "side": "sell", "entry": 78110.9, "sl": 78198.6, "tp": 77935.49999999997, "qty": 0.228050171037598, "signal_bar": "2026-05-16 23:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:20:02.280Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 18, "equity": 56227.50430371, "available": 41090.457357780004, "used_margin": 15166.38881593}
+{"ts": "2026-05-16T23:20:02.560Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 18, "has_position": false}
+{"ts": "2026-05-16T23:20:02.561Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.583175, "sl_before": 78198.6, "sl_after": 78140.016825}
+{"ts": "2026-05-16T23:20:02.561Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 6.6386, "reward_cash": 39.9912, "rr": 6.024, "qty": 0.228, "margin_used": 17809.2852, "leverage": 1, "risk_per_unit": 29.11683, "reward_per_unit": 175.4}
+{"ts": "2026-05-16T23:20:02.836Z", "symbol": "BTCUSDT", "event": "order_created", "dry_run": false, "link_id": "ema-15316363-s-1778973300", "side": "sell", "entry": 78110.9, "sl": 78140.1, "tp": 77935.4, "qty": 0.228, "signal_bar": "2026-05-16 23:15:00+00:00", "bybit_order_id": "2fb4cbba-3b02-4f55-b21a-72916060b006"}
+{"ts": "2026-05-16T23:20:02.837Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 18}
+{"ts": "2026-05-16T23:25:02.173Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 19}
+{"ts": "2026-05-16T23:25:02.795Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 19, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:20:00+00:00", "h1_trend": {"2026-05-16 23:10:00+00:00": "bear", "2026-05-16 23:15:00+00:00": "bear", "2026-05-16 23:20:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:25:02.973Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 19, "total_signals": 498, "side": "sell", "entry": 78110.9, "sl": 78239.6, "tp": 77853.49999999997, "qty": 0.15540015540014135, "signal_bar": "2026-05-16 23:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:25:03.523Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 19, "equity": 56238.99731371, "available": 41101.95036778, "used_margin": 15154.89580593}
+{"ts": "2026-05-16T23:25:03.820Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 19, "has_position": false}
+{"ts": "2026-05-16T23:25:03.821Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.583175, "sl_before": 78239.6, "sl_after": 78181.016825}
+{"ts": "2026-05-16T23:25:03.822Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 10.8681, "reward_cash": 39.897, "rr": 3.671, "qty": 0.155, "margin_used": 12107.1895, "leverage": 1, "risk_per_unit": 70.11683, "reward_per_unit": 257.4}
+{"ts": "2026-05-16T23:25:04.113Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778973300", "entry": 78110.9, "sl": 78181.1, "tp": 77853.4, "qty": 0.155}
+{"ts": "2026-05-16T23:25:04.113Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 19}
+{"ts": "2026-05-16T23:30:01.349Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 20}
+{"ts": "2026-05-16T23:30:01.844Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 20, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:25:00+00:00", "h1_trend": {"2026-05-16 23:15:00+00:00": "bear", "2026-05-16 23:20:00+00:00": "bear", "2026-05-16 23:25:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:30:02.024Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 20, "total_signals": 498, "side": "sell", "entry": 78110.9, "sl": 78239.6, "tp": 77853.49999999997, "qty": 0.15540015540014135, "signal_bar": "2026-05-16 23:25:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:30:02.383Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 20, "equity": 56236.45010371, "available": 41099.403157780005, "used_margin": 15157.44301593}
+{"ts": "2026-05-16T23:30:02.662Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 20, "has_position": false}
+{"ts": "2026-05-16T23:30:02.663Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.583175, "sl_before": 78239.6, "sl_after": 78181.016825}
+{"ts": "2026-05-16T23:30:02.663Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 10.8681, "reward_cash": 39.897, "rr": 3.671, "qty": 0.155, "margin_used": 12107.1895, "leverage": 1, "risk_per_unit": 70.11683, "reward_per_unit": 257.4}
+{"ts": "2026-05-16T23:30:02.663Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 20}
+{"ts": "2026-05-16T23:35:02.010Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 21}
+{"ts": "2026-05-16T23:35:03.515Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 21, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:30:00+00:00", "h1_trend": {"2026-05-16 23:20:00+00:00": "bear", "2026-05-16 23:25:00+00:00": "bear", "2026-05-16 23:30:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:35:03.695Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 21, "total_signals": 498, "side": "sell", "entry": 78116.7, "sl": 78239.6, "tp": 77870.89999999998, "qty": 0.16273393002439854, "signal_bar": "2026-05-16 23:30:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:35:04.840Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 21, "equity": 56236.18985371, "available": 41099.14290778, "used_margin": 15157.70326593}
+{"ts": "2026-05-16T23:35:05.650Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 21, "has_position": false}
+{"ts": "2026-05-16T23:35:05.651Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.587525, "sl_before": 78239.6, "sl_after": 78181.01247500001}
+{"ts": "2026-05-16T23:35:05.651Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 10.4186, "reward_cash": 39.8196, "rr": 3.822, "qty": 0.162, "margin_used": 12654.9054, "leverage": 1, "risk_per_unit": 64.31248, "reward_per_unit": 245.8}
+{"ts": "2026-05-16T23:35:06.484Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778973300", "entry": 78116.7, "sl": 78181.1, "tp": 77870.8, "qty": 0.162}
+{"ts": "2026-05-16T23:35:06.484Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 21}
+{"ts": "2026-05-16T23:40:02.582Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 22}
+{"ts": "2026-05-16T23:40:03.433Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 22, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:35:00+00:00", "h1_trend": {"2026-05-16 23:25:00+00:00": "bear", "2026-05-16 23:30:00+00:00": "bear", "2026-05-16 23:35:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:40:03.611Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 22, "total_signals": 498, "side": "sell", "entry": 78139.6, "sl": 78239.6, "tp": 77939.6, "qty": 0.2, "signal_bar": "2026-05-16 23:35:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:40:05.092Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 22, "equity": 56235.24057371, "available": 41098.19362778, "used_margin": 15158.65254593}
+{"ts": "2026-05-16T23:40:05.931Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 22, "has_position": false}
+{"ts": "2026-05-16T23:40:05.932Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.60470000000001, "sl_before": 78239.6, "sl_after": 78180.99530000001}
+{"ts": "2026-05-16T23:40:05.932Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 8.2791, "reward_cash": 40.0, "rr": 4.831, "qty": 0.2, "margin_used": 15627.92, "leverage": 1, "risk_per_unit": 41.3953, "reward_per_unit": 200.0}
+{"ts": "2026-05-16T23:40:06.416Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778973300", "entry": 78139.6, "sl": 78181.0, "tp": 77939.6, "qty": 0.2}
+{"ts": "2026-05-16T23:40:06.416Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 22}
+{"ts": "2026-05-16T23:45:01.647Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 23}
+{"ts": "2026-05-16T23:45:02.114Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 23, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:40:00+00:00", "h1_trend": {"2026-05-16 23:30:00+00:00": "bear", "2026-05-16 23:35:00+00:00": "bear", "2026-05-16 23:40:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:45:02.292Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 23, "total_signals": 498, "side": "sell", "entry": 78152.6, "sl": 78239.6, "tp": 77978.6, "qty": 0.22988505747126436, "signal_bar": "2026-05-16 23:40:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:45:02.654Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 23, "equity": 56236.69030371, "available": 41099.64335778, "used_margin": 15157.20281593}
+{"ts": "2026-05-16T23:45:02.933Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 23, "has_position": false}
+{"ts": "2026-05-16T23:45:02.934Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.614450000000005, "sl_before": 78239.6, "sl_after": 78180.98555000001}
+{"ts": "2026-05-16T23:45:02.934Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 6.5003, "reward_cash": 39.846, "rr": 6.13, "qty": 0.229, "margin_used": 17896.9454, "leverage": 1, "risk_per_unit": 28.38555, "reward_per_unit": 174.0}
+{"ts": "2026-05-16T23:45:03.211Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778973300", "entry": 78152.6, "sl": 78181.0, "tp": 77978.6, "qty": 0.229}
+{"ts": "2026-05-16T23:45:03.211Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 23}
+{"ts": "2026-05-16T23:50:01.612Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 24}
+{"ts": "2026-05-16T23:50:02.011Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 24, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:45:00+00:00", "h1_trend": {"2026-05-16 23:35:00+00:00": "bear", "2026-05-16 23:40:00+00:00": "bear", "2026-05-16 23:45:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:50:02.225Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 24, "total_signals": 498, "side": "sell", "entry": 78161.0, "sl": 78222.9, "tp": 78037.20000000001, "qty": 0.3231017770598042, "signal_bar": "2026-05-16 23:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:50:02.300Z", "symbol": "BTCUSDT", "event": "order_cleared", "link_id": "ema-15316363-s-1778973300", "reason": "exchange_status_filled", "exchange_status": "filled"}
+{"ts": "2026-05-16T23:50:02.579Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 24, "equity": 56238.10731463, "available": 23184.428328760005, "used_margin": 33068.83845587}
+{"ts": "2026-05-16T23:50:02.858Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 24, "has_position": true}
+{"ts": "2026-05-16T23:50:02.858Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T23:50:02.858Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 24}
+{"ts": "2026-05-16T23:55:02.237Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 25}
+{"ts": "2026-05-16T23:55:02.719Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 25, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:50:00+00:00", "h1_trend": {"2026-05-16 23:40:00+00:00": "bear", "2026-05-16 23:45:00+00:00": "bear", "2026-05-16 23:50:00+00:00": "bear"}}
+{"ts": "2026-05-16T23:55:02.898Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 25, "total_signals": 498, "side": "sell", "entry": 78147.0, "sl": 78222.9, "tp": 77995.20000000001, "qty": 0.2635046113307185, "signal_bar": "2026-05-16 23:50:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T23:55:02.980Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 25, "equity": 56249.15249463, "available": 23195.473508760006, "used_margin": 33057.79327587}
+{"ts": "2026-05-16T23:55:03.259Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 25, "has_position": true}
+{"ts": "2026-05-16T23:55:03.259Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T23:55:03.259Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 25}
+{"ts": "2026-05-17T00:00:01.554Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 26}
+{"ts": "2026-05-17T00:00:02.037Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 26, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 23:55:00+00:00", "h1_trend": {"2026-05-16 23:45:00+00:00": "bear", "2026-05-16 23:50:00+00:00": "bear", "2026-05-16 23:55:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:00:02.217Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 26, "total_signals": 498, "side": "sell", "entry": 78081.1, "sl": 78222.9, "tp": 77797.50000000003, "qty": 0.1410437235543134, "signal_bar": "2026-05-16 23:55:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:00:02.302Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 26, "equity": 56255.32070463, "available": 23201.641718760002, "used_margin": 33051.62506587}
+{"ts": "2026-05-17T00:00:02.581Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 26, "has_position": true}
+{"ts": "2026-05-17T00:00:02.581Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T00:00:02.581Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 26}
+{"ts": "2026-05-17T00:05:01.991Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 27}
+{"ts": "2026-05-17T00:05:02.480Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 27, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:00:00+00:00", "h1_trend": {"2026-05-16 23:50:00+00:00": "bear", "2026-05-16 23:55:00+00:00": "bear", "2026-05-17 00:00:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:05:02.662Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 27, "total_signals": 498, "side": "sell", "entry": 78081.1, "sl": 78217.2, "tp": 77808.90000000002, "qty": 0.14695077149155975, "signal_bar": "2026-05-17 00:00:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:05:02.741Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 27, "equity": 56210.19064482, "available": 41073.143698889995, "used_margin": 15164.47104593}
+{"ts": "2026-05-17T00:05:03.019Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 27, "has_position": false}
+{"ts": "2026-05-17T00:05:03.020Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.56082500000001, "sl_before": 78217.2, "sl_after": 78158.639175}
+{"ts": "2026-05-17T00:05:03.021Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 11.3207, "reward_cash": 39.7412, "rr": 3.51, "qty": 0.146, "margin_used": 11399.8406, "leverage": 1, "risk_per_unit": 77.53917, "reward_per_unit": 272.2}
+{"ts": "2026-05-17T00:05:03.298Z", "symbol": "BTCUSDT", "event": "order_created", "dry_run": false, "link_id": "ema-15316363-s-1778976000", "side": "sell", "entry": 78081.1, "sl": 78158.7, "tp": 77808.9, "qty": 0.146, "signal_bar": "2026-05-17 00:00:00+00:00", "bybit_order_id": "d5a3c25a-2965-4c08-84dd-bd004e4d8d00"}
+{"ts": "2026-05-17T00:05:03.298Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 27}
+{"ts": "2026-05-17T00:10:01.506Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 28}
+{"ts": "2026-05-17T00:10:01.909Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 28, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:05:00+00:00", "h1_trend": {"2026-05-16 23:55:00+00:00": "bear", "2026-05-17 00:00:00+00:00": "bear", "2026-05-17 00:05:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:10:02.089Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 28, "total_signals": 498, "side": "sell", "entry": 78081.1, "sl": 78203.0, "tp": 77837.30000000002, "qty": 0.16406890894176338, "signal_bar": "2026-05-17 00:05:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:10:02.449Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 28, "equity": 56212.28654482, "available": 41075.239598889995, "used_margin": 15162.37514593}
+{"ts": "2026-05-17T00:10:02.728Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 28, "has_position": false}
+{"ts": "2026-05-17T00:10:02.729Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.56082500000001, "sl_before": 78203.0, "sl_after": 78144.439175}
+{"ts": "2026-05-17T00:10:02.729Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 10.3876, "reward_cash": 39.9832, "rr": 3.849, "qty": 0.164, "margin_used": 12805.3004, "leverage": 1, "risk_per_unit": 63.33918, "reward_per_unit": 243.8}
+{"ts": "2026-05-17T00:10:03.005Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778976000", "entry": 78081.1, "sl": 78144.5, "tp": 77837.3, "qty": 0.164}
+{"ts": "2026-05-17T00:10:03.005Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 28}
+{"ts": "2026-05-17T00:15:01.408Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 29}
+{"ts": "2026-05-17T00:15:01.934Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 29, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:10:00+00:00", "h1_trend": {"2026-05-17 00:00:00+00:00": "bear", "2026-05-17 00:05:00+00:00": "bear", "2026-05-17 00:10:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:15:02.112Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 29, "total_signals": 498, "side": "sell", "entry": 78081.1, "sl": 78210.0, "tp": 77823.30000000002, "qty": 0.15515903801397132, "signal_bar": "2026-05-17 00:10:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:15:02.475Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 29, "equity": 56227.05748482, "available": 41090.01053889, "used_margin": 15147.60420593}
+{"ts": "2026-05-17T00:15:02.752Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 29, "has_position": false}
+{"ts": "2026-05-17T00:15:02.753Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.56082500000001, "sl_before": 78210.0, "sl_after": 78151.439175}
+{"ts": "2026-05-17T00:15:02.754Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 10.9026, "reward_cash": 39.959, "rr": 3.665, "qty": 0.155, "margin_used": 12102.5705, "leverage": 1, "risk_per_unit": 70.33918, "reward_per_unit": 257.8}
+{"ts": "2026-05-17T00:15:03.030Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778976000", "entry": 78081.1, "sl": 78151.5, "tp": 77823.3, "qty": 0.155}
+{"ts": "2026-05-17T00:15:03.030Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 29}
+{"ts": "2026-05-17T00:20:01.284Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 30}
+{"ts": "2026-05-17T00:20:01.619Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 30, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:15:00+00:00", "h1_trend": {"2026-05-17 00:05:00+00:00": "bear", "2026-05-17 00:10:00+00:00": "bear", "2026-05-17 00:15:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:20:01.803Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 30, "total_signals": 498, "side": "sell", "entry": 78081.1, "sl": 78210.1, "tp": 77823.1, "qty": 0.15503875968992248, "signal_bar": "2026-05-17 00:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:20:02.157Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 30, "equity": 56227.65736482, "available": 41090.61041889, "used_margin": 15147.00432593}
+{"ts": "2026-05-17T00:20:02.437Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 30, "has_position": false}
+{"ts": "2026-05-17T00:20:02.438Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.56082500000001, "sl_before": 78210.1, "sl_after": 78151.53917500001}
+{"ts": "2026-05-17T00:20:02.438Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 10.9181, "reward_cash": 39.99, "rr": 3.663, "qty": 0.155, "margin_used": 12102.5705, "leverage": 1, "risk_per_unit": 70.43918, "reward_per_unit": 258.0}
+{"ts": "2026-05-17T00:20:02.438Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 30}
+{"ts": "2026-05-17T00:25:01.721Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 31}
+{"ts": "2026-05-17T00:25:02.111Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 31, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:20:00+00:00", "h1_trend": {"2026-05-17 00:10:00+00:00": "bear", "2026-05-17 00:15:00+00:00": "bear", "2026-05-17 00:20:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:25:02.290Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 31, "total_signals": 498, "side": "sell", "entry": 78097.0, "sl": 78210.1, "tp": 77870.79999999999, "qty": 0.1768346595932712, "signal_bar": "2026-05-17 00:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:25:02.653Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 31, "equity": 56225.14689248, "available": 38709.42748187, "used_margin": 17526.88043061}
+{"ts": "2026-05-17T00:25:02.931Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 31, "has_position": false}
+{"ts": "2026-05-17T00:25:02.932Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.57275, "sl_before": 78210.1, "sl_after": 78151.52725}
+{"ts": "2026-05-17T00:25:02.932Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 9.5968, "reward_cash": 39.8112, "rr": 4.148, "qty": 0.176, "margin_used": 13745.072, "leverage": 1, "risk_per_unit": 54.52725, "reward_per_unit": 226.2}
+{"ts": "2026-05-17T00:25:03.207Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778976000", "entry": 78097.0, "sl": 78151.6, "tp": 77870.7, "qty": 0.176}
+{"ts": "2026-05-17T00:25:03.207Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 31}
+{"ts": "2026-05-17T00:30:01.553Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 32}
+{"ts": "2026-05-17T00:30:02.089Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 32, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:25:00+00:00", "h1_trend": {"2026-05-17 00:15:00+00:00": "bear", "2026-05-17 00:20:00+00:00": "bear", "2026-05-17 00:25:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:30:02.269Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 32, "total_signals": 498, "side": "sell", "entry": 78099.8, "sl": 78210.1, "tp": 77879.2, "qty": 0.18132366273798253, "signal_bar": "2026-05-17 00:25:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:30:02.661Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 32, "equity": 56235.19361238, "available": 44696.91616317, "used_margin": 11555.41037921}
+{"ts": "2026-05-17T00:30:02.959Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 32, "has_position": false}
+{"ts": "2026-05-17T00:30:02.959Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.574850000000005, "sl_before": 78210.1, "sl_after": 78151.52515}
+{"ts": "2026-05-17T00:30:02.960Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 9.3623, "reward_cash": 39.9286, "rr": 4.265, "qty": 0.181, "margin_used": 14136.0638, "leverage": 1, "risk_per_unit": 51.72515, "reward_per_unit": 220.6}
+{"ts": "2026-05-17T00:30:03.255Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778976000", "entry": 78099.8, "sl": 78151.6, "tp": 77879.2, "qty": 0.181}
+{"ts": "2026-05-17T00:30:03.255Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 32}
+{"ts": "2026-05-17T00:35:01.564Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 33}
+{"ts": "2026-05-17T00:35:01.957Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 33, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:30:00+00:00", "h1_trend": {"2026-05-17 00:20:00+00:00": "bear", "2026-05-17 00:25:00+00:00": "bear", "2026-05-17 00:30:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:35:02.136Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 33, "total_signals": 498, "side": "sell", "entry": 78097.0, "sl": 78210.1, "tp": 77870.79999999999, "qty": 0.1768346595932712, "signal_bar": "2026-05-17 00:30:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:35:02.495Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 33, "equity": 56236.66834238, "available": 44698.39089317, "used_margin": 11553.93564921}
+{"ts": "2026-05-17T00:35:02.772Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 33, "has_position": false}
+{"ts": "2026-05-17T00:35:02.773Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.57275, "sl_before": 78210.1, "sl_after": 78151.52725}
+{"ts": "2026-05-17T00:35:02.773Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 9.5968, "reward_cash": 39.8112, "rr": 4.148, "qty": 0.176, "margin_used": 13745.072, "leverage": 1, "risk_per_unit": 54.52725, "reward_per_unit": 226.2}
+{"ts": "2026-05-17T00:35:03.049Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778976000", "entry": 78097.0, "sl": 78151.6, "tp": 77870.7, "qty": 0.176}
+{"ts": "2026-05-17T00:35:03.049Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 33}
+{"ts": "2026-05-17T00:40:01.455Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 34}
+{"ts": "2026-05-17T00:40:01.982Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 34, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:35:00+00:00", "h1_trend": {"2026-05-17 00:25:00+00:00": "bear", "2026-05-17 00:30:00+00:00": "bear", "2026-05-17 00:35:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:40:02.162Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 34, "total_signals": 498, "side": "sell", "entry": 78097.0, "sl": 78210.1, "tp": 77870.79999999999, "qty": 0.1768346595932712, "signal_bar": "2026-05-17 00:35:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:40:02.521Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 34, "equity": 56232.20240238, "available": 44693.92495317, "used_margin": 11558.40158921}
+{"ts": "2026-05-17T00:40:02.800Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 34, "has_position": false}
+{"ts": "2026-05-17T00:40:02.801Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.57275, "sl_before": 78210.1, "sl_after": 78151.52725}
+{"ts": "2026-05-17T00:40:02.801Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 9.5968, "reward_cash": 39.8112, "rr": 4.148, "qty": 0.176, "margin_used": 13745.072, "leverage": 1, "risk_per_unit": 54.52725, "reward_per_unit": 226.2}
+{"ts": "2026-05-17T00:40:02.801Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 34}
+{"ts": "2026-05-17T00:45:02.093Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 35}
+{"ts": "2026-05-17T00:45:02.601Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 35, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:40:00+00:00", "h1_trend": {"2026-05-17 00:30:00+00:00": "bear", "2026-05-17 00:35:00+00:00": "bear", "2026-05-17 00:40:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:45:02.780Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 35, "total_signals": 498, "side": "sell", "entry": 78097.0, "sl": 78201.9, "tp": 77887.20000000001, "qty": 0.19065776930410971, "signal_bar": "2026-05-17 00:40:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:45:02.865Z", "symbol": "BTCUSDT", "event": "order_cleared", "link_id": "ema-15316363-s-1778976000", "reason": "exchange_status_filled", "exchange_status": "filled"}
+{"ts": "2026-05-17T00:45:03.147Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 35, "equity": 56243.62851798, "available": 30945.15948957, "used_margin": 25304.41803841}
+{"ts": "2026-05-17T00:45:03.426Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 35, "has_position": true}
+{"ts": "2026-05-17T00:45:03.426Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T00:45:03.426Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 35}
+{"ts": "2026-05-17T00:50:01.749Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 36}
+{"ts": "2026-05-17T00:50:03.242Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 36, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:45:00+00:00", "h1_trend": {"2026-05-17 00:35:00+00:00": "bear", "2026-05-17 00:40:00+00:00": "bear", "2026-05-17 00:45:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:50:03.421Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 36, "total_signals": 498, "side": "sell", "entry": 78076.4, "sl": 78201.9, "tp": 77825.4, "qty": 0.1593625498007968, "signal_bar": "2026-05-17 00:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:50:03.706Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 36, "equity": 56253.18819729, "available": 27347.26317751, "used_margin": 28900.33242978}
+{"ts": "2026-05-17T00:50:04.185Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 36, "has_position": true}
+{"ts": "2026-05-17T00:50:04.185Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T00:50:04.185Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 36}
+{"ts": "2026-05-17T00:55:01.584Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 37}
+{"ts": "2026-05-17T00:55:02.048Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 37, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:50:00+00:00", "h1_trend": {"2026-05-17 00:40:00+00:00": "bear", "2026-05-17 00:45:00+00:00": "bear", "2026-05-17 00:50:00+00:00": "bear"}}
+{"ts": "2026-05-17T00:55:02.228Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 37, "total_signals": 498, "side": "sell", "entry": 78041.4, "sl": 78201.9, "tp": 77720.4, "qty": 0.12461059190031153, "signal_bar": "2026-05-17 00:50:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T00:55:02.478Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 37, "equity": 56252.08353729, "available": 27346.15851751, "used_margin": 28901.43708978}
+{"ts": "2026-05-17T00:55:02.923Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 37, "has_position": true}
+{"ts": "2026-05-17T00:55:02.923Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T00:55:02.923Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 37}
+{"ts": "2026-05-17T01:00:02.327Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 38}
+{"ts": "2026-05-17T01:00:03.694Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 38, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 00:55:00+00:00", "h1_trend": {"2026-05-17 00:45:00+00:00": "bear", "2026-05-17 00:50:00+00:00": "bear", "2026-05-17 00:55:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:00:03.898Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 38, "total_signals": 498, "side": "sell", "entry": 78039.3, "sl": 78201.9, "tp": 77714.10000000002, "qty": 0.12300123001230673, "signal_bar": "2026-05-17 00:55:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:00:04.528Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 38, "equity": 56300.54507908, "available": 38553.43901281, "used_margin": 17725.10637627}
+{"ts": "2026-05-17T01:00:05.015Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 38, "has_position": false}
+{"ts": "2026-05-17T01:00:05.016Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.529475000000005, "sl_before": 78201.9, "sl_after": 78143.37052499999}
+{"ts": "2026-05-17T01:00:05.017Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 12.8007, "reward_cash": 39.9996, "rr": 3.125, "qty": 0.123, "margin_used": 9598.8339, "leverage": 1, "risk_per_unit": 104.07052, "reward_per_unit": 325.2}
+{"ts": "2026-05-17T01:00:05.850Z", "symbol": "BTCUSDT", "event": "order_create_failed", "link_id": "ema-15316363-s-1778979300", "side": "sell", "entry": 78039.3, "error": "expect Falling, but trigger_price[780393000] >= current[779192000]??LastPrice (ErrCode: 110093) (ErrTime: 01:00:05).\nRequest \u2192 POST https://api-demo.bybit.com/v5/order/create: {\"category\": \"linear\", \"symbol\": \"BTCUSDT\", \"side\": \"Sell\", \"orderType\": \"Limit\", \"qty\": \"0.123\", \"price\": \"78039.3\", \"triggerPrice\": \"78039.3\", \"triggerBy\": \"LastPrice\", \"triggerDirection\": 2, \"timeInForce\": \"GTC\", \"orderLinkId\": \"ema-15316363-s-1778979300\", \"stopLoss\": \"78143.4\", \"takeProfit\": \"77714.1\", \"slTriggerBy\": \"LastPrice\", \"tpTriggerBy\": \"LastPrice\", \"positionIdx\": 0, \"reduceOnly\": false, \"closeOnTrigger\": false}."}
+{"ts": "2026-05-17T01:00:05.850Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 38}
+{"ts": "2026-05-17T01:05:02.064Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 39}
+{"ts": "2026-05-17T01:05:02.574Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 39, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:00:00+00:00", "h1_trend": {"2026-05-17 00:50:00+00:00": "bear", "2026-05-17 00:55:00+00:00": "bear", "2026-05-17 01:00:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:05:02.753Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 39, "total_signals": 498, "side": "sell", "entry": 77759.4, "sl": 78201.9, "tp": 76874.4, "qty": 0.04519774011299435, "signal_bar": "2026-05-17 01:00:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:05:02.836Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 39, "equity": 56307.33269908, "available": 38560.226632809994, "used_margin": 17718.31875627}
+{"ts": "2026-05-17T01:05:03.113Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 39, "has_position": false}
+{"ts": "2026-05-17T01:05:03.114Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.31955, "sl_before": 78201.9, "sl_after": 78143.58045}
+{"ts": "2026-05-17T01:05:03.115Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 17.2881, "reward_cash": 39.825, "rr": 2.304, "qty": 0.045, "margin_used": 3499.173, "leverage": 1, "risk_per_unit": 384.18045, "reward_per_unit": 885.0}
+{"ts": "2026-05-17T01:05:03.391Z", "symbol": "BTCUSDT", "event": "order_created", "dry_run": false, "link_id": "ema-15316363-s-1778979600", "side": "sell", "entry": 77759.4, "sl": 78143.6, "tp": 76874.4, "qty": 0.045, "signal_bar": "2026-05-17 01:00:00+00:00", "bybit_order_id": "96d2209e-57cf-4ae2-a2c9-69939e55b23c"}
+{"ts": "2026-05-17T01:05:03.391Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 39}
+{"ts": "2026-05-17T01:10:01.638Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 40}
+{"ts": "2026-05-17T01:10:02.107Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 40, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:05:00+00:00", "h1_trend": {"2026-05-17 00:55:00+00:00": "bear", "2026-05-17 01:00:00+00:00": "bear", "2026-05-17 01:05:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:10:02.286Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 40, "total_signals": 498, "side": "sell", "entry": 77759.4, "sl": 78173.0, "tp": 76932.19999999998, "qty": 0.048355899419728524, "signal_bar": "2026-05-17 01:05:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:10:02.647Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 40, "equity": 56284.20299908, "available": 38537.096932809996, "used_margin": 17741.44845627}
+{"ts": "2026-05-17T01:10:02.925Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 40, "has_position": false}
+{"ts": "2026-05-17T01:10:02.926Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.31955, "sl_before": 78173.0, "sl_after": 78114.68045}
+{"ts": "2026-05-17T01:10:02.926Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 17.0535, "reward_cash": 39.7056, "rr": 2.328, "qty": 0.048, "margin_used": 3732.4512, "leverage": 1, "risk_per_unit": 355.28045, "reward_per_unit": 827.2}
+{"ts": "2026-05-17T01:10:03.202Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778979600", "entry": 77759.4, "sl": 78114.7, "tp": 76932.1, "qty": 0.048}
+{"ts": "2026-05-17T01:10:03.202Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 40}
+{"ts": "2026-05-17T01:15:01.566Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 41}
+{"ts": "2026-05-17T01:15:02.070Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 41, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:10:00+00:00", "h1_trend": {"2026-05-17 01:00:00+00:00": "bear", "2026-05-17 01:05:00+00:00": "bear", "2026-05-17 01:10:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:15:02.249Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 41, "total_signals": 498, "side": "sell", "entry": 77759.4, "sl": 78122.8, "tp": 77032.59999999998, "qty": 0.05503577325261288, "signal_bar": "2026-05-17 01:10:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:15:02.611Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 41, "equity": 56289.21176908, "available": 38542.10570281, "used_margin": 17736.43968627}
+{"ts": "2026-05-17T01:15:02.890Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 41, "has_position": false}
+{"ts": "2026-05-17T01:15:02.891Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.31955, "sl_before": 78122.8, "sl_after": 78064.48045}
+{"ts": "2026-05-17T01:15:02.891Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 16.7794, "reward_cash": 39.974, "rr": 2.382, "qty": 0.055, "margin_used": 4276.767, "leverage": 1, "risk_per_unit": 305.08045, "reward_per_unit": 726.8}
+{"ts": "2026-05-17T01:15:03.167Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778979600", "entry": 77759.4, "sl": 78064.5, "tp": 77032.5, "qty": 0.055}
+{"ts": "2026-05-17T01:15:03.167Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 41}
+{"ts": "2026-05-17T01:20:01.384Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 42}
+{"ts": "2026-05-17T01:20:01.793Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 42, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:15:00+00:00", "h1_trend": {"2026-05-17 01:05:00+00:00": "bear", "2026-05-17 01:10:00+00:00": "bear", "2026-05-17 01:15:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:20:01.974Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 42, "total_signals": 498, "side": "sell", "entry": 77759.4, "sl": 78097.2, "tp": 77083.79999999999, "qty": 0.05920663114268747, "signal_bar": "2026-05-17 01:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:20:02.336Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 42, "equity": 56306.27383908, "available": 38559.16777281, "used_margin": 17719.37761627}
+{"ts": "2026-05-17T01:20:02.616Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 42, "has_position": false}
+{"ts": "2026-05-17T01:20:02.617Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.31955, "sl_before": 78097.2, "sl_after": 78038.88045}
+{"ts": "2026-05-17T01:20:02.617Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 16.4893, "reward_cash": 39.8604, "rr": 2.417, "qty": 0.059, "margin_used": 4587.8046, "leverage": 1, "risk_per_unit": 279.48045, "reward_per_unit": 675.6}
+{"ts": "2026-05-17T01:20:02.893Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778979600", "entry": 77759.4, "sl": 78038.9, "tp": 77083.7, "qty": 0.059}
+{"ts": "2026-05-17T01:20:02.893Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 42}
+{"ts": "2026-05-17T01:25:02.169Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 43}
+{"ts": "2026-05-17T01:25:03.542Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 43, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:20:00+00:00", "h1_trend": {"2026-05-17 01:10:00+00:00": "bear", "2026-05-17 01:15:00+00:00": "bear", "2026-05-17 01:20:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:25:03.722Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 43, "total_signals": 498, "side": "sell", "entry": 77759.4, "sl": 78083.0, "tp": 77112.19999999998, "qty": 0.06180469715698282, "signal_bar": "2026-05-17 01:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:25:04.515Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 43, "equity": 56313.85294908, "available": 38566.746882809995, "used_margin": 17711.79850627}
+{"ts": "2026-05-17T01:25:05.011Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 43, "has_position": false}
+{"ts": "2026-05-17T01:25:05.012Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.31955, "sl_before": 78083.0, "sl_after": 78024.68045}
+{"ts": "2026-05-17T01:25:05.012Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 16.1821, "reward_cash": 39.4792, "rr": 2.44, "qty": 0.061, "margin_used": 4743.3234, "leverage": 1, "risk_per_unit": 265.28045, "reward_per_unit": 647.2}
+{"ts": "2026-05-17T01:25:05.502Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778979600", "entry": 77759.4, "sl": 78024.7, "tp": 77112.1, "qty": 0.061}
+{"ts": "2026-05-17T01:25:05.502Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 43}
+{"ts": "2026-05-17T01:30:01.810Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 44}
+{"ts": "2026-05-17T01:30:02.271Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 44, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:25:00+00:00", "h1_trend": {"2026-05-17 01:15:00+00:00": "bear", "2026-05-17 01:20:00+00:00": "bear", "2026-05-17 01:25:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:30:02.450Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 44, "total_signals": 498, "side": "sell", "entry": 77783.0, "sl": 78083.0, "tp": 77183.0, "qty": 0.06666666666666667, "signal_bar": "2026-05-17 01:25:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:30:02.810Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 44, "equity": 56331.68240908, "available": 38584.57634281, "used_margin": 17693.96904627}
+{"ts": "2026-05-17T01:30:03.089Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 44, "has_position": false}
+{"ts": "2026-05-17T01:30:03.090Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.337250000000004, "sl_before": 78083.0, "sl_after": 78024.66275}
+{"ts": "2026-05-17T01:30:03.091Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 15.9497, "reward_cash": 39.6, "rr": 2.483, "qty": 0.066, "margin_used": 5133.678, "leverage": 1, "risk_per_unit": 241.66275, "reward_per_unit": 600.0}
+{"ts": "2026-05-17T01:30:03.367Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778979600", "entry": 77783.0, "sl": 78024.7, "tp": 77183.0, "qty": 0.066}
+{"ts": "2026-05-17T01:30:03.367Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 44}
+{"ts": "2026-05-17T01:35:01.762Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 45}
+{"ts": "2026-05-17T01:35:02.171Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 45, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:30:00+00:00", "h1_trend": {"2026-05-17 01:20:00+00:00": "bear", "2026-05-17 01:25:00+00:00": "bear", "2026-05-17 01:30:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:35:02.382Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 45, "total_signals": 498, "side": "sell", "entry": 77865.0, "sl": 78083.0, "tp": 77429.0, "qty": 0.09174311926605505, "signal_bar": "2026-05-17 01:30:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:35:02.736Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 45, "equity": 56344.10357908, "available": 38596.99751281, "used_margin": 17681.54787627}
+{"ts": "2026-05-17T01:35:03.014Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 45, "has_position": false}
+{"ts": "2026-05-17T01:35:03.015Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.39875, "sl_before": 78083.0, "sl_after": 78024.60125}
+{"ts": "2026-05-17T01:35:03.015Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 14.5237, "reward_cash": 39.676, "rr": 2.732, "qty": 0.091, "margin_used": 7085.715, "leverage": 1, "risk_per_unit": 159.60125, "reward_per_unit": 436.0}
+{"ts": "2026-05-17T01:35:03.290Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778979600", "entry": 77865.0, "sl": 78024.7, "tp": 77429.0, "qty": 0.091}
+{"ts": "2026-05-17T01:35:03.290Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 45}
+{"ts": "2026-05-17T01:40:01.518Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 46}
+{"ts": "2026-05-17T01:40:01.927Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 46, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:35:00+00:00", "h1_trend": {"2026-05-17 01:25:00+00:00": "bear", "2026-05-17 01:30:00+00:00": "bear", "2026-05-17 01:35:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:40:02.122Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 46, "total_signals": 498, "side": "sell", "entry": 77865.0, "sl": 78083.0, "tp": 77429.0, "qty": 0.09174311926605505, "signal_bar": "2026-05-17 01:35:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:40:02.201Z", "symbol": "BTCUSDT", "event": "order_cleared", "link_id": "ema-15316363-s-1778979600", "reason": "exchange_status_filled", "exchange_status": "filled"}
+{"ts": "2026-05-17T01:40:02.480Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 46, "equity": 56335.01257608, "available": 31494.39722331, "used_margin": 24782.73102277}
+{"ts": "2026-05-17T01:40:02.759Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 46, "has_position": true}
+{"ts": "2026-05-17T01:40:02.760Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T01:40:02.760Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 46}
+{"ts": "2026-05-17T01:45:01.959Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 47}
+{"ts": "2026-05-17T01:45:02.441Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 47, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:40:00+00:00", "h1_trend": {"2026-05-17 01:30:00+00:00": "bear", "2026-05-17 01:35:00+00:00": "bear", "2026-05-17 01:40:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:45:02.620Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 47, "total_signals": 498, "side": "sell", "entry": 77819.2, "sl": 78064.3, "tp": 77328.99999999999, "qty": 0.08159934720522043, "signal_bar": "2026-05-17 01:40:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:45:02.702Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 47, "equity": 56390.29640608, "available": 31549.68105331, "used_margin": 24727.44719277}
+{"ts": "2026-05-17T01:45:02.982Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 47, "has_position": true}
+{"ts": "2026-05-17T01:45:02.982Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T01:45:02.982Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 47}
+{"ts": "2026-05-17T01:50:02.259Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 48}
+{"ts": "2026-05-17T01:50:02.771Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 48, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:45:00+00:00", "h1_trend": {"2026-05-17 01:35:00+00:00": "bear", "2026-05-17 01:40:00+00:00": "bear", "2026-05-17 01:45:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:50:02.949Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 48, "total_signals": 498, "side": "sell", "entry": 77672.0, "sl": 78026.0, "tp": 76964.0, "qty": 0.05649717514124294, "signal_bar": "2026-05-17 01:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:50:03.033Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 48, "equity": 56383.30043608, "available": 31542.68508331, "used_margin": 24734.44316277}
+{"ts": "2026-05-17T01:50:03.312Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 48, "has_position": true}
+{"ts": "2026-05-17T01:50:03.313Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T01:50:03.313Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 48}
+{"ts": "2026-05-17T01:55:01.616Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 49}
+{"ts": "2026-05-17T01:55:02.137Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 49, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:50:00+00:00", "h1_trend": {"2026-05-17 01:40:00+00:00": "bear", "2026-05-17 01:45:00+00:00": "bear", "2026-05-17 01:50:00+00:00": "bear"}}
+{"ts": "2026-05-17T01:55:02.317Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 49, "total_signals": 498, "side": "sell", "entry": 77672.0, "sl": 77998.7, "tp": 77018.6, "qty": 0.0612182430364254, "signal_bar": "2026-05-17 01:50:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T01:55:02.399Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 49, "equity": 56369.13561608, "available": 31528.520263309998, "used_margin": 24748.60798277}
+{"ts": "2026-05-17T01:55:02.678Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 49, "has_position": true}
+{"ts": "2026-05-17T01:55:02.679Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T01:55:02.679Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 49}
+{"ts": "2026-05-17T02:00:01.948Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 50}
+{"ts": "2026-05-17T02:00:02.437Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 50, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 01:55:00+00:00", "h1_trend": {"2026-05-17 01:45:00+00:00": "bear", "2026-05-17 01:50:00+00:00": "bear", "2026-05-17 01:55:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:00:02.615Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 50, "total_signals": 498, "side": "sell", "entry": 77672.0, "sl": 77976.6, "tp": 77062.79999999999, "qty": 0.06565988181221148, "signal_bar": "2026-05-17 01:55:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:00:02.701Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 50, "equity": 56405.43693608, "available": 31564.82158331, "used_margin": 24712.30666277}
+{"ts": "2026-05-17T02:00:02.979Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 50, "has_position": true}
+{"ts": "2026-05-17T02:00:02.979Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:00:02.980Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 50}
+{"ts": "2026-05-17T02:05:02.281Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 51}
+{"ts": "2026-05-17T02:05:02.749Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 51, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:00:00+00:00", "h1_trend": {"2026-05-17 01:50:00+00:00": "bear", "2026-05-17 01:55:00+00:00": "bear", "2026-05-17 02:00:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:05:02.929Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 51, "total_signals": 498, "side": "sell", "entry": 77672.0, "sl": 77948.4, "tp": 77119.20000000001, "qty": 0.07235890014471932, "signal_bar": "2026-05-17 02:00:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:05:03.012Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 51, "equity": 56378.05497608, "available": 31537.439623309998, "used_margin": 24739.68862277}
+{"ts": "2026-05-17T02:05:03.291Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 51, "has_position": true}
+{"ts": "2026-05-17T02:05:03.292Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:05:03.292Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 51}
+{"ts": "2026-05-17T02:10:01.696Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 52}
+{"ts": "2026-05-17T02:10:02.181Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 52, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:05:00+00:00", "h1_trend": {"2026-05-17 01:55:00+00:00": "bear", "2026-05-17 02:00:00+00:00": "bear", "2026-05-17 02:05:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:10:02.360Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 52, "total_signals": 498, "side": "sell", "entry": 77672.0, "sl": 77931.9, "tp": 77152.20000000001, "qty": 0.07695267410542689, "signal_bar": "2026-05-17 02:05:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:10:02.441Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 52, "equity": 56366.36801608, "available": 31525.75266331, "used_margin": 24751.37558277}
+{"ts": "2026-05-17T02:10:02.719Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 52, "has_position": true}
+{"ts": "2026-05-17T02:10:02.719Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:10:02.720Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 52}
+{"ts": "2026-05-17T02:15:02.093Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 53}
+{"ts": "2026-05-17T02:15:02.590Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 53, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:10:00+00:00", "h1_trend": {"2026-05-17 02:00:00+00:00": "bear", "2026-05-17 02:05:00+00:00": "bear", "2026-05-17 02:10:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:15:02.769Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 53, "total_signals": 498, "side": "sell", "entry": 77674.1, "sl": 77849.1, "tp": 77324.1, "qty": 0.11428571428571428, "signal_bar": "2026-05-17 02:10:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:15:02.853Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 53, "equity": 56353.06905608, "available": 31512.45370331, "used_margin": 24764.67454277}
+{"ts": "2026-05-17T02:15:03.132Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 53, "has_position": true}
+{"ts": "2026-05-17T02:15:03.133Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:15:03.133Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 53}
+{"ts": "2026-05-17T02:20:01.413Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 54}
+{"ts": "2026-05-17T02:20:01.844Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 54, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:15:00+00:00", "h1_trend": {"2026-05-17 02:05:00+00:00": "bear", "2026-05-17 02:10:00+00:00": "bear", "2026-05-17 02:15:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:20:02.024Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 54, "total_signals": 498, "side": "sell", "entry": 77674.1, "sl": 77902.9, "tp": 77216.50000000003, "qty": 0.08741258741259186, "signal_bar": "2026-05-17 02:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:20:02.107Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 54, "equity": 56338.08981608, "available": 31497.474463309998, "used_margin": 24779.65378277}
+{"ts": "2026-05-17T02:20:02.386Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 54, "has_position": true}
+{"ts": "2026-05-17T02:20:02.386Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:20:02.386Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 54}
+{"ts": "2026-05-17T02:25:01.641Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 55}
+{"ts": "2026-05-17T02:25:02.148Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 55, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:20:00+00:00", "h1_trend": {"2026-05-17 02:10:00+00:00": "bear", "2026-05-17 02:15:00+00:00": "bear", "2026-05-17 02:20:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:25:02.329Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 55, "total_signals": 498, "side": "sell", "entry": 77674.1, "sl": 77902.9, "tp": 77216.50000000003, "qty": 0.08741258741259186, "signal_bar": "2026-05-17 02:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:25:02.411Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 55, "equity": 56355.48153608, "available": 31514.866183309998, "used_margin": 24762.26206277}
+{"ts": "2026-05-17T02:25:02.690Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 55, "has_position": true}
+{"ts": "2026-05-17T02:25:02.690Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:25:02.690Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 55}
+{"ts": "2026-05-17T02:30:02.090Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 56}
+{"ts": "2026-05-17T02:30:02.580Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 56, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:25:00+00:00", "h1_trend": {"2026-05-17 02:15:00+00:00": "bear", "2026-05-17 02:20:00+00:00": "bear", "2026-05-17 02:25:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:30:02.762Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 56, "total_signals": 498, "side": "sell", "entry": 77674.1, "sl": 77902.9, "tp": 77216.50000000003, "qty": 0.08741258741259186, "signal_bar": "2026-05-17 02:25:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:30:02.842Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 56, "equity": 56343.69649608, "available": 31503.08114331, "used_margin": 24774.04710277}
+{"ts": "2026-05-17T02:30:03.121Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 56, "has_position": true}
+{"ts": "2026-05-17T02:30:03.121Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:30:03.121Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 56}
+{"ts": "2026-05-17T02:35:01.508Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 57}
+{"ts": "2026-05-17T02:35:02.035Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 57, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:30:00+00:00", "h1_trend": {"2026-05-17 02:20:00+00:00": "bear", "2026-05-17 02:25:00+00:00": "bear", "2026-05-17 02:30:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:35:02.215Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 57, "total_signals": 498, "side": "sell", "entry": 77747.4, "sl": 77902.9, "tp": 77436.4, "qty": 0.12861736334405144, "signal_bar": "2026-05-17 02:30:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:35:02.296Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 57, "equity": 56357.14656608, "available": 31516.531213309998, "used_margin": 24760.59703277}
+{"ts": "2026-05-17T02:35:02.575Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 57, "has_position": true}
+{"ts": "2026-05-17T02:35:02.576Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:35:02.576Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 57}
+{"ts": "2026-05-17T02:40:01.940Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 58}
+{"ts": "2026-05-17T02:40:02.441Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 58, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:35:00+00:00", "h1_trend": {"2026-05-17 02:25:00+00:00": "bear", "2026-05-17 02:30:00+00:00": "bear", "2026-05-17 02:35:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:40:02.630Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 58, "total_signals": 498, "side": "sell", "entry": 77790.8, "sl": 77902.9, "tp": 77566.60000000002, "qty": 0.1784121320249916, "signal_bar": "2026-05-17 02:35:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:40:02.707Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 58, "equity": 56340.05046608, "available": 31499.43511331, "used_margin": 24777.69313277}
+{"ts": "2026-05-17T02:40:02.986Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 58, "has_position": true}
+{"ts": "2026-05-17T02:40:02.986Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:40:02.987Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 58}
+{"ts": "2026-05-17T02:45:02.292Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 59}
+{"ts": "2026-05-17T02:45:02.712Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 59, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:40:00+00:00", "h1_trend": {"2026-05-17 02:30:00+00:00": "bear", "2026-05-17 02:35:00+00:00": "bear", "2026-05-17 02:40:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:45:02.899Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 59, "total_signals": 498, "side": "sell", "entry": 77790.8, "sl": 77903.0, "tp": 77566.40000000001, "qty": 0.17825311942959465, "signal_bar": "2026-05-17 02:40:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:45:02.976Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 59, "equity": 56343.32863608, "available": 31502.71328331, "used_margin": 24774.41496277}
+{"ts": "2026-05-17T02:45:03.255Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 59, "has_position": true}
+{"ts": "2026-05-17T02:45:03.255Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:45:03.255Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 59}
+{"ts": "2026-05-17T02:50:02.278Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 60}
+{"ts": "2026-05-17T02:50:03.132Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 60, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:45:00+00:00", "h1_trend": {"2026-05-17 02:35:00+00:00": "bear", "2026-05-17 02:40:00+00:00": "bear", "2026-05-17 02:45:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:50:03.313Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 60, "total_signals": 498, "side": "sell", "entry": 77790.8, "sl": 77903.0, "tp": 77566.40000000001, "qty": 0.17825311942959465, "signal_bar": "2026-05-17 02:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:50:03.604Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 60, "equity": 56347.66608608, "available": 31507.05073331, "used_margin": 24770.07751277}
+{"ts": "2026-05-17T02:50:04.414Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 60, "has_position": true}
+{"ts": "2026-05-17T02:50:04.415Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:50:04.415Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 60}
+{"ts": "2026-05-17T02:55:01.789Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 61}
+{"ts": "2026-05-17T02:55:02.250Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 61, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:50:00+00:00", "h1_trend": {"2026-05-17 02:40:00+00:00": "bear", "2026-05-17 02:45:00+00:00": "bear", "2026-05-17 02:50:00+00:00": "bear"}}
+{"ts": "2026-05-17T02:55:02.430Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 61, "total_signals": 498, "side": "sell", "entry": 77790.8, "sl": 77903.0, "tp": 77566.40000000001, "qty": 0.17825311942959465, "signal_bar": "2026-05-17 02:50:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T02:55:02.514Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 61, "equity": 56349.76461608, "available": 31509.14926331, "used_margin": 24767.97898277}
+{"ts": "2026-05-17T02:55:02.793Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 61, "has_position": true}
+{"ts": "2026-05-17T02:55:02.793Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T02:55:02.793Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 61}
+{"ts": "2026-05-17T03:00:02.141Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 62}
+{"ts": "2026-05-17T03:00:02.711Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 62, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 02:55:00+00:00", "h1_trend": {"2026-05-17 02:45:00+00:00": "bear", "2026-05-17 02:50:00+00:00": "bear", "2026-05-17 02:55:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:00:02.890Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 62, "total_signals": 498, "side": "sell", "entry": 77807.6, "sl": 77903.0, "tp": 77616.80000000002, "qty": 0.20964360587003375, "signal_bar": "2026-05-17 02:55:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:00:02.974Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 62, "equity": 56346.87217608, "available": 31506.25682331, "used_margin": 24770.87142277}
+{"ts": "2026-05-17T03:00:03.253Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 62, "has_position": true}
+{"ts": "2026-05-17T03:00:03.253Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T03:00:03.254Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 62}
+{"ts": "2026-05-17T03:05:01.969Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 63}
+{"ts": "2026-05-17T03:05:02.838Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 63, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:00:00+00:00", "h1_trend": {"2026-05-17 02:50:00+00:00": "bear", "2026-05-17 02:55:00+00:00": "bear", "2026-05-17 03:00:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:05:03.064Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 63, "total_signals": 498, "side": "sell", "entry": 77807.6, "sl": 77903.0, "tp": 77616.80000000002, "qty": 0.20964360587003375, "signal_bar": "2026-05-17 03:00:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:05:03.698Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 63, "equity": 56297.67152608, "available": 31457.05617331, "used_margin": 24820.07207277}
+{"ts": "2026-05-17T03:05:04.538Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 63, "has_position": true}
+{"ts": "2026-05-17T03:05:04.538Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T03:05:04.538Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 63}
+{"ts": "2026-05-17T03:10:01.865Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 64}
+{"ts": "2026-05-17T03:10:02.362Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 64, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:05:00+00:00", "h1_trend": {"2026-05-17 02:55:00+00:00": "bear", "2026-05-17 03:00:00+00:00": "bear", "2026-05-17 03:05:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:10:02.540Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 64, "total_signals": 498, "side": "sell", "entry": 77807.6, "sl": 77988.1, "tp": 77446.6, "qty": 0.11080332409972299, "signal_bar": "2026-05-17 03:05:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:10:02.625Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 64, "equity": 56293.24568608, "available": 31452.63033331, "used_margin": 24824.49791277}
+{"ts": "2026-05-17T03:10:02.904Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 64, "has_position": true}
+{"ts": "2026-05-17T03:10:02.905Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T03:10:02.905Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 64}
+{"ts": "2026-05-17T03:15:02.276Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 65}
+{"ts": "2026-05-17T03:15:02.670Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 65, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:10:00+00:00", "h1_trend": {"2026-05-17 03:00:00+00:00": "bear", "2026-05-17 03:05:00+00:00": "bear", "2026-05-17 03:10:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:15:02.849Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 65, "total_signals": 498, "side": "sell", "entry": 77807.6, "sl": 77988.1, "tp": 77446.6, "qty": 0.11080332409972299, "signal_bar": "2026-05-17 03:10:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:15:02.932Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 65, "equity": 56297.48192608, "available": 31456.86657331, "used_margin": 24820.26167277}
+{"ts": "2026-05-17T03:15:03.211Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 65, "has_position": true}
+{"ts": "2026-05-17T03:15:03.211Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T03:15:03.211Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 65}
+{"ts": "2026-05-17T03:20:02.409Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 66}
+{"ts": "2026-05-17T03:20:03.747Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 66, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:15:00+00:00", "h1_trend": {"2026-05-17 03:05:00+00:00": "bear", "2026-05-17 03:10:00+00:00": "bear", "2026-05-17 03:15:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:20:03.926Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 66, "total_signals": 498, "side": "sell", "entry": 77807.6, "sl": 77988.1, "tp": 77446.6, "qty": 0.11080332409972299, "signal_bar": "2026-05-17 03:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:20:04.227Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 66, "equity": 56292.00979608, "available": 31451.39444331, "used_margin": 24825.73380277}
+{"ts": "2026-05-17T03:20:04.724Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 66, "has_position": true}
+{"ts": "2026-05-17T03:20:04.724Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T03:20:04.724Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 66}
+{"ts": "2026-05-17T03:25:01.945Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 67}
+{"ts": "2026-05-17T03:25:02.343Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 67, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:20:00+00:00", "h1_trend": {"2026-05-17 03:10:00+00:00": "bear", "2026-05-17 03:15:00+00:00": "bear", "2026-05-17 03:20:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:25:02.522Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 67, "total_signals": 498, "side": "sell", "entry": 77834.6, "sl": 77988.1, "tp": 77527.6, "qty": 0.13029315960912052, "signal_bar": "2026-05-17 03:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:25:02.605Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 67, "equity": 56289.27528608, "available": 31448.65993331, "used_margin": 24828.46831277}
+{"ts": "2026-05-17T03:25:02.886Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 67, "has_position": true}
+{"ts": "2026-05-17T03:25:02.886Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T03:25:02.886Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 67}
+{"ts": "2026-05-17T03:30:02.286Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 68}
+{"ts": "2026-05-17T03:30:02.703Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 68, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:25:00+00:00", "h1_trend": {"2026-05-17 03:15:00+00:00": "bear", "2026-05-17 03:20:00+00:00": "bear", "2026-05-17 03:25:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:30:02.882Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 68, "total_signals": 498, "side": "sell", "entry": 77843.6, "sl": 77988.1, "tp": 77554.6, "qty": 0.1384083044982699, "signal_bar": "2026-05-17 03:25:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:30:02.967Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 68, "equity": 56288.65796608, "available": 31448.04261331, "used_margin": 24829.08563277}
+{"ts": "2026-05-17T03:30:03.246Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 68, "has_position": true}
+{"ts": "2026-05-17T03:30:03.247Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T03:30:03.247Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 68}
+{"ts": "2026-05-17T03:35:01.598Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 69}
+{"ts": "2026-05-17T03:35:01.960Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 69, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:30:00+00:00", "h1_trend": {"2026-05-17 03:20:00+00:00": "bear", "2026-05-17 03:25:00+00:00": "bear", "2026-05-17 03:30:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:35:02.139Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 69, "total_signals": 498, "side": "sell", "entry": 77900.0, "sl": 77984.7, "tp": 77730.6, "qty": 0.2361275088547897, "signal_bar": "2026-05-17 03:30:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:35:02.224Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 69, "equity": 56252.82385608, "available": 31412.20850331, "used_margin": 24864.91974277}
+{"ts": "2026-05-17T03:35:02.507Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 69, "has_position": true}
+{"ts": "2026-05-17T03:35:02.507Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T03:35:02.507Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 69}
+{"ts": "2026-05-17T03:40:01.811Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 70}
+{"ts": "2026-05-17T03:40:02.215Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 70, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:35:00+00:00", "h1_trend": {"2026-05-17 03:25:00+00:00": "bear", "2026-05-17 03:30:00+00:00": "bear", "2026-05-17 03:35:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:40:02.397Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 70, "total_signals": 498, "side": "sell", "entry": 77900.0, "sl": 78003.0, "tp": 77694.0, "qty": 0.1941747572815534, "signal_bar": "2026-05-17 03:35:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:40:02.479Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 70, "equity": 56251.60018608, "available": 31410.984833309998, "used_margin": 24866.14341277}
+{"ts": "2026-05-17T03:40:02.758Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 70, "has_position": true}
+{"ts": "2026-05-17T03:40:02.758Z", "symbol": "BTCUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-17T03:40:02.758Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 70}
+{"ts": "2026-05-17T03:45:01.967Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 71}
+{"ts": "2026-05-17T03:45:02.381Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 71, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:40:00+00:00", "h1_trend": {"2026-05-17 03:30:00+00:00": "bear", "2026-05-17 03:35:00+00:00": "bear", "2026-05-17 03:40:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:45:02.561Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 71, "total_signals": 498, "side": "sell", "entry": 77917.5, "sl": 78014.2, "tp": 77724.1, "qty": 0.20682523267839298, "signal_bar": "2026-05-17 03:40:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:45:02.644Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 71, "equity": 56252.0694948, "available": 38504.96342853, "used_margin": 17753.64503627}
+{"ts": "2026-05-17T03:45:02.922Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 71, "has_position": false}
+{"ts": "2026-05-17T03:45:02.923Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.438125, "sl_before": 78014.2, "sl_after": 77955.761875}
+{"ts": "2026-05-17T03:45:02.923Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 7.8819, "reward_cash": 39.8404, "rr": 5.055, "qty": 0.206, "margin_used": 16051.005, "leverage": 1, "risk_per_unit": 38.26187, "reward_per_unit": 193.4}
+{"ts": "2026-05-17T03:45:03.199Z", "symbol": "BTCUSDT", "event": "order_created", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "side": "sell", "entry": 77917.5, "sl": 77955.8, "tp": 77724.1, "qty": 0.206, "signal_bar": "2026-05-17 03:40:00+00:00", "bybit_order_id": "695ac14a-42c7-42cf-8aeb-1d09f97e6cc6"}
+{"ts": "2026-05-17T03:45:03.199Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 71}
+{"ts": "2026-05-17T03:50:01.436Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 72}
+{"ts": "2026-05-17T03:50:01.834Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 72, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:45:00+00:00", "h1_trend": {"2026-05-17 03:35:00+00:00": "bear", "2026-05-17 03:40:00+00:00": "bear", "2026-05-17 03:45:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:50:02.017Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 72, "total_signals": 498, "side": "sell", "entry": 77918.3, "sl": 78042.4, "tp": 77670.10000000002, "qty": 0.16116035455279135, "signal_bar": "2026-05-17 03:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:50:02.511Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 72, "equity": 56236.2183048, "available": 38489.112238530004, "used_margin": 17769.49622627}
+{"ts": "2026-05-17T03:50:02.790Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 72, "has_position": false}
+{"ts": "2026-05-17T03:50:02.791Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.438725000000005, "sl_before": 78042.4, "sl_after": 77983.961275}
+{"ts": "2026-05-17T03:50:02.791Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 10.5715, "reward_cash": 39.9602, "rr": 3.78, "qty": 0.161, "margin_used": 12544.8463, "leverage": 1, "risk_per_unit": 65.66127, "reward_per_unit": 248.2}
+{"ts": "2026-05-17T03:50:03.066Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 77918.3, "sl": 77984.0, "tp": 77670.1, "qty": 0.161}
+{"ts": "2026-05-17T03:50:03.066Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 72}
+{"ts": "2026-05-17T03:55:01.373Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 73}
+{"ts": "2026-05-17T03:55:01.863Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 73, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:50:00+00:00", "h1_trend": {"2026-05-17 03:40:00+00:00": "bear", "2026-05-17 03:45:00+00:00": "bear", "2026-05-17 03:50:00+00:00": "bear"}}
+{"ts": "2026-05-17T03:55:02.042Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 73, "total_signals": 498, "side": "sell", "entry": 77922.0, "sl": 78042.4, "tp": 77681.20000000001, "qty": 0.16611295681063926, "signal_bar": "2026-05-17 03:50:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T03:55:02.404Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 73, "equity": 56240.2504648, "available": 38493.14439853, "used_margin": 17765.46406627}
+{"ts": "2026-05-17T03:55:02.684Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 73, "has_position": false}
+{"ts": "2026-05-17T03:55:02.685Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.4415, "sl_before": 78042.4, "sl_after": 77983.9585}
+{"ts": "2026-05-17T03:55:02.685Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 10.2851, "reward_cash": 39.9728, "rr": 3.886, "qty": 0.166, "margin_used": 12935.052, "leverage": 1, "risk_per_unit": 61.9585, "reward_per_unit": 240.8}
+{"ts": "2026-05-17T03:55:02.960Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 77922.0, "sl": 77984.0, "tp": 77681.2, "qty": 0.166}
+{"ts": "2026-05-17T03:55:02.960Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 73}
+{"ts": "2026-05-17T04:00:02.380Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 74}
+{"ts": "2026-05-17T04:00:02.960Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 74, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 03:55:00+00:00", "h1_trend": {"2026-05-17 03:45:00+00:00": "bear", "2026-05-17 03:50:00+00:00": "bear", "2026-05-17 03:55:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:00:03.148Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 74, "total_signals": 498, "side": "sell", "entry": 77937.7, "sl": 78053.0, "tp": 77707.09999999999, "qty": 0.17346053772766257, "signal_bar": "2026-05-17 03:55:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:00:03.504Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 74, "equity": 56242.7341048, "available": 38495.628038530005, "used_margin": 17762.98042627}
+{"ts": "2026-05-17T04:00:03.785Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 74, "has_position": false}
+{"ts": "2026-05-17T04:00:03.786Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.453275, "sl_before": 78053.0, "sl_after": 77994.546725}
+{"ts": "2026-05-17T04:00:03.786Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 9.8345, "reward_cash": 39.8938, "rr": 4.057, "qty": 0.173, "margin_used": 13483.2221, "leverage": 1, "risk_per_unit": 56.84672, "reward_per_unit": 230.6}
+{"ts": "2026-05-17T04:00:04.062Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 77937.7, "sl": 77994.6, "tp": 77707.0, "qty": 0.173}
+{"ts": "2026-05-17T04:00:04.063Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 74}
+{"ts": "2026-05-17T04:05:02.168Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 75}
+{"ts": "2026-05-17T04:05:03.328Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 75, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:00:00+00:00", "h1_trend": {"2026-05-17 03:50:00+00:00": "bear", "2026-05-17 03:55:00+00:00": "bear", "2026-05-17 04:00:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:05:03.514Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 75, "total_signals": 498, "side": "sell", "entry": 77951.7, "sl": 78053.0, "tp": 77749.09999999999, "qty": 0.1974333662388887, "signal_bar": "2026-05-17 04:00:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:05:04.611Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 75, "equity": 56218.3542948, "available": 38471.24822853001, "used_margin": 17787.36023627}
+{"ts": "2026-05-17T04:05:05.451Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 75, "has_position": false}
+{"ts": "2026-05-17T04:05:05.452Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.463775, "sl_before": 78053.0, "sl_after": 77994.536225}
+{"ts": "2026-05-17T04:05:05.453Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 8.4387, "reward_cash": 39.9122, "rr": 4.73, "qty": 0.197, "margin_used": 15356.4849, "leverage": 1, "risk_per_unit": 42.83623, "reward_per_unit": 202.6}
+{"ts": "2026-05-17T04:05:06.266Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 77951.7, "sl": 77994.6, "tp": 77749.0, "qty": 0.197}
+{"ts": "2026-05-17T04:05:06.266Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 75}
+{"ts": "2026-05-17T04:10:01.573Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 76}
+{"ts": "2026-05-17T04:10:01.956Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 76, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:05:00+00:00", "h1_trend": {"2026-05-17 03:55:00+00:00": "bear", "2026-05-17 04:00:00+00:00": "bear", "2026-05-17 04:05:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:10:02.135Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 76, "total_signals": 498, "side": "sell", "entry": 77951.7, "sl": 78053.0, "tp": 77749.09999999999, "qty": 0.1974333662388887, "signal_bar": "2026-05-17 04:05:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:10:02.496Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 76, "equity": 56210.5871148, "available": 38463.481048530004, "used_margin": 17795.12741627}
+{"ts": "2026-05-17T04:10:02.775Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 76, "has_position": false}
+{"ts": "2026-05-17T04:10:02.776Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.463775, "sl_before": 78053.0, "sl_after": 77994.536225}
+{"ts": "2026-05-17T04:10:02.776Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 8.4387, "reward_cash": 39.9122, "rr": 4.73, "qty": 0.197, "margin_used": 15356.4849, "leverage": 1, "risk_per_unit": 42.83623, "reward_per_unit": 202.6}
+{"ts": "2026-05-17T04:10:02.777Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 76}
+{"ts": "2026-05-17T04:15:02.043Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 77}
+{"ts": "2026-05-17T04:15:02.416Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 77, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:10:00+00:00", "h1_trend": {"2026-05-17 04:00:00+00:00": "bear", "2026-05-17 04:05:00+00:00": "bear", "2026-05-17 04:10:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:15:02.596Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 77, "total_signals": 498, "side": "sell", "entry": 77951.7, "sl": 78053.0, "tp": 77749.09999999999, "qty": 0.1974333662388887, "signal_bar": "2026-05-17 04:10:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:15:02.959Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 77, "equity": 56215.6491648, "available": 38468.543098530004, "used_margin": 17790.06536627}
+{"ts": "2026-05-17T04:15:03.237Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 77, "has_position": false}
+{"ts": "2026-05-17T04:15:03.238Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.463775, "sl_before": 78053.0, "sl_after": 77994.536225}
+{"ts": "2026-05-17T04:15:03.239Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 8.4387, "reward_cash": 39.9122, "rr": 4.73, "qty": 0.197, "margin_used": 15356.4849, "leverage": 1, "risk_per_unit": 42.83623, "reward_per_unit": 202.6}
+{"ts": "2026-05-17T04:15:03.239Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 77}
+{"ts": "2026-05-17T04:20:01.528Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 78}
+{"ts": "2026-05-17T04:20:02.020Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 78, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:15:00+00:00", "h1_trend": {"2026-05-17 04:05:00+00:00": "bear", "2026-05-17 04:10:00+00:00": "bear", "2026-05-17 04:15:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:20:02.200Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 78, "total_signals": 498, "side": "sell", "entry": 77951.7, "sl": 78053.0, "tp": 77749.09999999999, "qty": 0.1974333662388887, "signal_bar": "2026-05-17 04:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:20:02.560Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 78, "equity": 56200.3463748, "available": 38453.24030853, "used_margin": 17805.36815627}
+{"ts": "2026-05-17T04:20:02.839Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 78, "has_position": false}
+{"ts": "2026-05-17T04:20:02.840Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.463775, "sl_before": 78053.0, "sl_after": 77994.536225}
+{"ts": "2026-05-17T04:20:02.841Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 8.4387, "reward_cash": 39.9122, "rr": 4.73, "qty": 0.197, "margin_used": 15356.4849, "leverage": 1, "risk_per_unit": 42.83623, "reward_per_unit": 202.6}
+{"ts": "2026-05-17T04:20:02.841Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 78}
+{"ts": "2026-05-17T04:25:02.147Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 79}
+{"ts": "2026-05-17T04:25:02.621Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 79, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:20:00+00:00", "h1_trend": {"2026-05-17 04:10:00+00:00": "bear", "2026-05-17 04:15:00+00:00": "bear", "2026-05-17 04:20:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:25:02.801Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 79, "total_signals": 498, "side": "sell", "entry": 77951.7, "sl": 78056.9, "tp": 77741.3, "qty": 0.1901140684410699, "signal_bar": "2026-05-17 04:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:25:03.163Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 79, "equity": 56174.67574792, "available": 42394.06803565, "used_margin": 13844.36976227}
+{"ts": "2026-05-17T04:25:03.441Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 79, "has_position": false}
+{"ts": "2026-05-17T04:25:03.442Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.463775, "sl_before": 78056.9, "sl_after": 77998.436225}
+{"ts": "2026-05-17T04:25:03.442Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 8.8799, "reward_cash": 39.976, "rr": 4.502, "qty": 0.19, "margin_used": 14810.823, "leverage": 1, "risk_per_unit": 46.73623, "reward_per_unit": 210.4}
+{"ts": "2026-05-17T04:25:03.721Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 77951.7, "sl": 77998.5, "tp": 77741.3, "qty": 0.19}
+{"ts": "2026-05-17T04:25:03.721Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 79}
+{"ts": "2026-05-17T04:30:01.980Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 80}
+{"ts": "2026-05-17T04:30:02.379Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 80, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:25:00+00:00", "h1_trend": {"2026-05-17 04:15:00+00:00": "bear", "2026-05-17 04:20:00+00:00": "bear", "2026-05-17 04:25:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:30:02.558Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 80, "total_signals": 498, "side": "sell", "entry": 77953.4, "sl": 78141.7, "tp": 77576.79999999999, "qty": 0.10621348911311572, "signal_bar": "2026-05-17 04:25:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:30:02.920Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 80, "equity": 56184.96076792, "available": 42404.35305565, "used_margin": 13834.08474227}
+{"ts": "2026-05-17T04:30:03.199Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 80, "has_position": false}
+{"ts": "2026-05-17T04:30:03.200Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.46505, "sl_before": 78141.7, "sl_after": 78083.23495}
+{"ts": "2026-05-17T04:30:03.201Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 13.7625, "reward_cash": 39.9196, "rr": 2.901, "qty": 0.106, "margin_used": 8263.0604, "leverage": 1, "risk_per_unit": 129.83495, "reward_per_unit": 376.6}
+{"ts": "2026-05-17T04:30:03.476Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 77953.4, "sl": 78083.3, "tp": 77576.7, "qty": 0.106}
+{"ts": "2026-05-17T04:30:03.476Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 80}
+{"ts": "2026-05-17T04:35:01.826Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 81}
+{"ts": "2026-05-17T04:35:02.339Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 81, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:30:00+00:00", "h1_trend": {"2026-05-17 04:20:00+00:00": "bear", "2026-05-17 04:25:00+00:00": "bear", "2026-05-17 04:30:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:35:02.545Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 81, "total_signals": 498, "side": "sell", "entry": 77980.6, "sl": 78141.7, "tp": 77658.40000000002, "qty": 0.12414649286158339, "signal_bar": "2026-05-17 04:30:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:35:02.900Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 81, "equity": 56194.87455792, "available": 42414.266845649996, "used_margin": 13824.17095227}
+{"ts": "2026-05-17T04:35:03.180Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 81, "has_position": false}
+{"ts": "2026-05-17T04:35:03.181Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.48545000000001, "sl_before": 78141.7, "sl_after": 78083.21455}
+{"ts": "2026-05-17T04:35:03.181Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 12.7242, "reward_cash": 39.9528, "rr": 3.14, "qty": 0.124, "margin_used": 9669.5944, "leverage": 1, "risk_per_unit": 102.61455, "reward_per_unit": 322.2}
+{"ts": "2026-05-17T04:35:03.456Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 77980.6, "sl": 78083.3, "tp": 77658.4, "qty": 0.124}
+{"ts": "2026-05-17T04:35:03.456Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 81}
+{"ts": "2026-05-17T04:40:01.876Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 82}
+{"ts": "2026-05-17T04:40:02.363Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 82, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:35:00+00:00", "h1_trend": {"2026-05-17 04:25:00+00:00": "bear", "2026-05-17 04:30:00+00:00": "bear", "2026-05-17 04:35:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:40:02.552Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 82, "total_signals": 498, "side": "sell", "entry": 77980.6, "sl": 78141.7, "tp": 77658.40000000002, "qty": 0.12414649286158339, "signal_bar": "2026-05-17 04:35:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:40:02.907Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 82, "equity": 56183.52130792, "available": 42402.913595649996, "used_margin": 13835.52420227}
+{"ts": "2026-05-17T04:40:03.185Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 82, "has_position": false}
+{"ts": "2026-05-17T04:40:03.186Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.48545000000001, "sl_before": 78141.7, "sl_after": 78083.21455}
+{"ts": "2026-05-17T04:40:03.187Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 12.7242, "reward_cash": 39.9528, "rr": 3.14, "qty": 0.124, "margin_used": 9669.5944, "leverage": 1, "risk_per_unit": 102.61455, "reward_per_unit": 322.2}
+{"ts": "2026-05-17T04:40:03.187Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 82}
+{"ts": "2026-05-17T04:45:01.459Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 83}
+{"ts": "2026-05-17T04:45:02.953Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 83, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:40:00+00:00", "h1_trend": {"2026-05-17 04:30:00+00:00": "bear", "2026-05-17 04:35:00+00:00": "bear", "2026-05-17 04:40:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:45:03.135Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 83, "total_signals": 498, "side": "sell", "entry": 77997.7, "sl": 78152.2, "tp": 77688.7, "qty": 0.12944983818770225, "signal_bar": "2026-05-17 04:40:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:45:04.247Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 83, "equity": 56178.33459792, "available": 42397.72688565, "used_margin": 13840.71091227}
+{"ts": "2026-05-17T04:45:05.088Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 83, "has_position": false}
+{"ts": "2026-05-17T04:45:05.089Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.498275, "sl_before": 78152.2, "sl_after": 78093.70172499999}
+{"ts": "2026-05-17T04:45:05.089Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 12.3842, "reward_cash": 39.861, "rr": 3.219, "qty": 0.129, "margin_used": 10061.7033, "leverage": 1, "risk_per_unit": 96.00172, "reward_per_unit": 309.0}
+{"ts": "2026-05-17T04:45:05.923Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 77997.7, "sl": 78093.8, "tp": 77688.7, "qty": 0.129}
+{"ts": "2026-05-17T04:45:05.923Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 83}
+{"ts": "2026-05-17T04:50:02.203Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 84}
+{"ts": "2026-05-17T04:50:02.560Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 84, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:45:00+00:00", "h1_trend": {"2026-05-17 04:35:00+00:00": "bear", "2026-05-17 04:40:00+00:00": "bear", "2026-05-17 04:45:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:50:02.742Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 84, "total_signals": 498, "side": "sell", "entry": 77997.7, "sl": 78168.0, "tp": 77657.09999999999, "qty": 0.11743981209629864, "signal_bar": "2026-05-17 04:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:50:03.099Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 84, "equity": 56179.42878792, "available": 42398.82107565, "used_margin": 13839.61672227}
+{"ts": "2026-05-17T04:50:03.378Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 84, "has_position": false}
+{"ts": "2026-05-17T04:50:03.379Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.498275, "sl_before": 78168.0, "sl_after": 78109.501725}
+{"ts": "2026-05-17T04:50:03.379Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 13.0808, "reward_cash": 39.8502, "rr": 3.046, "qty": 0.117, "margin_used": 9125.7309, "leverage": 1, "risk_per_unit": 111.80172, "reward_per_unit": 340.6}
+{"ts": "2026-05-17T04:50:03.654Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 77997.7, "sl": 78109.6, "tp": 77657.0, "qty": 0.117}
+{"ts": "2026-05-17T04:50:03.654Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 84}
+{"ts": "2026-05-17T04:55:02.841Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 85}
+{"ts": "2026-05-17T04:55:03.719Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 85, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:50:00+00:00", "h1_trend": {"2026-05-17 04:40:00+00:00": "bear", "2026-05-17 04:45:00+00:00": "bear", "2026-05-17 04:50:00+00:00": "bear"}}
+{"ts": "2026-05-17T04:55:03.899Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 85, "total_signals": 498, "side": "sell", "entry": 77997.7, "sl": 78168.0, "tp": 77657.09999999999, "qty": 0.11743981209629864, "signal_bar": "2026-05-17 04:50:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T04:55:05.032Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 85, "equity": 56184.76328792, "available": 42404.15557565, "used_margin": 13834.28222227}
+{"ts": "2026-05-17T04:55:05.849Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 85, "has_position": false}
+{"ts": "2026-05-17T04:55:05.850Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.498275, "sl_before": 78168.0, "sl_after": 78109.501725}
+{"ts": "2026-05-17T04:55:05.850Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 13.0808, "reward_cash": 39.8502, "rr": 3.046, "qty": 0.117, "margin_used": 9125.7309, "leverage": 1, "risk_per_unit": 111.80172, "reward_per_unit": 340.6}
+{"ts": "2026-05-17T04:55:05.851Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 85}
+{"ts": "2026-05-17T05:00:02.212Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 86}
+{"ts": "2026-05-17T05:00:02.789Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 86, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 04:55:00+00:00", "h1_trend": {"2026-05-17 04:45:00+00:00": "bear", "2026-05-17 04:50:00+00:00": "bear", "2026-05-17 04:55:00+00:00": "bear"}}
+{"ts": "2026-05-17T05:00:02.970Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 86, "total_signals": 498, "side": "sell", "entry": 77997.7, "sl": 78168.0, "tp": 77657.09999999999, "qty": 0.11743981209629864, "signal_bar": "2026-05-17 04:55:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T05:00:03.331Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 86, "equity": 56187.84642792, "available": 42407.23871565, "used_margin": 13831.19908227}
+{"ts": "2026-05-17T05:00:03.611Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 86, "has_position": false}
+{"ts": "2026-05-17T05:00:03.612Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.498275, "sl_before": 78168.0, "sl_after": 78109.501725}
+{"ts": "2026-05-17T05:00:03.612Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 13.0808, "reward_cash": 39.8502, "rr": 3.046, "qty": 0.117, "margin_used": 9125.7309, "leverage": 1, "risk_per_unit": 111.80172, "reward_per_unit": 340.6}
+{"ts": "2026-05-17T05:00:03.613Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 86}
+{"ts": "2026-05-17T05:05:01.929Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 87}
+{"ts": "2026-05-17T05:05:02.343Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 87, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 05:00:00+00:00", "h1_trend": {"2026-05-17 04:50:00+00:00": "bear", "2026-05-17 04:55:00+00:00": "bear", "2026-05-17 05:00:00+00:00": "bear"}}
+{"ts": "2026-05-17T05:05:02.525Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 87, "total_signals": 498, "side": "sell", "entry": 78040.6, "sl": 78168.0, "tp": 77785.80000000002, "qty": 0.15698587127159272, "signal_bar": "2026-05-17 05:00:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T05:05:02.881Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 87, "equity": 56178.08465792, "available": 42397.47694565, "used_margin": 13840.96085227}
+{"ts": "2026-05-17T05:05:03.160Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 87, "has_position": false}
+{"ts": "2026-05-17T05:05:03.161Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.53045000000001, "sl_before": 78168.0, "sl_after": 78109.46955}
+{"ts": "2026-05-17T05:05:03.162Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 10.7436, "reward_cash": 39.7488, "rr": 3.7, "qty": 0.156, "margin_used": 12174.3336, "leverage": 1, "risk_per_unit": 68.86955, "reward_per_unit": 254.8}
+{"ts": "2026-05-17T05:05:03.438Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 78040.6, "sl": 78109.5, "tp": 77785.8, "qty": 0.156}
+{"ts": "2026-05-17T05:05:03.438Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 87}
+{"ts": "2026-05-17T05:10:01.831Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 88}
+{"ts": "2026-05-17T05:10:02.296Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 88, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 05:05:00+00:00", "h1_trend": {"2026-05-17 04:55:00+00:00": "bear", "2026-05-17 05:00:00+00:00": "bear", "2026-05-17 05:05:00+00:00": "bear"}}
+{"ts": "2026-05-17T05:10:02.484Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 88, "total_signals": 498, "side": "sell", "entry": 78097.0, "sl": 78169.4, "tp": 77952.20000000001, "qty": 0.27624309392267415, "signal_bar": "2026-05-17 05:05:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T05:10:02.838Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 88, "equity": 56142.85345059, "available": 53365.08426189, "used_margin": 2794.0946887}
+{"ts": "2026-05-17T05:10:03.117Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 88, "has_position": false}
+{"ts": "2026-05-17T05:10:03.118Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.57275, "sl_before": 78169.4, "sl_after": 78110.82724999999}
+{"ts": "2026-05-17T05:10:03.118Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 3.8163, "reward_cash": 39.9648, "rr": 10.472, "qty": 0.276, "margin_used": 21554.772, "leverage": 1, "risk_per_unit": 13.82725, "reward_per_unit": 144.8}
+{"ts": "2026-05-17T05:10:03.395Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 78097.0, "sl": 78110.9, "tp": 77952.2, "qty": 0.276}
+{"ts": "2026-05-17T05:10:03.395Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 88}
+{"ts": "2026-05-17T05:15:01.779Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 89}
+{"ts": "2026-05-17T05:15:02.113Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 89, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 05:10:00+00:00", "h1_trend": {"2026-05-17 05:00:00+00:00": "bear", "2026-05-17 05:05:00+00:00": "bear", "2026-05-17 05:10:00+00:00": "bear"}}
+{"ts": "2026-05-17T05:15:02.293Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 89, "total_signals": 498, "side": "sell", "entry": 78097.0, "sl": 78287.4, "tp": 77716.20000000001, "qty": 0.1050420168067259, "signal_bar": "2026-05-17 05:10:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T05:15:02.656Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 89, "equity": 56144.93295059, "available": 53367.16376189, "used_margin": 2792.0151887}
+{"ts": "2026-05-17T05:15:02.936Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 89, "has_position": false}
+{"ts": "2026-05-17T05:15:02.937Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.57275, "sl_before": 78287.4, "sl_after": 78228.82724999999}
+{"ts": "2026-05-17T05:15:02.937Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 13.8419, "reward_cash": 39.984, "rr": 2.889, "qty": 0.105, "margin_used": 8200.185, "leverage": 1, "risk_per_unit": 131.82725, "reward_per_unit": 380.8}
+{"ts": "2026-05-17T05:15:03.214Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 78097.0, "sl": 78228.9, "tp": 77716.2, "qty": 0.105}
+{"ts": "2026-05-17T05:15:03.214Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 89}
+{"ts": "2026-05-17T05:20:01.647Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 90}
+{"ts": "2026-05-17T05:20:01.980Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 90, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 05:15:00+00:00", "h1_trend": {"2026-05-17 05:05:00+00:00": "bear", "2026-05-17 05:10:00+00:00": "bear", "2026-05-17 05:15:00+00:00": "bear"}}
+{"ts": "2026-05-17T05:20:02.162Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 90, "total_signals": 498, "side": "sell", "entry": 78097.0, "sl": 78287.4, "tp": 77716.20000000001, "qty": 0.1050420168067259, "signal_bar": "2026-05-17 05:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T05:20:02.527Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 90, "equity": 56146.15095059, "available": 53368.38176189, "used_margin": 2790.7971887}
+{"ts": "2026-05-17T05:20:02.808Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 90, "has_position": false}
+{"ts": "2026-05-17T05:20:02.809Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.57275, "sl_before": 78287.4, "sl_after": 78228.82724999999}
+{"ts": "2026-05-17T05:20:02.809Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 13.8419, "reward_cash": 39.984, "rr": 2.889, "qty": 0.105, "margin_used": 8200.185, "leverage": 1, "risk_per_unit": 131.82725, "reward_per_unit": 380.8}
+{"ts": "2026-05-17T05:20:02.809Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 90}
+{"ts": "2026-05-17T05:25:02.084Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 91}
+{"ts": "2026-05-17T05:25:02.568Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 91, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 05:20:00+00:00", "h1_trend": {"2026-05-17 05:10:00+00:00": "bear", "2026-05-17 05:15:00+00:00": "bear", "2026-05-17 05:20:00+00:00": "bear"}}
+{"ts": "2026-05-17T05:25:02.756Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 91, "total_signals": 498, "side": "sell", "entry": 78097.0, "sl": 78287.4, "tp": 77716.20000000001, "qty": 0.1050420168067259, "signal_bar": "2026-05-17 05:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T05:25:03.113Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 91, "equity": 56146.27625059, "available": 53368.50706189, "used_margin": 2790.6718887}
+{"ts": "2026-05-17T05:25:03.391Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 91, "has_position": false}
+{"ts": "2026-05-17T05:25:03.392Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.57275, "sl_before": 78287.4, "sl_after": 78228.82724999999}
+{"ts": "2026-05-17T05:25:03.392Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 13.8419, "reward_cash": 39.984, "rr": 2.889, "qty": 0.105, "margin_used": 8200.185, "leverage": 1, "risk_per_unit": 131.82725, "reward_per_unit": 380.8}
+{"ts": "2026-05-17T05:25:03.392Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 91}
+{"ts": "2026-05-17T05:30:01.709Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 92}
+{"ts": "2026-05-17T05:30:02.219Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 92, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 05:25:00+00:00", "h1_trend": {"2026-05-17 05:15:00+00:00": "bear", "2026-05-17 05:20:00+00:00": "bear", "2026-05-17 05:25:00+00:00": "bear"}}
+{"ts": "2026-05-17T05:30:02.403Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 92, "total_signals": 498, "side": "sell", "entry": 78097.0, "sl": 78287.4, "tp": 77716.20000000001, "qty": 0.1050420168067259, "signal_bar": "2026-05-17 05:25:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T05:30:02.757Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 92, "equity": 56147.18695059, "available": 53369.41776189, "used_margin": 2789.7611887}
+{"ts": "2026-05-17T05:30:03.035Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 92, "has_position": false}
+{"ts": "2026-05-17T05:30:03.036Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.57275, "sl_before": 78287.4, "sl_after": 78228.82724999999}
+{"ts": "2026-05-17T05:30:03.036Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 13.8419, "reward_cash": 39.984, "rr": 2.889, "qty": 0.105, "margin_used": 8200.185, "leverage": 1, "risk_per_unit": 131.82725, "reward_per_unit": 380.8}
+{"ts": "2026-05-17T05:30:03.037Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 92}
+{"ts": "2026-05-17T05:35:02.100Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 93}
+{"ts": "2026-05-17T05:35:03.329Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 93, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 05:30:00+00:00", "h1_trend": {"2026-05-17 05:20:00+00:00": "bear", "2026-05-17 05:25:00+00:00": "bear", "2026-05-17 05:30:00+00:00": "bear"}}
+{"ts": "2026-05-17T05:35:03.508Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 93, "total_signals": 499, "side": "sell", "entry": 78131.2, "sl": 78287.4, "tp": 77818.8, "qty": 0.12804097311139803, "signal_bar": "2026-05-17 05:30:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T05:35:04.777Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 93, "equity": 56147.64395059, "available": 53369.87476189, "used_margin": 2789.3041887}
+{"ts": "2026-05-17T05:35:05.592Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 93, "has_position": false}
+{"ts": "2026-05-17T05:35:05.593Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.5984, "sl_before": 78287.4, "sl_after": 78228.80159999999}
+{"ts": "2026-05-17T05:35:05.593Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 12.493, "reward_cash": 39.9872, "rr": 3.201, "qty": 0.128, "margin_used": 10000.7936, "leverage": 1, "risk_per_unit": 97.6016, "reward_per_unit": 312.4}
+{"ts": "2026-05-17T05:35:06.579Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 78131.2, "sl": 78228.9, "tp": 77818.8, "qty": 0.128}
+{"ts": "2026-05-17T05:35:06.579Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 93}
+{"ts": "2026-05-17T05:40:01.878Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 94}
+{"ts": "2026-05-17T05:40:02.301Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 94, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 05:35:00+00:00", "h1_trend": {"2026-05-17 05:25:00+00:00": "bear", "2026-05-17 05:30:00+00:00": "bear", "2026-05-17 05:35:00+00:00": "bear"}}
+{"ts": "2026-05-17T05:40:02.482Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 94, "total_signals": 500, "side": "sell", "entry": 78111.1, "sl": 78254.0, "tp": 77825.30000000002, "qty": 0.13995801259622684, "signal_bar": "2026-05-17 05:35:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T05:40:02.840Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 94, "equity": 56146.83395059, "available": 53369.064761890004, "used_margin": 2790.1141887}
+{"ts": "2026-05-17T05:40:03.119Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 94, "has_position": false}
+{"ts": "2026-05-17T05:40:03.120Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.583325, "sl_before": 78254.0, "sl_after": 78195.416675}
+{"ts": "2026-05-17T05:40:03.121Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 11.72, "reward_cash": 39.7262, "rr": 3.39, "qty": 0.139, "margin_used": 10857.4429, "leverage": 1, "risk_per_unit": 84.31667, "reward_per_unit": 285.8}
+{"ts": "2026-05-17T05:40:03.397Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 78111.1, "sl": 78195.5, "tp": 77825.3, "qty": 0.139}
+{"ts": "2026-05-17T05:40:03.397Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 94}
+{"ts": "2026-05-17T05:45:02.571Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 95}
+{"ts": "2026-05-17T05:45:03.761Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 95, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 05:40:00+00:00", "h1_trend": {"2026-05-17 05:30:00+00:00": "bear", "2026-05-17 05:35:00+00:00": "bear", "2026-05-17 05:40:00+00:00": "bear"}}
+{"ts": "2026-05-17T05:45:03.940Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 95, "total_signals": 501, "side": "sell", "entry": 78111.1, "sl": 78223.7, "tp": 77885.90000000002, "qty": 0.1776198934280777, "signal_bar": "2026-05-17 05:40:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T05:45:05.070Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 95, "equity": 56148.67795059, "available": 53370.90876189, "used_margin": 2788.2701887}
+{"ts": "2026-05-17T05:45:05.884Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 95, "has_position": false}
+{"ts": "2026-05-17T05:45:05.885Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.583325, "sl_before": 78223.7, "sl_after": 78165.116675}
+{"ts": "2026-05-17T05:45:05.885Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 9.561, "reward_cash": 39.8604, "rr": 4.169, "qty": 0.177, "margin_used": 13825.6647, "leverage": 1, "risk_per_unit": 54.01667, "reward_per_unit": 225.2}
+{"ts": "2026-05-17T05:45:06.699Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 78111.1, "sl": 78165.2, "tp": 77885.9, "qty": 0.177}
+{"ts": "2026-05-17T05:45:06.700Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 95}
+{"ts": "2026-05-17T05:50:02.029Z", "symbol": "BTCUSDT", "event": "cycle_start", "cycle": 96}
+{"ts": "2026-05-17T05:50:02.500Z", "symbol": "BTCUSDT", "event": "data_fetched", "cycle": 96, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-17 05:45:00+00:00", "h1_trend": {"2026-05-17 05:35:00+00:00": "bear", "2026-05-17 05:40:00+00:00": "bear", "2026-05-17 05:45:00+00:00": "bear"}}
+{"ts": "2026-05-17T05:50:02.681Z", "symbol": "BTCUSDT", "event": "signal", "cycle": 96, "total_signals": 502, "side": "sell", "entry": 78111.1, "sl": 78181.0, "tp": 77971.30000000002, "qty": 0.2861230329041726, "signal_bar": "2026-05-17 05:45:00+00:00", "trend": "bear"}
+{"ts": "2026-05-17T05:50:03.042Z", "symbol": "BTCUSDT", "event": "balance", "cycle": 96, "equity": 56146.87595059, "available": 53369.10676189, "used_margin": 2790.0721887}
+{"ts": "2026-05-17T05:50:03.322Z", "symbol": "BTCUSDT", "event": "position_check", "cycle": 96, "has_position": false}
+{"ts": "2026-05-17T05:50:03.324Z", "symbol": "BTCUSDT", "event": "fee_sl_tighten", "fee_per_unit": 58.583325, "sl_before": 78181.0, "sl_after": 78122.416675}
+{"ts": "2026-05-17T05:50:03.325Z", "symbol": "BTCUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 3.2366, "reward_cash": 39.9828, "rr": 12.353, "qty": 0.286, "margin_used": 22339.7746, "leverage": 1, "risk_per_unit": 11.31667, "reward_per_unit": 139.8}
+{"ts": "2026-05-17T05:50:03.600Z", "symbol": "BTCUSDT", "event": "order_modified", "dry_run": false, "link_id": "ema-15316363-s-1778989200", "entry": 78111.1, "sl": 78122.5, "tp": 77971.3, "qty": 0.286}
+{"ts": "2026-05-17T05:50:03.600Z", "symbol": "BTCUSDT", "event": "cycle_complete", "cycle": 96}

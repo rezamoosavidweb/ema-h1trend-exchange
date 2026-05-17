@@ -1,0 +1,25 @@
+{"ts": "2026-05-16T21:22:01.152Z", "symbol": "SHIB1000USDT", "event": "bot_start", "mode": "DEMO", "dry_run": false, "risk_usdt": 20.0, "leverage": 1, "rr": 2.0, "pip_size": 1e-06, "expiry_min": 60, "expiry_bars": 12, "lookback_bars": 5, "position_mode": "one_way", "magic": 59894617, "journal_path": "logs/events_SHIB1000USDT.jsonl"}
+{"ts": "2026-05-16T21:22:01.152Z", "symbol": "SHIB1000USDT", "event": "account_snapshot", "equity": 56255.44926015, "available": 20308.397641509997, "used_margin": 35962.00135864, "open_positions": [{"side": "sell", "size": 588230.0, "entry": 0.005886, "upnl": 2.94115}], "pending_orders": []}
+{"ts": "2026-05-16T21:22:01.448Z", "symbol": "SHIB1000USDT", "event": "cycle_start", "cycle": 1}
+{"ts": "2026-05-16T21:22:04.096Z", "symbol": "SHIB1000USDT", "event": "data_fetched", "cycle": 1, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:15:00+00:00", "h1_trend": {"2026-05-16 21:05:00+00:00": "bear", "2026-05-16 21:10:00+00:00": "bear", "2026-05-16 21:15:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:22:04.293Z", "symbol": "SHIB1000USDT", "event": "signal", "cycle": 1, "total_signals": 546, "side": "sell", "entry": 0.0058709999999999995, "sl": 0.005889, "tp": 0.005834999999999998, "qty": 1111111.1111110707, "signal_bar": "2026-05-16 21:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:22:04.738Z", "symbol": "SHIB1000USDT", "event": "balance", "cycle": 1, "equity": 56253.48907015, "available": 20306.43745151, "used_margin": 35963.96154864}
+{"ts": "2026-05-16T21:22:05.017Z", "symbol": "SHIB1000USDT", "event": "position_check", "cycle": 1, "has_position": true}
+{"ts": "2026-05-16T21:22:05.018Z", "symbol": "SHIB1000USDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T21:22:05.018Z", "symbol": "SHIB1000USDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-16T21:22:19.170Z", "symbol": "SHIB1000USDT", "event": "bot_start", "mode": "DEMO", "dry_run": false, "risk_usdt": 20.0, "leverage": 1, "rr": 2.0, "pip_size": 1e-06, "expiry_min": 60, "expiry_bars": 12, "lookback_bars": 5, "position_mode": "one_way", "magic": 59894617, "journal_path": "logs/events_SHIB1000USDT.jsonl"}
+{"ts": "2026-05-16T21:22:19.171Z", "symbol": "SHIB1000USDT", "event": "account_snapshot", "equity": 56251.50024015, "available": 20304.448621509997, "used_margin": 35965.95037864, "open_positions": [{"side": "sell", "size": 588230.0, "entry": 0.005886, "upnl": 0.58823}], "pending_orders": []}
+{"ts": "2026-05-16T21:22:20.487Z", "symbol": "SHIB1000USDT", "event": "cycle_start", "cycle": 1}
+{"ts": "2026-05-16T21:22:22.361Z", "symbol": "SHIB1000USDT", "event": "data_fetched", "cycle": 1, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:15:00+00:00", "h1_trend": {"2026-05-16 21:05:00+00:00": "bear", "2026-05-16 21:10:00+00:00": "bear", "2026-05-16 21:15:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:22:22.559Z", "symbol": "SHIB1000USDT", "event": "signal", "cycle": 1, "total_signals": 546, "side": "sell", "entry": 0.0058709999999999995, "sl": 0.005889, "tp": 0.005834999999999998, "qty": 1111111.1111110707, "signal_bar": "2026-05-16 21:15:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:22:22.638Z", "symbol": "SHIB1000USDT", "event": "balance", "cycle": 1, "equity": 56252.13917015, "available": 20305.087551509998, "used_margin": 35965.31144864}
+{"ts": "2026-05-16T21:22:22.920Z", "symbol": "SHIB1000USDT", "event": "position_check", "cycle": 1, "has_position": true}
+{"ts": "2026-05-16T21:22:22.921Z", "symbol": "SHIB1000USDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T21:22:22.921Z", "symbol": "SHIB1000USDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-16T21:25:03.048Z", "symbol": "SHIB1000USDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-16T21:25:03.963Z", "symbol": "SHIB1000USDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "h1_bars": 349, "current_bar": "2026-05-16 21:20:00+00:00", "h1_trend": {"2026-05-16 21:10:00+00:00": "bear", "2026-05-16 21:15:00+00:00": "bear", "2026-05-16 21:20:00+00:00": "bear"}}
+{"ts": "2026-05-16T21:25:04.151Z", "symbol": "SHIB1000USDT", "event": "signal", "cycle": 2, "total_signals": 546, "side": "sell", "entry": 0.0058709999999999995, "sl": 0.005889, "tp": 0.005834999999999998, "qty": 1111111.1111110707, "signal_bar": "2026-05-16 21:20:00+00:00", "trend": "bear"}
+{"ts": "2026-05-16T21:25:04.542Z", "symbol": "SHIB1000USDT", "event": "balance", "cycle": 2, "equity": 56265.20178829, "available": 2079.3502344200024, "used_margin": 54187.40501387}
+{"ts": "2026-05-16T21:25:04.822Z", "symbol": "SHIB1000USDT", "event": "position_check", "cycle": 2, "has_position": true}
+{"ts": "2026-05-16T21:25:04.823Z", "symbol": "SHIB1000USDT", "event": "position_open_skip"}
+{"ts": "2026-05-16T21:25:04.823Z", "symbol": "SHIB1000USDT", "event": "cycle_complete", "cycle": 2}
