@@ -16,3 +16,99 @@
 {"ts": "2026-05-17T07:00:02.684Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
 {"ts": "2026-05-17T07:00:02.684Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 43272.10 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
 {"ts": "2026-05-17T07:00:02.684Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 2}
+{"ts": "2026-05-17T07:05:02.116Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-17T07:05:02.612Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "current_bar": "2026-05-17 07:00:00+00:00"}
+{"ts": "2026-05-17T07:05:02.754Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 3, "total_signals": 8, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:05:02.887Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 3, "equity": 56131.06617478, "available": 43274.004146499996, "used_margin": 12869.25053828}
+{"ts": "2026-05-17T07:05:03.168Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 3, "has_position": false}
+{"ts": "2026-05-17T07:05:03.169Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:05:03.170Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 43274.00 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:05:03.170Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 3}
+{"ts": "2026-05-17T07:10:01.497Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 4}
+{"ts": "2026-05-17T07:10:01.908Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 4, "m5_bars": 599, "current_bar": "2026-05-17 07:05:00+00:00"}
+{"ts": "2026-05-17T07:10:02.050Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 4, "total_signals": 8, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:10:02.238Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 4, "equity": 56132.89438478, "available": 43275.832356499996, "used_margin": 12867.42232828}
+{"ts": "2026-05-17T07:10:02.516Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 4, "has_position": false}
+{"ts": "2026-05-17T07:10:02.517Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:10:02.518Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 43275.83 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:10:02.518Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 4}
+{"ts": "2026-05-17T07:15:01.849Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 5}
+{"ts": "2026-05-17T07:15:02.246Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 5, "m5_bars": 599, "current_bar": "2026-05-17 07:10:00+00:00"}
+{"ts": "2026-05-17T07:15:02.387Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 5, "total_signals": 8, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:15:02.571Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 5, "equity": 56133.26455478, "available": 43276.2025265, "used_margin": 12867.05215828}
+{"ts": "2026-05-17T07:15:02.850Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 5, "has_position": false}
+{"ts": "2026-05-17T07:15:02.852Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:15:02.852Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 43276.20 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:15:02.852Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 5}
+{"ts": "2026-05-17T07:20:02.834Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 6}
+{"ts": "2026-05-17T07:20:03.981Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 6, "m5_bars": 599, "current_bar": "2026-05-17 07:15:00+00:00"}
+{"ts": "2026-05-17T07:20:04.122Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 6, "total_signals": 7, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:20:04.453Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 6, "equity": 56138.07448478, "available": 43281.0124565, "used_margin": 12862.24222828}
+{"ts": "2026-05-17T07:20:05.284Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 6, "has_position": false}
+{"ts": "2026-05-17T07:20:05.285Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:20:05.285Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 43281.01 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:20:05.285Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 6}
+{"ts": "2026-05-17T07:25:01.601Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 7}
+{"ts": "2026-05-17T07:25:01.976Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 7, "m5_bars": 599, "current_bar": "2026-05-17 07:20:00+00:00"}
+{"ts": "2026-05-17T07:25:02.117Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 7, "total_signals": 8, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:25:02.248Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 7, "equity": 56130.40560478, "available": 43273.343576499996, "used_margin": 12869.91110828}
+{"ts": "2026-05-17T07:25:02.529Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 7, "has_position": false}
+{"ts": "2026-05-17T07:25:02.530Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:25:02.530Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 43273.34 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:25:02.530Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 7}
+{"ts": "2026-05-17T07:30:01.740Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 8}
+{"ts": "2026-05-17T07:30:02.019Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 8, "m5_bars": 599, "current_bar": "2026-05-17 07:25:00+00:00"}
+{"ts": "2026-05-17T07:30:02.164Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 8, "total_signals": 8, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:30:02.352Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 8, "equity": 56128.26782478, "available": 43271.2057965, "used_margin": 12872.04888828}
+{"ts": "2026-05-17T07:30:02.630Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 8, "has_position": false}
+{"ts": "2026-05-17T07:30:02.631Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:30:02.631Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 43271.21 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:30:02.631Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 8}
+{"ts": "2026-05-17T07:35:01.902Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 9}
+{"ts": "2026-05-17T07:35:02.180Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 9, "m5_bars": 599, "current_bar": "2026-05-17 07:30:00+00:00"}
+{"ts": "2026-05-17T07:35:02.323Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 9, "total_signals": 8, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:35:02.508Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 9, "equity": 56116.02220692, "available": 53338.25301822, "used_margin": 2790.0806887}
+{"ts": "2026-05-17T07:35:02.787Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 9, "has_position": false}
+{"ts": "2026-05-17T07:35:02.788Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:35:02.788Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 53338.25 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:35:02.788Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 9}
+{"ts": "2026-05-17T07:40:01.960Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 10}
+{"ts": "2026-05-17T07:40:02.301Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 10, "m5_bars": 599, "current_bar": "2026-05-17 07:35:00+00:00"}
+{"ts": "2026-05-17T07:40:02.443Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 10, "total_signals": 8, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:40:02.665Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 10, "equity": 56118.46980692, "available": 53340.70061822, "used_margin": 2787.6330887}
+{"ts": "2026-05-17T07:40:02.946Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 10, "has_position": false}
+{"ts": "2026-05-17T07:40:02.947Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:40:02.947Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 53340.70 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:40:02.947Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 10}
+{"ts": "2026-05-17T07:45:02.245Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 11}
+{"ts": "2026-05-17T07:45:02.523Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 11, "m5_bars": 599, "current_bar": "2026-05-17 07:40:00+00:00"}
+{"ts": "2026-05-17T07:45:02.663Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 11, "total_signals": 7, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:45:02.796Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 11, "equity": 56118.26260692, "available": 53340.49341822, "used_margin": 2787.8402887}
+{"ts": "2026-05-17T07:45:03.076Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 11, "has_position": false}
+{"ts": "2026-05-17T07:45:03.077Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:45:03.077Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 53340.49 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:45:03.077Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 11}
+{"ts": "2026-05-17T07:50:01.489Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 12}
+{"ts": "2026-05-17T07:50:01.763Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 12, "m5_bars": 599, "current_bar": "2026-05-17 07:45:00+00:00"}
+{"ts": "2026-05-17T07:50:01.913Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 12, "total_signals": 8, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:50:02.243Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 12, "equity": 56117.50760692, "available": 53339.73841822, "used_margin": 2788.5952887}
+{"ts": "2026-05-17T07:50:02.523Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 12, "has_position": false}
+{"ts": "2026-05-17T07:50:02.524Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:50:02.525Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 53339.74 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:50:02.525Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 12}
+{"ts": "2026-05-17T07:55:01.835Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 13}
+{"ts": "2026-05-17T07:55:02.119Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 13, "m5_bars": 599, "current_bar": "2026-05-17 07:50:00+00:00"}
+{"ts": "2026-05-17T07:55:02.268Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 13, "total_signals": 7, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:55:02.490Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 13, "equity": 56116.98070692, "available": 53339.21151822, "used_margin": 2789.1221887}
+{"ts": "2026-05-17T07:55:02.770Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 13, "has_position": false}
+{"ts": "2026-05-17T07:55:02.771Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:55:02.772Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 53339.21 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:55:02.772Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 13}
+{"ts": "2026-05-17T08:00:02.104Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 14}
+{"ts": "2026-05-17T08:00:02.542Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 14, "m5_bars": 599, "current_bar": "2026-05-17 07:55:00+00:00"}
+{"ts": "2026-05-17T08:00:02.686Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 14, "total_signals": 7, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T08:00:02.874Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 14, "equity": 56117.34280692, "available": 53339.57361822, "used_margin": 2788.7600887}
+{"ts": "2026-05-17T08:00:03.158Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 14, "has_position": false}
+{"ts": "2026-05-17T08:00:03.159Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T08:00:03.159Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 53339.57 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T08:00:03.159Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 14}

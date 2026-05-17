@@ -16,3 +16,99 @@
 {"ts": "2026-05-17T07:00:02.686Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
 {"ts": "2026-05-17T07:00:02.686Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 43272.10 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
 {"ts": "2026-05-17T07:00:02.686Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 2}
+{"ts": "2026-05-17T07:05:02.062Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-17T07:05:02.340Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "current_bar": "2026-05-17 07:00:00+00:00"}
+{"ts": "2026-05-17T07:05:02.498Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 3, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:05:02.834Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 3, "equity": 56131.06617478, "available": 43274.004146499996, "used_margin": 12869.25053828}
+{"ts": "2026-05-17T07:05:03.116Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 3, "has_position": false}
+{"ts": "2026-05-17T07:05:03.116Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:05:03.117Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 43274.00 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:05:03.117Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 3}
+{"ts": "2026-05-17T07:10:01.442Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 4}
+{"ts": "2026-05-17T07:10:01.752Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 4, "m5_bars": 599, "current_bar": "2026-05-17 07:05:00+00:00"}
+{"ts": "2026-05-17T07:10:01.902Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 4, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:10:02.237Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 4, "equity": 56132.89438478, "available": 43275.832356499996, "used_margin": 12867.42232828}
+{"ts": "2026-05-17T07:10:02.518Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 4, "has_position": false}
+{"ts": "2026-05-17T07:10:02.519Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:10:02.520Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 43275.83 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:10:02.520Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 4}
+{"ts": "2026-05-17T07:15:01.815Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 5}
+{"ts": "2026-05-17T07:15:02.092Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 5, "m5_bars": 599, "current_bar": "2026-05-17 07:10:00+00:00"}
+{"ts": "2026-05-17T07:15:02.240Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 5, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:15:02.572Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 5, "equity": 56133.26455478, "available": 43276.2025265, "used_margin": 12867.05215828}
+{"ts": "2026-05-17T07:15:02.853Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 5, "has_position": false}
+{"ts": "2026-05-17T07:15:02.854Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:15:02.854Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 43276.20 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:15:02.854Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 5}
+{"ts": "2026-05-17T07:20:02.141Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 6}
+{"ts": "2026-05-17T07:20:02.420Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 6, "m5_bars": 599, "current_bar": "2026-05-17 07:15:00+00:00"}
+{"ts": "2026-05-17T07:20:02.558Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 6, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:20:02.693Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 6, "equity": 56138.07448478, "available": 43281.0124565, "used_margin": 12862.24222828}
+{"ts": "2026-05-17T07:20:02.972Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 6, "has_position": false}
+{"ts": "2026-05-17T07:20:02.973Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:20:02.973Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 43281.01 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:20:02.973Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 6}
+{"ts": "2026-05-17T07:25:02.323Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 7}
+{"ts": "2026-05-17T07:25:02.602Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 7, "m5_bars": 599, "current_bar": "2026-05-17 07:20:00+00:00"}
+{"ts": "2026-05-17T07:25:02.740Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 7, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:25:02.874Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 7, "equity": 56130.40560478, "available": 43273.343576499996, "used_margin": 12869.91110828}
+{"ts": "2026-05-17T07:25:03.153Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 7, "has_position": false}
+{"ts": "2026-05-17T07:25:03.154Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:25:03.154Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 43273.34 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:25:03.154Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 7}
+{"ts": "2026-05-17T07:30:01.486Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 8}
+{"ts": "2026-05-17T07:30:01.766Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 8, "m5_bars": 599, "current_bar": "2026-05-17 07:25:00+00:00"}
+{"ts": "2026-05-17T07:30:01.922Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 8, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:30:02.164Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 8, "equity": 56128.26782478, "available": 43271.2057965, "used_margin": 12872.04888828}
+{"ts": "2026-05-17T07:30:02.444Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 8, "has_position": false}
+{"ts": "2026-05-17T07:30:02.445Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:30:02.445Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 43271.21 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:30:02.445Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 8}
+{"ts": "2026-05-17T07:35:01.652Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 9}
+{"ts": "2026-05-17T07:35:01.930Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 9, "m5_bars": 599, "current_bar": "2026-05-17 07:30:00+00:00"}
+{"ts": "2026-05-17T07:35:02.069Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 9, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:35:02.323Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 9, "equity": 56116.02220692, "available": 53338.25301822, "used_margin": 2790.0806887}
+{"ts": "2026-05-17T07:35:02.601Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 9, "has_position": false}
+{"ts": "2026-05-17T07:35:02.602Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:35:02.602Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 53338.25 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:35:02.602Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 9}
+{"ts": "2026-05-17T07:40:01.972Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 10}
+{"ts": "2026-05-17T07:40:02.448Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 10, "m5_bars": 599, "current_bar": "2026-05-17 07:35:00+00:00"}
+{"ts": "2026-05-17T07:40:02.586Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 10, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:40:02.720Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 10, "equity": 56118.46980692, "available": 53340.70061822, "used_margin": 2787.6330887}
+{"ts": "2026-05-17T07:40:02.998Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 10, "has_position": false}
+{"ts": "2026-05-17T07:40:02.999Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:40:03.000Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 53340.70 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:40:03.000Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 10}
+{"ts": "2026-05-17T07:45:01.331Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 11}
+{"ts": "2026-05-17T07:45:01.607Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 11, "m5_bars": 599, "current_bar": "2026-05-17 07:40:00+00:00"}
+{"ts": "2026-05-17T07:45:01.760Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 11, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:45:01.878Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 11, "equity": 56118.30230692, "available": 53340.53311822, "used_margin": 2787.8005887}
+{"ts": "2026-05-17T07:45:02.156Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 11, "has_position": false}
+{"ts": "2026-05-17T07:45:02.157Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:45:02.157Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 53340.53 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:45:02.158Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 11}
+{"ts": "2026-05-17T07:50:01.498Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 12}
+{"ts": "2026-05-17T07:50:02.027Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 12, "m5_bars": 599, "current_bar": "2026-05-17 07:45:00+00:00"}
+{"ts": "2026-05-17T07:50:02.165Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 12, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:50:02.300Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 12, "equity": 56117.50760692, "available": 53339.73841822, "used_margin": 2788.5952887}
+{"ts": "2026-05-17T07:50:02.578Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 12, "has_position": false}
+{"ts": "2026-05-17T07:50:02.579Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:50:02.579Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 53339.74 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:50:02.579Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 12}
+{"ts": "2026-05-17T07:55:01.890Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 13}
+{"ts": "2026-05-17T07:55:02.274Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 13, "m5_bars": 599, "current_bar": "2026-05-17 07:50:00+00:00"}
+{"ts": "2026-05-17T07:55:02.411Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 13, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:55:02.546Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 13, "equity": 56116.98070692, "available": 53339.21151822, "used_margin": 2789.1221887}
+{"ts": "2026-05-17T07:55:02.825Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 13, "has_position": false}
+{"ts": "2026-05-17T07:55:02.826Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:55:02.826Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 53339.21 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:55:02.826Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 13}
+{"ts": "2026-05-17T08:00:02.114Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 14}
+{"ts": "2026-05-17T08:00:02.393Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 14, "m5_bars": 599, "current_bar": "2026-05-17 07:55:00+00:00"}
+{"ts": "2026-05-17T08:00:02.536Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 14, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T08:00:02.874Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 14, "equity": 56117.34280692, "available": 53339.57361822, "used_margin": 2788.7600887}
+{"ts": "2026-05-17T08:00:03.156Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 14, "has_position": false}
+{"ts": "2026-05-17T08:00:03.157Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T08:00:03.157Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 53339.57 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T08:00:03.158Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 14}
