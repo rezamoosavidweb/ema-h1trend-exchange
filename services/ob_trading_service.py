@@ -182,7 +182,7 @@ class OBTradingService:
             link_prefix=OB_LINK_PREFIX,
         )
 
-        add_symbol_file_handler(cfg.symbol, log_dir="logs", json_output=cfg.log_json)
+        add_symbol_file_handler(cfg.symbol, log_dir=cfg.event_log_dir, json_output=cfg.log_json)
         await self._reconciler.reconcile_on_startup()
 
         self._log.info(

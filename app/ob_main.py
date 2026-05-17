@@ -89,6 +89,9 @@ def _apply_overrides(args: argparse.Namespace) -> None:
     if args.log_level:      os.environ["LOG_LEVEL"]        = args.log_level
     if args.log_file:       os.environ["LOG_FILE"]         = args.log_file
     if args.log_json:       os.environ["LOG_JSON"]         = "true"
+    # OB bot writes to logs_ob/ so its files don't mix with the EMA bot's logs/
+    if not os.environ.get("EVENT_LOG_DIR"):
+        os.environ["EVENT_LOG_DIR"] = "logs_ob"
 
 
 # ── Signal handlers ───────────────────────────────────────────────────────────
