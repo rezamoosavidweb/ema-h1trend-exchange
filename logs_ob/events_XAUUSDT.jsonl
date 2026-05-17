@@ -8,3 +8,11 @@
 {"ts": "2026-05-17T06:58:38.552Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
 {"ts": "2026-05-17T06:58:38.552Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 43273.41 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
 {"ts": "2026-05-17T06:58:38.553Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-17T07:00:01.635Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-17T07:00:01.914Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "current_bar": "2026-05-17 06:55:00+00:00"}
+{"ts": "2026-05-17T07:00:02.061Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 2, "total_signals": 8, "side": "buy", "entry": 4534.51, "sl": 4534.08, "tp": 4535.370000000001, "sl_dist": 0.43000000000029104, "rr": 2.0, "qty": 46.511627906945264, "signal_bar": "2026-05-17 05:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T07:00:02.402Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 2, "equity": 56129.16018478, "available": 43272.0981565, "used_margin": 12871.15652828}
+{"ts": "2026-05-17T07:00:02.683Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 2, "has_position": false}
+{"ts": "2026-05-17T07:00:02.684Z", "symbol": "XAUUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9997, "reward_cash": 39.9995, "rr": 2.0, "qty": 46.511, "margin_used": 210904.5946, "leverage": 1, "risk_per_unit": 0.43, "reward_per_unit": 0.86}
+{"ts": "2026-05-17T07:00:02.684Z", "symbol": "XAUUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248231995.05 USDT (incl. buffer), have 43272.10 USDT free. (qty=46.511 entry=4534.51 leverage=1x)", "qty": 46.511, "entry": 4534.51, "leverage": 1}
+{"ts": "2026-05-17T07:00:02.684Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 2}

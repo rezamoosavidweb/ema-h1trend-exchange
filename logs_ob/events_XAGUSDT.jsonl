@@ -8,3 +8,11 @@
 {"ts": "2026-05-17T06:58:38.500Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
 {"ts": "2026-05-17T06:58:38.501Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 43273.41 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
 {"ts": "2026-05-17T06:58:38.501Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-17T07:00:01.594Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-17T07:00:02.067Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "current_bar": "2026-05-17 06:55:00+00:00"}
+{"ts": "2026-05-17T07:00:02.213Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 2, "total_signals": 17, "side": "sell", "entry": 75.79, "sl": 75.8, "tp": 75.77000000000002, "sl_dist": 0.009999999999990905, "rr": 2.0, "qty": 2000.000000001819, "signal_bar": "2026-05-17 06:35:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-17T07:00:02.403Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 2, "equity": 56129.16018478, "available": 43272.0981565, "used_margin": 12871.15652828}
+{"ts": "2026-05-17T07:00:02.685Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 2, "has_position": false}
+{"ts": "2026-05-17T07:00:02.686Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 2000.0, "margin_used": 151580.0, "leverage": 1, "risk_per_unit": 0.01, "reward_per_unit": 0.02}
+{"ts": "2026-05-17T07:00:02.686Z", "symbol": "XAGUSDT", "event": "margin_failed", "error": "Insufficient margin: need \u2248166738.00 USDT (incl. buffer), have 43272.10 USDT free. (qty=2000.0 entry=75.79 leverage=1x)", "qty": 2000.0, "entry": 75.79, "leverage": 1}
+{"ts": "2026-05-17T07:00:02.686Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 2}
