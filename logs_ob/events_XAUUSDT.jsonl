@@ -12,3 +12,183 @@
 {"ts": "2026-05-17T09:00:01.870Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 2, "equity": 56122.97006115, "available": 53345.20087245, "used_margin": 2783.2471887}
 {"ts": "2026-05-17T09:00:02.277Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 2, "has_position": false}
 {"ts": "2026-05-17T09:00:02.278Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 2}
+{"ts": "2026-05-17T09:05:01.660Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-17T09:05:01.946Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "current_bar": "2026-05-17 09:00:00+00:00"}
+{"ts": "2026-05-17T09:05:02.111Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 3, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:05:02.215Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 3, "equity": 56123.21926115, "available": 53345.450072449996, "used_margin": 2782.9979887}
+{"ts": "2026-05-17T09:05:02.743Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 3, "has_position": false}
+{"ts": "2026-05-17T09:05:02.743Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 3}
+{"ts": "2026-05-17T09:10:02.046Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 4}
+{"ts": "2026-05-17T09:10:02.324Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 4, "m5_bars": 599, "current_bar": "2026-05-17 09:05:00+00:00"}
+{"ts": "2026-05-17T09:10:02.471Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 4, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:10:02.596Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 4, "equity": 56122.75706115, "available": 53344.987872449994, "used_margin": 2783.4601887}
+{"ts": "2026-05-17T09:10:02.876Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 4, "has_position": false}
+{"ts": "2026-05-17T09:10:02.877Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 4}
+{"ts": "2026-05-17T09:15:02.273Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 5}
+{"ts": "2026-05-17T09:15:02.606Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 5, "m5_bars": 599, "current_bar": "2026-05-17 09:10:00+00:00"}
+{"ts": "2026-05-17T09:15:02.759Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 5, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:15:02.889Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 5, "equity": 56121.44806115, "available": 53343.67887244999, "used_margin": 2784.7691887}
+{"ts": "2026-05-17T09:15:03.183Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 5, "has_position": false}
+{"ts": "2026-05-17T09:15:03.184Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 5}
+{"ts": "2026-05-17T09:20:01.591Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 6}
+{"ts": "2026-05-17T09:20:01.867Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 6, "m5_bars": 599, "current_bar": "2026-05-17 09:15:00+00:00"}
+{"ts": "2026-05-17T09:20:02.013Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 6, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:20:02.231Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 6, "equity": 56120.56506115, "available": 53342.79587245, "used_margin": 2785.6521887}
+{"ts": "2026-05-17T09:20:02.512Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 6, "has_position": false}
+{"ts": "2026-05-17T09:20:02.513Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 6}
+{"ts": "2026-05-17T09:25:01.800Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 7}
+{"ts": "2026-05-17T09:25:02.074Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 7, "m5_bars": 599, "current_bar": "2026-05-17 09:20:00+00:00"}
+{"ts": "2026-05-17T09:25:02.244Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 7, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:25:02.427Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 7, "equity": 56122.88406115, "available": 53345.114872449994, "used_margin": 2783.3331887}
+{"ts": "2026-05-17T09:25:02.781Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 7, "has_position": false}
+{"ts": "2026-05-17T09:25:02.782Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 7}
+{"ts": "2026-05-17T09:30:02.142Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 8}
+{"ts": "2026-05-17T09:30:02.424Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 8, "m5_bars": 599, "current_bar": "2026-05-17 09:25:00+00:00"}
+{"ts": "2026-05-17T09:30:02.569Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 8, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:30:02.698Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 8, "equity": 56124.85525334, "available": 50283.250744640005, "used_margin": 5842.0874287}
+{"ts": "2026-05-17T09:30:02.978Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 8, "has_position": false}
+{"ts": "2026-05-17T09:30:02.979Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 8}
+{"ts": "2026-05-17T09:35:02.293Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 9}
+{"ts": "2026-05-17T09:35:02.787Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 9, "m5_bars": 599, "current_bar": "2026-05-17 09:30:00+00:00"}
+{"ts": "2026-05-17T09:35:02.927Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 9, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:35:03.060Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 9, "equity": 56128.75249334, "available": 50286.33990464, "used_margin": 5838.9982687}
+{"ts": "2026-05-17T09:35:03.340Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 9, "has_position": false}
+{"ts": "2026-05-17T09:35:03.341Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 9}
+{"ts": "2026-05-17T09:40:01.642Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 10}
+{"ts": "2026-05-17T09:40:01.936Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 10, "m5_bars": 599, "current_bar": "2026-05-17 09:35:00+00:00"}
+{"ts": "2026-05-17T09:40:02.078Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 10, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:40:02.309Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 10, "equity": 56127.84437334, "available": 50287.85602464, "used_margin": 5837.4821487}
+{"ts": "2026-05-17T09:40:02.599Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 10, "has_position": false}
+{"ts": "2026-05-17T09:40:02.600Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 10}
+{"ts": "2026-05-17T09:45:01.808Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 11}
+{"ts": "2026-05-17T09:45:02.089Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 11, "m5_bars": 599, "current_bar": "2026-05-17 09:40:00+00:00"}
+{"ts": "2026-05-17T09:45:02.226Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 11, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:45:02.443Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 11, "equity": 56126.87037334, "available": 50286.88202464, "used_margin": 5838.4561487}
+{"ts": "2026-05-17T09:45:02.723Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 11, "has_position": false}
+{"ts": "2026-05-17T09:45:02.724Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 11}
+{"ts": "2026-05-17T09:50:02.041Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 12}
+{"ts": "2026-05-17T09:50:02.392Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 12, "m5_bars": 599, "current_bar": "2026-05-17 09:45:00+00:00"}
+{"ts": "2026-05-17T09:50:02.529Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 12, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:50:02.744Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 12, "equity": 56124.86533334, "available": 50285.68506464, "used_margin": 5839.6531087}
+{"ts": "2026-05-17T09:50:03.023Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 12, "has_position": false}
+{"ts": "2026-05-17T09:50:03.024Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 12}
+{"ts": "2026-05-17T09:55:01.296Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 13}
+{"ts": "2026-05-17T09:55:01.575Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 13, "m5_bars": 599, "current_bar": "2026-05-17 09:50:00+00:00"}
+{"ts": "2026-05-17T09:55:01.729Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 13, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T09:55:02.055Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 13, "equity": 56123.81925334, "available": 50282.214744640005, "used_margin": 5843.1234287}
+{"ts": "2026-05-17T09:55:02.335Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 13, "has_position": false}
+{"ts": "2026-05-17T09:55:02.336Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 13}
+{"ts": "2026-05-17T10:00:01.565Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 14}
+{"ts": "2026-05-17T10:00:01.975Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 14, "m5_bars": 599, "current_bar": "2026-05-17 09:55:00+00:00"}
+{"ts": "2026-05-17T10:00:02.115Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 14, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:00:02.248Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 14, "equity": 56123.44033334, "available": 50280.219664640004, "used_margin": 5845.1185087}
+{"ts": "2026-05-17T10:00:02.576Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 14, "has_position": false}
+{"ts": "2026-05-17T10:00:02.577Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 14}
+{"ts": "2026-05-17T10:05:01.770Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 15}
+{"ts": "2026-05-17T10:05:02.048Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 15, "m5_bars": 599, "current_bar": "2026-05-17 10:00:00+00:00"}
+{"ts": "2026-05-17T10:05:02.185Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 15, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:05:02.404Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 15, "equity": 56118.44957334, "available": 50274.42082464, "used_margin": 5850.9173487}
+{"ts": "2026-05-17T10:05:02.684Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 15, "has_position": false}
+{"ts": "2026-05-17T10:05:02.685Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 15}
+{"ts": "2026-05-17T10:10:01.880Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 16}
+{"ts": "2026-05-17T10:10:02.160Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 16, "m5_bars": 599, "current_bar": "2026-05-17 10:05:00+00:00"}
+{"ts": "2026-05-17T10:10:02.329Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 16, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:10:02.657Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 16, "equity": 56118.68071334, "available": 50273.84388464, "used_margin": 5851.4942887}
+{"ts": "2026-05-17T10:10:02.938Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 16, "has_position": false}
+{"ts": "2026-05-17T10:10:02.939Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 16}
+{"ts": "2026-05-17T10:15:02.297Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 17}
+{"ts": "2026-05-17T10:15:02.574Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 17, "m5_bars": 599, "current_bar": "2026-05-17 10:10:00+00:00"}
+{"ts": "2026-05-17T10:15:02.712Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 17, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:15:02.848Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 17, "equity": 56117.38773334, "available": 50270.12666464, "used_margin": 5855.2115087}
+{"ts": "2026-05-17T10:15:03.128Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 17, "has_position": false}
+{"ts": "2026-05-17T10:15:03.129Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 17}
+{"ts": "2026-05-17T10:20:01.459Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 18}
+{"ts": "2026-05-17T10:20:01.738Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 18, "m5_bars": 599, "current_bar": "2026-05-17 10:15:00+00:00"}
+{"ts": "2026-05-17T10:20:01.880Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 18, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:20:02.097Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 18, "equity": 56117.76407334, "available": 50269.69492464, "used_margin": 5855.6432487}
+{"ts": "2026-05-17T10:20:02.377Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 18, "has_position": false}
+{"ts": "2026-05-17T10:20:02.378Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 18}
+{"ts": "2026-05-17T10:25:02.533Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 19}
+{"ts": "2026-05-17T10:25:03.389Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 19, "m5_bars": 599, "current_bar": "2026-05-17 10:20:00+00:00"}
+{"ts": "2026-05-17T10:25:03.528Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 19, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:25:04.215Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 19, "equity": 56118.35177334, "available": 50270.28262464, "used_margin": 5855.0555487}
+{"ts": "2026-05-17T10:25:05.043Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 19, "has_position": false}
+{"ts": "2026-05-17T10:25:05.044Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 19}
+{"ts": "2026-05-17T10:30:01.223Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 20}
+{"ts": "2026-05-17T10:30:01.502Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 20, "m5_bars": 599, "current_bar": "2026-05-17 10:25:00+00:00"}
+{"ts": "2026-05-17T10:30:01.645Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 20, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:30:01.774Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 20, "equity": 56119.15431334, "available": 50270.27708464, "used_margin": 5855.0610887}
+{"ts": "2026-05-17T10:30:02.055Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 20, "has_position": false}
+{"ts": "2026-05-17T10:30:02.056Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 20}
+{"ts": "2026-05-17T10:35:01.349Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 21}
+{"ts": "2026-05-17T10:35:01.627Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 21, "m5_bars": 599, "current_bar": "2026-05-17 10:30:00+00:00"}
+{"ts": "2026-05-17T10:35:01.766Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 21, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:35:01.992Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 21, "equity": 56121.62189334, "available": 50271.12850464, "used_margin": 5854.2096687}
+{"ts": "2026-05-17T10:35:02.271Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 21, "has_position": false}
+{"ts": "2026-05-17T10:35:02.272Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 21}
+{"ts": "2026-05-17T10:40:01.560Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 22}
+{"ts": "2026-05-17T10:40:01.894Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 22, "m5_bars": 599, "current_bar": "2026-05-17 10:35:00+00:00"}
+{"ts": "2026-05-17T10:40:02.063Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 22, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:40:02.164Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 22, "equity": 56121.33985334, "available": 50271.654544640005, "used_margin": 5853.6836287}
+{"ts": "2026-05-17T10:40:02.520Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 22, "has_position": false}
+{"ts": "2026-05-17T10:40:02.521Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 22}
+{"ts": "2026-05-17T10:45:02.022Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 23}
+{"ts": "2026-05-17T10:45:02.320Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 23, "m5_bars": 599, "current_bar": "2026-05-17 10:40:00+00:00"}
+{"ts": "2026-05-17T10:45:02.467Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 23, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:45:02.602Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 23, "equity": 56122.58144753, "available": 53344.81225883, "used_margin": 2788.1520887}
+{"ts": "2026-05-17T10:45:02.890Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 23, "has_position": false}
+{"ts": "2026-05-17T10:45:02.891Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 23}
+{"ts": "2026-05-17T10:50:02.207Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 24}
+{"ts": "2026-05-17T10:50:02.591Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 24, "m5_bars": 599, "current_bar": "2026-05-17 10:45:00+00:00"}
+{"ts": "2026-05-17T10:50:02.771Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 24, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:50:02.862Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 24, "equity": 56123.19914753, "available": 53345.429958830005, "used_margin": 2787.5343887}
+{"ts": "2026-05-17T10:50:03.140Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 24, "has_position": false}
+{"ts": "2026-05-17T10:50:03.141Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 24}
+{"ts": "2026-05-17T10:55:01.467Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 25}
+{"ts": "2026-05-17T10:55:01.743Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 25, "m5_bars": 599, "current_bar": "2026-05-17 10:50:00+00:00"}
+{"ts": "2026-05-17T10:55:01.909Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 25, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T10:55:02.018Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 25, "equity": 56123.16624753, "available": 53345.39705883, "used_margin": 2787.5672887}
+{"ts": "2026-05-17T10:55:02.296Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 25, "has_position": false}
+{"ts": "2026-05-17T10:55:02.297Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 25}
+{"ts": "2026-05-17T11:00:02.332Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 26}
+{"ts": "2026-05-17T11:00:03.178Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 26, "m5_bars": 599, "current_bar": "2026-05-17 10:55:00+00:00"}
+{"ts": "2026-05-17T11:00:03.319Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 26, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T11:00:03.660Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 26, "equity": 56123.65984753, "available": 53345.89065883, "used_margin": 2787.0736887}
+{"ts": "2026-05-17T11:00:04.474Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 26, "has_position": false}
+{"ts": "2026-05-17T11:00:04.475Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 26}
+{"ts": "2026-05-17T11:05:01.648Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 27}
+{"ts": "2026-05-17T11:05:02.020Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 27, "m5_bars": 599, "current_bar": "2026-05-17 11:00:00+00:00"}
+{"ts": "2026-05-17T11:05:02.179Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 27, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T11:05:02.292Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 27, "equity": 56127.49254753, "available": 53349.72335883, "used_margin": 2783.2409887}
+{"ts": "2026-05-17T11:05:02.707Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 27, "has_position": false}
+{"ts": "2026-05-17T11:05:02.708Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 27}
+{"ts": "2026-05-17T11:10:01.912Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 28}
+{"ts": "2026-05-17T11:10:02.192Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 28, "m5_bars": 599, "current_bar": "2026-05-17 11:05:00+00:00"}
+{"ts": "2026-05-17T11:10:02.332Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 28, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T11:10:02.466Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 28, "equity": 56123.89434753, "available": 53346.12515883001, "used_margin": 2786.8391887}
+{"ts": "2026-05-17T11:10:02.744Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 28, "has_position": false}
+{"ts": "2026-05-17T11:10:02.745Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 28}
+{"ts": "2026-05-17T11:15:02.084Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 29}
+{"ts": "2026-05-17T11:15:02.362Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 29, "m5_bars": 599, "current_bar": "2026-05-17 11:10:00+00:00"}
+{"ts": "2026-05-17T11:15:02.501Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 29, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T11:15:02.722Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 29, "equity": 56125.96434753, "available": 53348.19515883, "used_margin": 2784.7691887}
+{"ts": "2026-05-17T11:15:03.001Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 29, "has_position": false}
+{"ts": "2026-05-17T11:15:03.002Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 29}
+{"ts": "2026-05-17T11:20:01.370Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 30}
+{"ts": "2026-05-17T11:20:01.645Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 30, "m5_bars": 599, "current_bar": "2026-05-17 11:15:00+00:00"}
+{"ts": "2026-05-17T11:20:01.789Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 30, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T11:20:02.006Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 30, "equity": 56127.17924753, "available": 53349.410058830006, "used_margin": 2783.5542887}
+{"ts": "2026-05-17T11:20:02.286Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 30, "has_position": false}
+{"ts": "2026-05-17T11:20:02.287Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 30}
+{"ts": "2026-05-17T11:25:02.396Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 31}
+{"ts": "2026-05-17T11:25:03.235Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 31, "m5_bars": 599, "current_bar": "2026-05-17 11:20:00+00:00"}
+{"ts": "2026-05-17T11:25:03.373Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 31, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T11:25:04.062Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 31, "equity": 56128.05084753, "available": 53350.281658830005, "used_margin": 2782.6826887}
+{"ts": "2026-05-17T11:25:04.893Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 31, "has_position": false}
+{"ts": "2026-05-17T11:25:04.894Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 31}
+{"ts": "2026-05-17T11:30:02.263Z", "symbol": "XAUUSDT", "event": "cycle_start", "cycle": 32}
+{"ts": "2026-05-17T11:30:02.544Z", "symbol": "XAUUSDT", "event": "data_fetched", "cycle": 32, "m5_bars": 599, "current_bar": "2026-05-17 11:25:00+00:00"}
+{"ts": "2026-05-17T11:30:02.686Z", "symbol": "XAUUSDT", "event": "signal", "cycle": 32, "total_signals": 3, "side": "buy", "entry": 4545.67, "sl": 4535.84, "tp": 4565.33, "sl_dist": 9.829999999999927, "rr": 2.0, "qty": 2.0345879959308393, "signal_bar": "2026-05-15 15:55:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T11:30:02.816Z", "symbol": "XAUUSDT", "event": "balance", "cycle": 32, "equity": 56130.09994753, "available": 53352.33075883, "used_margin": 2780.6335887}
+{"ts": "2026-05-17T11:30:03.098Z", "symbol": "XAUUSDT", "event": "position_check", "cycle": 32, "has_position": false}
+{"ts": "2026-05-17T11:30:03.098Z", "symbol": "XAUUSDT", "event": "cycle_complete", "cycle": 32}
