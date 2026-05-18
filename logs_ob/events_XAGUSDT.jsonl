@@ -903,3 +903,686 @@
 {"ts": "2026-05-17T20:56:21.035Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 1, "has_position": false}
 {"ts": "2026-05-17T20:56:21.036Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 229, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
 {"ts": "2026-05-17T20:56:21.036Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 1}
+{"ts": "2026-05-17T21:00:01.159Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 2}
+{"ts": "2026-05-17T21:00:01.574Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 2, "m5_bars": 599, "current_bar": "2026-05-17 20:55:00+00:00"}
+{"ts": "2026-05-17T21:00:01.703Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 2, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:00:02.043Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 2, "equity": 56180.44042547, "available": 38640.81663893, "used_margin": 17531.17148654}
+{"ts": "2026-05-17T21:00:02.321Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 2, "has_position": false}
+{"ts": "2026-05-17T21:00:02.322Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 230, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:00:02.323Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 2}
+{"ts": "2026-05-17T21:05:01.655Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 3}
+{"ts": "2026-05-17T21:05:02.066Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 3, "m5_bars": 599, "current_bar": "2026-05-17 21:00:00+00:00"}
+{"ts": "2026-05-17T21:05:02.188Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 3, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:05:02.392Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 3, "equity": 56186.33922547, "available": 38646.71543893, "used_margin": 17525.27268654}
+{"ts": "2026-05-17T21:05:02.672Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 3, "has_position": false}
+{"ts": "2026-05-17T21:05:02.673Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 231, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:05:02.673Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 3}
+{"ts": "2026-05-17T21:10:01.898Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 4}
+{"ts": "2026-05-17T21:10:02.308Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 4, "m5_bars": 599, "current_bar": "2026-05-17 21:05:00+00:00"}
+{"ts": "2026-05-17T21:10:02.459Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 4, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:10:02.671Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 4, "equity": 56184.66192547, "available": 38645.03813893, "used_margin": 17526.94998654}
+{"ts": "2026-05-17T21:10:02.951Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 4, "has_position": false}
+{"ts": "2026-05-17T21:10:02.952Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 232, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:10:02.952Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 4}
+{"ts": "2026-05-17T21:15:02.249Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 5}
+{"ts": "2026-05-17T21:15:02.638Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 5, "m5_bars": 599, "current_bar": "2026-05-17 21:10:00+00:00"}
+{"ts": "2026-05-17T21:15:02.759Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 5, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:15:02.910Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 5, "equity": 56176.03082547, "available": 38636.40703893, "used_margin": 17535.58108654}
+{"ts": "2026-05-17T21:15:03.187Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 5, "has_position": false}
+{"ts": "2026-05-17T21:15:03.188Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 233, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:15:03.188Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 5}
+{"ts": "2026-05-17T21:20:01.920Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 6}
+{"ts": "2026-05-17T21:20:02.298Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 6, "m5_bars": 599, "current_bar": "2026-05-17 21:15:00+00:00"}
+{"ts": "2026-05-17T21:20:02.418Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 6, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:20:02.571Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 6, "equity": 56172.80702547, "available": 38633.183238929996, "used_margin": 17538.80488654}
+{"ts": "2026-05-17T21:20:02.850Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 6, "has_position": false}
+{"ts": "2026-05-17T21:20:02.851Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 234, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:20:02.851Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 6}
+{"ts": "2026-05-17T21:25:02.222Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 7}
+{"ts": "2026-05-17T21:25:02.621Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 7, "m5_bars": 599, "current_bar": "2026-05-17 21:20:00+00:00"}
+{"ts": "2026-05-17T21:25:02.755Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 7, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:25:02.893Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 7, "equity": 56146.37502547, "available": 38606.75123893, "used_margin": 17565.23688654}
+{"ts": "2026-05-17T21:25:03.171Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 7, "has_position": false}
+{"ts": "2026-05-17T21:25:03.172Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 235, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:25:03.172Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 7}
+{"ts": "2026-05-17T21:30:01.348Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 8}
+{"ts": "2026-05-17T21:30:01.625Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 8, "m5_bars": 599, "current_bar": "2026-05-17 21:25:00+00:00"}
+{"ts": "2026-05-17T21:30:01.751Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 8, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:30:02.096Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 8, "equity": 56131.35697937, "available": 54742.34874917, "used_margin": 1399.7221302}
+{"ts": "2026-05-17T21:30:02.508Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 8, "has_position": false}
+{"ts": "2026-05-17T21:30:02.509Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 236, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:30:02.509Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 8}
+{"ts": "2026-05-17T21:35:01.906Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 9}
+{"ts": "2026-05-17T21:35:02.185Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 9, "m5_bars": 599, "current_bar": "2026-05-17 21:30:00+00:00"}
+{"ts": "2026-05-17T21:35:02.305Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 9, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:35:02.636Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 9, "equity": 56130.99487937, "available": 54741.98664917, "used_margin": 1400.0842302}
+{"ts": "2026-05-17T21:35:02.914Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 9, "has_position": false}
+{"ts": "2026-05-17T21:35:02.915Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 237, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:35:02.915Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 9}
+{"ts": "2026-05-17T21:40:02.210Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 10}
+{"ts": "2026-05-17T21:40:02.486Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 10, "m5_bars": 599, "current_bar": "2026-05-17 21:35:00+00:00"}
+{"ts": "2026-05-17T21:40:02.618Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 10, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:40:02.757Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 10, "equity": 56132.05987937, "available": 54743.051649170004, "used_margin": 1399.0192302}
+{"ts": "2026-05-17T21:40:03.125Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 10, "has_position": false}
+{"ts": "2026-05-17T21:40:03.126Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 238, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:40:03.126Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 10}
+{"ts": "2026-05-17T21:45:01.419Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 11}
+{"ts": "2026-05-17T21:45:01.697Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 11, "m5_bars": 599, "current_bar": "2026-05-17 21:40:00+00:00"}
+{"ts": "2026-05-17T21:45:01.814Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 11, "total_signals": 8, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:45:01.968Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 11, "equity": 56132.44327937, "available": 54743.43504917, "used_margin": 1398.6358302}
+{"ts": "2026-05-17T21:45:02.432Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 11, "has_position": false}
+{"ts": "2026-05-17T21:45:02.433Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 239, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:45:02.433Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 11}
+{"ts": "2026-05-17T21:50:01.815Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 12}
+{"ts": "2026-05-17T21:50:02.097Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 12, "m5_bars": 599, "current_bar": "2026-05-17 21:45:00+00:00"}
+{"ts": "2026-05-17T21:50:02.224Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 12, "total_signals": 6, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:50:02.368Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 12, "equity": 56131.25047937, "available": 54742.242249170005, "used_margin": 1399.8286302}
+{"ts": "2026-05-17T21:50:02.716Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 12, "has_position": false}
+{"ts": "2026-05-17T21:50:02.718Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 240, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:50:02.718Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 12}
+{"ts": "2026-05-17T21:55:02.013Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 13}
+{"ts": "2026-05-17T21:55:02.404Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 13, "m5_bars": 599, "current_bar": "2026-05-17 21:50:00+00:00"}
+{"ts": "2026-05-17T21:55:02.519Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 13, "total_signals": 6, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T21:55:02.676Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 13, "equity": 56131.33567937, "available": 54742.32744917001, "used_margin": 1399.7434302}
+{"ts": "2026-05-17T21:55:02.956Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 13, "has_position": false}
+{"ts": "2026-05-17T21:55:02.957Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 241, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T21:55:02.957Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 13}
+{"ts": "2026-05-17T22:00:02.184Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 14}
+{"ts": "2026-05-17T22:00:02.595Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 14, "m5_bars": 599, "current_bar": "2026-05-17 21:50:00+00:00"}
+{"ts": "2026-05-17T22:00:02.713Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 14, "total_signals": 6, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:00:02.868Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 14, "equity": 56130.84577937, "available": 54741.837549170006, "used_margin": 1400.2333302}
+{"ts": "2026-05-17T22:00:03.147Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 14, "has_position": false}
+{"ts": "2026-05-17T22:00:03.148Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 241, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:00:03.148Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 14}
+{"ts": "2026-05-17T22:05:01.601Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 15}
+{"ts": "2026-05-17T22:05:01.876Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 15, "m5_bars": 599, "current_bar": "2026-05-17 22:00:00+00:00"}
+{"ts": "2026-05-17T22:05:02.025Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 15, "total_signals": 8, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:05:02.148Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 15, "equity": 56080.85295835, "available": 54691.844728150005, "used_margin": 1398.0181302}
+{"ts": "2026-05-17T22:05:02.513Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 15, "has_position": false}
+{"ts": "2026-05-17T22:05:02.514Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 243, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:05:02.514Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 15}
+{"ts": "2026-05-17T22:10:01.906Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 16}
+{"ts": "2026-05-17T22:10:02.183Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 16, "m5_bars": 599, "current_bar": "2026-05-17 22:05:00+00:00"}
+{"ts": "2026-05-17T22:10:02.309Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 16, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:10:02.454Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 16, "equity": 56082.62085835, "available": 54693.612628150004, "used_margin": 1396.2502302}
+{"ts": "2026-05-17T22:10:02.734Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 16, "has_position": false}
+{"ts": "2026-05-17T22:10:02.735Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 244, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:10:02.735Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 16}
+{"ts": "2026-05-17T22:15:02.076Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 17}
+{"ts": "2026-05-17T22:15:02.356Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 17, "m5_bars": 599, "current_bar": "2026-05-17 22:10:00+00:00"}
+{"ts": "2026-05-17T22:15:02.490Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 17, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:15:02.705Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 17, "equity": 56081.55585835, "available": 54692.54762815, "used_margin": 1397.3152302}
+{"ts": "2026-05-17T22:15:02.984Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 17, "has_position": false}
+{"ts": "2026-05-17T22:15:02.985Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 245, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:15:02.985Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 17}
+{"ts": "2026-05-17T22:20:02.163Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 18}
+{"ts": "2026-05-17T22:20:02.439Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 18, "m5_bars": 599, "current_bar": "2026-05-17 22:15:00+00:00"}
+{"ts": "2026-05-17T22:20:02.557Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 18, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:20:02.711Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 18, "equity": 56083.72845835, "available": 54694.72022815001, "used_margin": 1395.1426302}
+{"ts": "2026-05-17T22:20:02.989Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 18, "has_position": false}
+{"ts": "2026-05-17T22:20:02.990Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 246, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:20:02.990Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 18}
+{"ts": "2026-05-17T22:25:02.269Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 19}
+{"ts": "2026-05-17T22:25:02.547Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 19, "m5_bars": 599, "current_bar": "2026-05-17 22:20:00+00:00"}
+{"ts": "2026-05-17T22:25:02.674Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 19, "total_signals": 8, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:25:02.817Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 19, "equity": 56084.11185835, "available": 54695.103628150006, "used_margin": 1394.7592302}
+{"ts": "2026-05-17T22:25:03.095Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 19, "has_position": false}
+{"ts": "2026-05-17T22:25:03.096Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 247, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:25:03.096Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 19}
+{"ts": "2026-05-17T22:30:02.121Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 20}
+{"ts": "2026-05-17T22:30:02.934Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 20, "m5_bars": 599, "current_bar": "2026-05-17 22:25:00+00:00"}
+{"ts": "2026-05-17T22:30:03.052Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 20, "total_signals": 8, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:30:03.784Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 20, "equity": 56084.62305835, "available": 54695.614828150006, "used_margin": 1394.2480302}
+{"ts": "2026-05-17T22:30:04.620Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 20, "has_position": false}
+{"ts": "2026-05-17T22:30:04.621Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 248, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:30:04.621Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 20}
+{"ts": "2026-05-17T22:35:01.923Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 21}
+{"ts": "2026-05-17T22:35:02.200Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 21, "m5_bars": 599, "current_bar": "2026-05-17 22:30:00+00:00"}
+{"ts": "2026-05-17T22:35:02.318Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 21, "total_signals": 6, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:35:02.572Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 21, "equity": 56081.55585835, "available": 54692.54762815, "used_margin": 1397.3152302}
+{"ts": "2026-05-17T22:35:02.850Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 21, "has_position": false}
+{"ts": "2026-05-17T22:35:02.851Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 249, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:35:02.851Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 21}
+{"ts": "2026-05-17T22:40:02.072Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 22}
+{"ts": "2026-05-17T22:40:02.348Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 22, "m5_bars": 599, "current_bar": "2026-05-17 22:35:00+00:00"}
+{"ts": "2026-05-17T22:40:02.469Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 22, "total_signals": 8, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:40:02.814Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 22, "equity": 56082.94035835, "available": 54693.93212815, "used_margin": 1395.9307302}
+{"ts": "2026-05-17T22:40:03.100Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 22, "has_position": false}
+{"ts": "2026-05-17T22:40:03.101Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 250, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:40:03.101Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 22}
+{"ts": "2026-05-17T22:45:01.346Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 23}
+{"ts": "2026-05-17T22:45:01.628Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 23, "m5_bars": 599, "current_bar": "2026-05-17 22:40:00+00:00"}
+{"ts": "2026-05-17T22:45:01.790Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 23, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:45:01.897Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 23, "equity": 56083.47285835, "available": 54694.46462815, "used_margin": 1395.3982302}
+{"ts": "2026-05-17T22:45:02.404Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 23, "has_position": false}
+{"ts": "2026-05-17T22:45:02.406Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 251, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:45:02.406Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 23}
+{"ts": "2026-05-17T22:50:01.560Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 24}
+{"ts": "2026-05-17T22:50:01.843Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 24, "m5_bars": 599, "current_bar": "2026-05-17 22:45:00+00:00"}
+{"ts": "2026-05-17T22:50:01.981Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 24, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:50:02.115Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 24, "equity": 56084.49525835, "available": 54695.487028150004, "used_margin": 1394.3758302}
+{"ts": "2026-05-17T22:50:02.395Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 24, "has_position": false}
+{"ts": "2026-05-17T22:50:02.397Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 252, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:50:02.397Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 24}
+{"ts": "2026-05-17T22:55:01.682Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 25}
+{"ts": "2026-05-17T22:55:02.076Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 25, "m5_bars": 599, "current_bar": "2026-05-17 22:50:00+00:00"}
+{"ts": "2026-05-17T22:55:02.192Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 25, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T22:55:02.487Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 25, "equity": 56086.75305835, "available": 54697.744828150004, "used_margin": 1392.1180302}
+{"ts": "2026-05-17T22:55:02.767Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 25, "has_position": false}
+{"ts": "2026-05-17T22:55:02.768Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 253, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T22:55:02.768Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 25}
+{"ts": "2026-05-17T23:00:02.121Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 26}
+{"ts": "2026-05-17T23:00:02.540Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 26, "m5_bars": 599, "current_bar": "2026-05-17 22:55:00+00:00"}
+{"ts": "2026-05-17T23:00:02.657Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 26, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:00:02.928Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 26, "equity": 56085.60285835, "available": 54696.59462815, "used_margin": 1393.2682302}
+{"ts": "2026-05-17T23:00:03.209Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 26, "has_position": false}
+{"ts": "2026-05-17T23:00:03.210Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 254, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T23:00:03.210Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 26}
+{"ts": "2026-05-17T23:05:01.499Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 27}
+{"ts": "2026-05-17T23:05:01.779Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 27, "m5_bars": 599, "current_bar": "2026-05-17 23:00:00+00:00"}
+{"ts": "2026-05-17T23:05:01.897Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 27, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:05:02.052Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 27, "equity": 56087.09385835, "available": 54698.08562815, "used_margin": 1391.7772302}
+{"ts": "2026-05-17T23:05:02.369Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 27, "has_position": false}
+{"ts": "2026-05-17T23:05:02.370Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 255, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T23:05:02.370Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 27}
+{"ts": "2026-05-17T23:10:01.575Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 28}
+{"ts": "2026-05-17T23:10:02.018Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 28, "m5_bars": 599, "current_bar": "2026-05-17 23:05:00+00:00"}
+{"ts": "2026-05-17T23:10:02.135Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 28, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:10:02.290Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 28, "equity": 56088.22275835, "available": 46418.54617234001, "used_margin": 9671.31668601}
+{"ts": "2026-05-17T23:10:02.568Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 28, "has_position": false}
+{"ts": "2026-05-17T23:10:02.569Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 256, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T23:10:02.570Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 28}
+{"ts": "2026-05-17T23:15:01.988Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 29}
+{"ts": "2026-05-17T23:15:02.394Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 29, "m5_bars": 599, "current_bar": "2026-05-17 23:10:00+00:00"}
+{"ts": "2026-05-17T23:15:02.514Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 29, "total_signals": 6, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:15:02.708Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 29, "equity": 56092.02291835, "available": 46426.893197620004, "used_margin": 9662.96966073}
+{"ts": "2026-05-17T23:15:02.987Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 29, "has_position": false}
+{"ts": "2026-05-17T23:15:02.988Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 257, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T23:15:02.988Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 29}
+{"ts": "2026-05-17T23:20:02.268Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 30}
+{"ts": "2026-05-17T23:20:02.546Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 30, "m5_bars": 599, "current_bar": "2026-05-17 23:15:00+00:00"}
+{"ts": "2026-05-17T23:20:02.673Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 30, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:20:02.818Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 30, "equity": 56096.31159835, "available": 46431.18187762, "used_margin": 9658.68098073}
+{"ts": "2026-05-17T23:20:03.096Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 30, "has_position": false}
+{"ts": "2026-05-17T23:20:03.097Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 258, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T23:20:03.097Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 30}
+{"ts": "2026-05-17T23:25:01.487Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 31}
+{"ts": "2026-05-17T23:25:01.764Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 31, "m5_bars": 599, "current_bar": "2026-05-17 23:20:00+00:00"}
+{"ts": "2026-05-17T23:25:01.879Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 31, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:25:02.169Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 31, "equity": 56092.70139835, "available": 46427.57167762, "used_margin": 9662.29118073}
+{"ts": "2026-05-17T23:25:02.446Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 31, "has_position": false}
+{"ts": "2026-05-17T23:25:02.447Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 259, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T23:25:02.447Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 31}
+{"ts": "2026-05-17T23:30:02.503Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 32}
+{"ts": "2026-05-17T23:30:03.682Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 32, "m5_bars": 599, "current_bar": "2026-05-17 23:25:00+00:00"}
+{"ts": "2026-05-17T23:30:03.799Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 32, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:30:04.509Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 32, "equity": 56103.31995835, "available": 46438.19023762, "used_margin": 9651.67262073}
+{"ts": "2026-05-17T23:30:05.369Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 32, "has_position": false}
+{"ts": "2026-05-17T23:30:05.369Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 260, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T23:30:05.370Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 32}
+{"ts": "2026-05-17T23:35:01.647Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 33}
+{"ts": "2026-05-17T23:35:01.925Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 33, "m5_bars": 599, "current_bar": "2026-05-17 23:30:00+00:00"}
+{"ts": "2026-05-17T23:35:02.068Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 33, "total_signals": 7, "side": "buy", "entry": 75.7, "sl": 75.61, "tp": 75.88000000000001, "sl_dist": 0.09000000000000341, "rr": 2.0, "qty": 222.2222222222138, "signal_bar": "2026-05-17 01:45:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:35:02.198Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 33, "equity": 56099.39433835, "available": 46434.26461762001, "used_margin": 9655.59824073}
+{"ts": "2026-05-17T23:35:02.574Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 33, "has_position": false}
+{"ts": "2026-05-17T23:35:02.574Z", "symbol": "XAGUSDT", "event": "signal_expired_skip", "bars_passed": 261, "expiry_bars": 100, "side": "buy", "entry": 75.7, "signal_bar": "2026-05-17 01:45:00+00:00"}
+{"ts": "2026-05-17T23:35:02.574Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 33}
+{"ts": "2026-05-17T23:40:01.729Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 34}
+{"ts": "2026-05-17T23:40:02.076Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 34, "m5_bars": 599, "current_bar": "2026-05-17 23:35:00+00:00"}
+{"ts": "2026-05-17T23:40:02.194Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 34, "total_signals": 7, "side": "buy", "entry": 76.44, "sl": 76.28, "tp": 76.75999999999999, "sl_dist": 0.1599999999999966, "rr": 2.0, "qty": 125.00000000000267, "signal_bar": "2026-05-17 23:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:40:02.351Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 34, "equity": 56102.69109835, "available": 46437.561377620004, "used_margin": 9652.30148073}
+{"ts": "2026-05-17T23:40:02.631Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 34, "has_position": false}
+{"ts": "2026-05-17T23:40:02.632Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 125.0, "margin_used": 9555.0, "leverage": 1, "risk_per_unit": 0.16, "reward_per_unit": 0.32}
+{"ts": "2026-05-17T23:40:02.907Z", "symbol": "XAGUSDT", "event": "order_created", "dry_run": false, "link_id": "ob-82950467-b-1779060600", "side": "buy", "entry": 76.44, "sl": 76.28, "tp": 76.76, "qty": 125.0, "signal_bar": "2026-05-17 23:30:00+00:00", "bybit_order_id": "e6b74ffb-4153-4c76-aecd-ef4ba9a2c062"}
+{"ts": "2026-05-17T23:40:02.907Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 34}
+{"ts": "2026-05-17T23:45:02.200Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 35}
+{"ts": "2026-05-17T23:45:02.591Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 35, "m5_bars": 599, "current_bar": "2026-05-17 23:40:00+00:00"}
+{"ts": "2026-05-17T23:45:02.705Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 35, "total_signals": 7, "side": "buy", "entry": 76.44, "sl": 76.28, "tp": 76.75999999999999, "sl_dist": 0.1599999999999966, "rr": 2.0, "qty": 125.00000000000267, "signal_bar": "2026-05-17 23:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:45:02.864Z", "symbol": "XAGUSDT", "event": "order_cleared", "link_id": "ob-82950467-b-1779060600", "reason": "exchange_status_filled", "exchange_status": "filled"}
+{"ts": "2026-05-17T23:45:03.143Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 35, "equity": 56089.0379782, "available": 47812.91648767, "used_margin": 8268.15865053}
+{"ts": "2026-05-17T23:45:03.421Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 35, "has_position": false}
+{"ts": "2026-05-17T23:45:03.422Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 125.0, "margin_used": 9555.0, "leverage": 1, "risk_per_unit": 0.16, "reward_per_unit": 0.32}
+{"ts": "2026-05-17T23:45:03.699Z", "symbol": "XAGUSDT", "event": "order_create_failed", "link_id": "ob-82950467-b-1779060600-1", "side": "buy", "entry": 76.44, "error": "expect Falling, but trigger_price[7644000000] >= current[7643000000]??LastPrice (ErrCode: 110093) (ErrTime: 23:45:03).\nRequest \u2192 POST https://api-demo.bybit.com/v5/order/create: {\"category\": \"linear\", \"symbol\": \"XAGUSDT\", \"side\": \"Buy\", \"orderType\": \"Limit\", \"qty\": \"125.000\", \"price\": \"76.44\", \"triggerPrice\": \"76.44\", \"triggerBy\": \"LastPrice\", \"triggerDirection\": 2, \"timeInForce\": \"GTC\", \"orderLinkId\": \"ob-82950467-b-1779060600-1\", \"stopLoss\": \"76.28\", \"takeProfit\": \"76.76\", \"slTriggerBy\": \"LastPrice\", \"tpTriggerBy\": \"LastPrice\", \"positionIdx\": 0, \"reduceOnly\": false, \"closeOnTrigger\": false}."}
+{"ts": "2026-05-17T23:45:03.699Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 35}
+{"ts": "2026-05-17T23:50:02.217Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 36}
+{"ts": "2026-05-17T23:50:02.497Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 36, "m5_bars": 599, "current_bar": "2026-05-17 23:45:00+00:00"}
+{"ts": "2026-05-17T23:50:02.615Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 36, "total_signals": 7, "side": "buy", "entry": 76.44, "sl": 76.28, "tp": 76.75999999999999, "sl_dist": 0.1599999999999966, "rr": 2.0, "qty": 125.00000000000267, "signal_bar": "2026-05-17 23:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:50:02.770Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 36, "equity": 56091.8558782, "available": 47815.73438767, "used_margin": 8265.34075053}
+{"ts": "2026-05-17T23:50:03.050Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 36, "has_position": false}
+{"ts": "2026-05-17T23:50:03.051Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 125.0, "margin_used": 9555.0, "leverage": 1, "risk_per_unit": 0.16, "reward_per_unit": 0.32}
+{"ts": "2026-05-17T23:50:03.326Z", "symbol": "XAGUSDT", "event": "order_created", "dry_run": false, "link_id": "ob-82950467-b-1779060600-1", "side": "buy", "entry": 76.44, "sl": 76.28, "tp": 76.76, "qty": 125.0, "signal_bar": "2026-05-17 23:30:00+00:00", "bybit_order_id": "760e0aac-86f9-4f2b-9a28-9e188b55dbcb"}
+{"ts": "2026-05-17T23:50:03.326Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 36}
+{"ts": "2026-05-17T23:55:01.537Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 37}
+{"ts": "2026-05-17T23:55:01.815Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 37, "m5_bars": 599, "current_bar": "2026-05-17 23:50:00+00:00"}
+{"ts": "2026-05-17T23:55:01.939Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 37, "total_signals": 7, "side": "buy", "entry": 76.44, "sl": 76.28, "tp": 76.75999999999999, "sl_dist": 0.1599999999999966, "rr": 2.0, "qty": 125.00000000000267, "signal_bar": "2026-05-17 23:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-17T23:55:02.550Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 37, "equity": 56085.5110582, "available": 47809.389567670005, "used_margin": 8271.68557053}
+{"ts": "2026-05-17T23:55:02.828Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 37, "has_position": false}
+{"ts": "2026-05-17T23:55:02.830Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 125.0, "margin_used": 9555.0, "leverage": 1, "risk_per_unit": 0.16, "reward_per_unit": 0.32}
+{"ts": "2026-05-17T23:55:02.830Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 37}
+{"ts": "2026-05-18T00:00:02.136Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 38}
+{"ts": "2026-05-18T00:00:02.500Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 38, "m5_bars": 599, "current_bar": "2026-05-17 23:55:00+00:00"}
+{"ts": "2026-05-18T00:00:02.616Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 38, "total_signals": 7, "side": "buy", "entry": 76.44, "sl": 76.28, "tp": 76.75999999999999, "sl_dist": 0.1599999999999966, "rr": 2.0, "qty": 125.00000000000267, "signal_bar": "2026-05-17 23:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T00:00:03.053Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 38, "equity": 56091.4922782, "available": 47815.37078767, "used_margin": 8265.70435053}
+{"ts": "2026-05-18T00:00:03.333Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 38, "has_position": false}
+{"ts": "2026-05-18T00:00:03.334Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 125.0, "margin_used": 9555.0, "leverage": 1, "risk_per_unit": 0.16, "reward_per_unit": 0.32}
+{"ts": "2026-05-18T00:00:03.334Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 38}
+{"ts": "2026-05-18T00:05:01.720Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 39}
+{"ts": "2026-05-18T00:05:01.998Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 39, "m5_bars": 599, "current_bar": "2026-05-18 00:00:00+00:00"}
+{"ts": "2026-05-18T00:05:02.189Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 39, "total_signals": 7, "side": "buy", "entry": 76.44, "sl": 76.28, "tp": 76.75999999999999, "sl_dist": 0.1599999999999966, "rr": 2.0, "qty": 125.00000000000267, "signal_bar": "2026-05-17 23:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T00:05:02.609Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 39, "equity": 56102.5457182, "available": 47826.42422767, "used_margin": 8254.65091053}
+{"ts": "2026-05-18T00:05:02.888Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 39, "has_position": false}
+{"ts": "2026-05-18T00:05:02.889Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 125.0, "margin_used": 9555.0, "leverage": 1, "risk_per_unit": 0.16, "reward_per_unit": 0.32}
+{"ts": "2026-05-18T00:05:02.889Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 39}
+{"ts": "2026-05-18T00:10:02.176Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 40}
+{"ts": "2026-05-18T00:10:02.454Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 40, "m5_bars": 599, "current_bar": "2026-05-18 00:05:00+00:00"}
+{"ts": "2026-05-18T00:10:02.573Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 40, "total_signals": 7, "side": "buy", "entry": 76.44, "sl": 76.28, "tp": 76.75999999999999, "sl_dist": 0.1599999999999966, "rr": 2.0, "qty": 125.00000000000267, "signal_bar": "2026-05-17 23:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T00:10:02.726Z", "symbol": "XAGUSDT", "event": "order_cleared", "link_id": "ob-82950467-b-1779060600-1", "reason": "exchange_status_filled", "exchange_status": "filled"}
+{"ts": "2026-05-18T00:10:03.003Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 40, "equity": 56106.0015982, "available": 38289.880107670004, "used_margin": 17788.52033053}
+{"ts": "2026-05-18T00:10:03.281Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 40, "has_position": true}
+{"ts": "2026-05-18T00:10:03.282Z", "symbol": "XAGUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-18T00:10:03.282Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 40}
+{"ts": "2026-05-18T00:15:01.607Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 41}
+{"ts": "2026-05-18T00:15:01.886Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 41, "m5_bars": 599, "current_bar": "2026-05-18 00:10:00+00:00"}
+{"ts": "2026-05-18T00:15:02.004Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 41, "total_signals": 7, "side": "buy", "entry": 76.44, "sl": 76.28, "tp": 76.75999999999999, "sl_dist": 0.1599999999999966, "rr": 2.0, "qty": 125.00000000000267, "signal_bar": "2026-05-17 23:30:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T00:15:02.221Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 41, "equity": 56092.4635782, "available": 47816.342087670004, "used_margin": 8241.88855053}
+{"ts": "2026-05-18T00:15:02.500Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 41, "has_position": false}
+{"ts": "2026-05-18T00:15:02.502Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 125.0, "margin_used": 9555.0, "leverage": 1, "risk_per_unit": 0.16, "reward_per_unit": 0.32}
+{"ts": "2026-05-18T00:15:02.788Z", "symbol": "XAGUSDT", "event": "order_created", "dry_run": false, "link_id": "ob-82950467-b-1779060600-2", "side": "buy", "entry": 76.44, "sl": 76.28, "tp": 76.76, "qty": 125.0, "signal_bar": "2026-05-17 23:30:00+00:00", "bybit_order_id": "bc54c676-e08d-4be2-8d8c-567dc52c7e22"}
+{"ts": "2026-05-18T00:15:02.788Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 41}
+{"ts": "2026-05-18T00:20:01.976Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 42}
+{"ts": "2026-05-18T00:20:02.388Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 42, "m5_bars": 599, "current_bar": "2026-05-18 00:15:00+00:00"}
+{"ts": "2026-05-18T00:20:02.504Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 42, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T00:20:03.055Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 42, "equity": 56095.1723982, "available": 47819.050907670004, "used_margin": 8239.17973053}
+{"ts": "2026-05-18T00:20:03.336Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 42, "has_position": false}
+{"ts": "2026-05-18T00:20:03.337Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T00:20:03.338Z", "symbol": "XAGUSDT", "event": "order_cancelled", "link_id": "ob-82950467-b-1779060600-2", "reason": "side_changed", "dry_run": false}
+{"ts": "2026-05-18T00:20:03.892Z", "symbol": "XAGUSDT", "event": "order_created", "dry_run": false, "link_id": "ob-82950467-s-1779063000", "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "qty": 51.282, "signal_bar": "2026-05-18 00:10:00+00:00", "bybit_order_id": "cadbdf4c-10ee-4995-8eb2-f91765df61a7"}
+{"ts": "2026-05-18T00:20:03.892Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 42}
+{"ts": "2026-05-18T00:25:02.086Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 43}
+{"ts": "2026-05-18T00:25:02.367Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 43, "m5_bars": 599, "current_bar": "2026-05-18 00:20:00+00:00"}
+{"ts": "2026-05-18T00:25:02.487Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 43, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T00:25:02.991Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 43, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T00:25:03.270Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 43, "has_position": false}
+{"ts": "2026-05-18T00:25:03.271Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T00:25:03.272Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 43}
+{"ts": "2026-05-18T00:30:01.490Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 44}
+{"ts": "2026-05-18T00:30:01.767Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 44, "m5_bars": 599, "current_bar": "2026-05-18 00:25:00+00:00"}
+{"ts": "2026-05-18T00:30:01.883Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 44, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T00:30:02.458Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 44, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T00:30:02.805Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 44, "has_position": false}
+{"ts": "2026-05-18T00:30:02.806Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T00:30:02.806Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 44}
+{"ts": "2026-05-18T00:35:02.016Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 45}
+{"ts": "2026-05-18T00:35:02.293Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 45, "m5_bars": 599, "current_bar": "2026-05-18 00:30:00+00:00"}
+{"ts": "2026-05-18T00:35:02.416Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 45, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T00:35:03.027Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 45, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T00:35:03.306Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 45, "has_position": false}
+{"ts": "2026-05-18T00:35:03.307Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T00:35:03.308Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 45}
+{"ts": "2026-05-18T00:40:01.662Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 46}
+{"ts": "2026-05-18T00:40:01.938Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 46, "m5_bars": 599, "current_bar": "2026-05-18 00:35:00+00:00"}
+{"ts": "2026-05-18T00:40:02.059Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 46, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T00:40:02.676Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 46, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T00:40:02.953Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 46, "has_position": false}
+{"ts": "2026-05-18T00:40:02.954Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T00:40:02.955Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 46}
+{"ts": "2026-05-18T00:45:02.137Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 47}
+{"ts": "2026-05-18T00:45:02.415Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 47, "m5_bars": 599, "current_bar": "2026-05-18 00:40:00+00:00"}
+{"ts": "2026-05-18T00:45:02.531Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 47, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T00:45:02.964Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 47, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T00:45:03.256Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 47, "has_position": false}
+{"ts": "2026-05-18T00:45:03.257Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T00:45:03.257Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 47}
+{"ts": "2026-05-18T00:50:01.533Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 48}
+{"ts": "2026-05-18T00:50:01.993Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 48, "m5_bars": 599, "current_bar": "2026-05-18 00:45:00+00:00"}
+{"ts": "2026-05-18T00:50:02.111Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 48, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T00:50:02.588Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 48, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T00:50:02.869Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 48, "has_position": false}
+{"ts": "2026-05-18T00:50:02.870Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T00:50:02.871Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 48}
+{"ts": "2026-05-18T00:55:02.172Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 49}
+{"ts": "2026-05-18T00:55:02.578Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 49, "m5_bars": 599, "current_bar": "2026-05-18 00:50:00+00:00"}
+{"ts": "2026-05-18T00:55:02.694Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 49, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T00:55:03.128Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 49, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T00:55:03.408Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 49, "has_position": false}
+{"ts": "2026-05-18T00:55:03.409Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T00:55:03.410Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 49}
+{"ts": "2026-05-18T01:00:01.618Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 50}
+{"ts": "2026-05-18T01:00:02.029Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 50, "m5_bars": 599, "current_bar": "2026-05-18 00:55:00+00:00"}
+{"ts": "2026-05-18T01:00:02.149Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 50, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:00:02.755Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 50, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T01:00:03.038Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 50, "has_position": false}
+{"ts": "2026-05-18T01:00:03.038Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:00:03.039Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 50}
+{"ts": "2026-05-18T01:05:01.316Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 51}
+{"ts": "2026-05-18T01:05:01.593Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 51, "m5_bars": 599, "current_bar": "2026-05-18 01:00:00+00:00"}
+{"ts": "2026-05-18T01:05:01.714Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 51, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:05:02.343Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 51, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T01:05:02.622Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 51, "has_position": false}
+{"ts": "2026-05-18T01:05:02.623Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:05:02.623Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 51}
+{"ts": "2026-05-18T01:10:01.878Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 52}
+{"ts": "2026-05-18T01:10:02.188Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 52, "m5_bars": 599, "current_bar": "2026-05-18 01:05:00+00:00"}
+{"ts": "2026-05-18T01:10:02.305Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 52, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:10:02.778Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 52, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T01:10:03.055Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 52, "has_position": false}
+{"ts": "2026-05-18T01:10:03.056Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:10:03.056Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 52}
+{"ts": "2026-05-18T01:15:01.428Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 53}
+{"ts": "2026-05-18T01:15:01.702Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 53, "m5_bars": 599, "current_bar": "2026-05-18 01:10:00+00:00"}
+{"ts": "2026-05-18T01:15:01.834Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 53, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:15:02.382Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 53, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T01:15:02.659Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 53, "has_position": false}
+{"ts": "2026-05-18T01:15:02.661Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:15:02.661Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 53}
+{"ts": "2026-05-18T01:20:01.848Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 54}
+{"ts": "2026-05-18T01:20:02.133Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 54, "m5_bars": 599, "current_bar": "2026-05-18 01:15:00+00:00"}
+{"ts": "2026-05-18T01:20:02.253Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 54, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:20:02.733Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 54, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T01:20:03.010Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 54, "has_position": false}
+{"ts": "2026-05-18T01:20:03.011Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:20:03.012Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 54}
+{"ts": "2026-05-18T01:25:01.267Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 55}
+{"ts": "2026-05-18T01:25:01.545Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 55, "m5_bars": 599, "current_bar": "2026-05-18 01:20:00+00:00"}
+{"ts": "2026-05-18T01:25:01.661Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 55, "total_signals": 8, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:25:02.096Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 55, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T01:25:02.375Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 55, "has_position": false}
+{"ts": "2026-05-18T01:25:02.377Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:25:02.377Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 55}
+{"ts": "2026-05-18T01:30:01.646Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 56}
+{"ts": "2026-05-18T01:30:01.923Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 56, "m5_bars": 599, "current_bar": "2026-05-18 01:25:00+00:00"}
+{"ts": "2026-05-18T01:30:02.044Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 56, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:30:02.661Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 56, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T01:30:02.941Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 56, "has_position": false}
+{"ts": "2026-05-18T01:30:02.942Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:30:02.942Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 56}
+{"ts": "2026-05-18T01:35:02.292Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 57}
+{"ts": "2026-05-18T01:35:02.644Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 57, "m5_bars": 599, "current_bar": "2026-05-18 01:30:00+00:00"}
+{"ts": "2026-05-18T01:35:02.759Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 57, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:35:03.195Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 57, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T01:35:03.476Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 57, "has_position": false}
+{"ts": "2026-05-18T01:35:03.477Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:35:03.477Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 57}
+{"ts": "2026-05-18T01:40:01.684Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 58}
+{"ts": "2026-05-18T01:40:01.961Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 58, "m5_bars": 599, "current_bar": "2026-05-18 01:35:00+00:00"}
+{"ts": "2026-05-18T01:40:02.082Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 58, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:40:02.576Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 58, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T01:40:02.854Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 58, "has_position": false}
+{"ts": "2026-05-18T01:40:02.855Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:40:02.855Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 58}
+{"ts": "2026-05-18T01:45:02.122Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 59}
+{"ts": "2026-05-18T01:45:02.400Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 59, "m5_bars": 599, "current_bar": "2026-05-18 01:40:00+00:00"}
+{"ts": "2026-05-18T01:45:02.526Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 59, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:45:03.019Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 59, "equity": 56095.9230693, "available": 56095.9230693, "used_margin": 0.0}
+{"ts": "2026-05-18T01:45:03.298Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 59, "has_position": false}
+{"ts": "2026-05-18T01:45:03.299Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:45:03.300Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 59}
+{"ts": "2026-05-18T01:50:01.633Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 60}
+{"ts": "2026-05-18T01:50:02.033Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 60, "m5_bars": 599, "current_bar": "2026-05-18 01:45:00+00:00"}
+{"ts": "2026-05-18T01:50:02.149Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 60, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:50:02.701Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 60, "equity": 56082.72602028, "available": 41556.76852413, "used_margin": 14535.09174615}
+{"ts": "2026-05-18T01:50:02.980Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 60, "has_position": false}
+{"ts": "2026-05-18T01:50:02.981Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:50:02.981Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 60}
+{"ts": "2026-05-18T01:55:02.219Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 61}
+{"ts": "2026-05-18T01:55:02.497Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 61, "m5_bars": 599, "current_bar": "2026-05-18 01:50:00+00:00"}
+{"ts": "2026-05-18T01:55:02.617Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 61, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T01:55:03.113Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 61, "equity": 56068.65826378, "available": 56068.65826378, "used_margin": 0.0}
+{"ts": "2026-05-18T01:55:03.390Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 61, "has_position": false}
+{"ts": "2026-05-18T01:55:03.391Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T01:55:03.391Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 61}
+{"ts": "2026-05-18T02:00:01.646Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 62}
+{"ts": "2026-05-18T02:00:01.926Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 62, "m5_bars": 599, "current_bar": "2026-05-18 01:55:00+00:00"}
+{"ts": "2026-05-18T02:00:02.099Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 62, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:00:02.604Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 62, "equity": 56068.65826378, "available": 41535.61915026, "used_margin": 14533.03911352}
+{"ts": "2026-05-18T02:00:02.881Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 62, "has_position": false}
+{"ts": "2026-05-18T02:00:02.882Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:00:02.883Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 62}
+{"ts": "2026-05-18T02:05:02.831Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 63}
+{"ts": "2026-05-18T02:05:04.015Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 63, "m5_bars": 599, "current_bar": "2026-05-18 02:00:00+00:00"}
+{"ts": "2026-05-18T02:05:04.131Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 63, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:05:05.701Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 63, "equity": 56044.01385472, "available": 56044.01385472, "used_margin": 0.0}
+{"ts": "2026-05-18T02:05:06.536Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 63, "has_position": false}
+{"ts": "2026-05-18T02:05:06.537Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:05:06.537Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 63}
+{"ts": "2026-05-18T02:10:01.872Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 64}
+{"ts": "2026-05-18T02:10:02.152Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 64, "m5_bars": 599, "current_bar": "2026-05-18 02:05:00+00:00"}
+{"ts": "2026-05-18T02:10:02.280Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 64, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:10:02.776Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 64, "equity": 56044.01385472, "available": 56044.01385472, "used_margin": 0.0}
+{"ts": "2026-05-18T02:10:03.055Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 64, "has_position": false}
+{"ts": "2026-05-18T02:10:03.056Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:10:03.056Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 64}
+{"ts": "2026-05-18T02:15:01.413Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 65}
+{"ts": "2026-05-18T02:15:01.828Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 65, "m5_bars": 599, "current_bar": "2026-05-18 02:10:00+00:00"}
+{"ts": "2026-05-18T02:15:01.968Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 65, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:15:02.464Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 65, "equity": 56044.01385472, "available": 56044.01385472, "used_margin": 0.0}
+{"ts": "2026-05-18T02:15:02.741Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 65, "has_position": false}
+{"ts": "2026-05-18T02:15:02.742Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:15:02.743Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 65}
+{"ts": "2026-05-18T02:20:02.070Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 66}
+{"ts": "2026-05-18T02:20:02.533Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 66, "m5_bars": 599, "current_bar": "2026-05-18 02:15:00+00:00"}
+{"ts": "2026-05-18T02:20:02.649Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 66, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:20:03.082Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 66, "equity": 56041.49305462, "available": 47943.59465407, "used_margin": 8098.80140055}
+{"ts": "2026-05-18T02:20:03.359Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 66, "has_position": false}
+{"ts": "2026-05-18T02:20:03.360Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:20:03.361Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 66}
+{"ts": "2026-05-18T02:25:02.320Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 67}
+{"ts": "2026-05-18T02:25:03.163Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 67, "m5_bars": 599, "current_bar": "2026-05-18 02:20:00+00:00"}
+{"ts": "2026-05-18T02:25:03.282Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 67, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:25:04.827Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 67, "equity": 56046.99505462, "available": 47949.09665407, "used_margin": 8093.29940055}
+{"ts": "2026-05-18T02:25:05.667Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 67, "has_position": false}
+{"ts": "2026-05-18T02:25:05.668Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:25:05.668Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 67}
+{"ts": "2026-05-18T02:30:02.014Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 68}
+{"ts": "2026-05-18T02:30:02.288Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 68, "m5_bars": 599, "current_bar": "2026-05-18 02:25:00+00:00"}
+{"ts": "2026-05-18T02:30:02.407Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 68, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:30:02.904Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 68, "equity": 56047.10530462, "available": 47949.20690407, "used_margin": 8093.18915055}
+{"ts": "2026-05-18T02:30:03.183Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 68, "has_position": false}
+{"ts": "2026-05-18T02:30:03.185Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:30:03.185Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 68}
+{"ts": "2026-05-18T02:35:01.561Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 69}
+{"ts": "2026-05-18T02:35:01.840Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 69, "m5_bars": 599, "current_bar": "2026-05-18 02:30:00+00:00"}
+{"ts": "2026-05-18T02:35:01.968Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 69, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:35:02.464Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 69, "equity": 56049.35230462, "available": 47951.453904070004, "used_margin": 8090.94215055}
+{"ts": "2026-05-18T02:35:02.742Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 69, "has_position": false}
+{"ts": "2026-05-18T02:35:02.743Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:35:02.743Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 69}
+{"ts": "2026-05-18T02:40:02.046Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 70}
+{"ts": "2026-05-18T02:40:02.411Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 70, "m5_bars": 599, "current_bar": "2026-05-18 02:35:00+00:00"}
+{"ts": "2026-05-18T02:40:02.527Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 70, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:40:03.116Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 70, "equity": 56060.96005462, "available": 47963.06165407, "used_margin": 8079.33440055}
+{"ts": "2026-05-18T02:40:03.395Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 70, "has_position": false}
+{"ts": "2026-05-18T02:40:03.396Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:40:03.396Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 70}
+{"ts": "2026-05-18T02:45:01.788Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 71}
+{"ts": "2026-05-18T02:45:02.099Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 71, "m5_bars": 599, "current_bar": "2026-05-18 02:40:00+00:00"}
+{"ts": "2026-05-18T02:45:02.215Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 71, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:45:02.712Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 71, "equity": 56062.27255462, "available": 47964.37415407, "used_margin": 8078.02190055}
+{"ts": "2026-05-18T02:45:02.991Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 71, "has_position": false}
+{"ts": "2026-05-18T02:45:02.992Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:45:02.993Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 71}
+{"ts": "2026-05-18T02:50:02.277Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 72}
+{"ts": "2026-05-18T02:50:02.552Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 72, "m5_bars": 599, "current_bar": "2026-05-18 02:45:00+00:00"}
+{"ts": "2026-05-18T02:50:02.675Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 72, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:50:03.102Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 72, "equity": 56066.22895462, "available": 47968.33055407, "used_margin": 8074.06550055}
+{"ts": "2026-05-18T02:50:03.380Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 72, "has_position": false}
+{"ts": "2026-05-18T02:50:03.381Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:50:03.382Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 72}
+{"ts": "2026-05-18T02:55:01.672Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 73}
+{"ts": "2026-05-18T02:55:01.953Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 73, "m5_bars": 599, "current_bar": "2026-05-18 02:50:00+00:00"}
+{"ts": "2026-05-18T02:55:02.084Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 73, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T02:55:02.578Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 73, "equity": 56076.72391987, "available": 56076.72391987, "used_margin": 0.0}
+{"ts": "2026-05-18T02:55:02.858Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 73, "has_position": false}
+{"ts": "2026-05-18T02:55:02.859Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T02:55:02.859Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 73}
+{"ts": "2026-05-18T03:00:02.180Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 74}
+{"ts": "2026-05-18T03:00:02.480Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 74, "m5_bars": 599, "current_bar": "2026-05-18 02:55:00+00:00"}
+{"ts": "2026-05-18T03:00:02.614Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 74, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:00:03.028Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 74, "equity": 56076.72391987, "available": 56076.72391987, "used_margin": 0.0}
+{"ts": "2026-05-18T03:00:03.306Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 74, "has_position": false}
+{"ts": "2026-05-18T03:00:03.308Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:00:03.308Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 74}
+{"ts": "2026-05-18T03:05:01.574Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 75}
+{"ts": "2026-05-18T03:05:01.854Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 75, "m5_bars": 599, "current_bar": "2026-05-18 03:00:00+00:00"}
+{"ts": "2026-05-18T03:05:01.976Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 75, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:05:02.449Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 75, "equity": 56076.72391987, "available": 40545.88045146, "used_margin": 15530.84346841}
+{"ts": "2026-05-18T03:05:02.729Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 75, "has_position": false}
+{"ts": "2026-05-18T03:05:02.730Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:05:02.730Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 75}
+{"ts": "2026-05-18T03:10:02.034Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 76}
+{"ts": "2026-05-18T03:10:02.507Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 76, "m5_bars": 599, "current_bar": "2026-05-18 03:05:00+00:00"}
+{"ts": "2026-05-18T03:10:02.624Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 76, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:10:03.056Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 76, "equity": 56076.72391987, "available": 40545.88045146, "used_margin": 15530.84346841}
+{"ts": "2026-05-18T03:10:03.334Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 76, "has_position": false}
+{"ts": "2026-05-18T03:10:03.335Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:10:03.335Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 76}
+{"ts": "2026-05-18T03:15:01.682Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 77}
+{"ts": "2026-05-18T03:15:02.213Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 77, "m5_bars": 599, "current_bar": "2026-05-18 03:10:00+00:00"}
+{"ts": "2026-05-18T03:15:02.329Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 77, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:15:02.762Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 77, "equity": 56073.28211863, "available": 40551.650598629996, "used_margin": 15521.96886}
+{"ts": "2026-05-18T03:15:03.041Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 77, "has_position": false}
+{"ts": "2026-05-18T03:15:03.042Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:15:03.042Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 77}
+{"ts": "2026-05-18T03:20:01.341Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 78}
+{"ts": "2026-05-18T03:20:01.620Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 78, "m5_bars": 599, "current_bar": "2026-05-18 03:15:00+00:00"}
+{"ts": "2026-05-18T03:20:01.769Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 78, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:20:02.172Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 78, "equity": 56075.13849863, "available": 40549.79421863, "used_margin": 15523.82524}
+{"ts": "2026-05-18T03:20:02.572Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 78, "has_position": false}
+{"ts": "2026-05-18T03:20:02.573Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:20:02.573Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 78}
+{"ts": "2026-05-18T03:25:01.857Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 79}
+{"ts": "2026-05-18T03:25:02.134Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 79, "m5_bars": 599, "current_bar": "2026-05-18 03:20:00+00:00"}
+{"ts": "2026-05-18T03:25:02.258Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 79, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:25:02.766Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 79, "equity": 56089.50271863, "available": 40535.429998629996, "used_margin": 15538.18946}
+{"ts": "2026-05-18T03:25:03.045Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 79, "has_position": false}
+{"ts": "2026-05-18T03:25:03.046Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:25:03.046Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 79}
+{"ts": "2026-05-18T03:30:01.352Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 80}
+{"ts": "2026-05-18T03:30:01.632Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 80, "m5_bars": 599, "current_bar": "2026-05-18 03:25:00+00:00"}
+{"ts": "2026-05-18T03:30:01.757Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 80, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:30:02.394Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 80, "equity": 56091.32475863, "available": 40533.60795863, "used_margin": 15540.0115}
+{"ts": "2026-05-18T03:30:02.672Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 80, "has_position": false}
+{"ts": "2026-05-18T03:30:02.673Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:30:02.673Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 80}
+{"ts": "2026-05-18T03:35:02.849Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 81}
+{"ts": "2026-05-18T03:35:04.074Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 81, "m5_bars": 599, "current_bar": "2026-05-18 03:30:00+00:00"}
+{"ts": "2026-05-18T03:35:04.192Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 81, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:35:05.748Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 81, "equity": 56077.25747863, "available": 40547.67523863, "used_margin": 15525.94422}
+{"ts": "2026-05-18T03:35:06.239Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 81, "has_position": false}
+{"ts": "2026-05-18T03:35:06.240Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:35:06.240Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 81}
+{"ts": "2026-05-18T03:40:01.596Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 82}
+{"ts": "2026-05-18T03:40:01.875Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 82, "m5_bars": 599, "current_bar": "2026-05-18 03:35:00+00:00"}
+{"ts": "2026-05-18T03:40:02.009Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 82, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:40:02.621Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 82, "equity": 56081.79843863, "available": 40543.134278629994, "used_margin": 15530.48518}
+{"ts": "2026-05-18T03:40:02.901Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 82, "has_position": false}
+{"ts": "2026-05-18T03:40:02.902Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:40:02.902Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 82}
+{"ts": "2026-05-18T03:45:02.073Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 83}
+{"ts": "2026-05-18T03:45:02.351Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 83, "m5_bars": 599, "current_bar": "2026-05-18 03:40:00+00:00"}
+{"ts": "2026-05-18T03:45:02.471Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 83, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:45:02.943Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 83, "equity": 56100.02085863, "available": 40524.911858629996, "used_margin": 15548.7076}
+{"ts": "2026-05-18T03:45:03.221Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 83, "has_position": false}
+{"ts": "2026-05-18T03:45:03.222Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:45:03.223Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 83}
+{"ts": "2026-05-18T03:50:01.478Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 84}
+{"ts": "2026-05-18T03:50:01.759Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 84, "m5_bars": 599, "current_bar": "2026-05-18 03:45:00+00:00"}
+{"ts": "2026-05-18T03:50:01.904Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 84, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:50:02.397Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 84, "equity": 56096.02125863, "available": 40528.91145863, "used_margin": 15544.708}
+{"ts": "2026-05-18T03:50:02.676Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 84, "has_position": false}
+{"ts": "2026-05-18T03:50:02.677Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:50:02.677Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 84}
+{"ts": "2026-05-18T03:55:02.097Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 85}
+{"ts": "2026-05-18T03:55:02.441Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 85, "m5_bars": 599, "current_bar": "2026-05-18 03:50:00+00:00"}
+{"ts": "2026-05-18T03:55:02.558Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 85, "total_signals": 7, "side": "sell", "entry": 76.58, "sl": 76.97, "tp": 75.8, "sl_dist": 0.39000000000000057, "rr": 2.0, "qty": 51.282051282051206, "signal_bar": "2026-05-18 00:10:00+00:00", "ob_type": "bearish"}
+{"ts": "2026-05-18T03:55:02.987Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 85, "equity": 56082.08729863, "available": 40542.84541862999, "used_margin": 15530.77404}
+{"ts": "2026-05-18T03:55:03.265Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 85, "has_position": false}
+{"ts": "2026-05-18T03:55:03.266Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 20.0, "reward_cash": 40.0, "rr": 2.0, "qty": 51.282, "margin_used": 3927.1756, "leverage": 1, "risk_per_unit": 0.39, "reward_per_unit": 0.78}
+{"ts": "2026-05-18T03:55:03.266Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 85}
+{"ts": "2026-05-18T04:00:01.543Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 86}
+{"ts": "2026-05-18T04:00:01.953Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 86, "m5_bars": 599, "current_bar": "2026-05-18 03:55:00+00:00"}
+{"ts": "2026-05-18T04:00:02.075Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 86, "total_signals": 8, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:00:02.616Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 86, "equity": 56085.19405863, "available": 40539.73865863, "used_margin": 15533.8808}
+{"ts": "2026-05-18T04:00:02.895Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 86, "has_position": false}
+{"ts": "2026-05-18T04:00:02.896Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9998, "reward_cash": 39.9996, "rr": 2.0, "qty": 33.333, "margin_used": 2503.3083, "leverage": 1, "risk_per_unit": 0.6, "reward_per_unit": 1.2}
+{"ts": "2026-05-18T04:00:02.897Z", "symbol": "XAGUSDT", "event": "order_cancelled", "link_id": "ob-82950467-s-1779063000", "reason": "side_changed", "dry_run": false}
+{"ts": "2026-05-18T04:00:03.449Z", "symbol": "XAGUSDT", "event": "order_created", "dry_run": false, "link_id": "ob-82950467-b-1779076200", "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.3, "qty": 33.333, "signal_bar": "2026-05-18 03:50:00+00:00", "bybit_order_id": "079d185a-c146-4f47-aad6-f9ff68dc042c"}
+{"ts": "2026-05-18T04:00:03.449Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 86}
+{"ts": "2026-05-18T04:05:01.797Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 87}
+{"ts": "2026-05-18T04:05:02.148Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 87, "m5_bars": 599, "current_bar": "2026-05-18 04:00:00+00:00"}
+{"ts": "2026-05-18T04:05:02.268Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 87, "total_signals": 8, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:05:02.741Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 87, "equity": 56085.13345863, "available": 40539.799258629995, "used_margin": 15533.8202}
+{"ts": "2026-05-18T04:05:03.019Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 87, "has_position": false}
+{"ts": "2026-05-18T04:05:03.020Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9998, "reward_cash": 39.9996, "rr": 2.0, "qty": 33.333, "margin_used": 2503.3083, "leverage": 1, "risk_per_unit": 0.6, "reward_per_unit": 1.2}
+{"ts": "2026-05-18T04:05:03.021Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 87}
+{"ts": "2026-05-18T04:10:01.399Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 88}
+{"ts": "2026-05-18T04:10:01.679Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 88, "m5_bars": 599, "current_bar": "2026-05-18 04:05:00+00:00"}
+{"ts": "2026-05-18T04:10:01.799Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 88, "total_signals": 8, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:10:02.231Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 88, "equity": 56098.82905863, "available": 40526.103658629996, "used_margin": 15547.5158}
+{"ts": "2026-05-18T04:10:02.630Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 88, "has_position": false}
+{"ts": "2026-05-18T04:10:02.631Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9998, "reward_cash": 39.9996, "rr": 2.0, "qty": 33.333, "margin_used": 2503.3083, "leverage": 1, "risk_per_unit": 0.6, "reward_per_unit": 1.2}
+{"ts": "2026-05-18T04:10:02.631Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 88}
+{"ts": "2026-05-18T04:15:01.957Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 89}
+{"ts": "2026-05-18T04:15:02.236Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 89, "m5_bars": 599, "current_bar": "2026-05-18 04:10:00+00:00"}
+{"ts": "2026-05-18T04:15:02.353Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 89, "total_signals": 8, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:15:02.787Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 89, "equity": 56104.92743863, "available": 40520.00527862999, "used_margin": 15553.61418}
+{"ts": "2026-05-18T04:15:03.066Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 89, "has_position": false}
+{"ts": "2026-05-18T04:15:03.068Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9998, "reward_cash": 39.9996, "rr": 2.0, "qty": 33.333, "margin_used": 2503.3083, "leverage": 1, "risk_per_unit": 0.6, "reward_per_unit": 1.2}
+{"ts": "2026-05-18T04:15:03.068Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 89}
+{"ts": "2026-05-18T04:20:01.416Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 90}
+{"ts": "2026-05-18T04:20:01.693Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 90, "m5_bars": 599, "current_bar": "2026-05-18 04:15:00+00:00"}
+{"ts": "2026-05-18T04:20:01.812Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 90, "total_signals": 8, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:20:02.450Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 90, "equity": 56095.44757863, "available": 40529.48513863, "used_margin": 15544.13432}
+{"ts": "2026-05-18T04:20:02.729Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 90, "has_position": false}
+{"ts": "2026-05-18T04:20:02.730Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9998, "reward_cash": 39.9996, "rr": 2.0, "qty": 33.333, "margin_used": 2503.3083, "leverage": 1, "risk_per_unit": 0.6, "reward_per_unit": 1.2}
+{"ts": "2026-05-18T04:20:02.731Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 90}
+{"ts": "2026-05-18T04:25:02.163Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 91}
+{"ts": "2026-05-18T04:25:02.441Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 91, "m5_bars": 599, "current_bar": "2026-05-18 04:20:00+00:00"}
+{"ts": "2026-05-18T04:25:02.560Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 91, "total_signals": 8, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:25:02.994Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 91, "equity": 56060.88941863, "available": 40564.04329863, "used_margin": 15509.57616}
+{"ts": "2026-05-18T04:25:03.273Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 91, "has_position": false}
+{"ts": "2026-05-18T04:25:03.274Z", "symbol": "XAGUSDT", "event": "risk_sizing", "risk_cash": 20.0, "actual_risk": 19.9998, "reward_cash": 39.9996, "rr": 2.0, "qty": 33.333, "margin_used": 2503.3083, "leverage": 1, "risk_per_unit": 0.6, "reward_per_unit": 1.2}
+{"ts": "2026-05-18T04:25:03.274Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 91}
+{"ts": "2026-05-18T04:30:01.582Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 92}
+{"ts": "2026-05-18T04:30:01.860Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 92, "m5_bars": 599, "current_bar": "2026-05-18 04:25:00+00:00"}
+{"ts": "2026-05-18T04:30:01.991Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 92, "total_signals": 8, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:30:02.230Z", "symbol": "XAGUSDT", "event": "order_cleared", "link_id": "ob-82950467-b-1779076200", "reason": "exchange_status_filled", "exchange_status": "filled"}
+{"ts": "2026-05-18T04:30:02.579Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 92, "equity": 56047.00118938, "available": 53535.692969380005, "used_margin": 2507.30826}
+{"ts": "2026-05-18T04:30:02.859Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 92, "has_position": true}
+{"ts": "2026-05-18T04:30:02.860Z", "symbol": "XAGUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-18T04:30:02.860Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 92}
+{"ts": "2026-05-18T04:35:02.211Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 93}
+{"ts": "2026-05-18T04:35:02.489Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 93, "m5_bars": 599, "current_bar": "2026-05-18 04:30:00+00:00"}
+{"ts": "2026-05-18T04:35:02.617Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 93, "total_signals": 7, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:35:02.760Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 93, "equity": 56055.00110938, "available": 53527.69304938, "used_margin": 2515.30818}
+{"ts": "2026-05-18T04:35:03.038Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 93, "has_position": true}
+{"ts": "2026-05-18T04:35:03.038Z", "symbol": "XAGUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-18T04:35:03.038Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 93}
+{"ts": "2026-05-18T04:40:01.321Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 94}
+{"ts": "2026-05-18T04:40:01.599Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 94, "m5_bars": 599, "current_bar": "2026-05-18 04:35:00+00:00"}
+{"ts": "2026-05-18T04:40:01.719Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 94, "total_signals": 8, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:40:01.872Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 94, "equity": 56055.00110938, "available": 53527.69304938, "used_margin": 2515.30818}
+{"ts": "2026-05-18T04:40:02.150Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 94, "has_position": true}
+{"ts": "2026-05-18T04:40:02.151Z", "symbol": "XAGUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-18T04:40:02.151Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 94}
+{"ts": "2026-05-18T04:45:01.500Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 95}
+{"ts": "2026-05-18T04:45:01.917Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 95, "m5_bars": 599, "current_bar": "2026-05-18 04:40:00+00:00"}
+{"ts": "2026-05-18T04:45:02.035Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 95, "total_signals": 7, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:45:02.229Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 95, "equity": 56054.66777938, "available": 53528.026379380004, "used_margin": 2514.97485}
+{"ts": "2026-05-18T04:45:02.506Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 95, "has_position": true}
+{"ts": "2026-05-18T04:45:02.507Z", "symbol": "XAGUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-18T04:45:02.507Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 95}
+{"ts": "2026-05-18T04:50:01.810Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 96}
+{"ts": "2026-05-18T04:50:02.087Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 96, "m5_bars": 599, "current_bar": "2026-05-18 04:45:00+00:00"}
+{"ts": "2026-05-18T04:50:02.204Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 96, "total_signals": 7, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:50:02.612Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 96, "equity": 56059.7131771, "available": 29492.29973254, "used_margin": 26537.49030456}
+{"ts": "2026-05-18T04:50:02.892Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 96, "has_position": true}
+{"ts": "2026-05-18T04:50:02.895Z", "symbol": "XAGUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-18T04:50:02.895Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 96}
+{"ts": "2026-05-18T04:55:02.413Z", "symbol": "XAGUSDT", "event": "cycle_start", "cycle": 97}
+{"ts": "2026-05-18T04:55:02.691Z", "symbol": "XAGUSDT", "event": "data_fetched", "cycle": 97, "m5_bars": 599, "current_bar": "2026-05-18 04:50:00+00:00"}
+{"ts": "2026-05-18T04:55:02.810Z", "symbol": "XAGUSDT", "event": "signal", "cycle": 97, "total_signals": 7, "side": "buy", "entry": 75.1, "sl": 74.5, "tp": 76.29999999999998, "sl_dist": 0.5999999999999943, "rr": 2.0, "qty": 33.33333333333365, "signal_bar": "2026-05-18 03:50:00+00:00", "ob_type": "bullish"}
+{"ts": "2026-05-18T04:55:02.963Z", "symbol": "XAGUSDT", "event": "balance", "cycle": 97, "equity": 56047.0990171, "available": 29479.68557254, "used_margin": 26550.10446456}
+{"ts": "2026-05-18T04:55:03.243Z", "symbol": "XAGUSDT", "event": "position_check", "cycle": 97, "has_position": true}
+{"ts": "2026-05-18T04:55:03.243Z", "symbol": "XAGUSDT", "event": "position_open_skip"}
+{"ts": "2026-05-18T04:55:03.243Z", "symbol": "XAGUSDT", "event": "cycle_complete", "cycle": 97}
