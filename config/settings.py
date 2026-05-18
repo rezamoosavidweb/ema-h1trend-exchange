@@ -215,6 +215,37 @@ class Settings(BaseSettings):
         description="Cancel existing pending before placing new one on each cycle.",
     )
 
+    # ── OB Strategy Filters ───────────────────────────────────────────────────
+    # All default to False — behaviour is identical to the baseline ob_core.py.
+    # Enable after validating each filter in notebooks_ob/03–13.
+    ob_session_filter: bool = Field(
+        False,
+        description="Only trade during London/NY sessions; block Asia and off-hours.",
+    )
+    ob_allow_london: bool = Field(True, description="Allow London session (07-16 UTC).")
+    ob_allow_new_york: bool = Field(True, description="Allow New York session (12-21 UTC).")
+    ob_allow_overlap: bool = Field(True, description="Allow London/NY overlap (12-16 UTC).")
+    ob_require_bos: bool = Field(
+        False,
+        description="Require a Break of Structure on M5 before entering an OB trade.",
+    )
+    ob_require_fvg: bool = Field(
+        False,
+        description="Require a Fair Value Gap in the displacement (3-candle imbalance).",
+    )
+    ob_volume_filter: bool = Field(
+        False,
+        description="Require above-average relative volume during displacement candles.",
+    )
+    ob_regime_filter: bool = Field(
+        False,
+        description="Skip OB trades when ADX signals a ranging market.",
+    )
+    ob_require_htf_bias: bool = Field(
+        False,
+        description="Require H1 EMA trend to align with the OB direction before entry.",
+    )
+
     # ── Retry ─────────────────────────────────────────────────────────────────
     max_retries: int = Field(5, ge=1, description="Max API retries on transient errors.")
     retry_base_delay: float = Field(1.0, gt=0)

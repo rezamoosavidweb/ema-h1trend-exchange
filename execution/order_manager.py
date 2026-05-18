@@ -535,6 +535,7 @@ class OrderManager:
                 effective_tp = fee_adjusted_tp(
                     raw_entry, effective_sl, side,
                     self._entry_fee_rate, self._exit_fee_rate,
+                    rr=self._rr,
                 )
                 self._log.info(
                     "Fee-adjusted sizing | entry_fee=%.4f%% exit_fee=%.4f%% "

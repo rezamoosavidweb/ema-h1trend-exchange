@@ -30,11 +30,15 @@ from state.bot_state import BotState
 from storage.signal_log import SignalLogger
 from storage.event_journal import EventJournal
 from strategy.ob_core import (
-    list_ob_signals,
     OB_WARMUP_BARS,
     OB_EXPIRY_BARS,
     DEFAULT_RR as OB_DEFAULT_RR,
     SL_BUFFER as OB_SL_BUFFER,
+)
+from strategy.ob_signals import (
+    list_ob_signals_enhanced,
+    OBSignalConfig,
+    get_passed_signals,
 )
 from telemetry.logging import SymbolAdapter, add_symbol_file_handler
 
@@ -76,6 +80,10 @@ class OBTradingService:
         self._journal     = EventJournal(settings.symbol, log_dir=settings.event_log_dir)
         if self._journal.enabled:
             self._log.info("Event journal → %s", self._journal.path)
+
+        self._ob_config   = self._build_ob_config(settings)
+        # H1 data is only needed when HTF bias or H1-level BOS is requested.
+        self._needs_h1    = settings.ob_require_htf_bias
 
         self._info:       Optional[InstrumentInfo] = None
         self._fetcher:    Optional[DataFetcher]    = None
@@ -120,6 +128,23 @@ class OBTradingService:
         self._running = False
         self._shutdown_event.set()
 
+    # ── OB config builder ─────────────────────────────────────────────────────
+
+    @staticmethod
+    def _build_ob_config(cfg: "Settings") -> OBSignalConfig:
+        return OBSignalConfig(
+            rr=cfg.rr,
+            session_filter_enabled=cfg.ob_session_filter,
+            allow_london=cfg.ob_allow_london,
+            allow_new_york=cfg.ob_allow_new_york,
+            allow_overlap=cfg.ob_allow_overlap,
+            require_bos=cfg.ob_require_bos,
+            require_fvg=cfg.ob_require_fvg,
+            volume_filter_enabled=cfg.ob_volume_filter,
+            regime_filter_enabled=cfg.ob_regime_filter,
+            require_htf_bias=cfg.ob_require_htf_bias,
+        )
+
     # ── Initialization ────────────────────────────────────────────────────────
 
     async def _initialize(self) -> None:
@@ -162,9 +187,11 @@ class OBTradingService:
             journal=self._journal,
             entry_fee_rate=cfg.entry_fee_rate,
             exit_fee_rate=cfg.exit_fee_rate,
-            # Notebook (08_order_block_reaction_crypto.ipynb) has no fee-based SL/TP
-            # adjustments or ATR floor — keep False so bot output matches notebook exactly.
-            fee_adjusted_sizing=False,
+            # fee_adjusted_sizing=True: qty and TP are adjusted so that
+            # net_loss at SL == risk_usdt and net_win at TP == risk_usdt * rr,
+            # both after entry + exit fees. This matches the fee deduction
+            # model used in notebooks_ob/03, 11, 12, 13 backtests.
+            fee_adjusted_sizing=True,
             fee_tighten_sl=False,
             atr_min_sl_enabled=False,
             atr_period=cfg.atr_period,
@@ -185,15 +212,25 @@ class OBTradingService:
         add_symbol_file_handler(cfg.symbol, log_dir=cfg.event_log_dir, json_output=cfg.log_json)
         await self._reconciler.reconcile_on_startup()
 
+        oc = self._ob_config
         self._log.info(
             "Initialized OB bot | magic=%d pip_size=%.6f expiry_min=%d "
-            "rr=%.1f risk=%.2f USDT sl_buffer=%.4f fee_adj=False atr_floor=False",
+            "rr=%.1f risk=%.2f USDT sl_buffer=%.4f fee_adj=True atr_floor=False",
             cfg.effective_magic(),
             cfg.effective_pip_size(),
             cfg.pending_expiry_min,
             cfg.rr,
             cfg.risk_fixed_usdt,
             OB_SL_BUFFER,
+        )
+        self._log.info(
+            "OB filters | session=%s bos=%s fvg=%s volume=%s regime=%s htf_bias=%s",
+            oc.session_filter_enabled,
+            oc.require_bos,
+            oc.require_fvg,
+            oc.volume_filter_enabled,
+            oc.regime_filter_enabled,
+            oc.require_htf_bias,
         )
 
         await self._log_account_summary()
@@ -226,9 +263,9 @@ class OBTradingService:
             cfg.effective_pip_size(), cfg.pending_expiry_min,
         )
         self._log.info(
-            "  SL/TP    | fee_tighten=False  atr_floor=False  sl_buffer=%.4f"
-            "  (notebook: RR=%.1f  SL_BUFFER=%.1f)",
-            OB_SL_BUFFER, OB_DEFAULT_RR, OB_SL_BUFFER,
+            "  SL/TP    | fee_adj=True  fee_tighten=False  atr_floor=False"
+            "  sl_buffer=%.4f  entry_fee=%.4f%%  exit_fee=%.4f%%",
+            OB_SL_BUFFER, cfg.entry_fee_rate * 100, cfg.exit_fee_rate * 100,
         )
         if wallet is not None and wallet.total_equity > 0:
             self._log.info(
@@ -280,6 +317,12 @@ class OBTradingService:
         except Exception as exc:
             self._log.warning("  Pending   | could not fetch: %s", exc)
 
+        oc = self._ob_config
+        self._log.info(
+            "  Filters  | session=%s bos=%s fvg=%s vol=%s regime=%s htf=%s",
+            oc.session_filter_enabled, oc.require_bos, oc.require_fvg,
+            oc.volume_filter_enabled, oc.regime_filter_enabled, oc.require_htf_bias,
+        )
         self._log.info(sep)
 
         # ── Journal ───────────────────────────────────────────────────────────
@@ -299,6 +342,14 @@ class OBTradingService:
             magic=cfg.effective_magic(),
             link_prefix=OB_LINK_PREFIX,
             journal_path=str(self._journal.path),
+            ob_filters={
+                "session": oc.session_filter_enabled,
+                "bos":     oc.require_bos,
+                "fvg":     oc.require_fvg,
+                "volume":  oc.volume_filter_enabled,
+                "regime":  oc.regime_filter_enabled,
+                "htf_bias": oc.require_htf_bias,
+            },
         )
         self._journal.log(
             "account_snapshot",
@@ -358,29 +409,59 @@ class OBTradingService:
         self._log.info("── OB CYCLE #%d ──────────────────────────────────────", cycle_num)
         self._journal.log("cycle_start", cycle=cycle_num)
 
-        # ── 1. Fetch M5 only ─────────────────────────────────────────────────
-        m5 = await self._fetcher.fetch_m5_frame()
+        # ── 1. Fetch price data ──────────────────────────────────────────────
+        h1: Optional[pd.DataFrame] = None
+        if self._needs_h1:
+            m5, h1 = await self._fetcher.fetch_closed_frames()
+        else:
+            m5 = await self._fetcher.fetch_m5_frame()
 
-        self._log.info("M5 bars: %d  current_bar=%s", len(m5), m5.index[-1])
+        self._log.info(
+            "M5 bars: %d  current_bar=%s%s",
+            len(m5), m5.index[-1],
+            f"  H1 bars: {len(h1)}" if h1 is not None else "",
+        )
         self._journal.log(
             "data_fetched",
             cycle=cycle_num,
             m5_bars=len(m5),
+            h1_bars=len(h1) if h1 is not None else 0,
             current_bar=str(m5.index[-1]),
         )
 
         # ── 2. Generate OB signals ───────────────────────────────────────────
-        # Matches notebook run_ob_backtest exactly:
-        #   Bullish: entry=ob_high  sl=ob_low-SL_BUFFER   tp=entry+(entry-sl)*rr
-        #   Bearish: entry=ob_low   sl=ob_high+SL_BUFFER   tp=entry-(sl-entry)*rr
-        signals = list_ob_signals(
+        all_signals = list_ob_signals_enhanced(
             m5,
+            h1=h1,
             risk_cash=cfg.risk_fixed_usdt,
-            rr=cfg.rr,
-            sl_buffer=OB_SL_BUFFER,
+            config=self._ob_config,
+        )
+        signals = get_passed_signals(all_signals)
+
+        n_total    = len(all_signals)
+        n_passed   = len(signals)
+        n_rejected = n_total - n_passed
+        self._log.info(
+            "OB Signals: %d total | %d passed filters | %d rejected",
+            n_total, n_passed, n_rejected,
         )
 
-        self._log.info("OB Signals: %d total", len(signals))
+        # Log a sample of rejection reasons when filters are active
+        if n_rejected > 0 and (
+            self._ob_config.session_filter_enabled
+            or self._ob_config.require_bos
+            or self._ob_config.require_fvg
+            or self._ob_config.volume_filter_enabled
+            or self._ob_config.regime_filter_enabled
+        ):
+            reasons = (
+                all_signals[~all_signals["passed_all_filters"]]["filter_reason"]
+                .value_counts()
+                .head(3)
+            )
+            for reason, count in reasons.items():
+                self._log.info("  rejected ×%d: %s", count, reason)
+
         if not signals.empty:
             last = signals.iloc[-1]
             sl_dist = abs(float(last["entry"]) - float(last["sl"]))

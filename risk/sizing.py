@@ -173,17 +173,21 @@ def fee_adjusted_tp(
     side: str,
     entry_fee_rate: float,
     exit_fee_rate: float,
+    rr: float = 2.0,
 ) -> float:
     """
-    TP price that makes net P&L at TP == +risk_net, symmetric with the loss at SL.
+    TP price that makes net P&L at TP == +risk_net * rr (after fees).
 
-        tp_dist = sl_dist + 2 * entry * (entry_fee_rate + exit_fee_rate)
+    Derivation (with qty from compute_qty_fee_adjusted):
+        qty = risk_net / (sl_dist + fee_dist)
+        net_win = qty * (tp_dist - fee_dist) = risk_net * rr
+        → tp_dist = rr * sl_dist + (rr + 1) * fee_dist
 
-    Use together with compute_qty_fee_adjusted() for exact symmetry.
+    Use together with compute_qty_fee_adjusted() for exact fee symmetry.
     """
     sl_dist = abs(entry - sl)
     fee_dist = entry * (entry_fee_rate + exit_fee_rate)
-    tp_dist = sl_dist + 2 * fee_dist
+    tp_dist = rr * sl_dist + (rr + 1) * fee_dist
     return entry + tp_dist if side == "buy" else entry - tp_dist
 
 
