@@ -893,3 +893,19 @@ A: 1. Check logs — every cycle prints signal info, order actions, and balance.
 **Q: Can I run Bybit and MT5 simultaneously on the same symbol?**
 A: Not recommended — they will fight over the same position.
 Use different symbols or disable one before enabling the other.
+
+
+:\Users\Administrator\Desktop\tob\ema-h1trend-exchange>run_multi_scalper_bybit_loop.bat
+========================================================================
+ Bybit Multi-Symbol Scalper ΓÇö LIVE LOOP
+ Started: Sat 05/30/2026 15:04:34.26
+ Repo:    C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange
+ Python:  C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\.venv\Scripts\python.exe
+ Logs:    C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\logs\bybit_bot_loop\loop-20260530-150434.log
+ Args:
+ Stop:    Ctrl+C  (clean shutdown; open positions stay open)
+========================================================================
+[Sat 05/30/2026 15:04:34.28] launching python runner...
+[Sat 05/30/2026 15:04:40.10] python exited with code 1
+[Sat 05/30/2026 15:04:40.12] sleeping 60s before restart (Ctrl+C to abort)...
+[Sat 05/30/2026 15:05:40.22] launching python runner...
