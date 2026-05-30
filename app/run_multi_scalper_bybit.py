@@ -453,7 +453,7 @@ def qty_for_risk(entry: float, sl: float, risk_usdt: float,
     if risk_per_unit <= 0:
         return 0.0
     raw = risk_usdt / risk_per_unit
-    return normalize_qty(raw, info, mode="floor")
+    return normalize_qty(raw, info)
 
 
 # ═══════════════════════════════════════════════════════════════════════════
