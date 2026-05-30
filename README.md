@@ -894,18 +894,164 @@ A: 1. Check logs — every cycle prints signal info, order actions, and balance.
 A: Not recommended — they will fight over the same position.
 Use different symbols or disable one before enabling the other.
 
-
-:\Users\Administrator\Desktop\tob\ema-h1trend-exchange>run_multi_scalper_bybit_loop.bat
-========================================================================
- Bybit Multi-Symbol Scalper ΓÇö LIVE LOOP
- Started: Sat 05/30/2026 15:04:34.26
- Repo:    C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange
- Python:  C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\.venv\Scripts\python.exe
- Logs:    C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\logs\bybit_bot_loop\loop-20260530-150434.log
- Args:
- Stop:    Ctrl+C  (clean shutdown; open positions stay open)
-========================================================================
-[Sat 05/30/2026 15:04:34.28] launching python runner...
-[Sat 05/30/2026 15:04:40.10] python exited with code 1
-[Sat 05/30/2026 15:04:40.12] sleeping 60s before restart (Ctrl+C to abort)...
-[Sat 05/30/2026 15:05:40.22] launching python runner...
+[Sat 05/30/2026 15:04:34.28] launching python runner 
+2026-05-30 15:04:38,853 [INFO] telethon.crypto.libssl: Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2026-05-30 15:04:38,854 [INFO] telethon.crypto.aes: cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2026-05-30 15:04:39,643 [WARNING] bybit_bot: telegram login failed: TelegramBaseClient.__init__() got an unexpected keyword argument 'ssl' — running without notifications
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 974, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 968, in main
+    loop.run_until_complete(amain(args))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 891, in amain
+    winners = load_winners(symbols_override=args.symbols,
+                            skip_unprofitable=not args.include_unprofitable)
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 274, in load_winners
+    raise FileNotFoundError(
+        f"{WINNERS_DIR} missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first")
+FileNotFoundError: C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\notebooks\results\_top_per_symbol missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first
+[Sat 05/30/2026 15:04:40.10] python exited with code 1 
+[Sat 05/30/2026 15:04:40.12] sleeping 60s before restart 
+[Sat 05/30/2026 15:05:40.22] launching python runner 
+2026-05-30 15:05:43,862 [INFO] telethon.crypto.libssl: Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2026-05-30 15:05:43,864 [INFO] telethon.crypto.aes: cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2026-05-30 15:05:44,574 [WARNING] bybit_bot: telegram login failed: TelegramBaseClient.__init__() got an unexpected keyword argument 'ssl' — running without notifications
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 974, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 968, in main
+    loop.run_until_complete(amain(args))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 891, in amain
+    winners = load_winners(symbols_override=args.symbols,
+                            skip_unprofitable=not args.include_unprofitable)
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 274, in load_winners
+    raise FileNotFoundError(
+        f"{WINNERS_DIR} missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first")
+FileNotFoundError: C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\notebooks\results\_top_per_symbol missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first
+[Sat 05/30/2026 15:05:45.11] python exited with code 1 
+[Sat 05/30/2026 15:05:45.14] sleeping 60s before restart 
+[Sat 05/30/2026 15:06:45.18] launching python runner 
+2026-05-30 15:06:48,405 [INFO] telethon.crypto.libssl: Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2026-05-30 15:06:48,407 [INFO] telethon.crypto.aes: cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2026-05-30 15:06:49,111 [WARNING] bybit_bot: telegram login failed: TelegramBaseClient.__init__() got an unexpected keyword argument 'ssl' — running without notifications
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 974, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 968, in main
+    loop.run_until_complete(amain(args))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 891, in amain
+    winners = load_winners(symbols_override=args.symbols,
+                            skip_unprofitable=not args.include_unprofitable)
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 274, in load_winners
+    raise FileNotFoundError(
+        f"{WINNERS_DIR} missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first")
+FileNotFoundError: C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\notebooks\results\_top_per_symbol missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first
+[Sat 05/30/2026 15:06:49.60] python exited with code 1 
+[Sat 05/30/2026 15:06:49.63] sleeping 60s before restart 
+[Sat 05/30/2026 15:07:49.13] launching python runner 
+2026-05-30 15:07:52,362 [INFO] telethon.crypto.libssl: Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2026-05-30 15:07:52,363 [INFO] telethon.crypto.aes: cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2026-05-30 15:07:53,115 [WARNING] bybit_bot: telegram login failed: TelegramBaseClient.__init__() got an unexpected keyword argument 'ssl' — running without notifications
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 974, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 968, in main
+    loop.run_until_complete(amain(args))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 891, in amain
+    winners = load_winners(symbols_override=args.symbols,
+                            skip_unprofitable=not args.include_unprofitable)
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 274, in load_winners
+    raise FileNotFoundError(
+        f"{WINNERS_DIR} missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first")
+FileNotFoundError: C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\notebooks\results\_top_per_symbol missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first
+[Sat 05/30/2026 15:07:53.57] python exited with code 1 
+[Sat 05/30/2026 15:07:53.59] sleeping 60s before restart 
+[Sat 05/30/2026 15:08:53.13] launching python runner 
+2026-05-30 15:08:56,360 [INFO] telethon.crypto.libssl: Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2026-05-30 15:08:56,361 [INFO] telethon.crypto.aes: cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2026-05-30 15:08:57,087 [WARNING] bybit_bot: telegram login failed: TelegramBaseClient.__init__() got an unexpected keyword argument 'ssl' — running without notifications
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 974, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 968, in main
+    loop.run_until_complete(amain(args))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 891, in amain
+    winners = load_winners(symbols_override=args.symbols,
+                            skip_unprofitable=not args.include_unprofitable)
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 274, in load_winners
+    raise FileNotFoundError(
+        f"{WINNERS_DIR} missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first")
+FileNotFoundError: C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\notebooks\results\_top_per_symbol missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first
+[Sat 05/30/2026 15:08:57.54] python exited with code 1 
+[Sat 05/30/2026 15:08:57.57] sleeping 60s before restart 
+[Sat 05/30/2026 15:09:57.15] launching python runner 
+2026-05-30 15:10:00,776 [INFO] telethon.crypto.libssl: Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2026-05-30 15:10:00,777 [INFO] telethon.crypto.aes: cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2026-05-30 15:10:01,572 [WARNING] bybit_bot: telegram login failed: TelegramBaseClient.__init__() got an unexpected keyword argument 'ssl' — running without notifications
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 974, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 968, in main
+    loop.run_until_complete(amain(args))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 891, in amain
+    winners = load_winners(symbols_override=args.symbols,
+                            skip_unprofitable=not args.include_unprofitable)
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 274, in load_winners
+    raise FileNotFoundError(
+        f"{WINNERS_DIR} missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first")
+FileNotFoundError: C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\notebooks\results\_top_per_symbol missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first
+[Sat 05/30/2026 15:10:02.11] python exited with code 1 
+[Sat 05/30/2026 15:10:02.14] sleeping 60s before restart 
+[Sat 05/30/2026 15:11:02.13] launching python runner 
+2026-05-30 15:11:06,286 [INFO] telethon.crypto.libssl: Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2026-05-30 15:11:06,287 [INFO] telethon.crypto.aes: cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2026-05-30 15:11:07,018 [WARNING] bybit_bot: telegram login failed: TelegramBaseClient.__init__() got an unexpected keyword argument 'ssl' — running without notifications
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 974, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 968, in main
+    loop.run_until_complete(amain(args))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 891, in amain
+    winners = load_winners(symbols_override=args.symbols,
+                            skip_unprofitable=not args.include_unprofitable)
+  File "C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\app\run_multi_scalper_bybit.py", line 274, in load_winners
+    raise FileNotFoundError(
+        f"{WINNERS_DIR} missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first")
+FileNotFoundError: C:\Users\Administrator\Desktop\tob\ema-h1trend-exchange\notebooks\results\_top_per_symbol missing — run notebooks/26_top_strategy_per_symbol_bybit.ipynb first
+[Sat 05/30/2026 15:11:07.56] python exited with code 1 
+[Sat 05/30/2026 15:11:07.59] sleeping 60s before restart 
