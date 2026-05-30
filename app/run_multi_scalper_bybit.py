@@ -916,11 +916,16 @@ async def amain(args) -> None:
     if bot_sender.enabled:
         from types import SimpleNamespace
         from services.ws_order_notifier import WsOrderNotifier
+        from services.account_pnl_tracker import AccountPnLTracker
         ws_cfg = SimpleNamespace(
             bybit_api_key=api_key, bybit_api_secret=api_secret,
             bybit_testnet=testnet, bybit_demo=demo,
         )
-        ws_notifier = WsOrderNotifier(settings=ws_cfg, send_fn=bot_sender.send_async)
+        pnl_tracker = AccountPnLTracker(LOG_DIR)
+        ws_notifier = WsOrderNotifier(
+            settings=ws_cfg, send_fn=bot_sender.send_async,
+            pnl_tracker=pnl_tracker,
+        )
         ws_task = asyncio.create_task(ws_notifier.run(), name="ws_order_notifier")
         log.info("WsOrderNotifier started — order/position events → Telegram bot")
     else:

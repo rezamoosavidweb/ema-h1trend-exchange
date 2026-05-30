@@ -15,11 +15,14 @@ from __future__ import annotations
 
 import asyncio
 import logging
-from typing import Awaitable, Callable
+from typing import Awaitable, Callable, Optional, TYPE_CHECKING
 
 from config.settings import Settings
 from exchange.bybit_ws import BybitPrivateWebSocket
 from telegram_bot.formatters import format_order_event, format_position_event
+
+if TYPE_CHECKING:
+    from services.account_pnl_tracker import AccountPnLTracker
 
 log = logging.getLogger(__name__)
 
@@ -48,11 +51,13 @@ class WsOrderNotifier:
         self,
         settings: Settings,
         send_fn: Callable[[str], Awaitable[None]],
+        pnl_tracker: Optional["AccountPnLTracker"] = None,
     ) -> None:
-        self._cfg    = settings
-        self._send   = send_fn
-        self._stop   = asyncio.Event()
-        self._ws     = BybitPrivateWebSocket(
+        self._cfg     = settings
+        self._send    = send_fn
+        self._tracker = pnl_tracker
+        self._stop    = asyncio.Event()
+        self._ws      = BybitPrivateWebSocket(
             api_key    = settings.bybit_api_key,
             api_secret = settings.bybit_api_secret,
             testnet    = settings.bybit_testnet,
@@ -94,7 +99,8 @@ class WsOrderNotifier:
         if "order" in topic:
             msg = self._make_order_msg(event)
         elif "position" in topic:
-            msg = format_position_event(event)
+            account_pnl = self._update_pnl_tracker(event)
+            msg = format_position_event(event, account_pnl=account_pnl)
         else:
             return
 
@@ -105,6 +111,25 @@ class WsOrderNotifier:
             await self._send(msg)
         except Exception as exc:
             log.warning("WsOrderNotifier: Telegram send failed: %s", exc)
+
+    def _update_pnl_tracker(self, event: dict) -> Optional[float]:
+        """Add each closed position's realisedPnl to the tracker; return total."""
+        if self._tracker is None:
+            return None
+        any_closed = False
+        for pos in event.get("data", []) or []:
+            try:
+                size = float(pos.get("size") or 0)
+            except (TypeError, ValueError):
+                size = 0.0 if pos.get("size") in ("0", "") else float("nan")
+            if size == 0:
+                any_closed = True
+                try:
+                    rpnl = float(pos.get("realisedPnl") or 0)
+                except (TypeError, ValueError):
+                    rpnl = 0.0
+                self._tracker.add(rpnl)
+        return self._tracker.total if any_closed else None
 
     def _make_order_msg(self, event: dict) -> str:
         """Only notify for meaningful status changes; suppress noisy updates."""

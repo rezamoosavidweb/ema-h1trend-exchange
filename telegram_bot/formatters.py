@@ -190,9 +190,12 @@ def _format_single_order(order: dict, index: int) -> str:
 
 # ── Position formatter ────────────────────────────────────────────────────────
 
-def format_position_event(message: dict) -> str:
+def format_position_event(message: dict, account_pnl: float | None = None) -> str:
     """
     Format a Bybit private `position` WebSocket message as a Telegram notification.
+
+    If `account_pnl` is supplied AND at least one position in the batch is closed,
+    a running-account-PnL footer is appended after the per-position blocks.
     """
     data: list[dict] = message.get("data", [])
     if not data:
@@ -203,11 +206,22 @@ def format_position_event(message: dict) -> str:
 
     header = f"📊 Position Update\n\nTime: {msg_time}"
     blocks = [header]
+    any_closed = False
 
     for pos in data:
         blocks.append(_format_single_position(pos))
+        try:
+            if float(pos.get("size") or 0) == 0:
+                any_closed = True
+        except (TypeError, ValueError):
+            if pos.get("size") in ("0", ""):
+                any_closed = True
 
-    return "\n\n\n".join(blocks)
+    msg = "\n\n\n".join(blocks)
+    if account_pnl is not None and any_closed:
+        sign = "📈" if account_pnl >= 0 else "📉"
+        msg += f"\n\n💼 Account PnL: {sign} {account_pnl:+.2f} USDT"
+    return msg
 
 
 def _format_single_position(pos: dict) -> str:
@@ -234,7 +248,7 @@ def _format_single_position(pos: dict) -> str:
         is_closed = size in ("0", "")
 
     if is_closed:
-        rpnl_raw = pos.get("cumRealisedPnl") or pos.get("realisedPnl") or ""
+        rpnl_raw = pos.get("realisedPnl") or pos.get("cumRealisedPnl") or ""
         try:
             rpnl_f   = float(rpnl_raw or 0)
             rpnl_str = f"{'📈' if rpnl_f >= 0 else '📉'} {rpnl_f:+.2f} USDT"
