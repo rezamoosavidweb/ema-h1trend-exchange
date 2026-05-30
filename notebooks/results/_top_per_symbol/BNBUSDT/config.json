@@ -1,0 +1,27 @@
+{
+  "tag": "profitable_low_freq",
+  "symbol": "BNBUSDT",
+  "strategy": "fib_pullback",
+  "base_tf": "H1",
+  "htf": "H4",
+  "rr": 2.0,
+  "use_daily": false,
+  "date_from": "2022-01-01",
+  "params": {
+    "swing_lookback": 5,
+    "fib_min": 0.382,
+    "fib_max": 0.618,
+    "require_pin": true,
+    "wick_ratio": 0.55,
+    "session": [
+      0,
+      24
+    ],
+    "adx_min": 0,
+    "sl_method": "swing",
+    "sl_atr_mult": 1.5,
+    "sl_buf_atr": 0.2,
+    "use_htf_trend": true,
+    "tp_target": null
+  }
+}

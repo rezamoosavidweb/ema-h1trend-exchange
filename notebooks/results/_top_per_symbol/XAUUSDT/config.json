@@ -1,0 +1,25 @@
+{
+  "tag": "wr_target_only",
+  "symbol": "XAUUSDT",
+  "strategy": "bb_revert_mid",
+  "base_tf": "M5",
+  "htf": "H1",
+  "rr": 0.0,
+  "use_daily": false,
+  "date_from": "2022-01-01",
+  "params": {
+    "bb_std": 2.0,
+    "rsi_os": 30,
+    "rsi_ob": 70,
+    "require_pin": true,
+    "session": [
+      0,
+      24
+    ],
+    "adx_max": 0,
+    "sl_atr_mult": 4.0,
+    "sl_method": "atr",
+    "trade_with_htf": true,
+    "tp_target": "mid"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "tag": "profitable_top_freq",
+  "symbol": "AVAXUSDT",
+  "strategy": "donchian_brkout",
+  "base_tf": "M5",
+  "htf": "H1",
+  "rr": 2.5,
+  "use_daily": false,
+  "date_from": "2022-01-01",
+  "params": {
+    "don_len": 40,
+    "session": [
+      0,
+      24
+    ],
+    "adx_min": 18,
+    "sl_atr_mult": 1.5,
+    "sl_lookback": 12,
+    "sl_buf_atr": 0.1,
+    "require_htf_trend": true
+  }
+}

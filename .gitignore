@@ -23,7 +23,8 @@ secrets.yaml
 
 # Jupyter
 .ipynb_checkpoints/
-notebooks/results/
+notebooks/results/*
+!notebooks/results/_top_per_symbol/
 
 # Pytest
 .pytest_cache/
