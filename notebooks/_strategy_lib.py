@@ -26,8 +26,13 @@ try:
     _HAS_NUMBA = True
 except ImportError:
     _HAS_NUMBA = False
-    def njit(f):  # noqa: D401
-        return f
+    def njit(*args, **kwargs):  # noqa: D401
+        # Support both `@njit` and `@njit(cache=True, ...)` usage when numba is missing.
+        if len(args) == 1 and callable(args[0]) and not kwargs:
+            return args[0]
+        def _decorator(f):
+            return f
+        return _decorator
 
 
 @njit(cache=True)
