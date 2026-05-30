@@ -52,3 +52,7 @@ desktop.ini
 # Type stubs cache
 .mypy_cache/
 .ruff_cache/
+
+# Per-symbol winner configs are tracked so the live runner can be deployed
+# without re-running the (hours-long) sweep notebooks. Overrides *.csv above.
+!notebooks/results/_top_per_symbol/**
