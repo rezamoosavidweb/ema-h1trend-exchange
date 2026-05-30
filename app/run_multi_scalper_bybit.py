@@ -147,6 +147,12 @@ BARS_BY_TF = {"M5": 800, "M15": 600, "M30": 600,
 M5_SECONDS = 300
 DEFAULT_RISK_USDT = 20.0
 MAX_DATA_AGE_MIN  = 15
+# Per-timeframe staleness threshold. The last *closed* bar's start time is
+# inherently (interval) minutes old the moment it closes, so a flat 15-min
+# threshold makes H1/H4 strategies permanently stale. Allow ~2× the interval
+# so a cycle that runs anywhere inside the next bar still passes.
+MAX_DATA_AGE_BY_TF = {"M1": 5, "M5": 15, "M15": 35, "M30": 65,
+                      "H1": 125, "H4": 485, "D1": 2880}
 MAX_HOLD_BARS_BY_TF = {"M5": 96, "M15": 64, "H1": 48, "H4": 24, "D1": 14}
 
 
@@ -618,9 +624,10 @@ async def run_symbol_cycle(ctx: SymbolContext, client: BybitClient,
     last_bar = m5["time"].iloc[-1]
     now_utc = pd.Timestamp.now(tz="UTC").tz_localize(None)
     age_min = (now_utc - last_bar).total_seconds() / 60
-    if age_min > MAX_DATA_AGE_MIN:
+    max_age = MAX_DATA_AGE_BY_TF.get(ctx.cfg.base_tf, MAX_DATA_AGE_MIN)
+    if age_min > max_age:
         log_.event("skip", reason="stale_data", age_min=round(age_min, 1),
-                   last_bar=str(last_bar))
+                   last_bar=str(last_bar), max_age_min=max_age)
         return {**summary, "skipped": "stale_data", "age_min": age_min}
 
     # 2) Detect signal
