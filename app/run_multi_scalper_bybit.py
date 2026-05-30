@@ -95,6 +95,7 @@ from _strategy_lib import (
 from exchange.bybit_client import BybitClient
 from exchange.precision import normalize_qty, normalize_price, price_to_str
 from models.order import InstrumentInfo, Position, Side
+from telegram_bot.bot_sender import BotTelegramSender
 
 log = logging.getLogger("bybit_bot")
 
@@ -908,13 +909,31 @@ async def amain(args) -> None:
     if not contexts:
         log.error("no contexts built — exiting"); return
 
+    # Bot-API Telegram sender for WebSocket-driven order/position alerts
+    bot_sender   = BotTelegramSender()
+    ws_notifier  = None
+    ws_task: Optional[asyncio.Task] = None
+    if bot_sender.enabled:
+        from types import SimpleNamespace
+        from services.ws_order_notifier import WsOrderNotifier
+        ws_cfg = SimpleNamespace(
+            bybit_api_key=api_key, bybit_api_secret=api_secret,
+            bybit_testnet=testnet, bybit_demo=demo,
+        )
+        ws_notifier = WsOrderNotifier(settings=ws_cfg, send_fn=bot_sender.send_async)
+        ws_task = asyncio.create_task(ws_notifier.run(), name="ws_order_notifier")
+        log.info("WsOrderNotifier started — order/position events → Telegram bot")
+    else:
+        log.info("Bot-API Telegram disabled (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set)")
+
     write_portfolio_event("bot_run_started",
                           run_id=run_id,
                           symbols=[c.cfg.symbol for c in contexts],
                           dry_run=args.dry_run,
                           testnet=testnet, demo=demo,
                           risk_usdt=risk_usdt,
-                          telegram_enabled=tg.enabled)
+                          telegram_enabled=tg.enabled,
+                          ws_notifier_enabled=bot_sender.enabled)
     if tg.enabled:
         await tg.send(
             f"🤖 *Bybit scalper started*\n"
@@ -922,6 +941,16 @@ async def amain(args) -> None:
             f"symbols: {', '.join(c.cfg.symbol for c in contexts)}\n"
             f"risk/trade: `{risk_usdt}` USDT\n"
             f"dry\\_run: `{args.dry_run}`  testnet: `{testnet}`  demo: `{demo}`"
+        )
+    if bot_sender.enabled:
+        bot_sender.send(
+            f"🤖 <b>Bybit scalper started</b>\n"
+            f"run_id: <code>{run_id}</code>\n"
+            f"symbols: {', '.join(c.cfg.symbol for c in contexts)}\n"
+            f"risk/trade: <code>{risk_usdt}</code> USDT\n"
+            f"dry_run: <code>{args.dry_run}</code>  "
+            f"testnet: <code>{testnet}</code>  demo: <code>{demo}</code>",
+            category="bot_start",
         )
 
     try:
@@ -946,6 +975,22 @@ async def amain(args) -> None:
                 await tg._n.stop()
             except Exception:
                 pass
+        if bot_sender.enabled:
+            try:
+                bot_sender.send(
+                    f"🛑 <b>Bybit scalper stopped</b> — run_id <code>{run_id}</code>",
+                    category="bot_stop",
+                )
+            except Exception:
+                pass
+        if ws_notifier is not None and ws_task is not None:
+            try:
+                await ws_notifier.stop()
+                await asyncio.wait_for(ws_task, timeout=5.0)
+            except (asyncio.TimeoutError, asyncio.CancelledError):
+                ws_task.cancel()
+            except Exception as exc:
+                log.warning("WsOrderNotifier shutdown error: %s", exc)
 
 
 def main() -> None:
