@@ -2,12 +2,31 @@
 Telethon-based notifier — sends messages to TARGET_CHANNEL using the user's own account.
 Handles login at startup: phone number → verification code → optional 2FA password.
 Session is persisted to disk so subsequent starts skip the login prompts.
+
+SSL note: Telegram's TLS leaf is signed by a modern root that older Windows
+trust stores reject. We point telethon at the certifi CA bundle (the
+canonical Mozilla list maintained by the certifi package) before instantiating
+the client, which fixes `ssl.SSLCertVerificationError` on Windows machines
+that haven't installed recent Windows updates.
 """
 from __future__ import annotations
 
 import logging
+import os
+import ssl
 from pathlib import Path
 from typing import Optional
+
+try:
+    import certifi
+    # Globally point OpenSSL at the up-to-date CA bundle. Set this *before*
+    # telethon's TelegramClient establishes its TLS socket.
+    os.environ.setdefault("SSL_CERT_FILE",      certifi.where())
+    os.environ.setdefault("SSL_CERT_DIR",       str(Path(certifi.where()).parent))
+    os.environ.setdefault("REQUESTS_CA_BUNDLE", certifi.where())
+    _CERTIFI_PATH = certifi.where()
+except ImportError:
+    _CERTIFI_PATH = None
 
 from telethon import TelegramClient
 
@@ -39,7 +58,22 @@ class TelethonNotifier:
         - Otherwise: prompts for phone number, verification code, and 2FA password if needed.
         phone: pre-set phone number string (e.g. '+989123456789'). If None, will prompt.
         """
-        self._client = TelegramClient(self._session_file, self._api_id, self._api_hash)
+        # Build an SSL context using the certifi CA bundle so that older
+        # Windows trust stores don't reject Telegram's intermediate cert.
+        ssl_ctx: Optional[ssl.SSLContext] = None
+        if _CERTIFI_PATH:
+            try:
+                ssl_ctx = ssl.create_default_context(cafile=_CERTIFI_PATH)
+            except Exception as exc:
+                log.warning("certifi SSL context build failed: %s", exc)
+        self._client = TelegramClient(
+            self._session_file, self._api_id, self._api_hash,
+            connection_retries=5,
+            retry_delay=1,
+            request_retries=5,
+            timeout=30,
+            ssl=ssl_ctx,
+        )
 
         if phone:
             await self._client.start(phone=lambda: phone)

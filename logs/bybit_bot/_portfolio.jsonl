@@ -1,0 +1,6 @@
+{"ts": "2026-05-30T10:44:27.585893+00:00", "event": "bot_run_started", "run_id": "run-20260530T104425Z-00170f", "symbols": ["SOLUSDT", "XLMUSDT"], "dry_run": true, "testnet": false, "demo": true, "risk_usdt": 20.0, "telegram_enabled": false}
+{"ts": "2026-05-30T10:44:32.187001+00:00", "event": "cycle_complete", "symbols": 2, "signals": 0, "placed": 0, "skipped": 1, "elapsed_s": 4.6, "per_symbol": [{"symbol": "SOLUSDT", "signal": false}, {"symbol": "XLMUSDT", "skipped": "stale_data", "age_min": 104.53635198333333}]}
+{"ts": "2026-05-30T10:44:32.188025+00:00", "event": "bot_run_stopped", "run_id": "run-20260530T104425Z-00170f"}
+{"ts": "2026-05-30T10:47:14.221829+00:00", "event": "bot_run_started", "run_id": "run-20260530T104711Z-969c21", "symbols": ["SOLUSDT"], "dry_run": true, "testnet": false, "demo": true, "risk_usdt": 20.0, "telegram_enabled": false}
+{"ts": "2026-05-30T10:47:16.021862+00:00", "event": "cycle_complete", "symbols": 1, "signals": 0, "placed": 0, "skipped": 0, "elapsed_s": 1.8, "per_symbol": [{"symbol": "SOLUSDT", "signal": false}]}
+{"ts": "2026-05-30T10:47:16.024903+00:00", "event": "bot_run_stopped", "run_id": "run-20260530T104711Z-969c21"}
