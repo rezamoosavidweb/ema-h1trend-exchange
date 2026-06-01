@@ -1,0 +1,12 @@
+{
+  "open_position": {
+    "side": "buy",
+    "size": 458.0,
+    "entry_price": 0.2633,
+    "sl": 0.22006417338693074,
+    "tp": 0.3726145665326731,
+    "link": "bb-XLMUSDT-da0faf6fcd",
+    "opened_at": "2026-05-31T12:00:15.337104+00:00",
+    "signal_bar": "2026-05-31 11:00:00"
+  }
+}
