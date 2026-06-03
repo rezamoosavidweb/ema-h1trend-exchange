@@ -15,10 +15,12 @@ from __future__ import annotations
 
 import asyncio
 import logging
-from typing import Awaitable, Callable, Optional, TYPE_CHECKING
+from pathlib import Path
+from typing import Awaitable, Callable, Optional, Union, TYPE_CHECKING
 
 from config.settings import Settings
 from exchange.bybit_ws import BybitPrivateWebSocket
+from storage.ws_event_log import WsEventJournal
 from telegram_bot.formatters import format_order_event, format_position_event
 
 if TYPE_CHECKING:
@@ -52,10 +54,12 @@ class WsOrderNotifier:
         settings: Settings,
         send_fn: Callable[[str], Awaitable[None]],
         pnl_tracker: Optional["AccountPnLTracker"] = None,
+        log_dir: Optional[Union[str, Path]] = None,
     ) -> None:
         self._cfg     = settings
         self._send    = send_fn
         self._tracker = pnl_tracker
+        self._journal = WsEventJournal(log_dir)
         self._stop    = asyncio.Event()
         self._ws      = BybitPrivateWebSocket(
             api_key    = settings.bybit_api_key,
@@ -97,8 +101,12 @@ class WsOrderNotifier:
         topic = event.get("topic", "")
 
         if "order" in topic:
+            # Persist a faithful copy *before* the Telegram-notify filter so the
+            # journal captures every order event, not just the notable ones.
+            self._journal.log_event(event)
             msg = self._make_order_msg(event)
         elif "position" in topic:
+            self._journal.log_event(event)
             account_pnl = self._update_pnl_tracker(event)
             msg = format_position_event(event, account_pnl=account_pnl)
         else:

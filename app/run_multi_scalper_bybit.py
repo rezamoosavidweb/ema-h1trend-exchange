@@ -95,6 +95,7 @@ from _strategy_lib import (
 from exchange.bybit_client import BybitClient
 from exchange.precision import normalize_qty, normalize_price, price_to_str
 from models.order import InstrumentInfo, Position, Side
+from services.daily_loss_guard import DailyLossGuard
 from telegram_bot.bot_sender import BotTelegramSender
 
 log = logging.getLogger("bybit_bot")
@@ -564,10 +565,12 @@ class SymbolContext:
     seen:     set
     state:    dict
     risk_usdt: float
+    daily_guard: Optional["DailyLossGuard"] = None
 
 
 async def build_contexts(client: BybitClient, winners: List[WinnerConfig],
                           risk_usdt: float, run_id: str,
+                          daily_guard: Optional["DailyLossGuard"] = None,
                           ) -> List[SymbolContext]:
     contexts: List[SymbolContext] = []
     for wc in winners:
@@ -594,6 +597,7 @@ async def build_contexts(client: BybitClient, winners: List[WinnerConfig],
             seen=load_seen(wc.symbol),
             state=load_state(wc.symbol),
             risk_usdt=risk_usdt,
+            daily_guard=daily_guard,
         )
         contexts.append(ctx)
     return contexts
@@ -661,6 +665,19 @@ async def run_symbol_cycle(ctx: SymbolContext, client: BybitClient,
         log_.event("skip", reason="already_traded",
                    bar_time=str(sig.bar_time), direction=sig.direction)
         return {**summary, "skipped": "already_traded"}
+
+    # Portfolio daily-loss circuit breaker — once today's realised PnL hits the
+    # limit, stop opening NEW positions for the rest of the UTC day. Checked
+    # before the Telegram signal alert so a stopped day stays quiet. Existing
+    # positions keep their SL/TP; the breaker resets at UTC midnight.
+    if not dry_run and ctx.daily_guard is not None and ctx.daily_guard.enabled:
+        blocked, day_pnl = await ctx.daily_guard.should_block()
+        if blocked:
+            log_.event("skip", reason="daily_loss_stop",
+                       day_pnl=round(day_pnl, 2),
+                       limit_usdt=round(ctx.daily_guard.limit, 2),
+                       bar_time=str(sig.bar_time))
+            return {**summary, "signal": True, "stage": "daily_loss_stop"}
 
     has_open = len(positions) > 0
     log_.event("signal",
@@ -779,29 +796,64 @@ async def _reconcile_position_close(ctx: SymbolContext,
     if positions:
         return   # still open — nothing to do
 
-    # Position is gone — look up closed P&L for the most recent close
-    closed_at = datetime.now(timezone.utc).isoformat()
-    pnl = 0.0; exit_px = float("nan")
+    # Position is gone — look up the authoritative closed P&L. Bybit's
+    # closed-pnl REST record can lag the position-gone signal by a few seconds
+    # (and the list comes back empty when several positions close together),
+    # which previously caused exit_price=NaN / pnl=0 to be recorded as if the
+    # trade were a real break-even. Retry briefly, only accept a record newer
+    # than this position's open, and flag the result via `pnl_source` so any
+    # unresolved close is visible rather than silently counted as 0.
+    # The authoritative realised PnL for every close is also captured in the
+    # _ws_events-*.jsonl journal (WsOrderNotifier) regardless of this lookup.
+    closed_at  = datetime.now(timezone.utc).isoformat()
+    pnl        = 0.0
+    exit_px    = float("nan")
+    pnl_source = "unavailable"
+
+    opened_at_raw = last_open.get("opened_at")
+    opened_ms = 0
     try:
-        end_ms = int(time.time() * 1000)
-        start_ms = end_ms - 6 * 60 * 60 * 1000   # last 6 h is plenty
-        pnls = await client.get_closed_pnl(symbol=ctx.cfg.symbol,
-                                            start_ms=start_ms, end_ms=end_ms,
-                                            limit=20)
-        if pnls:
-            best = pnls[0]
-            pnl     = float(best.get("closedPnl", 0) or 0)
-            exit_px = float(best.get("avgExitPrice", 0) or 0) or float("nan")
-            closed_at = datetime.fromtimestamp(int(best["updatedTime"]) / 1000,
-                                                tz=timezone.utc).isoformat()
-    except Exception as exc:
-        ctx.logger.error("closed_pnl_fetch_failed", exc=exc)
+        if opened_at_raw:
+            opened_ms = int(datetime.fromisoformat(opened_at_raw).timestamp() * 1000)
+    except Exception:
+        opened_ms = 0
+
+    for attempt in range(3):
+        try:
+            end_ms   = int(time.time() * 1000)
+            start_ms = end_ms - 6 * 60 * 60 * 1000   # last 6 h is plenty
+            pnls = await client.get_closed_pnl(symbol=ctx.cfg.symbol,
+                                                start_ms=start_ms, end_ms=end_ms,
+                                                limit=20)
+            # Only consider closes that happened at/after this position opened,
+            # so we never attribute a stale earlier close to it.
+            fresh = [p for p in (pnls or [])
+                     if int(p.get("updatedTime", 0) or 0) >= opened_ms]
+            if fresh:
+                best    = max(fresh, key=lambda p: int(p.get("updatedTime", 0) or 0))
+                pnl     = float(best.get("closedPnl", 0) or 0)
+                exit_px = float(best.get("avgExitPrice", 0) or 0) or float("nan")
+                closed_at = datetime.fromtimestamp(int(best["updatedTime"]) / 1000,
+                                                    tz=timezone.utc).isoformat()
+                pnl_source = "closed_pnl"
+                break
+        except Exception as exc:
+            ctx.logger.error("closed_pnl_fetch_failed", exc=exc, attempt=attempt)
+        if attempt < 2:
+            await asyncio.sleep(1.5)   # let the exchange's closed-pnl record settle
+
+    if pnl_source == "unavailable":
+        ctx.logger.event("closed_pnl_unavailable",
+                         opened_at=opened_at_raw,
+                         note="position gone but no closed-pnl record after retries; "
+                              "see _ws_events-*.jsonl for authoritative realisedPnl")
 
     side = Side.BUY if last_open["side"].lower() == "buy" else Side.SELL
     ctx.logger.event("position_closed",
                      side=side.value, size=last_open.get("size"),
                      entry=last_open.get("entry_price"),
                      exit_price=exit_px, pnl_usdt=pnl,
+                     pnl_source=pnl_source,
                      opened_at=last_open.get("opened_at"),
                      closed_at=closed_at)
     await tg.position_closed(
@@ -904,8 +956,21 @@ async def amain(args) -> None:
     log.info("loaded %d symbol winners: %s",
              len(winners), [w.symbol for w in winners])
 
+    # Daily-loss circuit breaker (portfolio-wide). Stop opening new positions
+    # for the rest of the UTC day once realised PnL hits -(R × risk). Set
+    # DAILY_LOSS_STOP_R=0 to disable. Default 3R (data-driven; see DailyLossGuard).
+    daily_loss_stop_r = float(os.getenv("DAILY_LOSS_STOP_R", "3.0"))
+    daily_guard = DailyLossGuard(client, limit_usdt=risk_usdt * daily_loss_stop_r)
+    if daily_guard.enabled:
+        log.info("Daily-loss circuit breaker active: stop new entries when "
+                 "today's realised PnL <= -%.2f USDT (%.1fR × %.2f risk)",
+                 daily_guard.limit, daily_loss_stop_r, risk_usdt)
+    else:
+        log.info("Daily-loss circuit breaker disabled (DAILY_LOSS_STOP_R=0)")
+
     # Contexts
-    contexts = await build_contexts(client, winners, risk_usdt, run_id)
+    contexts = await build_contexts(client, winners, risk_usdt, run_id,
+                                    daily_guard=daily_guard)
     if not contexts:
         log.error("no contexts built — exiting"); return
 
@@ -925,6 +990,7 @@ async def amain(args) -> None:
         ws_notifier = WsOrderNotifier(
             settings=ws_cfg, send_fn=bot_sender.send_async,
             pnl_tracker=pnl_tracker,
+            log_dir=LOG_DIR,
         )
         ws_task = asyncio.create_task(ws_notifier.run(), name="ws_order_notifier")
         log.info("WsOrderNotifier started — order/position events → Telegram bot")
@@ -937,6 +1003,8 @@ async def amain(args) -> None:
                           dry_run=args.dry_run,
                           testnet=testnet, demo=demo,
                           risk_usdt=risk_usdt,
+                          daily_loss_stop_usdt=(daily_guard.limit
+                                                if daily_guard.enabled else 0),
                           telegram_enabled=tg.enabled,
                           ws_notifier_enabled=bot_sender.enabled)
     if tg.enabled:
