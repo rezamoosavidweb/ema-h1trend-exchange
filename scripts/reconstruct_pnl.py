@@ -110,10 +110,23 @@ def _norm_rest(r: dict) -> dict:
 
 def load_ws_closes() -> list[dict]:
     """
-    Extract realised-PnL closes from _ws_events-*.jsonl. A position record with
-    size==0 carries the close's realisedPnl.
+    Extract per-trade realised PnL from _ws_events-*.jsonl.
+
+    Bybit's position stream carries NO per-trade realised-PnL field: `realisedPnl`
+    is absent and `curRealisedPnl` zeroes out on close. The only usable figure is
+    `cumRealisedPnl` — the running *cumulative* realised PnL for the symbol. A
+    single trade's realised PnL is therefore the **delta** of cumRealisedPnl across
+    the close (cum_at_close − cum_just_before), NOT cumRealisedPnl itself. The old
+    code summed cumRealisedPnl directly, which produced absurd totals (e.g. the WS
+    sum read -4652 USDT against the ledger's +446).
+
+    We advance a per-symbol baseline on every position record (open or close) so
+    the deltas telescope correctly. The first close for a symbol is skipped when no
+    earlier record established a baseline (its true PnL can't be recovered).
     """
     out: list[dict] = []
+    last_cum: dict[str, float] = {}     # symbol -> last seen cumRealisedPnl
+    skipped = 0
     for fp in sorted(glob.glob(str(LOG_DIR / "_ws_events-*.jsonl"))):
         for line in open(fp, encoding="utf-8"):
             line = line.strip()
@@ -126,24 +139,29 @@ def load_ws_closes() -> list[dict]:
             if "position" not in (msg.get("topic") or ""):
                 continue
             for pos in msg.get("data", []) or []:
-                if _f(pos.get("size")) != 0:
+                sym = pos.get("symbol", "")
+                cum = _f(pos.get("cumRealisedPnl"))
+                if cum != cum:           # NaN — no cumulative figure, ignore record
                     continue
-                rpnl = pos.get("realisedPnl") or pos.get("cumRealisedPnl")
-                if rpnl in (None, ""):
-                    continue
-                out.append({
-                    "source":    "ws",
-                    "symbol":    pos.get("symbol", ""),
-                    "side":      pos.get("side", ""),
-                    "qty":       _f(pos.get("size")),
-                    "entry":     _f(pos.get("avgPrice")),
-                    "exit":      float("nan"),
-                    "pnl":       _f(rpnl),
-                    "closed_at": msg.get("received_ts", ""),
-                    "closed_ms": 0,
-                })
+                if _f(pos.get("size")) == 0:        # a close
+                    if sym in last_cum:
+                        out.append({
+                            "source":    "ws",
+                            "symbol":    sym,
+                            "side":      pos.get("side", ""),
+                            "qty":       0.0,
+                            "entry":     _f(pos.get("sessionAvgPrice")),
+                            "exit":      float("nan"),
+                            "pnl":       round(cum - last_cum[sym], 8),
+                            "closed_at": msg.get("received_ts", ""),
+                            "closed_ms": _iso_ms(msg.get("received_ts", "")),
+                        })
+                    else:
+                        skipped += 1     # first close for this symbol, no baseline
+                last_cum[sym] = cum      # advance baseline (open or close)
     if out:
-        print(f"[ws]   extracted {len(out)} closes from _ws_events journal")
+        note = f"  ({skipped} skipped — no pre-close baseline)" if skipped else ""
+        print(f"[ws]   extracted {len(out)} closes from _ws_events journal{note}")
     else:
         print("[ws]   no _ws_events journal yet (populates after bot restart)")
     return out
@@ -254,6 +272,16 @@ def _f(x) -> float:
         return float("nan")
 
 
+def _iso_ms(s) -> int:
+    """Parse an ISO-8601 ts ('2026-06-04T01:55:01.319Z') to epoch ms; 0 on failure."""
+    if not s:
+        return 0
+    try:
+        return int(datetime.fromisoformat(str(s).replace("Z", "+00:00")).timestamp() * 1000)
+    except Exception:
+        return 0
+
+
 def _ms(ts) -> str:
     try:
         return datetime.fromtimestamp(int(ts) / 1000, tz=timezone.utc)\
@@ -292,12 +320,21 @@ async def amain(args) -> None:
             cur = seg_end
 
     if args.source in ("ws", "both"):
-        trades += load_ws_closes()
+        ws_trades = load_ws_closes()
+        if args.source == "both":
+            # REST is authoritative for the history it covers. WS deltas and REST
+            # closed_ms never match exactly (different clocks), so a naive merge
+            # would double-count every shared trade. Let WS contribute ONLY closes
+            # newer than the newest REST close — i.e. the real-time tail REST hasn't
+            # caught up to yet.
+            latest_rest_ms = max((t.get("closed_ms", 0) for t in trades), default=0)
+            ws_trades = [t for t in ws_trades if t.get("closed_ms", 0) > latest_rest_ms]
+        trades += ws_trades
 
-    # De-dup if both sources overlap (same symbol + closed_ms + pnl)
+    # Safety net: drop exact-duplicate rows within a single source.
     seen, uniq = set(), []
     for t in trades:
-        key = (t["symbol"], t.get("closed_ms") or t.get("closed_at"), round(t["pnl"], 4))
+        key = (t["source"], t["symbol"], t.get("closed_ms") or t.get("closed_at"), round(t["pnl"], 4))
         if key in seen:
             continue
         seen.add(key)
