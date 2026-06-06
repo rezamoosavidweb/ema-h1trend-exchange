@@ -157,6 +157,17 @@ MAX_DATA_AGE_BY_TF = {"M1": 5, "M5": 15, "M15": 35, "M30": 65,
                       "H1": 125, "H4": 485, "D1": 2880}
 MAX_HOLD_BARS_BY_TF = {"M5": 96, "M15": 64, "H1": 48, "H4": 24, "D1": 14}
 
+# ── ATR low-volatility regime filter (data-driven; see CLAUDE.md) ────────────
+# Skip NEW entries when the base-tf ATR sits in the bottom MIN_ATR_PERCENTILE of
+# its own recent range (a compression regime, where breakouts tend to fail).
+# Controlled by env vars (read in amain); 0 disables the filter entirely.
+#   MIN_ATR_PERCENTILE   e.g. 30   (0 = off, the default)
+#   ATR_PCTILE_LOOKBACK  e.g. 200  (base-tf bars in the rolling percentile window)
+# Demo-sample finding: trades in the bottom ATR regime won ~13% vs ~55% otherwise.
+MIN_ATR_PERCENTILE_DEFAULT  = 0.0     # 0 = off (opt-in via .env)
+ATR_PCTILE_LOOKBACK_DEFAULT = 200     # base-tf bars in the rolling percentile window
+ATR_PCTILE_MIN_BARS         = 50      # need at least this many bars to compute it
+
 
 # ═══════════════════════════════════════════════════════════════════════════
 # JSONL LOGGING — one file per (symbol, UTC date)
@@ -378,8 +389,23 @@ class StrategySignal:
         }
 
 
+def _atr_percentile(df_sig: pd.DataFrame, lookback: int) -> Optional[float]:
+    """Percentile rank (0–100) of the latest base-tf ATR within its trailing
+    `lookback` bars. Returns None when ATR is unavailable or the window is too
+    short — callers treat None as 'do not filter' (fail-open)."""
+    if "atr" not in df_sig:
+        return None
+    atr = pd.to_numeric(df_sig["atr"], errors="coerce").dropna()
+    if len(atr) < ATR_PCTILE_MIN_BARS:
+        return None
+    window = atr.iloc[-lookback:]
+    cur = float(atr.iloc[-1])
+    return round(float((window < cur).mean() * 100.0), 1)
+
+
 def detect_signal(wcfg: WinnerConfig,
                   m5: pd.DataFrame, htf: pd.DataFrame, d1: pd.DataFrame | None,
+                  atr_pctile_lookback: int = ATR_PCTILE_LOOKBACK_DEFAULT,
                   ) -> tuple[Optional[StrategySignal], dict]:
     """Run the strategy fn end-to-end and read off the last closed bar.
 
@@ -412,6 +438,9 @@ def detect_signal(wcfg: WinnerConfig,
         "adx":        float(last.get("adx", float("nan")))   if "adx"  in df_sig else None,
         "h1_trend":   int(last.get("h1_trend", 0))           if "h1_trend" in df_sig else None,
     }
+    # Volatility-regime gauge — logged in EVERY cycle's diag (even when no
+    # signal) so the ATR filter's effect can be reconstructed from history.
+    diag["atr_pctile"] = _atr_percentile(df_sig, atr_pctile_lookback)
     if sig_val == 0:
         return None, diag
 
@@ -483,6 +512,19 @@ class TelegramSender:
             f"entry : `{sig.entry:g}`\n"
             f"sl    : `{sig.sl:g}`\n"
             f"tp    : `{sig.tp:g}`"
+        )
+        await self.send(msg)
+
+    async def signal_skipped(self, sym: str, sig: StrategySignal, strat: str,
+                              reason: str, detail: str) -> None:
+        arrow = "🟢" if sig.direction == 1 else "🔴"
+        msg = (
+            f"⏸ *SKIPPED* {arrow} *{sym}* — {strat}\n"
+            f"reason : {reason}\n"
+            f"detail : {detail}\n"
+            f"side   : {sig.side.value.upper()}\n"
+            f"entry  : `{sig.entry:g}`  sl: `{sig.sl:g}`  tp: `{sig.tp:g}`\n"
+            f"bar    : `{sig.bar_time}`"
         )
         await self.send(msg)
 
@@ -566,11 +608,15 @@ class SymbolContext:
     state:    dict
     risk_usdt: float
     daily_guard: Optional["DailyLossGuard"] = None
+    min_atr_pctile: float = 0.0
+    atr_pctile_lookback: int = ATR_PCTILE_LOOKBACK_DEFAULT
 
 
 async def build_contexts(client: BybitClient, winners: List[WinnerConfig],
                           risk_usdt: float, run_id: str,
                           daily_guard: Optional["DailyLossGuard"] = None,
+                          min_atr_pctile: float = 0.0,
+                          atr_pctile_lookback: int = ATR_PCTILE_LOOKBACK_DEFAULT,
                           ) -> List[SymbolContext]:
     contexts: List[SymbolContext] = []
     for wc in winners:
@@ -591,13 +637,17 @@ async def build_contexts(client: BybitClient, winners: List[WinnerConfig],
                  params=wc.params, htf=wc.htf,
                  risk_usdt=risk_usdt,
                  tick_size=info.tick_size, qty_step=info.qty_step,
-                 min_qty=info.min_qty)
+                 min_qty=info.min_qty,
+                 min_atr_percentile=min_atr_pctile,
+                 atr_pctile_lookback=atr_pctile_lookback)
         ctx = SymbolContext(
             cfg=wc, info=info, logger=lg,
             seen=load_seen(wc.symbol),
             state=load_state(wc.symbol),
             risk_usdt=risk_usdt,
             daily_guard=daily_guard,
+            min_atr_pctile=min_atr_pctile,
+            atr_pctile_lookback=atr_pctile_lookback,
         )
         contexts.append(ctx)
     return contexts
@@ -637,7 +687,8 @@ async def run_symbol_cycle(ctx: SymbolContext, client: BybitClient,
 
     # 2) Detect signal
     try:
-        sig, diag = detect_signal(ctx.cfg, m5, htf, d1)
+        sig, diag = detect_signal(ctx.cfg, m5, htf, d1,
+                                  atr_pctile_lookback=ctx.atr_pctile_lookback)
     except Exception as exc:
         log_.error("strategy_exception", exc=exc)
         return {**summary, "skipped": "strategy_exception", "error": str(exc)}
@@ -680,6 +731,37 @@ async def run_symbol_cycle(ctx: SymbolContext, client: BybitClient,
             return {**summary, "signal": True, "stage": "daily_loss_stop"}
 
     has_open = len(positions) > 0
+
+    # ── ATR low-volatility regime gate ──────────────────────────────────────
+    # Block NEW entries (only when flat) if the base-tf ATR is in the bottom
+    # `min_atr_pctile` of its recent range — compression breakouts fail (~13%
+    # win in the demo sample vs ~55% otherwise). The would-be trade is still
+    # recorded: a `signal` event (regime_blocked=True) plus a `skip` event with
+    # reason="low_vol_regime" carrying entry/sl/tp so the trade can be
+    # reconstructed later for counterfactual analysis. Disabled when
+    # MIN_ATR_PERCENTILE=0. See CLAUDE.md "ATR regime filter".
+    atr_pctile = diag.get("atr_pctile")
+    if (not has_open and ctx.min_atr_pctile and atr_pctile is not None
+            and atr_pctile < ctx.min_atr_pctile):
+        log_.event("signal",
+                   bar_time=str(sig.bar_time),
+                   direction="long" if sig.direction == 1 else "short",
+                   entry=sig.entry, sl=sig.sl, tp=sig.tp,
+                   has_open_position=has_open,
+                   regime_blocked=True, atr_pctile=atr_pctile)
+        log_.event("skip", reason="low_vol_regime",
+                   atr_pctile=atr_pctile,
+                   min_atr_percentile=ctx.min_atr_pctile,
+                   atr=diag.get("atr"), adx=diag.get("adx"),
+                   bar_time=str(sig.bar_time),
+                   direction="long" if sig.direction == 1 else "short",
+                   entry=sig.entry, sl=sig.sl, tp=sig.tp)
+        ctx.seen.add(sig_key); save_seen(sym, ctx.seen)
+        await tg.signal_skipped(sym, sig, ctx.cfg.strategy, "low_vol_regime",
+                                f"ATR pctile {atr_pctile:g} < {ctx.min_atr_pctile:g}")
+        return {**summary, "signal": True, "stage": "low_vol_regime",
+                "atr_pctile": atr_pctile}
+
     log_.event("signal",
                bar_time=str(sig.bar_time),
                direction="long" if sig.direction == 1 else "short",
@@ -968,9 +1050,22 @@ async def amain(args) -> None:
     else:
         log.info("Daily-loss circuit breaker disabled (DAILY_LOSS_STOP_R=0)")
 
+    # ATR low-volatility regime filter. Skip NEW entries when the base-tf ATR is
+    # in the bottom MIN_ATR_PERCENTILE of its recent range (compression regime).
+    # MIN_ATR_PERCENTILE=0 disables it (default). See CLAUDE.md "ATR regime filter".
+    min_atr_pctile = float(os.getenv("MIN_ATR_PERCENTILE", str(MIN_ATR_PERCENTILE_DEFAULT)))
+    atr_pctile_lookback = int(os.getenv("ATR_PCTILE_LOOKBACK", str(ATR_PCTILE_LOOKBACK_DEFAULT)))
+    if min_atr_pctile > 0:
+        log.info("ATR regime filter ACTIVE: skip new entries when base-tf ATR "
+                 "percentile < %.0f (rolling %d bars)", min_atr_pctile, atr_pctile_lookback)
+    else:
+        log.info("ATR regime filter disabled (MIN_ATR_PERCENTILE=0)")
+
     # Contexts
     contexts = await build_contexts(client, winners, risk_usdt, run_id,
-                                    daily_guard=daily_guard)
+                                    daily_guard=daily_guard,
+                                    min_atr_pctile=min_atr_pctile,
+                                    atr_pctile_lookback=atr_pctile_lookback)
     if not contexts:
         log.error("no contexts built — exiting"); return
 
@@ -997,6 +1092,8 @@ async def amain(args) -> None:
     else:
         log.info("Bot-API Telegram disabled (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set)")
 
+    atr_filter_desc = (f"on (min %ile {min_atr_pctile:g}, lookback {atr_pctile_lookback})"
+                       if min_atr_pctile > 0 else "off")
     write_portfolio_event("bot_run_started",
                           run_id=run_id,
                           symbols=[c.cfg.symbol for c in contexts],
@@ -1005,6 +1102,8 @@ async def amain(args) -> None:
                           risk_usdt=risk_usdt,
                           daily_loss_stop_usdt=(daily_guard.limit
                                                 if daily_guard.enabled else 0),
+                          min_atr_percentile=min_atr_pctile,
+                          atr_pctile_lookback=atr_pctile_lookback,
                           telegram_enabled=tg.enabled,
                           ws_notifier_enabled=bot_sender.enabled)
     if tg.enabled:
@@ -1013,6 +1112,7 @@ async def amain(args) -> None:
             f"run\\_id: `{run_id}`\n"
             f"symbols: {', '.join(c.cfg.symbol for c in contexts)}\n"
             f"risk/trade: `{risk_usdt}` USDT\n"
+            f"ATR filter: `{atr_filter_desc}`\n"
             f"dry\\_run: `{args.dry_run}`  testnet: `{testnet}`  demo: `{demo}`"
         )
     if bot_sender.enabled:
@@ -1021,6 +1121,7 @@ async def amain(args) -> None:
             f"run_id: <code>{run_id}</code>\n"
             f"symbols: {', '.join(c.cfg.symbol for c in contexts)}\n"
             f"risk/trade: <code>{risk_usdt}</code> USDT\n"
+            f"ATR filter: <code>{atr_filter_desc}</code>\n"
             f"dry_run: <code>{args.dry_run}</code>  "
             f"testnet: <code>{testnet}</code>  demo: <code>{demo}</code>",
             category="bot_start",
